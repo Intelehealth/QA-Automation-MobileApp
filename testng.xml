@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+    <test name="M2006C3MII">
+        <listeners>
+            <listener class-name="com.intelehealth.listeners.TestListener" />
+        </listeners>
+        <parameter name="emulator" value="true" />
+        <parameter name="platformName" value="Android" />
+        <parameter name="udid" value="emulator-5554" />
+        <parameter name="deviceName" value="Samsung" />
+        <parameter name="systemPort" value="10000" />
+        <classes>
+            <class name="com.intelehealth.tests.AppointmentsTest"/>
+        </classes>
+    </test >
+</suite>  

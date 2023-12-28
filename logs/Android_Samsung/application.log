@@ -1,0 +1,6 @@
+[logsAndroid_Samsung INFO ] 2023-12-28 10:29:32.414 BaseTest:258 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-28 10:29:32.452 BaseTest:264 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-28 10:30:16.294 BaseTest:303 - driver initialized: AndroidDriver:  on ANDROID (c1b5958d-1543-41bd-a468-57a53e06da4c)
+[logsAndroid_Samsung INFO ] 2023-12-28 10:30:18.397 AppointmentsTest:26 - 
+****** starting test:IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed******
+

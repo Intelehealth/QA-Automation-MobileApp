@@ -1,0 +1,85 @@
+{
+	"validUser":{
+		"username":"nurse2",
+		"password":"Nurse123"
+	},
+	"inValidPatient":{
+		"patientName":"Computer"
+	},
+	"validPatient":{
+		"patientName":"Automation Rana"
+	},
+	"invalidPatientID":{
+		"Id":"123XY-Y1"
+	},
+	"personalDetails":{
+		"firstName":"Automation",
+		"lastname":"Patient",
+		"nationalId":"123456",
+		"occupation":"farmer",
+		"lastname1":"Bot",
+		"updatedName":"User B"
+		
+		
+	},
+	"patientAddress":{
+		"pincode":"581320",
+		"picode1":"123456",
+		"village":"Bhatkal",
+		"address1":"Heble",
+		"address2":"Tenginagundi"
+	},
+	"patientVitalsDetails":{
+		"height":"160",
+		"weight":"60",
+		"bpSystolic":"120",
+		"bpDiastolic":"70",
+		"pulse":"72",
+		"temperature":"98",
+		"spo2":"98",
+		"respiratoryRate":"72",
+		"bMIIndexValue":"23.44 kg/m"
+		},
+	
+	"description":{
+	"value":"Testing"
+	},
+	"registeredPatientDetails":{
+	"gender":"F",
+	"dateOfBirth":"06 March 1982",
+	"age":"41 years",
+	"state":"Karnataka",
+	"country":"India",
+	"district":"Uttara Kannada (Karwar)",
+	"socialCategory":"OBC",
+	"education":"Primary",
+	"economicCategory":"BPL"
+	},
+	"weights":{
+	"weight1":"46",
+	"weight2":"80",
+	"weight3":"90",
+	"weight4":"120"
+	},
+"weightStatus":{
+"expectedStatus1":"(Normal Weight)",
+"expectedStatus2":"(Underweight)",
+"expectedStatus3":"(Moderate Obesity(Class 1)",
+"expectedStatus4":"(Severe Obesity(Class 2)",
+"expectedStatus5":"(Very Severe(Morbid) Obesity(Class 3)"
+
+},
+
+
+"vitalsSummaryDetails":{
+"height":"160 cm",
+"weight":"60 kg",
+"bp":"120/70",
+"pulse":"72 bpm",
+"temperature":"98.1",
+"spo2":"98 %",
+"respiratoryRate":"72 breaths/min",
+"bMI":"23.44 kg/m"
+}
+	
+}

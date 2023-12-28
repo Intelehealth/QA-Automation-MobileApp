@@ -1,0 +1,28 @@
+[logsAndroid_Samsung INFO ] 2023-12-25 10:23:59.147 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-25 10:23:59.185 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-25 10:24:23.553 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (d3fe1c9f-700b-452f-a2c4-01760725f93f)
+[logsAndroid_Samsung INFO ] 2023-12-25 10:24:24.565 AppointmentsTest:26 - 
+****** starting test:IDA4_2375_verifyCancelledSection******
+
+[logsAndroid_Samsung INFO ] 2023-12-25 10:24:59.083 BaseTest:375 - WHile Using App Button is Displayed
+[logsAndroid_Samsung INFO ] 2023-12-25 10:27:46.039 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-25 10:27:46.077 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-25 10:28:07.787 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (0c0aecf4-9927-450e-84af-970dc14175d7)
+[logsAndroid_Samsung INFO ] 2023-12-25 10:28:09.202 StartVisitTest:34 - 
+****** starting test:IDA4_2413_verifyVitalsScreenUi******
+
+[logsAndroid_Samsung INFO ] 2023-12-25 10:28:40.110 BaseTest:375 - WHile Using App Button is Displayed
+[logsAndroid_Samsung INFO ] 2023-12-25 10:48:53.977 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-25 10:48:54.005 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-25 10:49:01.902 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (e48522fa-a28c-4d3e-804f-437a7d936333)
+[logsAndroid_Samsung INFO ] 2023-12-25 10:49:03.136 StartVisitTest:34 - 
+****** starting test:IDA4_2413_verifyVitalsScreenUi******
+
+[logsAndroid_Samsung INFO ] 2023-12-25 10:49:24.570 BaseTest:375 - WHile Using App Button is Displayed
+[logsAndroid_Samsung INFO ] 2023-12-25 11:01:14.451 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-25 11:01:14.459 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-25 11:01:47.558 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (3a75af1e-4848-445e-b3e1-4d49d2beac1b)
+[logsAndroid_Samsung INFO ] 2023-12-25 11:01:49.612 StartVisitTest:34 - 
+****** starting test:IDA4_2413_verifyVitalsScreenUi******
+
+[logsAndroid_Samsung INFO ] 2023-12-25 11:02:30.381 BaseTest:375 - WHile Using App Button is Displayed

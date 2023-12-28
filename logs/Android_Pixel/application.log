@@ -1,0 +1,23 @@
+[logsAndroid_Pixel INFO ] 2023-12-22 10:45:25.730 BaseTest:272 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2023-12-22 10:45:25.739 BaseTest:278 - load config.properties
+[logsAndroid_Pixel INFO ] 2023-12-22 10:45:47.742 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (78d06c14-ca57-43f8-980f-6d901c8221b4)
+[logsAndroid_Pixel INFO ] 2023-12-22 10:45:48.993 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:20.391 BaseTest:272 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:20.399 BaseTest:278 - load config.properties
+[logsAndroid_Pixel FATAL] 2023-12-22 10:48:23.464 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Pixel, appium:avdLaunchTimeout=120000, appium:deviceName=Pixel, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Pixel, avdLaunchTimeout: 120000, deviceName: Pixel, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Pixel, avdLaunchTimeout: 120000, deviceName: Pixel, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:37.637 BaseTest:272 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:37.644 BaseTest:278 - load config.properties
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:48.584 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (e142be41-643a-482e-92b4-8b9c6054fb92)
+[logsAndroid_Pixel INFO ] 2023-12-22 10:48:50.244 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Pixel INFO ] 2023-12-22 10:50:41.255 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup

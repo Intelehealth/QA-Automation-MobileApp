@@ -1,0 +1,1208 @@
+<html>
+<head>
+<title>TestNG:  Samsung(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Samsung(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/9</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 06 20:06:20 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>81 seconds (81324 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Parameters: public void com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2563_verifyOneOfSixQuestionsOptions()</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace113120488", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace113120488'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>68</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.afterMethod()'><b>afterMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest</td>
+<td></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2587_verifyFourOfSixQuestionsOptions()'><b>IDA4_2587_verifyFourOfSixQuestionsOptions</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify when user clicks Nails are normal/Clubbing/Spoon nails/Discolored option in 4 of 6</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace818407127", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace818407127'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2565_verifyUploadIcon()'><b>IDA4_2565_verifyUploadIcon</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify when user clicks on upload icon in 1 of 6</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1584097850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1584097850'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2586_verifyFourOfSixQuestionsIsShownToUser()'><b>IDA4_2586_verifyFourOfSixQuestionsIsShownToUser</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify 4 of 6 questions is shown to user</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1431450499", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1431450499'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2585_verifyThreeOfSixQuestionsNormalSlowOption()'><b>IDA4_2585_verifyThreeOfSixQuestionsNormalSlowOption</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify when user clicks Normal/Slow option in 3 of 6</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace939400365", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace939400365'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2563_verifyOneOfSixQuestionsOptions()'><b>IDA4_2563_verifyOneOfSixQuestionsOptions</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify 1 of 6 questions is shown to user</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace888893698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace888893698'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2584_verifyThreeOfSixQuestionsIsShownToUser()'><b>IDA4_2584_verifyThreeOfSixQuestionsIsShownToUser</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify 3 of 6 questions is shown to user</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace118494937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace118494937'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2574_verifyTwoOfSixQuestionIsDisplayed()'><b>IDA4_2574_verifyTwoOfSixQuestionIsDisplayed</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify 2 of 6 questions is shown to user</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422069282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422069282'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption()'><b>IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify when user clicks Normal/Pale option in 2 of 6</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace424798813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace424798813'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+<tr>
+<td title='com.intelehealth.tests.StartVisit3And4StepsTest.IDA4_2564_verifyTakeAPictureOption()'><b>IDA4_2564_verifyTakeAPictureOption</b><br>Test class: com.intelehealth.tests.StartVisit3And4StepsTest<br>Test method: Verify when user selects Take a picture in 1 of 6</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2013516830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2013516830'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot invoke method private android.view.accessibility.AccessibilityNodeInfo androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo() on object androidx.test.uiautomator.UiObject2@62342 with parameters []
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e0bcd5e9-dd8f-4d38-9094-7404f1193e4d, sendKeysToElement {id=00000000-0000-023f-ffff-ffff00000183, value=[Ljava.lang.CharSequence;@5e0a7001}]
+Capabilities {appium:automationName: UiAutomator2, appium:avd: Samsung, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 145, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1927, left: 0, top: 145, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (e0bcd5e9-dd8f-4d38-9094-7404f1193e4d)] -&gt; xpath: //android.widget.EditText[@text=&apos;Enter first name&apos;]]
+Session ID: e0bcd5e9-dd8f-4d38-9094-7404f1193e4d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wypDx1Jb.sendKeys(Unknown Source)
+	at com.intelehealth.base.BaseTest.sendKeys(BaseTest.java:357)
+	at com.intelehealth.pages.AddNewPatientPage.enterFirstName(AddNewPatientPage.java:362)
+	at com.intelehealth.pages.AddNewPatientPage.registerAPatient(AddNewPatientPage.java:918)
+	at com.intelehealth.tests.StartVisit3And4StepsTest.beforeMethod(StartVisit3And4StepsTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.intelehealth.tests.StartVisit3And4StepsTest@6f36c2f0</td></tr>
+</table><p>
+</body>
+</html>

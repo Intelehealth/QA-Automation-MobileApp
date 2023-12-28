@@ -1,0 +1,866 @@
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:07:23.739 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:07:23.761 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:07:30.400 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Avd 'M2006C3MII' is not available. Please select your avd name from one of these: 'Samsung,Pixel' 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=M2006C3MII, appium:avdLaunchTimeout=120000, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:08:03.831 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:08:03.839 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:08:08.163 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:08:22.403 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:08:22.411 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:08:28.949 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Avd 'M2006C3MII' is not available. Please select your avd name from one of these: 'Samsung,Pixel' 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=M2006C3MII, appium:avdLaunchTimeout=120000, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:24:26.965 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:24:26.974 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:24:34.270 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Avd 'M2006C3MII' is not available. Please select your avd name from one of these: 'Samsung,Pixel' 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=M2006C3MII, appium:avdLaunchTimeout=120000, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:24:54.564 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:24:54.576 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:25:00.917 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Avd 'M2006C3MII' is not available. Please select your avd name from one of these: 'Samsung,Pixel' 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=M2006C3MII, appium:avdLaunchTimeout=120000, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, avd: M2006C3MII, avdLaunchTimeout: 120000, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:25:28.403 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:25:28.410 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:25:41.342 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (90a73b00-5e18-4857-b468-73fba33a05bf)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:25:42.307 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:34:44.653 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:34:44.663 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:34:54.481 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (09fd45a2-3309-4292-b55d-c80351223605)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:34:55.442 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:36:55.518 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:36:55.529 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-22 11:36:58.715 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:37:15.027 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:37:15.036 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:37:25.193 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (0b711fa8-9b05-4124-b679-9d6a2e661f6d)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:37:36.567 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:38:54.873 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:40:37.493 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:40:51.830 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:40:52.496 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:40:53.500 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:01.741 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:04.718 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:38.050 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:39.561 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:39.986 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:42.434 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:42.697 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:43.676 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:44.490 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:44.683 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:44.873 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:45.103 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:45.322 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:49.120 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-37-15\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:41:49.964 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:42:56.995 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:44:35.832 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:44:49.727 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:44:50.442 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:44:51.450 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:44:59.824 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:02.803 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:35.223 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:38.592 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:38.951 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:42.000 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:42.270 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:43.640 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:44.542 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:47.261 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:48.222 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:49.079 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:52.760 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-37-15\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:45:53.662 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:46:26.408 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:48:40.562 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:48:55.998 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:48:57.090 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:48:58.384 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:08.390 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:12.324 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:49.449 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:49.760 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:50.094 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:52.701 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:52.982 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:53.871 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:54.704 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:54.893 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:55.041 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:55.787 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:56.036 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:56.195 BaseTest:375 - Clicked on Take a Picture option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:56.999 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:49:57.120 BaseTest:355 - Upload an image from gallery or take a picture is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:50:00.624 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-37-15\StartVisit3And4StepsTest\IDA4_2564_verifyTakeAPictureOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:50:01.492 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2565_verifyUploadIcon******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:51:06.847 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:52:47.497 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:04.225 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:06.510 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:06.752 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:15.792 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:19.107 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:53.978 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:55.652 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:56.060 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:58.939 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:53:59.917 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:00.188 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:00.978 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:01.136 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:01.254 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:01.400 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:01.542 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:01.673 BaseTest:375 - Clicked on 'Take a Picture' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:03.064 BaseTest:375 - Clicked on Image Capture button
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:03.895 BaseTest:355 - Take Photo option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:04.119 BaseTest:355 - Choose from Gallery option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:04.346 BaseTest:355 - Cancel option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:08.098 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-37-15\StartVisit3And4StepsTest\IDA4_2565_verifyUploadIcon.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:54:09.103 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2574_verifyTwoOfSixQuestionIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:58:09.215 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:58:09.223 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:58:18.817 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (5d229aa5-c38e-41c8-af5b-0ba7d6139607)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:58:19.648 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 11:59:06.250 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:16.036 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:30.310 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:30.950 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:32.322 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:41.461 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:01:46.611 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:33.451 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:35.342 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:35.691 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:38.367 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:39.335 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:39.612 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:40.380 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:40.519 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:40.655 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:40.823 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:41.075 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:44.687 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-58-09\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:02:45.505 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:03:48.790 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:20.565 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:33.340 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:33.978 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:34.917 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:43.675 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:05:46.337 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:13.962 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:16.792 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:17.107 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:19.488 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:19.749 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:21.062 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:21.994 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:24.244 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:25.162 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:25.411 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:29.672 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-58-09\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:06:30.467 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:07:36.003 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:12.771 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:27.649 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:28.333 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:29.852 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:38.199 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:09:40.932 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:14.492 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:17.322 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:17.669 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:20.088 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:20.287 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:21.359 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:22.080 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:22.295 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:22.497 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:22.736 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:22.954 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:23.203 BaseTest:375 - Clicked on Take a Picture option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:24.012 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:24.168 BaseTest:355 - Upload an image from gallery or take a picture is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:27.947 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-11-58-09\StartVisit3And4StepsTest\IDA4_2564_verifyTakeAPictureOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:10:28.763 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2565_verifyUploadIcon******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:11:02.310 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:22:28.853 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:22:28.866 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:22:45.086 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2fa0a985-9b71-404b-bbd0-cc69c22a070a)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:22:46.973 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:24:18.612 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:15.932 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:32.756 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:33.514 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:34.517 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:44.258 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:26:49.379 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:36.781 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:38.881 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:39.731 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:42.461 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:42.919 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:44.181 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:44.977 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:45.407 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:46.376 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:47.963 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:48.581 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:55.273 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-12-22-28\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:27:56.837 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:29:13.682 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:07.948 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:23.951 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:24.886 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:26.105 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:34.841 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:31:38.348 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:23.486 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:24.238 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:24.900 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:27.580 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:28.046 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:29.191 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:29.932 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:32.373 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:33.434 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:34.654 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:40.895 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-12-22-28\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:32:42.373 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:33:18.026 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:46:01.383 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:46:01.395 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:46:17.707 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (ec759948-44eb-44e2-a8fc-66ba5d20de24)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 12:46:19.046 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:09:35.082 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:36:01.423 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:36:01.438 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:36:17.450 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (1e0c668d-87f9-4bb6-a5b6-a24f1d6e23f0)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:36:18.968 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:39:49.488 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:39:49.495 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:40:06.236 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2f5ffdf7-ca4d-4c7e-b4b4-7513f46b5e6a)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 13:40:07.569 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 14:59:52.108 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 14:59:52.118 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:00:02.767 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (b976adf4-bbac-4b7c-8f49-0c2bae7ecab4)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:00:03.685 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:00:46.830 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:16.596 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:32.835 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:33.572 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:34.739 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:44.510 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:03:48.965 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:32.852 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:34.594 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:35.111 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:37.920 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:38.417 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:39.671 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:40.291 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:41.093 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:41.284 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:42.326 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:42.832 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:49.103 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-14-59-52\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:04:50.276 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:05:23.011 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:07:49.743 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:08:03.379 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:08:04.110 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:08:05.109 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:08:14.235 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:08:19.285 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:03.051 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:05.989 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:07.150 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:10.164 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:12.328 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:13.351 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:13.527 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:17.832 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:18.825 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:19.080 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:26.087 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-14-59-52\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:09:27.323 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:11:49.719 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:11:49.727 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:12:02.340 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (f3aa4f3d-2dcb-4788-ab07-13c4eb99751d)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:12:03.677 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:15:48.192 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:15:48.200 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:15:57.095 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (7e458992-2019-4f7a-8220-58bbdb19e9ff)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:15:58.053 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:17:19.525 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:13.159 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:29.941 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:30.645 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:31.678 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:41.073 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:19:46.632 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:28.825 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:30.592 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:31.194 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:33.917 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:34.895 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:36.848 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:37.236 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:37.440 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:37.614 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:37.839 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:38.096 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:44.788 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-15-48\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:20:46.162 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:21:21.999 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:23:48.829 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:24:05.303 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:24:05.986 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:24:06.973 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:24:16.294 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:24:21.367 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:07.763 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:09.766 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:10.510 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:13.677 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:14.062 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:15.281 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:15.873 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:18.444 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:21.451 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:21.946 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:28.438 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-15-48\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:25:29.720 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:26:04.207 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:31:18.719 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:31:18.728 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:31:31.148 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (1c0987e2-b3e3-4ad9-9056-2f03e9b6c838)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:31:32.411 StartVisitTest:32 - 
+****** starting test:IDA4_2413_verifyVitalsScreenUi******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:38.601 BaseTest:355 - Enter the Patient's Vitals label is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:38.960 BaseTest:355 - Created Patient Name is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:39.170 BaseTest:355 - Created Patient Age is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:39.326 BaseTest:355 - Visit Creation Refresh Image Button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:40.175 BaseTest:355 - Visit Creation Subtitle is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:40.407 BaseTest:355 - Visit Creation Step 1 ProgressBar is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:40.620 BaseTest:355 - Height EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:40.789 BaseTest:355 - Weight EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:41.048 BaseTest:355 -  BMI Index is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:41.325 BaseTest:355 - Blood Pressure Systolic EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:41.491 BaseTest:355 - Blood Pressure Diastolic EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:42.238 BaseTest:355 - Pulse EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:42.426 BaseTest:355 - Temperature EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:45.420 BaseTest:355 - SpO2 EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:45.660 BaseTest:355 -  Respiratory Rate EditText is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:48.896 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2413_verifyVitalsScreenUi.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:35:50.138 StartVisitTest:32 - 
+****** starting test:IDA4_2415_verifyNextButtonFunctionality******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:39:05.811 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2415_verifyNextButtonFunctionality.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:39:06.785 StartVisitTest:32 - 
+****** starting test:IDA4_2419_verifyBMIValueIsAutoCalculated******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:42:06.644 BaseTest:395 - Entered Height
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:42:09.404 BaseTest:395 - Entered weight
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:42:14.721 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2419_verifyBMIValueIsAutoCalculated.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:42:16.271 StartVisitTest:32 - 
+****** starting test:IDA4_2429_verifyTheUiOfVitalSummary******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:27.501 BaseTest:355 - Vitals Details Label is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:27.654 BaseTest:355 - Vitals Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:28.682 BaseTest:355 - Height Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:28.889 BaseTest:355 - Height Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.033 BaseTest:355 - Weight Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.170 BaseTest:355 - Weight Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.307 BaseTest:355 - BMI Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.453 BaseTest:355 - BMI Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.601 BaseTest:355 - Pulse Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.763 BaseTest:355 - Pulse Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:29.913 BaseTest:355 - BP Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:30.069 BaseTest:355 - BP Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:30.246 BaseTest:355 - Pulse Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:30.468 BaseTest:355 - Pulse Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:30.702 BaseTest:355 - Temp Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:30.871 BaseTest:355 - Temp Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:31.116 BaseTest:355 - SpO2 Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:31.388 BaseTest:355 - SpO2 Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:31.670 BaseTest:355 - RR Title is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:32.406 BaseTest:355 - RR Value is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:32.617 BaseTest:355 - Back Button is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:32.828 BaseTest:355 - Confirm Button is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:36.202 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2429_verifyTheUiOfVitalSummary.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:45:37.457 StartVisitTest:32 - 
+****** starting test:IDA4_2421_checkBMIStatusWithDifferentValues******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:44.648 BaseTest:395 - Entered Height
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:46.601 BaseTest:395 - Entered Weight
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:48.059 BaseTest:395 - Entered Height
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:50.251 BaseTest:395 - Entered Weight
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:51.956 BaseTest:395 - Entered Height
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:53.805 BaseTest:395 - Entered Weight
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:48:59.859 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2421_checkBMIStatusWithDifferentValues.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:49:01.111 StartVisitTest:32 - 
+****** starting test:IDA4_2430_verifyDeatilsOnVitalSummaryScreen******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:52:22.307 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2430_verifyDeatilsOnVitalSummaryScreen.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 15:52:23.308 StartVisitTest:32 - 
+****** starting test:IDA4_2432_VerifyChangeButtonOfVitalSummaryScreen******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:02:32.595 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2432_VerifyChangeButtonOfVitalSummaryScreen.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:02:33.758 StartVisitTest:32 - 
+****** starting test:IDA4_2433_VerifyVitalsdetailsAreSaved******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:05:50.710 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2433_VerifyVitalsdetailsAreSaved.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:05:51.716 StartVisitTest:32 - 
+****** starting test:IDA4_2435_verifyConfirmButtonfuntionality******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:09:12.500 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2435_verifyConfirmButtonfuntionality.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:09:13.553 StartVisitTest:32 - 
+****** starting test:IDA4_2438_verifyFuntionalityOfSelectedReason******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:12:43.675 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2438_verifyFuntionalityOfSelectedReason.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:12:45.534 StartVisitTest:32 - 
+****** starting test:IDA4_2439_VerifyTheFunctionalityOfRemoveOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:16:24.718 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-15-31-18\StartVisitTest\IDA4_2439_VerifyTheFunctionalityOfRemoveOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:16:26.426 StartVisitTest:32 - 
+****** starting test:IDA4_2440_verifySelectedReasons******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:34:07.653 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:34:07.668 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:34:22.834 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (b0ed73e3-14da-481e-a998-574e59a7fb98)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:34:24.573 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:35:56.764 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:01.620 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:18.394 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:19.734 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:22.041 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:31.137 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:38:37.967 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:34.316 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:37.022 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:38.023 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:41.081 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:42.146 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:43.616 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:44.354 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:45.788 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:46.155 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:47.145 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:48.411 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:56.730 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:39:58.253 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:41:18.672 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:20.787 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:39.731 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:40.488 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:41.725 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:51.566 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:43:58.344 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:49.212 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:51.738 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:53.048 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:56.439 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:56.982 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:58.255 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:44:59.165 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:45:01.732 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:45:02.861 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:45:03.931 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:45:12.299 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:45:13.741 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:46:33.156 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:48:31.394 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:48:49.565 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:48:50.317 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:48:51.977 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:49:01.800 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:49:07.612 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:00.579 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:02.632 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:03.450 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:06.631 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:08.109 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:10.389 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:11.262 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:12.254 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:13.281 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:13.860 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:14.470 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:16.183 BaseTest:375 - Clicked on Take a Picture option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:17.342 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:18.273 BaseTest:355 - Upload an image from gallery or take a picture is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:27.093 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2564_verifyTakeAPictureOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:50:28.627 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2565_verifyUploadIcon******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:51:42.865 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:53:39.178 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:53:57.200 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:53:58.643 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:53:59.732 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:54:09.651 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:54:16.356 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:02.554 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:05.086 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:05.961 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:09.064 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:10.752 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:12.853 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:13.474 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:13.885 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:15.002 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:15.578 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:16.189 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:16.789 BaseTest:375 - Clicked on 'Take a Picture' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:17.912 BaseTest:375 - Clicked on Image Capture button
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:18.960 BaseTest:355 - Take Photo option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:20.068 BaseTest:355 - Choose from Gallery option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:20.494 BaseTest:355 - Cancel option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:28.704 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2565_verifyUploadIcon.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:55:30.335 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2574_verifyTwoOfSixQuestionIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:56:08.407 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:58:40.161 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:58:58.214 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:59:00.213 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:59:01.403 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:59:10.500 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 16:59:15.704 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:02.891 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:05.742 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:06.480 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:09.615 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:10.122 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:11.393 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:12.529 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:13.520 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:13.776 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:14.533 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:15.765 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:16.255 BaseTest:375 - Clicked on 'No' option for the first question
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:18.737 BaseTest:355 - Second question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:19.836 BaseTest:355 - Is there pallor question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:21.570 BaseTest:355 - 'Normal' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:22.695 BaseTest:355 - 'Pale' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:24.084 BaseTest:355 - Take a picture option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:31.929 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2574_verifyTwoOfSixQuestionIsDisplayed.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:00:33.683 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:01:47.034 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:03:40.103 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:03:57.120 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:03:57.796 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:04:00.128 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:04:09.063 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:04:16.522 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:02.306 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:04.343 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:05.652 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:08.801 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:09.241 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:10.541 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:11.200 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:14.905 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:17.587 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:18.078 BaseTest:375 - Clicked on 'No' option for the first question
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:20.456 BaseTest:355 - Second question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:21.694 BaseTest:355 - Is there pallor question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:22.306 BaseTest:355 - 'Normal' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:24.514 BaseTest:355 - 'Pale' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:25.532 BaseTest:355 - Take a picture option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:26.857 BaseTest:375 - Clicked on 'Normal' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:29.489 BaseTest:375 - Clicked on 'Pale' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:31.611 BaseTest:355 - Third question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:40.365 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:05:41.794 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2584_verifyThreeOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:06:18.409 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:08:50.903 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:09:07.335 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:09:08.420 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:09:10.282 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:09:20.216 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:09:26.593 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:11.156 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:12.298 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:13.130 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:15.676 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:16.084 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:17.725 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:18.593 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:21.541 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:22.637 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:23.671 BaseTest:375 - Clicked on 'No' option for the first question
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:25.858 BaseTest:355 - Second question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:26.851 BaseTest:355 - Is there pallor question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:28.012 BaseTest:355 - 'Normal' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:28.746 BaseTest:355 - 'Pale' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:31.042 BaseTest:355 - Take a picture option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:31.776 BaseTest:375 - Clicked on 'Normal' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:34.968 BaseTest:355 - Third question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:36.151 BaseTest:355 - Pinch Skin question is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:36.804 BaseTest:355 - 'Normal' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:37.473 BaseTest:355 - 'Slow' option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:45.073 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-16-34-07\StartVisit3And4StepsTest\IDA4_2584_verifyThreeOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:10:46.358 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2585_verifyThreeOfSixQuestionsNormalSlowOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:11:24.446 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:13:16.704 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:13:16.713 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:13:30.954 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (82cc5f9b-53cc-4438-a7ab-48ce98a123dc)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:13:32.567 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:14:59.607 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:01.569 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:22.050 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:22.977 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:24.433 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:34.429 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:17:41.519 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:36.237 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:38.620 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:39.480 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:42.268 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:42.869 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:44.351 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:45.365 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:45.600 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:45.802 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:46.096 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:46.419 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:54.091 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-13-16\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:18:55.789 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:20:14.548 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:09.667 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:24.324 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:25.009 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:26.163 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:36.012 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:22:40.629 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:29.506 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:31.636 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:33.806 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:37.058 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:37.594 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:38.817 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:39.565 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:42.156 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:43.342 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:44.601 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:52.613 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-13-16\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:23:54.299 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:26:25.469 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:26:25.479 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:26:40.083 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2edffb1d-f717-4381-999d-2f403d4bb0ef)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:26:41.669 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:30:45.681 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:30:45.689 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:30:59.775 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2a5156a8-05aa-4da4-96d8-ce63601a349d)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:31:01.667 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:32:24.269 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:34:38.911 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:34:54.343 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:34:56.017 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:34:57.896 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:35:07.441 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:35:13.439 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:00.465 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:02.612 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:03.570 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:06.324 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:06.762 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:07.986 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:09.092 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:09.392 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:10.319 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:10.672 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:11.263 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:19.162 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-30-45\StartVisit3And4StepsTest\IDA4_2562_verifyOneOfSixQuestionsIsShownToUser.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:36:20.622 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2563_verifyOneOfSixQuestionsOptions******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:37:33.731 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:39:34.093 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:39:53.383 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:39:55.271 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:39:56.700 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:40:07.773 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:40:14.295 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:05.743 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:06.735 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:07.312 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:09.925 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:10.425 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:11.650 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:12.840 BaseTest:375 - Clicked on No option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:15.868 BaseTest:375 - Clicked on Take Picture option for One of Six Questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:17.063 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:17.286 BaseTest:355 - Two of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:25.870 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-30-45\StartVisit3And4StepsTest\IDA4_2563_verifyOneOfSixQuestionsOptions.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:41:27.483 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2564_verifyTakeAPictureOption******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:42:44.344 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:44:47.753 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:45:05.570 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:45:06.335 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:45:07.364 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:45:16.065 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:45:21.801 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:02.012 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:04.135 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:04.848 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:07.485 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:07.758 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:08.765 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:09.516 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:09.766 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:10.533 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:10.902 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:11.833 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:13.237 BaseTest:375 - Clicked on Take a Picture option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:14.702 BaseTest:355 - Image Capture button is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:14.942 BaseTest:355 - Upload an image from gallery or take a picture is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:21.767 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-30-45\StartVisit3And4StepsTest\IDA4_2564_verifyTakeAPictureOption.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:46:23.155 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2565_verifyUploadIcon******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:47:36.295 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:49:32.494 StartVisit3And4StepsTest:75 - Registering a patient with provided details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:49:49.771 StartVisit3And4StepsTest:86 - Entering patient vitals details
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:49:50.490 StartVisit3And4StepsTest:89 - Clicking on the 'Next' button after entering the first set of vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:49:51.989 StartVisit3And4StepsTest:93 - Clicking on the 'Confirm' button to confirm the entered vitals
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:01.796 StartVisit3And4StepsTest:97 - Scrolling to the HyperTension section on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:06.833 StartVisit3And4StepsTest:101 - Selecting and confirming the visit reason as Hypertension
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:50.913 StartVisit3And4StepsTest:105 - Handling the Hypertension-related visit questions
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:53.850 StartVisit3And4StepsTest:108 - Verifying that the 'Associated Symptoms' title is displayed on the page
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:54.495 StartVisit3And4StepsTest:112 - Selecting 'No' for the first associated symptom
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:57.043 StartVisit3And4StepsTest:116 - Clicking on the main 'Submit' button for associated symptoms
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:57.412 StartVisit3And4StepsTest:120 - Clicking on the 'Confirm' button on the visit reason summary screen
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:58.694 StartVisit3And4StepsTest:124 - Clicking on the 'Okay' button to proceed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:59.361 BaseTest:355 - One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:59.658 BaseTest:355 - Image for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:50:59.952 BaseTest:355 - Yes option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:00.999 BaseTest:355 - No option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:01.409 BaseTest:355 - Take Picture option for One of Six Questions is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:02.435 BaseTest:375 - Clicked on 'Take a Picture' option
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:04.225 BaseTest:375 - Clicked on Image Capture button
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:05.288 BaseTest:355 - Take Photo option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:05.668 BaseTest:355 - Choose from Gallery option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:06.105 BaseTest:355 - Cancel option is displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:14.349 BaseTest:162 - video path: videos\Android_M2006C3MII\2023-12-22-17-30-45\StartVisit3And4StepsTest\IDA4_2565_verifyUploadIcon.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:51:16.146 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2574_verifyTwoOfSixQuestionIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:52:55.874 BaseTest:272 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:52:55.890 BaseTest:278 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:53:11.287 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (70dd88de-ad86-466b-95a6-8da912517528)
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:53:12.978 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:54:10.061 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_M2006C3MII INFO ] 2023-12-22 17:56:39.887 StartVisit3And4StepsTest:75 - Registering a patient with provided details

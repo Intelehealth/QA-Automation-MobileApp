@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.intelehealth.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="M2006C3MII(failed)">
+    <parameter name="emulator" value="true"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="Samsung"/>
+    <parameter name="systemPort" value="10000"/>
+    <classes>
+      <class name="com.intelehealth.tests.AppointmentsTest">
+        <methods>
+          <include name="IDA4_2386_verifyCancelledAppointment"/>
+          <include name="IDA4_2388_verifyScheduleAppointmentScreenIsDisplayed"/>
+          <include name="IDA4_2380_verifyCancelAppointment"/>
+          <include name="IDA4_2375_verifyCancelledSection"/>
+          <include name="beforeMethod"/>
+          <include name="IDA4_2382_verifyYesButtonFunctionality"/>
+          <include name="IDA4_2406_verifySpecificRadioButtonForAppointments"/>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed"/>
+          <include name="IDA4_2385_verifycancelAppointmentSaveButton"/>
+          <include name="IDA4_2374_verifyCountOfCancelledTab"/>
+          <include name="beforeSuite"/>
+          <include name="IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection"/>
+          <include name="IDA4_2408_verifyAllTabCalenderFilter"/>
+          <include name="afterTest"/>
+          <include name="afterMethod"/>
+          <include name="IDA4_2404_verifyOverAllTabSection"/>
+          <include name="IDA4_2373_verifyCancelledTab"/>
+          <include name="IDA4_2391_verifyCompletedTabFunctionality"/>
+        </methods>
+      </class> <!-- com.intelehealth.tests.AppointmentsTest -->
+    </classes>
+  </test> <!-- M2006C3MII(failed) -->
+</suite> <!-- Failed suite [Suite] -->

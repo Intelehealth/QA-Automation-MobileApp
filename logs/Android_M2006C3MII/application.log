@@ -1,0 +1,158 @@
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:42:43.579 BaseTest:258 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:42:43.597 BaseTest:264 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:42:56.892 BaseTest:303 - driver initialized: AndroidDriver:  on ANDROID (6d69f5bb-923c-4882-8187-beae1f9b0a10)
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:42:57.812 AppointmentsTest:26 - 
+****** starting test:IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:29.416 BaseTest:363 - Clicked on appointments
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:33.060 BaseTest:343 - MyAppointment Screen is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:33.400 BaseTest:363 - Clicked on Completed Tab
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:34.492 BaseTest:343 - Completed patient is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:35.008 BaseTest:363 - Clicked on Completed Patient 
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:37.849 BaseTest:343 - Appointments Detals Screen is Displayed
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:40.820 BaseTest:148 - video path: videos\Android_M2006C3MII\2023-12-28-09-42-43\AppointmentsTest\IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed.mp4
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:44:42.039 AppointmentsTest:26 - 
+****** starting test:IDA4_2404_verifyOverAllTabSection******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:55:11.910 BaseTest:258 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:55:11.933 BaseTest:264 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:55:26.321 BaseTest:303 - driver initialized: AndroidDriver:  on ANDROID (f6cdddf6-98b3-452e-9cc1-079767572a9d)
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:55:27.933 AppointmentsTest:26 - 
+****** starting test:IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:57:08.867 BaseTest:363 - Clicked on appointments
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:58:52.872 BaseTest:258 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:58:52.893 BaseTest:264 - load config.properties
+[logsAndroid_M2006C3MII FATAL] 2023-12-28 09:58:59.695 BaseTest:305 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:deviceName=M2006C3MII, platformName=ANDROID, appium:systemPort=10000, appium:udid=CAZLOBVCJR9HWOZP}], desiredCapabilities=Capabilities {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}}]
+Capabilities {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:59:11.021 BaseTest:258 - log path: logs\Android_M2006C3MII
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:59:11.040 BaseTest:264 - load config.properties
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:59:27.667 BaseTest:303 - driver initialized: AndroidDriver:  on ANDROID (724b0520-ed85-4cdb-aa84-65aa30b804c1)
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 09:59:29.489 AppointmentsTest:26 - 
+****** starting test:IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed******
+
+[logsAndroid_M2006C3MII INFO ] 2023-12-28 10:01:08.472 BaseTest:363 - Clicked on appointments
+[logsAndroid_M2006C3MII ERROR] 2023-12-28 10:05:47.237 TestListener:33 - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [724b0520-ed85-4cdb-aa84-65aa30b804c1, findElement {using=accessibility id, value=Common Toolbar Title TextView}]
+Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}, appium:deviceApiLevel: 29, appium:deviceManufacturer: Xiaomi, appium:deviceModel: M2006C3MII, appium:deviceName: CAZLOBVCJR9HWOZP, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: CAZLOBVCJR9HWOZP, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 10, appium:statBarHeight: 55, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: CAZLOBVCJR9HWOZP, appium:viewportRect: {height: 1394, left: 0, top: 55, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 724b0520-ed85-4cdb-aa84-65aa30b804c1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:75)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$fFkgdaiL.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:323)
+	at com.intelehealth.base.BaseTest.isDisplayed(BaseTest.java:342)
+	at com.intelehealth.pages.AppointmentsPage.verifyAppointmentDetailsScreenIsDisplayed(AppointmentsPage.java:348)
+	at com.intelehealth.tests.AppointmentsTest.IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed(AppointmentsTest.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_M2006C3MII ERROR] 2023-12-28 10:05:47.324 TestListener:33 - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [724b0520-ed85-4cdb-aa84-65aa30b804c1, screenshot {}]
+Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, deviceName: M2006C3MII, platformName: ANDROID, systemPort: 10000, udid: CAZLOBVCJR9HWOZP}, appium:deviceApiLevel: 29, appium:deviceManufacturer: Xiaomi, appium:deviceModel: M2006C3MII, appium:deviceName: CAZLOBVCJR9HWOZP, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: CAZLOBVCJR9HWOZP, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 10, appium:statBarHeight: 55, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: CAZLOBVCJR9HWOZP, appium:viewportRect: {height: 1394, left: 0, top: 55, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 724b0520-ed85-4cdb-aa84-65aa30b804c1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+	at com.intelehealth.listeners.TestListener.onTestFailure(TestListener.java:37)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:108)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:751)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+

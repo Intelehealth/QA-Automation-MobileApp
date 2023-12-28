@@ -1,0 +1,58 @@
+[ServerLogs INFO ] 2023-12-27 10:47:20.848 BaseTest:172 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 12:27:04.757 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 12:55:46.681 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:22:40.155 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:24:15.818 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:44:44.338 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:50:16.612 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:53:17.176 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 15:59:29.309 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:06:50.712 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:13:34.161 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:19:10.072 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:21:35.458 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:30:18.224 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:38:15.848 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:41:18.108 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:44:04.420 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:46:29.322 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:49:34.857 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:51:59.312 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:54:50.220 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 16:57:26.453 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 17:03:44.661 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 17:53:19.503 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:11:41.329 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:13:18.146 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:23:40.511 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:25:52.779 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:27:08.277 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:28:34.877 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:30:38.800 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:33:09.653 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:33:46.775 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:35:53.742 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:38:16.540 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:41:22.381 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:43:25.782 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:43:54.067 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:44:39.028 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:46:39.803 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:47:07.957 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:48:22.195 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:50:23.502 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:51:26.778 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:52:40.092 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:54:48.010 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 19:56:26.402 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 19:57:21.497 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 19:59:23.565 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 20:00:26.172 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 20:01:26.643 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 20:03:27.467 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 20:17:30.901 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 20:18:01.699 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 20:20:05.578 BaseTest:196 - Appium server stopped
+[ServerLogs INFO ] 2023-12-27 20:20:33.282 BaseTest:173 - Appium server already running
+[ServerLogs INFO ] 2023-12-27 20:22:11.805 BaseTest:171 - Appium server started
+[ServerLogs INFO ] 2023-12-27 20:24:13.736 BaseTest:196 - Appium server stopped

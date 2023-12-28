@@ -1,0 +1,180 @@
+[logsAndroid_Samsung INFO ] 2023-12-22 09:10:43.351 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:10:43.395 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:11:09.983 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (880bbd85-c9ff-48ca-a377-0533aae177d4)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:11:11.228 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2652_verifyPatientHistoryScreenChangeButton******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:13:06.113 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:13:06.121 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:13:17.228 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (ecd74e4f-6001-432b-8efe-e12e338c3ce1)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:13:18.268 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:14:34.091 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 09:18:37.230 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:18:37.238 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:18:49.107 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (7746e5ec-819c-4b39-82e4-30284b10874c)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:18:50.268 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:19:56.502 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 09:32:37.489 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:32:37.527 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:32:47.609 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (33282c46-8285-42c4-8f90-78a2e93b3a8a)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:32:48.745 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:33:58.858 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 09:37:38.297 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:37:38.312 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:37:49.822 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (8fbdc3c7-6937-41fb-99db-48eca23074b3)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:37:50.722 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:39:02.727 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 09:42:25.191 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:42:25.198 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:42:36.936 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (caf0f9c3-2986-48c6-b26a-1e8aaf082600)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:42:38.404 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:43:46.545 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 09:52:56.110 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 09:52:56.142 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 09:53:23.727 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (3139232d-edc1-42ba-b0ce-7738ea463bcd)
+[logsAndroid_Samsung INFO ] 2023-12-22 09:53:25.070 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 09:55:09.340 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Samsung INFO ] 2023-12-22 18:02:48.334 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 18:02:48.363 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 18:03:05.504 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (5d78cd59-1817-4ff7-bf8a-a2ffd1f090fb)
+[logsAndroid_Samsung INFO ] 2023-12-22 18:03:06.476 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 18:08:38.542 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 18:08:38.552 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 18:08:42.463 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 18:08:54.861 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 18:08:54.874 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 18:09:05.418 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (a568020c-e085-4be6-ba14-c4fbac69607e)
+[logsAndroid_Samsung INFO ] 2023-12-22 18:09:06.398 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:04:22.279 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:04:22.287 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:04:33.712 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (3f36bc90-e2fe-44ff-9dfe-3383924aa488)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:04:35.131 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:21:47.330 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:21:47.338 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:21:57.333 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (6d6e36d5-86c8-4468-a1e5-3f2d5555a467)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:21:58.156 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:02.262 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:02.271 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 19:26:04.987 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:49.276 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:49.285 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:57.893 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (5234e8cf-9be0-4c15-b454-c88661abdcda)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:26:58.644 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:41:20.719 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:41:20.728 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:41:28.765 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (ca06b046-49c7-4d53-930f-0b638d60ddbb)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:41:29.530 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:43:18.546 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:43:18.555 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 19:43:21.954 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 19:43:43.342 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:43:43.351 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:43:52.187 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (3962ad9e-fb78-4733-9f34-0fa393fa8ef6)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:44:03.233 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 19:49:40.365 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:49:40.373 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 19:49:43.591 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 19:49:55.083 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:49:55.090 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 19:50:30.554 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized within 30000ms timeout. Make sure the application under test does not crash and investigate the logcat output. You could also try to increase the value of 'uiautomator2ServerLaunchTimeout' capability 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 19:54:06.515 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 19:54:06.523 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 19:54:15.390 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2bb85101-aca4-4904-b3bc-910824abd362)
+[logsAndroid_Samsung INFO ] 2023-12-22 19:54:16.644 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 20:01:02.954 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 20:01:02.962 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 20:01:11.058 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (2e07bf8f-8acd-494e-97a6-2962d0cba66c)
+[logsAndroid_Samsung INFO ] 2023-12-22 20:01:12.339 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 20:02:35.090 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 20:02:35.097 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 20:02:43.197 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (c7aecbec-a2dd-4582-a0a0-dcb1ef24679f)
+[logsAndroid_Samsung INFO ] 2023-12-22 20:02:44.314 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 20:03:14.189 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 20:03:14.228 BaseTest:278 - load config.properties
+[logsAndroid_Samsung FATAL] 2023-12-22 20:03:17.738 BaseTest:319 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Samsung, appium:avdLaunchTimeout=120000, appium:deviceName=Samsung, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {automationName: UiAutomator2, avd: Samsung, avdLaunchTimeout: 120000, deviceName: Samsung, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
+[logsAndroid_Samsung INFO ] 2023-12-22 20:04:53.423 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 20:04:53.432 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 20:05:02.046 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (8a1b38be-8ac0-4218-95fb-9c98f6411a23)
+[logsAndroid_Samsung INFO ] 2023-12-22 20:05:03.390 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
+[logsAndroid_Samsung INFO ] 2023-12-22 20:07:50.483 BaseTest:272 - log path: logs\Android_Samsung
+[logsAndroid_Samsung INFO ] 2023-12-22 20:07:50.490 BaseTest:278 - load config.properties
+[logsAndroid_Samsung INFO ] 2023-12-22 20:07:58.799 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (eeb13b16-a0a5-43f6-a13c-28f8388fc29d)
+[logsAndroid_Samsung INFO ] 2023-12-22 20:07:59.766 StartVisit3And4StepsTest:35 - 
+****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+
