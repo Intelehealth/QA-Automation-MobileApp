@@ -197,7 +197,7 @@ public class DashboardModulePage extends BaseTest {
 			.xpath("//android.widget.Button[@content-desc=\"Permission Required Dialog Okay Button\"]");
 
 	// Perform login
-	public void login(String un, String pw) {
+	public void login(String un, String pw) throws InterruptedException {
 		// Click on the dropdown to open the menu
 		click(dropdown);
 
@@ -214,7 +214,7 @@ public class DashboardModulePage extends BaseTest {
 		isDisplayed(locationName);
 	}
 
-	public void performLogin() {
+	public void performLogin() throws InterruptedException {
 		String originalUserName = appData.getJSONObject("validUser").getString("username");
 		String originalPassword = appData.getJSONObject("validUser").getString("password");
 
@@ -233,7 +233,7 @@ public class DashboardModulePage extends BaseTest {
 		appSetupPage.locationIsDisplayed();
 	}
 
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		appSetupPage.handlePermissions();
 		// Click on the "Next" button on the app setup page
 		appSetupPage.clickOnNextButton();
@@ -275,7 +275,7 @@ public class DashboardModulePage extends BaseTest {
 	}
 
 	// Verifies that the last synced time and date display on the page
-	public void verifyThatLastSyncedTimeAndDateDisplayOnTopOfThePage() {
+	public void verifyThatLastSyncedTimeAndDateDisplayOnTopOfThePage() throws InterruptedException {
 		performLogin();
 		ExtentReport.getTest().log(Status.INFO,
 				"Verifying whether app synced time and date is displayed on top of the page");

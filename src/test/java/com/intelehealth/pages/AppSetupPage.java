@@ -135,26 +135,13 @@ public  AppSetupPage() throws IOException {
 		isSelected(english);
 
 	}
-	public void handlePermissions() {
-	    try {
-	        // Assuming these methods are defined in your class
-	        if (isDisplayed(pDAllowButton)) {
-	            // Click pDAllowButton four times (verify if this is the intended behavior)
-	            for (int i = 0; i < 4; i++) {
-	                click(pDAllowButton);
-	            }
-	        } else   {
+	public void handlePermissions() throws InterruptedException {
+	    
 	        	isDisplayed(whileUsingAppButton);
 	            click(whileUsingAppButton);
 	            click(allowButton);
 	            click(allowButton);
-	            click(allowButton);
-	        } 
-	    } catch (Exception e) {
-	        // Handle the exception or print an error message
-	        System.err.println("An error occurred while handling permissions: " + e.getMessage());
-	        // You can choose to proceed with the next steps here if needed
-	    }
+	     
 	}
 
 
@@ -268,8 +255,8 @@ public  AppSetupPage() throws IOException {
 	    sendKeys(password, pw);
 	    // Click on the setup screen setup button to complete the login process
 	    click(setupScreeenSetupButton);
-	    click(toggle);
-	    click(back);
+//	    click(toggle);
+//	    click(back);
 	    isDisplayed(locationName);
 	    click(refreshButton);
 	    Thread.sleep(20000);;

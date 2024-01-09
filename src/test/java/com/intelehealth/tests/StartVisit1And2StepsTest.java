@@ -143,7 +143,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 6, description = "Verify the details section on Vital summary", enabled = true)
-	public void IDA4_2430_verifyDeatilsOnVitalSummaryScreen() {
+	public void IDA4_2430_verifyDeatilsOnVitalSummaryScreen() throws JSONException, InterruptedException {
 // Enter patient vitals details using data from the appData object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -172,7 +172,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 7, description = "Verify clicking on the change button of details section on Vital summary", enabled = true)
-	public void IDA4_2432_VerifyChangeButtonOfVitalSummaryScreen() {
+	public void IDA4_2432_VerifyChangeButtonOfVitalSummaryScreen() throws JSONException, InterruptedException {
 // Entering patient vitals details on the startVisit1And2StepsPage
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -198,7 +198,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 8, description = "Verify that the updated 1/4 details are saved", enabled = true)
-	public void IDA4_2433_VerifyVitalsdetailsAreSaved() {
+	public void IDA4_2433_VerifyVitalsdetailsAreSaved() throws JSONException, InterruptedException {
 // Entering patient vital details using the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"), // Height
@@ -228,7 +228,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 9, description = "Verify the functionality of Confirm button on 1/4 vital summary screen", enabled = true)
-	public void IDA4_2435_verifyConfirmButtonfuntionality() {
+	public void IDA4_2435_verifyConfirmButtonfuntionality() throws JSONException, InterruptedException {
 // Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -244,7 +244,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 10, description = "Verify the functionality of Selected reason section", enabled = true)
-	public void IDA4_2438_verifyFuntionalityOfSelectedReason() {
+	public void IDA4_2438_verifyFuntionalityOfSelectedReason() throws JSONException, InterruptedException {
 // Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -267,7 +267,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 11, description = "Verify user can remove the selected reason", enabled = true)
-	public void IDA4_2439_VerifyTheFunctionalityOfRemoveOption() {
+	public void IDA4_2439_VerifyTheFunctionalityOfRemoveOption() throws JSONException, InterruptedException {
 // Start entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -313,7 +313,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 13, description = "Verify the functionality of Back button after selecting a reason on 2/4 visit reason screen", enabled = true)
-	public void IDA4_2452_verifySelectedReasons() {
+	public void IDA4_2452_verifySelectedReasons() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -338,7 +338,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 14, description = "Verify the functionality of Next button on 2/4 Visit reason screen", enabled = true)
-	public void IDA4_2454_VerifyConfirmVisitPopup() {
+	public void IDA4_2454_VerifyConfirmVisitPopup() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -362,7 +362,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 15, description = "Verify clicking on No button in Confirm visit reason popup", enabled = true)
-	public void IDA4_2455_VerifyConfirmVisitPopupNoButtonFuntionality() {
+	public void IDA4_2455_VerifyConfirmVisitPopupNoButtonFuntionality() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -391,7 +391,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 16, description = "Verify clicking on Yes button in Confirm visit reason popup", enabled = true)
-	public void IDA4_2456_VerifyConfirmVisitPopupYesButtonFuntionality() {
+	public void IDA4_2456_VerifyConfirmVisitPopupYesButtonFuntionality() throws JSONException, InterruptedException {
 		// Enter patient vitals details using data from the appData object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -419,7 +419,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 17, description = "Verify the options displayed for the question", enabled = true)
-	public void IDA4_2459_VerifyOptions() {
+	public void IDA4_2459_VerifyOptions() throws JSONException, InterruptedException {
 		// Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -456,7 +456,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 18, description = "Verify the functionality of Submit button on 1st question", enabled = true)
-	public void IDA4_2462_verifySubmitButtonFuntionality() {
+	public void IDA4_2462_verifySubmitButtonFuntionality() throws JSONException, InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -502,7 +502,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 19, description = "Verify whether user able to go to 3rd question without selecting option/answer for 2nd question", enabled = true)
-	public void IDA4_2464_verifyUserCanGoTo3rdQuestionWithoutSelecting2ndQuestion() {
+	public void IDA4_2464_verifyUserCanGoTo3rdQuestionWithoutSelecting2ndQuestion() throws JSONException, InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -669,7 +669,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 22, description = "Verify by not selecting any options and click on submit button for describe section of 2 of 12", enabled = true)
-	public void IDA4_2467_VerifyDescribeSection() {
+	public void IDA4_2467_VerifyDescribeSection() throws InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -2648,7 +2648,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.clickSymptomsNoButton();
 		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
 		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction1();
+		startVisit1And2StepsPage.scrollToEndAction();
 
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
@@ -2670,7 +2670,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		Thread.sleep(2000);
 		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
 		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction1();
+		startVisit1And2StepsPage.scrollToEndAction();
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
 		startVisit1And2StepsPage.clickOnAbdominalPainChangeIcon();
@@ -2679,7 +2679,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.scrollToEightOfTwelveQuestions();
 		startVisit1And2StepsPage.selectfoodOption();
 		startVisit1And2StepsPage.clickOnSubmitButton();
-		startVisit1And2StepsPage.scrollToEndAction1();
+		startVisit1And2StepsPage.scrollToEndAction();
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
 		startVisit1And2StepsPage.verifySelectedFoodOptionIsDisplayed();
@@ -2702,7 +2702,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		Thread.sleep(2000);
 		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
 		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction1();
+		startVisit1And2StepsPage.scrollToEndAction();
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
 		startVisit1And2StepsPage.clickOnBackButtonOnVisitReasonSummaryScreen();

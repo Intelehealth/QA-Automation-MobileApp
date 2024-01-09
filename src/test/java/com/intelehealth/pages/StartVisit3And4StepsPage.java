@@ -425,7 +425,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Select Hypertension and confirm visit reason
-	public void selectAndConfirmVisitReason() {
+	public void selectAndConfirmVisitReason() throws InterruptedException {
 		click(hyperTension);
 		click(visitReasonNextButton);
 		isDisplayed(confirmVisitPopupTitle);
@@ -435,7 +435,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Handle a series of questions related to Hypertension visit
-	public void handleHypertensionVisitQuestions() {
+	public void handleHypertensionVisitQuestions() throws InterruptedException {
 
 		isDisplayed(visitReasonHeader);
 		isDisplayed(oneOfEightQuestions);

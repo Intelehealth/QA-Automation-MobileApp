@@ -569,7 +569,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	
 	//  Verifies that the Vitals Summary screen is displayed.
 	
-	public void verifyVitailsSummaryScreenIsDisplayed() {
+	public void verifyVitailsSummaryScreenIsDisplayed() throws InterruptedException {
 		isDisplayed(vitalSummaryTitle);
 	}
 
@@ -772,7 +772,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 //	  provided height and weight. Compares the actual status with the expected
 //	  status and prints the result of the verification.
 	
-	public void verifyStatusForNormalWeightPatient(String height, String weight, String expectedStatus) {
+	public void verifyStatusForNormalWeightPatient(String height, String weight, String expectedStatus) throws InterruptedException {
 // Enter the provided height and weight
 		sendKeys(heightEditText, height);
 		sendKeys(weightEditText, weight);
@@ -794,7 +794,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 	// Verifies the status for an underweight patient based on the provided height and weight.
-	public void verifyStatusForUnderWeightPatient(String height, String weight, String expectedStatus) {
+	public void verifyStatusForUnderWeightPatient(String height, String weight, String expectedStatus) throws InterruptedException {
 	    // Enter the provided height into the height field
 	    sendKeys(heightEditText, height);
 
@@ -907,7 +907,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	// Enters the vital details of a patient, including height, weight, blood pressure, pulse, temperature, spo2, and respiratory rate.
 	public void enterPatientVitalsDetails(String height, String weight, String bpSystolicValue, String bpDiastolicValue,
-	                                      String pulse, String temperature, String spo2, String respiratoryRate) {
+	                                      String pulse, String temperature, String spo2, String respiratoryRate) throws InterruptedException {
 		// Enter the provided height into the height field
 		sendKeys(heightEditText, height);
 
@@ -1038,7 +1038,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		}
 	}
 
-	public void verifyVisitReasonScreenIsDisplayed() {
+	public void verifyVisitReasonScreenIsDisplayed() throws InterruptedException {
 		isDisplayed(visitReasonTitle);
 	}
 
@@ -1052,7 +1052,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(visitReasonAbdominalPain);
 	}
 
-	public void verifyVisitReasonAbdominalPainIsSelected() {
+	public void verifyVisitReasonAbdominalPainIsSelected() throws InterruptedException {
 		isSelected(visitReasonAbdominalPain);
 		isDisplayed(selectedReason);
 	}
@@ -1138,7 +1138,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(visitReasononBackButton);
 	}
 
-	public void verifyConfirmVisitPopup() {
+	public void verifyConfirmVisitPopup() throws InterruptedException {
 		isDisplayed(confirmVisitPopupTitle);
 		isDisplayed(confirmVisitPopupSubTitle);
 		isDisplayed(reason);
@@ -1156,15 +1156,15 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 // 2/4 Visit reason : Abdominal Pain
 
-	public void verifyVisitReasonAbdominalPainTitleIsDisplayed() {
+	public void verifyVisitReasonAbdominalPainTitleIsDisplayed() throws InterruptedException {
 		isDisplayed(visitCreationTitle);
 	}
 
-	public void verifyOneOfTwelveQuestionIsDisplayed() {
+	public void verifyOneOfTwelveQuestionIsDisplayed() throws InterruptedException {
 		isDisplayed(OneofElevenQuestion);
 	}
 
-	public void verifyAbdominalFirstQuestionIsDisplayed() {
+	public void verifyAbdominalFirstQuestionIsDisplayed() throws InterruptedException {
 		isDisplayed(addominalPainReasonQuestion1);
 	}
 
@@ -1199,7 +1199,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(submitButton);
 	}
 
-	public void verifyTwoOfTwelveQuestionIsDisplayed() {
+	public void verifyTwoOfTwelveQuestionIsDisplayed() throws InterruptedException {
 		isDisplayed(twoOfElevenQuestion);
 	}
 
@@ -1260,7 +1260,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	}
 
-	public void verifySubmitButtonIsDisplayed() {
+	public void verifySubmitButtonIsDisplayed() throws InterruptedException {
 		isDisplayed(painRadiatesSubmitButton);
 	}
 
@@ -1268,7 +1268,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(painRadiatesSubmitButton);
 	}
 
-	public void verifyThreeOfTweleveQuestionsIsDisplayed() {
+	public void verifyThreeOfTweleveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(threeOfElevenQuestions);
 	}
 
@@ -1280,7 +1280,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(two);
 	}
 
-	public void verifyNumberTwoIsSelected() {
+	public void verifyNumberTwoIsSelected() throws InterruptedException {
 		isDisplayed(two);
 	}
 
@@ -1292,7 +1292,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(days);
 	}
 
-	public void verifyDaysIsSelected() {
+	public void verifyDaysIsSelected() throws InterruptedException {
 		isDisplayed(days);
 	}
 
@@ -1300,7 +1300,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(threeOfElevenQuestionSubmitButton);
 	}
 
-	public void verifyFourOfTwelveQuestionsIsDisplayed() {
+	public void verifyFourOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(fourOfElevenQuestion);
 	}
 
@@ -1308,7 +1308,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(gradualOption);
 	}
 
-	public void verifyFiveOfTwelveQuestonIsDisplayed() {
+	public void verifyFiveOfTwelveQuestonIsDisplayed() throws InterruptedException {
 		isDisplayed(fiveOfTwelveQuestions);
 	}
 
@@ -1316,7 +1316,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(othersOptionOfFourOfTwelveQuestions);
 	}
 
-	public void verifyDescribeBlockIsDisplayedWithSubmitButton() {
+	public void verifyDescribeBlockIsDisplayedWithSubmitButton() throws InterruptedException {
 		isDisplayed(describeTextField);
 		isDisplayed(submitButtonOfFourOfTwelveQuestion);
 	}
@@ -1325,7 +1325,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(submitButtonOfFourOfTwelveQuestion);
 	}
 
-	public void enterValueInDescribeTextBox(String txt) {
+	public void enterValueInDescribeTextBox(String txt) throws InterruptedException {
 		sendKeys(describeTextField, txt);
 //inputField.sendKeys(Keys.ENTER);
 // describeTextField.sendKeys(Keys.ENTER);
@@ -1342,7 +1342,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(night);
 	}
 
-	public void verifySixOfTwelveQuestionsIsDisplayed() {
+	public void verifySixOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(sixOfTwelveQuestions);
 	}
 
@@ -1362,7 +1362,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(sixOfTwelveQuestionsSubmitButton);
 	}
 
-	public void verifySevenOfTwelveQuestionsIsDisplayed() {
+	public void verifySevenOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(sevenOfTwelveQuestions);
 	}
 
@@ -1374,7 +1374,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(mildOneThreeOption);
 	}
 
-	public void verifyEightOfTwelvequsetionsIsDisplayed() {
+	public void verifyEightOfTwelvequsetionsIsDisplayed() throws InterruptedException {
 		isDisplayed(eightOfTwelveQusetions);
 	}
 
@@ -1387,7 +1387,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(eightOfTwelveQuestionsSubmitButton);
 	}
 
-	public void verifyNineOfTwelveQuestionsIsDisplayed() {
+	public void verifyNineOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(nineOfTwelveQuestions);
 	}
 
@@ -1409,7 +1409,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 // 10 of 12
-	public void verifyTenOfTwelveQuestionsIsDisplayed() {
+	public void verifyTenOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(tenOfTwelveQusetions);
 	}
 
@@ -1424,12 +1424,12 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 //Verify that age at onset option is displayed
-	public void verifyAgeAtOnSetIsDisplayed() {
+	public void verifyAgeAtOnSetIsDisplayed() throws InterruptedException {
 		isDisplayed(ageAtOnset);
 	}
 
 // enter age in ageonset Input feild
-	public void enterAgeInAgeOnSetFeild(String txt) {
+	public void enterAgeInAgeOnSetFeild(String txt) throws InterruptedException {
 		sendKeys(ageAtOnSetInputFiled, txt);
 	}
 
@@ -1439,12 +1439,12 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 //verify calender is displayed
-	public void verifyCalenderIsDisplayed() {
+	public void verifyCalenderIsDisplayed() throws InterruptedException {
 		isDisplayed(calender);
 	}
 
 //verify that LastMenstruationPeriod Is Displayed
-	public void verifyLastMenstruationPeriodIsDisplayed() {
+	public void verifyLastMenstruationPeriodIsDisplayed() throws InterruptedException {
 		isDisplayed(lastMenstruationPeriod);
 	}
 
@@ -1473,7 +1473,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 //11 of 12 
 // Verify that the eleventh question out of twelve is displayed
-	public void verifyElevenOfTwelveQuestionsIsDisplayed() {
+	public void verifyElevenOfTwelveQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(elevenOfTwelveQuestions);
 	}
 
@@ -1489,7 +1489,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 //12 of 12 
 // Check if the element representing twelve questions is displayed
-	public void verifyTwelveOfTwelveQusetionsIsDisplayed() {
+	public void verifyTwelveOfTwelveQusetionsIsDisplayed() throws InterruptedException {
 		isDisplayed(twelveOfTweleveQusetions);
 	}
 
@@ -1504,12 +1504,12 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 // Check if the element representing the title for associated symptoms is displayed
-	public void verifyAssociatedSymptomsTitleIsDisplayed() {
+	public void verifyAssociatedSymptomsTitleIsDisplayed() throws InterruptedException {
 		isDisplayed(associatedSymptomsTitle);
 	}
 
 // Check if the question doYouHaveFollowingSymptom is displayed
-	public void verifyDoYouHaveFollowingSymptomIsDisplayed() {
+	public void verifyDoYouHaveFollowingSymptomIsDisplayed() throws InterruptedException {
 		isDisplayed(doYouHaveFollowingSymptom);
 	}
 
@@ -1518,19 +1518,19 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(changeInApetiteYesButton);
 	}
 
-	public void verifyWhatIsTheChangeIsDisplayed() {
+	public void verifyWhatIsTheChangeIsDisplayed() throws InterruptedException {
 		isDisplayed(whatIsTheChange);
 	}
 
-	public void verifyInreasedOptionIsDisplayed() {
+	public void verifyInreasedOptionIsDisplayed() throws InterruptedException {
 		isDisplayed(increased);
 	}
 
-	public void verifyDecreasedOptionIsDisplayed() {
+	public void verifyDecreasedOptionIsDisplayed() throws InterruptedException {
 		isDisplayed(decreased);
 	}
 
-	public void verifyOneOfOneQuestionsIsDisplayed() {
+	public void verifyOneOfOneQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(oneOfOneQuestions);
 	}
 
@@ -1543,7 +1543,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 //Method to verify personal details
-	public boolean verifyPersonalDetails(String expectedGender, String expectedDOB, String expectedAge) {
+	public boolean verifyPersonalDetails(String expectedGender, String expectedDOB, String expectedAge) throws InterruptedException {
 		return isDisplayed(personalDetailsHeader)
 				&& getText(nameValue, "Name: ").equals(getText(patientName, "PatientName:"))
 				&& getText(genderValue, "Gender: ").equals(expectedGender)
@@ -1552,7 +1552,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 // Method to verify address details
 	public boolean verifyAddressDetails(String expectedPostalCode, String expectedCountry, String expectedState,
-			String expectedDistrict, String expectedVillage) {
+			String expectedDistrict, String expectedVillage) throws InterruptedException {
 		return isDisplayed(addressDetailsHeader) && getText(postalCodeValue, "Postal Code: ").equals(expectedPostalCode)
 				&& getText(countryValue, "Country: ").equals(expectedCountry)
 				&& getText(stateValue, "State: ").equals(expectedState)
@@ -1562,7 +1562,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 // Method to verify other details
 	public boolean verifyOtherDetails(String expectedNationalID, String expectedOccupation, String expectedCaste,
-			String expectedEducation, String expectedEconomic) {
+			String expectedEducation, String expectedEconomic) throws InterruptedException {
 		return isDisplayed(otherDetailsHeader) && getText(nationalIdValue, "nationalId:").equals(expectedNationalID)
 				&& getText(occupationValue, "Occupation: ").equals(expectedOccupation)
 				&& getText(casteValue, "Caste: ").equals(expectedCaste)
@@ -1592,7 +1592,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 	// Verifies that the text area for describing symptoms is displayed.
-	public void verifyDescribeTextAreaIsDisplayed() {
+	public void verifyDescribeTextAreaIsDisplayed() throws InterruptedException {
 		isDisplayed(describeTextArea);
 	}
 
@@ -1613,7 +1613,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	}
 
-	public void enterDataInDescribeTextFiled(String txt) {
+	public void enterDataInDescribeTextFiled(String txt) throws InterruptedException {
 		sendKeys(describeTextArea, txt);
 	}
 
@@ -1628,12 +1628,9 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(associatedSymptomSubmitButton);
 	}
 
-	public void scrollToEndAction1() {
-
-	}
-
+	
 	// visit reason summary screen
-	public void verifyVisitReasonSummaryScreenIsDisplayed() {
+	public void verifyVisitReasonSummaryScreenIsDisplayed() throws InterruptedException {
 		isDisplayed(visitReasonSummaryTitle);
 	}
 
@@ -1650,15 +1647,17 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	/**
 	 * Verifies if the selected food option is displayed on the screen.
+	 * @throws InterruptedException 
 	 */
-	public void verifySelectedFoodOptionIsDisplayed() {
+	public void verifySelectedFoodOptionIsDisplayed() throws InterruptedException {
 		isDisplayed(food);
 	}
 
 	/**
 	 * Verifies if vomiting information is displayed on the screen.
+	 * @throws InterruptedException 
 	 */
-	public void verifyVomitingIsDisplayed() {
+	public void verifyVomitingIsDisplayed() throws InterruptedException {
 		isDisplayed(vomiting);
 	}
 
@@ -1679,8 +1678,9 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	/**
 	 * Verifies if the "Please Wash or Sanitize Your Hands" popup is displayed.
 	 * Also, checks for the presence of the "Okay" button.
+	 * @throws InterruptedException 
 	 */
-	public void verifyPleaseWashOrSanitizeYourHandsPopupIsDisplayed() {
+	public void verifyPleaseWashOrSanitizeYourHandsPopupIsDisplayed() throws InterruptedException {
 		isDisplayed(pleaseWashOrSanitizeYourHands);
 		isDisplayed(okayButton);
 	}
@@ -1711,9 +1711,10 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	 * @param temperature      The body temperature of the patient.
 	 * @param spo2             The oxygen saturation level of the patient.
 	 * @param respiratoryRate  The respiratory rate of the patient.
+	 * @throws InterruptedException 
 	 */
 	public void enterVitalsAndCompleteVisit(String height, String weight, String bpSystolicValue,
-			String bpDiastolicValue, String pulse, String temperature, String spo2, String respiratoryRate) {
+			String bpDiastolicValue, String pulse, String temperature, String spo2, String respiratoryRate) throws InterruptedException {
 		// Enter patient vitals details
 		enterPatientVitalsDetails(height, weight, bpSystolicValue, bpDiastolicValue, pulse, temperature, spo2,
 				respiratoryRate);
@@ -1795,7 +1796,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 	public void enterVitalsDetailsAndCompleteTenQuestions(String height, String weight, String bpSystolicValue,
-			String bpDiastolicValue, String pulse, String temperature, String spo2, String respiratoryRate) {
+			String bpDiastolicValue, String pulse, String temperature, String spo2, String respiratoryRate) throws InterruptedException {
 		// Enter patient vitals details
 		enterPatientVitalsDetails(height, weight, bpSystolicValue, bpDiastolicValue, pulse, temperature, spo2,
 				respiratoryRate);
@@ -1945,7 +1946,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	}
 
-	public void verifyUserAllowedToSelectOneOptionInElevenOfTwelveQuestion() {
+	public void verifyUserAllowedToSelectOneOptionInElevenOfTwelveQuestion() throws InterruptedException {
 		click(yesDescribeOption);
 		isDisplayed(describeField);
 		click(noneOption);
@@ -1965,7 +1966,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	}
 
-	public void verifyAssociatedSymptomsSectionOnSummaryPage() {
+	public void verifyAssociatedSymptomsSectionOnSummaryPage() throws InterruptedException {
 		isDisplayed(associatedSymptomsTitle);
 
 		click(firstYesButton);
@@ -2032,7 +2033,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 //Verifies the functionality of selecting and confirming a visit reason after entering vitals
-	public void verifyAllReasonFuntionality() {
+	public void verifyAllReasonFuntionality() throws InterruptedException {
 		// Navigate to the next screen after entering vitals
 		clickOnFirstVitalsNextButton();
 

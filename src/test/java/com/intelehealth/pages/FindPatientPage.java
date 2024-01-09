@@ -74,7 +74,7 @@ public void verifySearchedPatient() {
 	isDisplayed(automationOnePatient,"Patient is Displayed");
 }
 // Method to enter an invalid patient name in the search box and press Enter
-public void enterInvalidPatienTName(String txt) {
+public void enterInvalidPatienTName(String txt) throws InterruptedException {
 	sendKeys(findPatientSearchBar,txt);
 	
 }
@@ -85,7 +85,7 @@ public void verifyInvalidPatientSearch(){
 	isDisplayed(addNewPatientCTAButton,"");
 }
 // Method to verify if the search box is visible
-public void verifySearchBoxIsVisible() {
-	isDisplayed(findPatientSearchBar,"");
+public void verifySearchBoxIsVisible() throws InterruptedException {
+	isDisplayed(findPatientSearchBar);
 }
 }
