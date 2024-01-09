@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.Status;
@@ -27,8 +28,7 @@ public class NotificationPage extends BaseTest {
 	@AndroidFindBy(accessibility = "Notifications Header Title TextView")
 	private WebElement notificationHeader;
 
-	@AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@content-desc=\"Notifications Today RecyclerView\"]\r\n"
-			+ "//android.widget.TextView[@content-desc=\"Notification List Item Name TextView\"]")
+	@AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@content-desc='Notifications Today RecyclerView']//android.widget.TextView[@content-desc='Notification List Item Name TextView']")
 	private List<WebElement> patients;
 	@AndroidFindBy(accessibility = "Prescription Screen Title TextView")
 	private WebElement prescriptionTitle;
@@ -65,9 +65,14 @@ public class NotificationPage extends BaseTest {
 		}
 	}
 
-	public void verifyUserAbleToViewPrescription() {
+	By notificationPatients = By.xpath("//androidx.recyclerview.widget.RecyclerView[@content-desc=\"Notifications Today RecyclerView\"]\r\n"
+			+ "//android.widget.TextView[@content-desc=\"Notification List Item Name TextView\"]");
+	
+	
+	public void verifyUserAbleToViewPrescription() throws InterruptedException {
+		Thread.sleep(25000);
 		startVisit3And4StepsPage.click(notificationIcon, "Clicked on Notification Icon");
-
+        waitForVisibility(notificationHeader);
 		String input = notificationHeader.getText();
 		String count = null;
 
@@ -106,6 +111,7 @@ public class NotificationPage extends BaseTest {
 	}
 
 	public void verifyDataIsSyncedToWeb() throws JSONException, InterruptedException {
+		Thread.sleep(25000);
 		addNewPatientPage.registerAPatient(appData.getJSONObject("personalDetails").getString("firstName"),
 				appData.getJSONObject("patientAddress").getString("pincode"),
 				appData.getJSONObject("patientAddress").getString("village"),
@@ -131,7 +137,7 @@ public class NotificationPage extends BaseTest {
 	    Thread.sleep(10000);
 		click(notificationIcon, "Clicked on Notification Icon");
 		click(notificationsRefreshButton, "Clicking on app sync icon");
-		if (isDisplayedListofWebelemets(patients)) {
+		if (isDisplayed2(notificationPatients)) {
 			ExtentReport.getTest().log(Status.INFO,
 					"Verifying whether user is able to view the recent prescription received notification");
 			System.out.println("Able to view the recent prescription received notification");
@@ -140,6 +146,7 @@ public class NotificationPage extends BaseTest {
 		}
 		int numberOfNotifications = patients.size();
 		String notifications = String.valueOf(numberOfNotifications);
+		waitForVisibility(notificationHeader);
 		String prescReceived = notificationHeader.getText();
 		String count = extractBefore(prescReceived, "prescriptions received");
 		if (notifications.equals(count)) {

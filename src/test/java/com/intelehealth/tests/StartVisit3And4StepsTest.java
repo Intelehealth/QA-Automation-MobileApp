@@ -127,7 +127,7 @@ public class StartVisit3And4StepsTest extends BaseTest {
 
 	@Test(priority = 1, description = "Verify 1 of 6 questions is shown to user", enabled = true)
 
-	public void IDA4_2562_verifyOneOfSixQuestionsIsShownToUser() {
+	public void IDA4_2562_verifyOneOfSixQuestionsIsShownToUser() throws InterruptedException {
      // method to verify that 1 of 6 questions is displayed
 		startVisit3And4StepsPage.verifyOneOfSixQuestions();
 
@@ -144,14 +144,14 @@ public class StartVisit3And4StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 3, description = "Verify when user selects Take a picture in 1 of 6", enabled = true)
-	public void IDA4_2564_verifyTakeAPictureOption() {
+	public void IDA4_2564_verifyTakeAPictureOption() throws InterruptedException {
 		//method to verify that 1 of 6 questions is displayed
 		startVisit3And4StepsPage.verifyOneOfSixQuestions();
 	//	method to verify the take a picture option
 		startVisit3And4StepsPage.verifyTakeAPictureOption();
 	}
 	@Test(priority = 4, description = "Verify when user clicks on upload icon in 1 of 6", enabled = true)
-	public void IDA4_2565_verifyUploadIcon() {
+	public void IDA4_2565_verifyUploadIcon() throws InterruptedException {
 	//	method to verify that 1 of 6 questions is displayed
 		startVisit3And4StepsPage.verifyOneOfSixQuestions();
 		//method to verify the upload icon
@@ -159,7 +159,7 @@ public class StartVisit3And4StepsTest extends BaseTest {
 		
 	}
 	@Test(priority = 5, description = "Verify 2 of 6 questions is shown to user", enabled = true)
-	public void IDA4_2574_verifyTwoOfSixQuestionIsDisplayed() {
+	public void IDA4_2574_verifyTwoOfSixQuestionIsDisplayed() throws InterruptedException {
 		//method to verify that 1 of 6 questions is displayed
 		startVisit3And4StepsPage.verifyOneOfSixQuestions();
 	//	method to verify 2 of 6 questions are displayed with options
@@ -232,70 +232,70 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 		
 	}
 	@Test(priority = 11, description = "Verify 5 of 6 questions is shown to user ", enabled = true)
-	public void IDA4_2596_verifyFiveOfSixQuestionsIsDisplayedWithOptions() {
+	public void IDA4_2596_verifyFiveOfSixQuestionsIsDisplayedWithOptions() throws InterruptedException {
 		startVisit3And4StepsPage.verifyFiveOfSixQuestionsOptionsAreDisplayed();
 		
 	}
 	@Test(priority = 12, description = "Verify when user clicks Nails are normal/Nails are pale option in 5 of 6", enabled = true)
-	public void IDA4_2597_verifyFiveOfSixQuestionsIsDisplayedWithOptions() {
+	public void IDA4_2597_verifyFiveOfSixQuestionsIsDisplayedWithOptions() throws InterruptedException {
 		startVisit3And4StepsPage.verifyFiveOfSixQuestionsNailsAreNormal_NailsArePaleOption();
 		
 		
 	}
 	@Test(priority = 13, description = "Verify when user clicks Nails are normal/Nails are pale option in 5 of 6", enabled = true)
-	public void IDA4_2606_verifySixofSixQuestionsIsShownToUser() {
+	public void IDA4_2606_verifySixofSixQuestionsIsShownToUser() throws InterruptedException {
 		startVisit3And4StepsPage.verifySixOfSixQuestionsIsDisplayedWithOptions();
 	
 	}
 	@Test(priority = 14, description = "Verify when user clicks -No oedema/In left/In right/Both option in 6 of 6", enabled = true)
-	public void IDA4_2607_verifySixofSixQuestionsOptions() {
+	public void IDA4_2607_verifySixofSixQuestionsOptions() throws InterruptedException {
 		startVisit3And4StepsPage.verifySixOfSixQuestionsIsDisplayedWithOptions();
 		startVisit3And4StepsPage.verifySixOfSixQuestionsOptions();
 		
 	}
 	@Test(priority = 15, description = "Verify Change button functionality on Physical examination summary screen", enabled = true)
-	public void IDA4_2621_verifyChangeButtonFunctionality() {
+	public void IDA4_2621_verifyChangeButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyPhysicalExaminationChangeButton();
 	}
 	
 	@Test(priority = 16, description = "Verify Back button functionality on Physical examination summary screen", enabled = true)
-	public void IDA4_2623_verifyBackButtonFunctionality() {
+	public void IDA4_2623_verifyBackButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyBackButton();
 	}
 	@Test(priority = 17, description = "Verify Back button functionality on Physical examination summary screen", enabled = true)
-	public void IDA4_2624_verifyConfirmButtonFunctionality() {
+	public void IDA4_2624_verifyConfirmButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyConfirmButton();
 	}
 	@Test(priority = 18, description = "Verify the UI of Family history screen", enabled = true)
-	public void IDA4_2641_verifyFamilyHistoryUi() {
+	public void IDA4_2641_verifyFamilyHistoryUi() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.verifyFamilyHistoryScreenUi();
 	}
 	@Test(priority = 19, description = "Verify one or more options can be selected for the question on Family history screen", enabled = true)
-	public void IDA4_2644_verifyMultipleOptionsInFamilyHistoryScreen() {
+	public void IDA4_2644_verifyMultipleOptionsInFamilyHistoryScreen() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.validateMultipleOptionsInFamilyHistory();
 	}
 	@Test(priority = 20, description = "Verify if Other option is selected on Family history screen", enabled = true)
-	public void IDA4_2645_verifyTextBoxIsDisplayed() {
+	public void IDA4_2645_verifyTextBoxIsDisplayed() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.verifyDescribeTextBoxIsDisplayed();
 }
 	
 	@Test(priority = 21, description = "Verify the user is able to enter data into the textbox on Family history screen", enabled = true)
-	public void IDA4_2646_verifyUserAbleToEnterDataInTextBox() {
+	public void IDA4_2646_verifyUserAbleToEnterDataInTextBox() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
 	}
 	@Test(priority = 22, description = "Verify confirm button functionality on Family history screen", enabled = true)
-	public void IDA4_2648_verifyConfirmButtonFunctionality() {
+	public void IDA4_2648_verifyConfirmButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
@@ -304,7 +304,7 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 		
 	}
 	@Test(priority = 23, description = "Verify Change button functionality for patient history on Medical history summary screen", enabled = true)
-	public void IDA4_2652_verifyPatientHistoryScreenChangeButton() {
+	public void IDA4_2652_verifyPatientHistoryScreenChangeButton() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
@@ -314,7 +314,7 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 24, description = "Verify Change button functionality for family history on Medical history summary screen", enabled = true)
-	public void IDA4_2653_verifyFamilyHistoryScreenChangeButton() {
+	public void IDA4_2653_verifyFamilyHistoryScreenChangeButton() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
@@ -324,7 +324,7 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 25, description = "Verify Back button functionality on Medical history summary screen", enabled = true)
-	public void IDA4_2655_verifyBackButtonFunctionality() {
+	public void IDA4_2655_verifyBackButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
@@ -333,7 +333,7 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 26, description = "Verify Confirm button functionality on Medical history summary screen", enabled = true)
-	public void IDA4_2656_verifyConfirmButtonFunctionality() {
+	public void IDA4_2656_verifyConfirmButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
 		startVisit3And4StepsPage.enterDataInTextBoxAndSubmit();
@@ -341,35 +341,35 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 27, description = "Verify that user can select one or more options for the questions allowed on Patient history screen", enabled = true)
-	public void IDA4_2628_verifyUserAbleToSelectOneOrMoreOption() {
+	public void IDA4_2628_verifyUserAbleToSelectOneOrMoreOption() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyUserAbleToSelectOneOrMoreOption();
 
 	}
 
 	@Test(priority = 28, description = "Verify Skip functionality on Patient history screen", enabled = true)
-	public void IDA4_2630_verifySkipButtonFunctionality() {
+	public void IDA4_2630_verifySkipButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifySkipButtonOnPatientScreen();
 
 	}
 
 	@Test(priority = 29, description = "Verify Submit functionality on Patient history screen", enabled = true)
-	public void IDA4_2632_verifySubmitButtonFunctionality() {
+	public void IDA4_2632_verifySubmitButtonFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyPatientHistorySubmitButtonFunctionality();
 
 	}
 
 	@Test(priority = 30, description = "Verify Other [Describe] textbox functionality on Patient history screen", enabled = true)
-	public void IDA4_2633_verifyOtherDescribeFunctionality() {
+	public void IDA4_2633_verifyOtherDescribeFunctionality() throws InterruptedException {
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.verifyPatientHistoryOtherDescribeTextBox();
 
 	}
 
 	@Test(priority = 31, description = "Verify dropdowns for selecting durations on Patient history screen", enabled = true)
-	public void IDA4_2635_verifyDropdowns() {
+	public void IDA4_2635_verifyDropdowns() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 
@@ -379,28 +379,28 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 32, description = "Verify calendar selection option on Patient history screen", enabled = true)
-	public void IDA4_2636_verifyCalenderSelectionOption() {
+	public void IDA4_2636_verifyCalenderSelectionOption() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.calenderSelectionOption();
 	}
 
 	@Test(priority = 33, description = "Verify whether the selected date appears correctly on Patient history screen", enabled = true)
-	public void IDA4_2637_verifySelectedDateAppearsOnPatientHistoryScreen() {
+	public void IDA4_2637_verifySelectedDateAppearsOnPatientHistoryScreen() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.calenderSelectionOption();
 	}
 
 	@Test(priority = 34, description = "Verify whether the changes are updated in physical examination screen", enabled = true)
-	public void IDA4_2622_verifyChangesUpdated() {
+	public void IDA4_2622_verifyChangesUpdated() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.updatePhysicalExaminationQuestionsAndVerify();
 	}
 
 	@Test(priority = 35, description = "Verify whether the changes are updated in medical history summary screen", enabled = true)
-	public void IDA4_2654_verifyChangesUpdatedInMedicalHistoryScreen() {
+	public void IDA4_2654_verifyChangesUpdatedInMedicalHistoryScreen() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
@@ -409,7 +409,7 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 36, description = "Verify Describe section of the question on Family history screen", enabled = true)
-	public void IDA4_2647_verifyFamilyHistoryDescribeSection() {
+	public void IDA4_2647_verifyFamilyHistoryDescribeSection() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.answerPhysicalExaminationQuestions();
 		startVisit3And4StepsPage.answerMedicalHistoryQuestions();
@@ -417,59 +417,59 @@ public void IDA4_2575_verifyTwoOfSixQuestionNormalPaleOption() throws Interrupte
 	}
 
 	@Test(priority = 37, description = "Verify clicking photo in 1 of 6", enabled = true)
-	public void IDA4_2567_verifyClickingOnPhotoInOneOfSix() {
+	public void IDA4_2567_verifyClickingOnPhotoInOneOfSix() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.verifyClickingPhotoInOneOfSixQuestions();
 	}
 
 	@Test(priority = 38, description = "Verify clicking photo in 1 of 6", enabled = true)
-	public void IDA4_2579_verifyClickingOnPhotoInTwoOfSix() {
+	public void IDA4_2579_verifyClickingOnPhotoInTwoOfSix() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.verifyClickingPhotoInTwoOfSixQuestions();
 	}
 
 	@Test(priority = 39, description = "Verify when user selects take photo option in 4 of 6", enabled = true)
-	public void IDA4_2590_verifyClickingOnPhotoInFourOfSix() {
+	public void IDA4_2590_verifyClickingOnPhotoInFourOfSix() throws InterruptedException {
 		// answers the physical examination questions
 		startVisit3And4StepsPage.verifyClickingPhotoInFourOfSixQuestions();
 	}
 
 	@Test(priority = 40, description = "Verify when user selects take photo option in 5 of 6", enabled = true)
-	public void IDA4_2601_verifyClickingOnPhotoInFiveOfSix() {
+	public void IDA4_2601_verifyClickingOnPhotoInFiveOfSix() throws InterruptedException {
 		startVisit3And4StepsPage.verifyClickingPhotoInFiveOfSixQuestions();
 	}
 
 	@Test(priority = 41, description = "Verify when user selects take photo option in 6 of 6", enabled = true)
-	public void IDA4_2611_verifyClickingOnPhotoInSixOfSix() {
+	public void IDA4_2611_verifyClickingOnPhotoInSixOfSix() throws InterruptedException {
 		startVisit3And4StepsPage.verifyClickingPhotoInSixOfSixQuestions();
 	}
 
 	@Test(priority = 42, description = "Verify picture is uploaded when selected from gallery/photos in 1 of 6", enabled = true)
-	public void IDA4_2572_verifyPictureUploadedFromGalleryInOneOfSix() {
+	public void IDA4_2572_verifyPictureUploadedFromGalleryInOneOfSix() throws InterruptedException {
 
 		startVisit3And4StepsPage.verifyPictureUploadedFromGalleryInOneOfSix();
 	}
 
 	@Test(priority = 43, description = "Verify picture is uploaded when selected from gallery/photos in 2 of 6", enabled = true)
-	public void IDA4_2582_verifyPictureUploadedFromGalleryInTwoOfSix() {
+	public void IDA4_2582_verifyPictureUploadedFromGalleryInTwoOfSix() throws InterruptedException {
 
 		startVisit3And4StepsPage.verifyPictureUploadedFromGalleryInTwoOfSix();
 	}
 
 	@Test(priority = 44, description = "Verify picture is uploaded when selected from gallery/photos in 4 of 6", enabled = true)
-	public void IDA4_2594_verifyPictureUploadedFromGalleryInFourOfSix() {
+	public void IDA4_2594_verifyPictureUploadedFromGalleryInFourOfSix() throws InterruptedException {
 
 		startVisit3And4StepsPage.verifyPictureUploadedFromGalleryInFourOfSix();
 	}
 
 	@Test(priority = 45, description = "Verify picture is uploaded when selected from gallery/photos in 4 of 6", enabled = true)
-	public void IDA4_2604_verifyPictureUploadedFromGalleryInFiveOfSix() {
+	public void IDA4_2604_verifyPictureUploadedFromGalleryInFiveOfSix() throws InterruptedException {
 
 		startVisit3And4StepsPage.verifyPictureUploadedFromGalleryInFiveOfSix();
 	}
 
 	@Test(priority = 46, description = "Verify picture is uploaded when selected from gallery/photos in 6 of 6", enabled = true)
-	public void IDA4_2614_verifyPictureUploadedFromGalleryInSixOfSix() {
+	public void IDA4_2614_verifyPictureUploadedFromGalleryInSixOfSix() throws InterruptedException {
 
 		startVisit3And4StepsPage.verifyPictureUploadedFromGalleryInSixOfSix();
 	}

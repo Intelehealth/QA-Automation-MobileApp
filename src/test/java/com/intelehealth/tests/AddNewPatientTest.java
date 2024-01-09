@@ -65,7 +65,7 @@ public class AddNewPatientTest extends BaseTest {
 	
 
 	@Test(priority = 1, description = "Verify the functionality of Accept button on Privacy Policy screen", enabled = true)
-	public void IDA4_2258_verifyAcceptButtonFunctionality() {
+	public void IDA4_2258_verifyAcceptButtonFunctionality() throws InterruptedException {
 
 		 // Verify that the location is displayed
 	    appSetupPage.locationIsDisplayed();
@@ -81,7 +81,7 @@ public class AddNewPatientTest extends BaseTest {
 	} 
 
 	@Test(priority = 2, description = "Verify the functionality of Decline button on Privacy Policy screen", enabled = true)
-	public void IDA4_2259_verifyDeclineButtonFunctionality() {
+	public void IDA4_2259_verifyDeclineButtonFunctionality() throws InterruptedException {
 		// Navigate to Add Patients screen
 	    addNewPatientPage.clickOnAddPatients();
 
@@ -169,7 +169,7 @@ public class AddNewPatientTest extends BaseTest {
 	}
 
 	@Test(priority = 5, description = " Verify Next button functionality from Personal Screen of Add new patient", enabled = true)
-	public void IDA4_2283_VerifyNextButtonFuntionality() {
+	public void IDA4_2283_verifyNextButtonFuntionality() throws InterruptedException {
 
 		// Navigate to Add Patients screen
 	    addNewPatientPage.clickOnAddPatients();
@@ -210,7 +210,7 @@ public class AddNewPatientTest extends BaseTest {
 	}
 
 	@Test(priority = 6, description = "Verify Next button functionality on Address screen", enabled = true)
-	public void IDA4_2295_VerifyNextButtonFunctionalityOnAddressScreen() {
+	public void IDA4_2295_verifyNextButtonFunctionalityOnAddressScreen() throws InterruptedException {
 
 		// Navigate to Add Patients screen
 	    addNewPatientPage.clickOnAddPatients();
@@ -263,7 +263,7 @@ public class AddNewPatientTest extends BaseTest {
 	}
 
 	@Test(priority = 7, description = " Verify clicking on change option for personal details", enabled = true)
-	public void IDA4_2309_VerifyChangeOptionForPersonalDetails() {
+	public void IDA4_2309_verifyChangeOptionForPersonalDetails() throws InterruptedException {
 		// Click on the "Add Patients" button
 	    addNewPatientPage.clickOnAddPatients();
 
@@ -326,9 +326,12 @@ public class AddNewPatientTest extends BaseTest {
 	    // Select the district from the test data
 	    addNewPatientPage.selectDistrict();
 
-	    // Uncomment the following line if there's a method to enter patient address details
-	    // addNewPatientPage.enterPatientAddressDetails(appData.getJSONObject("patientAddress").getString("nationalId"),appData.getJSONObject("patientAddress").getString("occupation"));
-
+	 // Enter patient address details from the test data
+	 		addNewPatientPage.enterPatientAddressDetails(
+	 		        appData.getJSONObject("patientAddress").getString("pincode"),
+	 		        appData.getJSONObject("patientAddress").getString("village"),
+	 		        appData.getJSONObject("patientAddress").getString("address1"),
+	 		        appData.getJSONObject("patientAddress").getString("address2"));
 	    // Click on the "Next" button to proceed to the next step
 	    addNewPatientPage.clickOnNextButton2();
 
@@ -349,7 +352,7 @@ public class AddNewPatientTest extends BaseTest {
 
 	@Test(priority = 8, description = " Verify clicking on change option for personal details", enabled = true)
 
-	public void IDA4_2310_verifyPersonalDetailsUpdation() {
+	public void IDA4_2310_verifyPersonalDetailsUpdation() throws InterruptedException {
 
 		// Click on the "Add Patients" button
 		addNewPatientPage.clickOnAddPatients();
@@ -544,7 +547,7 @@ public class AddNewPatientTest extends BaseTest {
 
 	}
 	
-	@Test( priority = 10, description = "IDA4-2312: Verify the update of address details reflects on patient details screen", enabled = true)
+	@Test( priority = 10, description = " Verify the update of address details reflects on patient details screen", enabled = true)
 	public void IDA4_2312_verifyAddressDetailsUpdation() throws InterruptedException {
 		// Click on the "Add Patients" button
 	    addNewPatientPage.clickOnAddPatients();
@@ -648,7 +651,7 @@ public class AddNewPatientTest extends BaseTest {
 	    addNewPatientPage.verifyPostalCodeUpdateIsSuccessful(appData.getJSONObject("patientAddress").getString("pincode1"));
 	}
 
-	@Test(priority = 11, description = "IDA4-2313: Verify clicking on change option for Other details", enabled = true)
+	@Test(priority = 11, description = "Verify clicking on change option for Other details", enabled = true)
 	public void IDA4_2313_verifyChangeOptionForAOtherDetailsScreen() throws InterruptedException {
 		// Click on the "Add Patients" button to initiate the patient addition process
 		addNewPatientPage.clickOnAddPatients();
@@ -739,8 +742,8 @@ public class AddNewPatientTest extends BaseTest {
 	}
 
 	
-	@Test( priority = 12, description = "IDA4-2314: Verify the update of other details reflects on patient details screen", enabled = true)
-	public void IDA4_2314_VerifyUpdatedOtherDetails() throws InterruptedException {
+	@Test( priority = 12, description = " Verify the update of other details reflects on patient details screen", enabled = true)
+	public void IDA4_2314_verifyUpdatedOtherDetails() throws InterruptedException {
 		 // Click on the "Add Patients" button to initiate the patient addition process.
 	    addNewPatientPage.clickOnAddPatients();
 	    
@@ -824,9 +827,8 @@ public class AddNewPatientTest extends BaseTest {
 	    addNewPatientPage.verifyNationalIDUpdateIsSuccessful("345678");
 	}
 
-	@Test(groups = {
-			"REGRESSION" }, priority = 13, description = "IDA4-2315: Verify Start Visit button functionality", enabled = true)
-	public void IDA4_2314_VerifyStartVisitButtonFunctionality() throws InterruptedException {
+	@Test( priority = 13, description = "Verify Start Visit button functionality", enabled = true)
+	public void IDA4_2315_verifyStartVisitButtonFunctionality() throws InterruptedException {
 		 // Click on 'Add Patients' button
 	    addNewPatientPage.clickOnAddPatients();
 
@@ -900,9 +902,8 @@ public class AddNewPatientTest extends BaseTest {
 	    addNewPatientPage.verifyPatientRegisteredPopupIsDisplayed();
 	}
 
-	@Test(groups = {
-			"REGRESSION" }, priority = 14, description = "Verify Continue button functionality when clicked on Start visit", enabled = true)
-	public void verifyContinueButtonFuntionality() throws InterruptedException {
+	@Test( priority = 14, description = "Verify Continue button functionality when clicked on Start visit", enabled = true)
+	public void IDA4_2317_verifyContinueButtonFuntionality() throws InterruptedException {
 		//Register a patient
 		addNewPatientPage.registerAPatient(appData.getJSONObject("personalDetails").getString("firstName"),
 				appData.getJSONObject("patientAddress").getString("pincode"),
@@ -917,9 +918,8 @@ public class AddNewPatientTest extends BaseTest {
 	    addNewPatientPage.verifyVitalsScreenIsDisplayed();;
 	}
 
-	@Test(groups = {
-			"REGRESSION" }, priority = 15, description = "Verify clicking on Past Visit", enabled = true)
-	public void IDA4_2321_VerifyPastVisitScreen() throws InterruptedException {
+	@Test( priority = 15, description = "Verify clicking on Past Visit", enabled = true)
+	public void IDA4_2321_verifyPastVisitScreen() throws InterruptedException {
 		Thread.sleep(5000);		   //  Click on the 'Find Patient' button
 	    findPatientPage.clickOnFindPatient();
 
@@ -942,51 +942,51 @@ public class AddNewPatientTest extends BaseTest {
 	    addNewPatientPage.verifyPastVisitSummaryScreen();
 	}
 
-//	@Test( priority = 16, description = "Verify clicking on Open Visit", enabled = true)
-//	public void IDA4_2323_VeifyOpenVisitScreen() throws InterruptedException {
-//		
-//		 
-//		 //  Click on the 'Find Patient' button
-//	    findPatientPage.clickOnFindPatient();
-//	    
-//	    // Introduce another delay for 4 seconds (assumes a reason for the delay)
-//	    Thread.sleep(4000);
-//	    
-//	    //  Verify that the search box is visible
-//	    findPatientPage.verifySearchBoxIsVisible();
-//	    
-//	    //  Scroll to view the 'Prescription Pending' section
-//	    addNewPatientPage.scrollToViewPrescriptionPending();
-//	    
-//	    //  Click on the 'Prescription Pending' section
-//	    addNewPatientPage.clickOnPrescriptionPending();
-//	    
-//	    // Scroll to view 'Open Visits'
-//	    addNewPatientPage.scrollToViewOpenVisits();
-//	    
-//	    //  Click on the arrow (assuming it's a back arrow or similar)
-//	    addNewPatientPage.clickOnArrow();
-//	    
-//	    //  Verify that the 'Open Visit' summary screen is displayed
-//	    addNewPatientPage.verifyOpenVisitSummaryScreen();
-//
-//	}
+	@Test( priority = 16, description = "Verify clicking on Open Visit", enabled = true)
+	public void IDA4_2323_verifyOpenVisitScreen() throws InterruptedException {
+		
+		 
+		 //  Click on the 'Find Patient' button
+	    findPatientPage.clickOnFindPatient();
+	    
+	    // Introduce another delay for 4 seconds (assumes a reason for the delay)
+	    Thread.sleep(4000);
+	    
+	    //  Verify that the search box is visible
+	    findPatientPage.verifySearchBoxIsVisible();
+	    
+	    //  Scroll to view the 'Prescription Pending' section
+	    addNewPatientPage.scrollToViewPrescriptionPending();
+	    
+	    //  Click on the 'Prescription Pending' section
+	    addNewPatientPage.clickOnPrescriptionPending();
+	    
+	    // Scroll to view 'Open Visits'
+	    addNewPatientPage.scrollToViewOpenVisits();
+	    
+	    //  Click on the arrow (assuming it's a back arrow or similar)
+	    addNewPatientPage.clickOnArrow();
+	    
+	    //  Verify that the 'Open Visit' summary screen is displayed
+	    addNewPatientPage.verifyOpenVisitSummaryScreen();
 
-//	@Test( priority = 17, description = "Verify Sync functionality", enabled = true)
-//	public void IDA4_2305_verifySyncFunctionality() throws InterruptedException {
-//		//Register a patient
-//				addNewPatientPage.verifySyncFunctionality(appData.getJSONObject("personalDetails").getString("firstName"),
-//						appData.getJSONObject("patientAddress").getString("pincode"),
-//						appData.getJSONObject("patientAddress").getString("village"),
-//						appData.getJSONObject("patientAddress").getString("address1"),
-//						appData.getJSONObject("patientAddress").getString("address2"),
-//						appData.getJSONObject("personalDetails").getString("nationalId"),
-//						appData.getJSONObject("personalDetails").getString("occupation"));
-//	}
-//	@Test( priority = 18, description = "Verify if user clicks on While using the app/only this time", enabled = true)
-//	public void IDA4_2265_addProfilePhotoAndVerify() throws InterruptedException {
-//		addNewPatientPage.addProfilePictureAndVerify();
-//	}
+	}
+
+	@Test( priority = 17, description = "Verify Sync functionality", enabled = true)
+	public void IDA4_2305_verifySyncFunctionality() throws InterruptedException {
+		//Register a patient
+				addNewPatientPage.verifySyncFunctionality(appData.getJSONObject("personalDetails").getString("firstName"),
+						appData.getJSONObject("patientAddress").getString("pincode"),
+						appData.getJSONObject("patientAddress").getString("village"),
+						appData.getJSONObject("patientAddress").getString("address1"),
+						appData.getJSONObject("patientAddress").getString("address2"),
+						appData.getJSONObject("personalDetails").getString("nationalId"),
+						appData.getJSONObject("personalDetails").getString("occupation"));
+	}
+	@Test( priority = 18, description = "Verify if user clicks on While using the app/only this time", enabled = true)
+	public void IDA4_2265_addProfilePhotoAndVerify() throws InterruptedException {
+		addNewPatientPage.addProfilePictureAndVerify();
+	}
 	
 	@AfterMethod
 	public void afterMethod() {

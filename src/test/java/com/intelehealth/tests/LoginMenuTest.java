@@ -56,7 +56,6 @@ public class LoginMenuTest extends BaseTest {
 		// Perform the complete setup using the obtained username and password
 		appSetupPage.completeSetup();
 				///appData.getJSONObject("validUser").getString("password"));
-
 		// Click on the hamburger menu in the login menu page
 		loginMenuPage.clickOnHamburgerMenu();
 	}

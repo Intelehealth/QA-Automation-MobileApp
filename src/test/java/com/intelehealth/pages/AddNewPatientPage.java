@@ -131,8 +131,12 @@ public class AddNewPatientPage extends BaseTest {
 	private WebElement cancelButton;
 	@AndroidFindBy(accessibility = "Patient Registration Dialog Positive (Yes) Button")
 	private WebElement continueButton;
-	@AndroidFindBy(accessibility = "Visit Creation Subtitle TextView-vitals")
+	@AndroidFindBy(accessibility =  "Visit Creation Subtitle TextView")
+			//Visit Creation Subtitle TextView-vitals")
 	private WebElement visitCreationVitalsTitle;
+	@AndroidFindBy(accessibility =  "Visit Creation Subtitle TextView")
+	//Visit Creation Subtitle TextView-vitals")
+private WebElement visitCreationVitalsScreen;
 	@AndroidFindBy(accessibility = "Find Patient List Item Prescription Received TextView")
 	private WebElement prescriptionReceived;
 	@AndroidFindBy(accessibility = "Patient Details Patient Name TextView")
@@ -222,53 +226,54 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Click on the "Add Patients" button to initiate the patient addition process
-	public void clickOnAddPatients() {
+	public void clickOnAddPatients() throws InterruptedException {
+		Thread.sleep(5000);
 	    click(addNewPatientButton);
 	}
 
 
 	// Click on the "Accept" button to confirm or acknowledge an action
-	public void clickOnAcceptButton() {
+	public void clickOnAcceptButton() throws InterruptedException {
 	    click(acceptButton);
 	}
 
 
 	
 	// Click on the "Decline" button to reject or decline an action
-	public void clickOnDeclineButton() {
+	public void clickOnDeclineButton() throws InterruptedException {
 	    click(declineButton, "Clicked on the 'Decline' button to reject or decline an action");
 	}
 
 
 	
 	// Click on the month spinner to interact with the month selection dropdown
-	public void clickOnMonthSpinner() {
+	public void clickOnMonthSpinner() throws InterruptedException {
 	    click(monthSpinner);
 	}
 
 
 	
 	// Click on the year spinner to interact with the year selection dropdown
-	public void clickOnYearSpinner() {
+	public void clickOnYearSpinner() throws InterruptedException {
 	    click(yearSpinner);
 	}
 
 
 	
 	// Click on the state spinner to interact with the state selection dropdown
-	public void clickOnStateSpinner() {
+	public void clickOnStateSpinner() throws InterruptedException {
 	    click(stateSpinner);
 	}
 
 
 	
 	// Click on the district spinner to interact with the district selection dropdown
-	public void clickOnDistrictSpinner() {
+	public void clickOnDistrictSpinner() throws InterruptedException {
 	    click(districtSpinner);
 	}
 
 	// Click on the date of birth (DOB) icon to initiate date selection
-	public void clickOnDobIcon() {
+	public void clickOnDobIcon() throws InterruptedException {
 	    click(dobIcon);
 	}
 
@@ -276,34 +281,34 @@ public class AddNewPatientPage extends BaseTest {
 	
 
 	// Select the month, e.g., March, from the dropdown
-	public void selectMonth() {
+	public void selectMonth() throws InterruptedException {
 	    click(march);
 	}
 
 	// Select the year from the dropdown
-	public void selectYear() {
+	public void selectYear() throws InterruptedException {
 	    click(year);
 	}
 
 
 	// Select a date by interacting with the date element
-	public void selectDate() {
+	public void selectDate() throws InterruptedException {
 	    click(date);
 	}
 
 	// Click on the "Okay" button to confirm or finalize an action
-	public void clickOnOkayButton() {
+	public void clickOnOkayButton() throws InterruptedException {
 	    click(okayButton);
 	}
 
 
 	// Click on the Next button  to proceed to the next screen
-	public void clickOnNextButton1() {
+	public void clickOnNextButton1() throws InterruptedException {
 	    click(nextButton1);
 	}
 
 	// Verify the elements on the Add New Patient screen
-	public void verifyAddNewPatientScreen() {
+	public void verifyAddNewPatientScreen() throws InterruptedException {
 	    isDisplayed(addNewPatientTitle, "Add New Patient title is displayed on the screen");
 	    personal.isEnabled(); // Assuming `personal` is an element, you might want to check its state
 	}
@@ -314,19 +319,19 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Click on the Next button  to proceed to the next screen
-	public void clickOnNextButton2() {
+	public void clickOnNextButton2() throws InterruptedException {
 	    click(nextButton2);
 	}
 
 
 	
 	// Click on the Next button (Step 3) to proceed to the next screen
-	public void clickOnNextButton3() {
+	public void clickOnNextButton3() throws InterruptedException {
 	    click(nextButton3);
 	}
 
 	// Enter the first name in the corresponding field
-	public void enterFirstName(String txt) {
+	public void enterFirstName(String txt) throws InterruptedException {
 	    int maxAttempts = 5;
 	    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
 	        try {
@@ -362,7 +367,7 @@ public class AddNewPatientPage extends BaseTest {
 //	    String text = faker.name().lastName();
 //	    sendKeys(lastName, text);
 //	}
-	public void enterLastName() {
+	public void enterLastName() throws InterruptedException {
 	    int maxAttempts = 3; // Maximum number of attempts to handle StaleElementReferenceException
 	    int attempt = 0;
 	    
@@ -388,53 +393,80 @@ public class AddNewPatientPage extends BaseTest {
 	}
 
 	// Enter a specific last name value into the corresponding field
-	public void enterLastNameValue(String txt) {
+	public void enterLastNameValue(String txt) throws InterruptedException {
 	    sendKeys(lastName, txt, "Entered the last name: " + txt);
 	}
 
 	
 	// Select the gender, e.g., Female, from the available options
-	public void selectGender() {
+	public void selectGender() throws InterruptedException {
 	    click(female);
 	}
 
 	// Select the state from the available options
-	public void selectState() {
+	public void selectState() throws InterruptedException {
 	    click(state);
 	}
 
 
 	
 	// Select the district from the available options
-	public void selectDistrict() {
+	public void selectDistrict() throws InterruptedException {
 	    click(district);
 	}
 
 	// Click on the "Change" icon in the personal details section
-	public void clickOnChange() {
+	public void clickOnChange() throws InterruptedException {
 	    click(personalDetailsChangeIcon, "Clicked on the 'Change' icon in the personal details section");
 	}
 
 
 	
 	// Click on the Save button to save the entered details
-	public void clickOnSaveButton() {
+	public void clickOnSaveButton() throws InterruptedException {
 	    click(saveButton);
 	}
 
-	// Verify if the displayed age matches the expected age
+//	// Verify if the displayed age matches the expected age
+//	public void verifyAge(String expectedAge) {
+//	    // Get the current age value from the ageTextBox
+//	    String age = ageTextBox.getText();
+//
+//	    // Compare the displayed age with the expected age
+//	    if (Integer.parseInt(age) == Integer.parseInt(expectedAge)) {
+//	        System.out.println("Age verification successful!");
+//	    } else {
+//	        System.out.println("Age verification failed. Please enter the correct age.");
+//	    }
+//	}
 	public void verifyAge(String expectedAge) {
 	    // Get the current age value from the ageTextBox
 	    String age = ageTextBox.getText();
 
-	    // Compare the displayed age with the expected age
-	    if (Integer.parseInt(age) == Integer.parseInt(expectedAge)) {
+	    // Extract numeric parts from the age and expectedAge strings
+	    int actualAge = extractNumeric(age);
+	    int expectedAgeValue = extractNumeric(expectedAge);
+
+	    // Compare the extracted age with the expected age
+	    if (actualAge == expectedAgeValue) {
 	        System.out.println("Age verification successful!");
 	    } else {
-	        System.out.println("Age verification failed. Please enter the correct age.");
+	        System.out.println("Age verification failed. Expected: " + expectedAgeValue + ", Actual: " + actualAge);
 	    }
 	}
 
+	// Helper method to extract numeric part from a string
+	private int extractNumeric(String input) {
+	    String numericPart = input.replaceAll("[^0-9]", "");
+	    try {
+	        return Integer.parseInt(numericPart);
+	    } catch (NumberFormatException e) {
+	        // Handle the exception or log an error message
+	        e.printStackTrace();
+	        return -1; // Return a default value or handle the error accordingly
+	    }
+	}
+	
 
 	
 	// Scroll to the element related to the phone number in the Identification First Screen
@@ -524,20 +556,20 @@ public class AddNewPatientPage extends BaseTest {
 	}
 
 	// Verify that the Address Screen is displayed by checking the presence of the postal code title
-	public void verifyAddressScreenIsDisplayed() {
+	public void verifyAddressScreenIsDisplayed() throws InterruptedException {
 	    isDisplayed(postalCodeTitle, "Address Screen is displayed by checking the presence of the postal code title");
 	}
 
 
 	
 	// Enter the postal code into the corresponding field
-	public void enterPostalCode(String txt) {
+	public void enterPostalCode(String txt) throws InterruptedException {
 	    clear(postalCode);
 	    sendKeys(postalCode, txt, "Entered the postal code: " + txt);
 	}
 
 	// Enter patient address details, including postal code, village, and address lines
-	public void enterPatientAddressDetails(String code, String village, String address1, String address2) {
+	public void enterPatientAddressDetails(String code, String village, String address1, String address2) throws InterruptedException {
 	    sendKeys(postalCode, code);
 	    sendKeys(villageTextBox, village);
 	    sendKeys(correspondingAddress1, address1);
@@ -548,7 +580,7 @@ public class AddNewPatientPage extends BaseTest {
 	
 	 
 	// Enter other details including national ID, occupation, category, education, and economic status
-	public void enterOtherDetails(String id, String occupation) {
+	public void enterOtherDetails(String id, String occupation) throws InterruptedException {
 	    sendKeys(nationalIDTextBox, id);
 	    sendKeys(occupationTextBox, occupation);
 
@@ -561,7 +593,7 @@ public class AddNewPatientPage extends BaseTest {
 	}
 
 	// Enter the national ID into the corresponding field
-	public void enterNationalID(String id) {
+	public void enterNationalID(String id) throws InterruptedException {
 	    clear(nationalIDTextBox);
 	    sendKeys(nationalIDTextBox, id, "Entered national ID: " + id);
 	}
@@ -569,17 +601,17 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Enter the occupation into the corresponding field
-	public void enterOccupation(String occupation) {
+	public void enterOccupation(String occupation) throws InterruptedException {
 	    sendKeys(occupationTextBox, occupation, "Entered occupation: " + occupation);
 	}
 
 	// Click on the "Change" icon in the personal details section
-	public void clickOnPersonalDetailsChangeIcon() {
+	public void clickOnPersonalDetailsChangeIcon() throws InterruptedException {
 	    click(personalDetailsChangeIcon, "Clicked on the 'Change' icon in the personal details section");
 	}
 
 	// Verify that the Update Patient Screen is visible by checking the presence of the title
-	public void verfyUpdatePatientScreenIsVisible() {
+	public void verfyUpdatePatientScreenIsVisible() throws InterruptedException {
 	    isDisplayed(updatePatientScreenTitle, "Update Patient Screen is visible by checking the presence of the title");
 	}
 
@@ -598,7 +630,7 @@ public class AddNewPatientPage extends BaseTest {
 	}
 
 	// Click on the "Change" icon in the address details section
-	public void clickOnAddressDetailsChangeIcon() {
+	public void clickOnAddressDetailsChangeIcon() throws InterruptedException {
 	    click(addressDetailsChangeIcon, "Clicked on the 'Change' icon in the address details section");
 	}
 
@@ -632,7 +664,7 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Update the postal code with the provided code
-	public void updatePostalCode(String code) {
+	public void updatePostalCode(String code) throws InterruptedException {
 	    sendKeys(postalCode, code, "Updated the postal code to: " + code);
 	}
 
@@ -650,23 +682,23 @@ public class AddNewPatientPage extends BaseTest {
 
 
 	// Click on the "Change" icon in the other details section
-	public void clickOnOtherDetailsChangeIcon() {
+	public void clickOnOtherDetailsChangeIcon() throws InterruptedException {
 	    click(otherDetailsChangeIcon, "Clicked on the 'Change' icon in the other details section");
 	}
 
 	// Verify that the Update Other Details Screen is visible by checking the presence of the national ID label
-	public void verifyUpdateOtherDetailsScreenIsVisible() {
+	public void verifyUpdateOtherDetailsScreenIsVisible() throws InterruptedException {
 	    isDisplayed(nationalIdLabel, "Update Other Details Screen is visible by checking the presence of the national ID label");
 	}
 
 	
 	// Click on the "Start Visit" button
-	public void clickOnStartVisitButton() {
+	public void clickOnStartVisitButton() throws InterruptedException {
 	    click(startVisitButton);
 	}
 
 	// Verify that the Patient Registered Popup is displayed by checking the presence of its elements
-	public void verifyPatientRegisteredPopupIsDisplayed() {
+	public void verifyPatientRegisteredPopupIsDisplayed() throws InterruptedException {
 	    isDisplayed(patientRegistrationDialogTitle, "Patient Registered Popup is displayed - Title");
 	    isDisplayed(patientRegistrationSubTitle, "Patient Registered Popup is displayed - Subtitle");
 	    isDisplayed(cancelButton, "Patient Registered Popup is displayed - Cancel Button");
@@ -676,29 +708,29 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Click on the "Continue" button in the Patient Registered Popup
-	public void clickOnContinueButton() {
+	public void clickOnContinueButton() throws InterruptedException {
 	    click(continueButton);
 	}
 
 	// Verify that the Vitals Screen is displayed by checking the presence of its title
-	public void verifyVitalsScreenIsDisplayed() {
-	    isDisplayed(visitCreationVitalsTitle, "Vitals Screen is displayed - Title");
+	public void verifyVitalsScreenIsDisplayed() throws InterruptedException {
+	    isDisplayed(visitCreationVitalsScreen, "Vitals Screen is Displayed ");
 	}
 
 	// Click on the "Prescription Received" checkbox
-	public void clickOnPrescriptionReceived() {
+	public void clickOnPrescriptionReceived() throws InterruptedException {
 	    click(prescriptionReceived, "Clicked on the 'Prescription Received' checkbox");
 	}
 
 	// Click on the arrow (presumably for navigation)
-	public void clickOnArrow() {
+	public void clickOnArrow() throws InterruptedException {
 	    click(arrow, "Clicked on the 'Arrow' for navigation");
 	}
 
 
 	
 	// Verify elements on the Past Visit Summary Screen
-	public void verifyPastVisitSummaryScreen() {
+	public void verifyPastVisitSummaryScreen() throws InterruptedException {
 	    isDisplayed(visitSummaryTitle, "Past Visit Summary Screen - Title is Displayed");
 	    isDisplayed(patientName, "Past Visit Summary Screen - Patient Name is Displayed");
 	    isDisplayed(patientID, "Past Visit Summary Screen - Patient ID is Dsiplayed");
@@ -718,14 +750,14 @@ public class AddNewPatientPage extends BaseTest {
 
 	
 	// Click on the "Prescription Pending" checkbox
-	public void clickOnPrescriptionPending() {
+	public void clickOnPrescriptionPending() throws InterruptedException {
 	    click(prescriptionPending, "Clicked on the 'Prescription Pending' checkbox");
 	}
 
 
 
 	// Verify elements on the Open Visit Summary Screen
-	public void verifyOpenVisitSummaryScreen() {
+	public void verifyOpenVisitSummaryScreen() throws InterruptedException {
 	    isDisplayed(visitSummaryTitle, "Open Visit Summary Screen - Title  is Dsiplayed");
 	    isDisplayed(patientName, "Open Visit Summary Screen - Patient Name  is Dsiplayed");
 	    isDisplayed(patientID, "Open Visit Summary Screen - Patient ID  is Dsiplayed");
@@ -745,6 +777,7 @@ public class AddNewPatientPage extends BaseTest {
 	
 	public void registerAPatient(String txt, String code, String village, String address1, String address2, String id,
 			String occupation) throws InterruptedException {
+		waitForVisibility(addNewPatientButton);
 		// Click on the 'Add Patients' button to initiate the registration process
 		clickOnAddPatients();
 
@@ -816,7 +849,7 @@ public class AddNewPatientPage extends BaseTest {
 		
 	}
 	public void verifySyncFunctionality(String txt, String code, String village, String address1, String address2, String id,
-			String occupation) {
+			String occupation) throws InterruptedException {
 		String syncTime = appSyncTime.getText();
 		System.out.println(syncTime);
 		// Click on the 'Add Patients' button to initiate the registration process
@@ -896,7 +929,7 @@ public class AddNewPatientPage extends BaseTest {
 		
 	}
 	// Add a profile picture and verify the process
-	public void addProfilePictureAndVerify() {
+	public void addProfilePictureAndVerify() throws InterruptedException {
 	    click(addNewPatientButton, "Clicked on 'Add Patients'");
 	    click(acceptButton, "Accepted the Privacy Policy");
 	    click(addPicture, "Clicked on 'Add Picture'");
@@ -906,7 +939,7 @@ public class AddNewPatientPage extends BaseTest {
 	}
 
 
-	public void verifyDashboardScreenIsVisible() {
+	public void verifyDashboardScreenIsVisible() throws InterruptedException {
 		isDisplayed(location);
 		
 	}

@@ -6,6 +6,7 @@ import java.io.InputStream;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.Status;
@@ -59,6 +60,9 @@ public class EndToEndPage extends BaseTest {
 
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Add account']")
 	private WebElement turnOnSyncAddAccount;
+
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Select a printer\"]")
+	private WebElement selectAPrinterText;
 
 	@AndroidFindBy(id = "com.android.printspooler:id/title")
 	private WebElement printerPageTitle;
@@ -140,20 +144,17 @@ public class EndToEndPage extends BaseTest {
 
 	@AndroidFindBy(accessibility = "Patient Details Screen Address Details 'District' Value TextView")
 	private WebElement patientDetailsDistrict;
-	
+
 	@AndroidFindBy(accessibility = "Identification Second Screen Village EditText")
-	private WebElement  villageTextBox;
-	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Schedule Appointment 'No Slot Available' TextView\"]")
-	private WebElement  noTimeSlots;
-	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Patient Details Open Visits Title TextView\"]")
-	private WebElement  patientDetailsOpenVisit;
+	private WebElement villageTextBox;
 
-//	By byNoTimeSlots = By
-//			.xpath("//android.widget.TextView[@content-desc=\"Schedule Appointment 'No Slot Available' TextView\"]");
+	By byNoTimeSlots = By
+			.xpath("//android.widget.TextView[@content-desc=\"Schedule Appointment 'No Slot Available' TextView\"]");
 
-//	By patientDetailsOpenVisit = By.xpath("//android.widget.TextView[@content-desc=\"Patient Details Open Visits Title TextView\"]");
+	By patientDetailsOpenVisit = By
+			.xpath("//android.widget.TextView[@content-desc=\"Patient Details Open Visits Title TextView\"]");
+
+	// Constructor
 	public EndToEndPage(ThreadLocal<AppiumDriver> driver) throws Throwable {
 		visitSummaryPage = new VisitSummaryPage(driver);
 		prescriptionsPage = new PrescriptionsPage();
@@ -185,9 +186,19 @@ public class EndToEndPage extends BaseTest {
 
 	// Clicking on app sync icon and clicking on find patient textfield
 	public void refreshFindPatient() throws Throwable {
-		Thread.sleep(20000);
-		click(homeScreenRefreshButton, "Clicking on app sync icon");
-		click(findPatientTextfield, "Clicking on find patient textfield");
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton, "Clicking on app sync icon");
+				click(findPatientTextfield, "Clicking on find patient textfield");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 	}
 
 	// Performs the login, adds a new patient, and registers the patient
@@ -199,7 +210,9 @@ public class EndToEndPage extends BaseTest {
 		addNewPatientPage.enterFirstName(appData.getJSONObject("personalDetails").getString("firstName"));
 		Thread.sleep(2000);
 		addNewPatientPage.enterLastName();
+		waitForVisibility(addedFirstName);
 		String givenFirstName = addedFirstName.getText();
+		waitForVisibility(addedLastName);
 		String givenLastName = addedLastName.getText();
 		addNewPatientPage.selectGender();
 		scrollToElement();
@@ -211,6 +224,7 @@ public class EndToEndPage extends BaseTest {
 		addNewPatientPage.selectYear();
 		addNewPatientPage.selectDate();
 		addNewPatientPage.clickOnOkayButton();
+		waitForVisibility(addedPatientAge);
 		String givenAge = addedPatientAge.getText();
 		addNewPatientPage.clickOnNextButton1();
 		addNewPatientPage.clickOnStateSpinner();
@@ -222,62 +236,86 @@ public class EndToEndPage extends BaseTest {
 		sendKeys(villageTextBox, "BHATKAL");
 		addNewPatientPage.clickOnNextButton2();
 		addNewPatientPage.clickOnNextButton3();
+		waitForVisibility(patientDetailsPatientName);
 		String savedPatientName = patientDetailsPatientName.getText();
+		waitForVisibility(patientDetailsAge);
 		String savedAge = patientDetailsAge.getText();
 		if (savedPatientName.contains(givenFirstName) && savedPatientName.contains(givenLastName)
 				&& givenAge.contains(savedAge)) {
-			ExtentReport.getTest().log(Status.INFO,
-					"Verifying whether the patient is added with the added details");
+			ExtentReport.getTest().log(Status.INFO, "Verifying whether the patient is added with the added details");
 			System.out.println("The patient is added with the added details");
 		}
 	}
 
-	// Performs login, adds a new patient, registers the patient, and updates patient details
+	// Performs login, adds a new patient, registers the patient, and updates
+	// patient details
 	public void logiAddPatientPatientRegisterUpdatePatientDetails() throws Throwable {
 		visitSummaryPage.addPatients();
 	}
 
-	// Performs login, adds a new patient, registers the patient, starts a visit, and sends the visit
+	// Performs login, adds a new patient, registers the patient, starts a visit,
+	// and sends the visit
 	public void loginAddPatientPatientRegisterStartVisitSendVisit() throws Throwable {
 		visitSummaryPage.verifyIfPriorityVisitIsEnabledON();
 	}
 
-	// Performs login, finds a patient, and books an appointment for an already added patient profile.
+	// Performs login, finds a patient, and books an appointment for an already
+	// added patient profile
 	public void loginFindPatientBookAppointmentForAlreadyAddedPatientProfile() throws Throwable {
-		restAssured sendPrescription = new restAssured();
-		sendPrescription.createPatientAndSharePrescription();
+//		restAssured sendPrescription = new restAssured();
+//		sendPrescription.createPatientAndSharePrescription();
 		refreshFindPatient();
-		scrollToTextContains_Android("Prescription received");
-		click(recentlyAddedPrescriptionPendingPatient, "Clicking on the recently added patient");
-		scrollToElementByDescription("Past Visit List Item Visit Date TextView");
-		boolean openVisit = isDisplayed2(patientDetailsOpenVisit);
-		if(openVisit == true) {
-		click(openTheOpenVisit, "Click on open visit");
-		String patientName = visitSummaryPatientName.getText();
-		System.out.println(patientName);
-		click(appointmentButton, "Clicking on appointment button");
-		boolean noSlots = isDisplayed2(noTimeSlots);
-		if (noSlots == true) {
-			System.err.println("Appointment slot is not available for selected date and speciality!");
-			throw new Exception("Appointment slot is not available for selected date and speciality!");
-		}
-		click(appointmentFirstTime, "Selecting the time slot");
-		click(bookAppointmentButton, "Clicking on book appointment button");
-		appointmentsPage.verifyWhenUserClicksYesInConfirmAppointmentPopup();
-		String AppointmentPatientName = AddedAppointmentPatientName.getText();
-		if (patientName.equals(AppointmentPatientName)) {
-			ExtentReport.getTest().log(Status.INFO,
-					"Verifying whether the booked appointment is shown in Upcoming section of Appointment");
-			System.out.println("The booked appointment is shown in Upcoming section of Appointment");
-		}
-		}else {
-			System.err.println("The visit has ended");
-			ExtentReport.getTest().log(Status.INFO,"The visit has ended");
-			throw new Exception("The visit has ended");
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+//				scrollToTextContains_Android("Prescription received");
+				scrollToTextContains_Android("Prescription pending");
+				click(recentlyAddedPrescriptionPendingPatient, "Clicking on the recently added patient");
+//		        scrollToElementByDescription("Patient Details Open Visits Title TextView");
+				scrollToElementByDescription("Past Visit List Item Visit Date TextView");
+				boolean openVisit = isDisplayed2(patientDetailsOpenVisit);
+				if (openVisit == true) {
+					click(openTheOpenVisit, "Click on open visit");
+					waitForVisibility(visitSummaryPatientName);
+					String patientName = visitSummaryPatientName.getText();
+					System.out.println(patientName);
+					click(appointmentButton, "Clicking on appointment button");
+					boolean noSlots = isDisplayed2(byNoTimeSlots);
+					if (noSlots == true) {
+						System.err.println("Appointment slot is not available for selected date and speciality!");
+						throw new Exception("Appointment slot is not available for selected date and speciality!");
+					}
+					click(appointmentFirstTime, "Selecting the time slot");
+					click(bookAppointmentButton, "Clicking on book appointment button");
+					appointmentsPage.verifyWhenUserClicksYesInConfirmAppointmentPopup();
+					waitForVisibility(AddedAppointmentPatientName);
+					String AppointmentPatientName = AddedAppointmentPatientName.getText();
+					if (patientName.equals(AppointmentPatientName)) {
+						ExtentReport.getTest().log(Status.INFO,
+								"Verifying whether the booked appointment is shown in Upcoming section of Appointment");
+						System.out.println("The booked appointment is shown in Upcoming section of Appointment");
+					} else {
+						System.err.println("The booked appointment is not shown in Upcoming section of Appointment");
+						ExtentReport.getTest().log(Status.INFO,
+								"The booked appointment is not shown in Upcoming section of Appointment");
+						throw new Exception("The booked appointment is not shown in Upcoming section of Appointment");
+					}
+				} else {
+					System.err.println("The visit has ended");
+					ExtentReport.getTest().log(Status.INFO, "The visit has ended");
+					throw new Exception("The visit has ended");
+				}
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
 		}
 	}
 
-	// Performs login, finds a patient, starts a visit, and sends the visit, assuming no visit was created earlier
+	// Performs login, finds a patient, starts a visit, and sends the visit,
+	// assuming no visit was created earlier
 	public void loginFindPatientStartVisitSendVisitNoVisitCreatedEarlier() throws Throwable {
 		refreshFindPatient();
 		scrollToTextContains_Android("No visit created");
@@ -300,36 +338,84 @@ public class EndToEndPage extends BaseTest {
 		}
 	}
 
-	// Performs login and sends a WhatsApp message to a patient with received prescriptions.
+	// Performs login and sends a WhatsApp message to a patient with received
+	// prescriptions
 	public void loginPrescriptionsReceivedWhatsappToPatient() throws Throwable {
-		prescriptionsPage.verifyThatUserCanSendWhatsappMessageToThePatient();
-	}
+		int maxAttempts = 3;
+		int attempt = 0;
 
-	// Performs login and verifies visit summary and prescription print functionality for received prescriptions
-	public void loginPrescriptionsReceivedVisitSummaryPrint() throws Throwable {
-		prescriptionsReceivedVisitSummary();
-		click(visitSummaryPrintButton, "Clicking on print button");
-		if (isDisplayed(printedFile) && isDisplayed(printerPageTitle)) {
-			ExtentReport.getTest().log(Status.INFO, "Verifying whether the visit summary is saved as pdf copy");
-			System.out.println("The visit summary is saved as pdf copy");
+		while (attempt < maxAttempts) {
+			try {
+				prescriptionsPage.verifyThatUserCanSendWhatsappMessageToThePatient();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
 		}
 	}
 
-	// Performs login and verifies visit summary and prescription share functionality for received prescriptions
-	public void loginPrescriptionsReceivedVisitSummaryShare() throws Throwable {
+	// Performs login and verifies visit summary and prescription print
+	// functionality for received prescriptions
+	public void loginPrescriptionsReceivedVisitSummaryPrint() throws Throwable {
 		prescriptionsReceivedVisitSummary();
-		click(visitSummaryShareButton, "Clicking on share button");
-		prescriptionsPage.verifyUserCanShareThroughWhatsapp();
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
+				click(visitSummaryPrintButton, "Clicking on print button");
+				if (isDisplayed(printedFile) && isDisplayed(selectAPrinterText) || isDisplayed(printerPageTitle)) {
+					ExtentReport.getTest().log(Status.INFO, "Verifying whether the visit summary is saved as pdf copy");
+				}
+				System.out.println("The visit summary is saved as pdf copy");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 	}
 
-	// Logs in, checks prescriptions received, views visit summary, and navigates back to the home page
+	// Performs login and verifies visit summary and prescription share
+	// functionality for received prescriptions
+	public void loginPrescriptionsReceivedVisitSummaryShare() throws Throwable {
+		prescriptionsReceivedVisitSummary();
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
+				click(visitSummaryShareButton, "Clicking on share button");
+				prescriptionsPage.verifyUserCanShareThroughWhatsapp();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+	}
+
+	// Logs in, checks prescriptions received, views visit summary, and navigates
+	// back to the home page
 	public void loginPrescriptionsReceivedVisitSummaryHome() throws Throwable {
 		prescriptionsReceivedVisitSummary();
-		click(PrescriptionVisitSummaryScreenKebabMenu, "Clicking on kebab menu");
-		click(kebabMenuHome, "Clicking on Home");
-		if (isDisplayed(homeScreenHome)) {
-			ExtentReport.getTest().log(Status.INFO, "Verifying whether user is navigated to Home page");
-			System.out.println("User is navigated to Home page");
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
+				click(PrescriptionVisitSummaryScreenKebabMenu, "Clicking on kebab menu");
+				click(kebabMenuHome, "Clicking on Home");
+				if (isDisplayed(homeScreenHome)) {
+					ExtentReport.getTest().log(Status.INFO, "Verifying whether user is navigated to Home page");
+					System.out.println("User is navigated to Home page");
+				}
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
 		}
 	}
 

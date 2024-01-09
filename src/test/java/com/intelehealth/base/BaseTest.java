@@ -1,6 +1,8 @@
 package com.intelehealth.base;
 
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.SessionNotCreatedException;
+import org.openqa.selenium.WebDriverException;
 import com.google.common.collect.ImmutableMap;
 import com.intelehealth.reports.ExtentReport;
 import com.intelehealth.utils.TestUtils;
@@ -24,6 +26,7 @@ import org.apache.logging.log4j.ThreadContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -61,8 +64,8 @@ public class BaseTest {
 	protected static ThreadLocal<String> dateTime = new ThreadLocal<String>();
 	protected static ThreadLocal<String> deviceName = new ThreadLocal<String>();
 	private static AppiumDriverLocalService server;
-	 private static final String SECRET_KEY = "YourSecretKey1234";
-	 
+	private static final String SECRET_KEY = "YourSecretKey1234";
+
 	String appiumURL;
 	TestUtils utils = new TestUtils();
 
@@ -199,38 +202,33 @@ public class BaseTest {
 
 	// for Windows
 	public AppiumDriverLocalService getAppiumServerDefault() {
+		int maxAttempts = 3;
+		int attempt = 0;
+		AppiumDriverLocalService server = null;
 
-		HashMap<String, String> environment = new HashMap();
+		while (attempt < maxAttempts) {
+			try {
+				HashMap<String, String> environment = new HashMap();
+				environment.put("PATH", "/Users/local/bin:" + System.getenv("PATH"));
 
-		environment.put("PATH", "/Users/local/bin:" + System.getenv("PATH"));
-
-		AppiumServiceBuilder builder = new AppiumServiceBuilder();
-
-		builder
-
-				.withAppiumJS(
+				AppiumServiceBuilder builder = new AppiumServiceBuilder();
+				builder.withAppiumJS(
 						new File("C://Users//Shweta//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
+						.usingDriverExecutable(new File("C://Program Files//nodejs//node.exe")).usingPort(4723)
+						.withEnvironment(environment).withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
 
-				.usingDriverExecutable(new File("C://Program Files//nodejs//node.exe"))
+				server = AppiumDriverLocalService.buildService(builder);
 
-				.usingPort(4723)
-
-				.withEnvironment(environment)
-
-				.withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
-
-				
-
-		AppiumDriverLocalService server = AppiumDriverLocalService.buildService(builder);
-
-		System.out.println("Server started at :" + server.getUrl());
-		// return AppiumDriverLocalService.buildService(new AppiumServiceBuilder());
-		// System.out.println("Server started at :" + server.getUrl());
-		// return server.getUrl().toString();
-
+				System.out.println("Server started at :" + server.getUrl());
+				// Additional logic can be added here if needed
+				break; // Exit the loop if the server is successfully created
+			} catch (Exception e) {
+				// Handle the exception (e.g., log, retry logic)
+				e.printStackTrace();
+				attempt++;
+			}
+		}
 		return server;
-
-		// return AppiumDriverLocalService.buildDefaultService();
 	}
 
 	@BeforeTest
@@ -291,7 +289,7 @@ public class BaseTest {
 //		
 //			utils.log().info("appUrl is" + androidAppUrl);
 //			desiredCapabilities.setCapability("app", androidAppUrl);
-				
+
 				driver = new AndroidDriver(url, desiredCapabilities);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 				// Check if the app is installed
@@ -314,96 +312,97 @@ public class BaseTest {
 		}
 	}
 
-	
 	public void waitForVisibility(WebElement e) {
-	    int maxAttempts = 5;
-	    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-	        try {
-	            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(TestUtils.WAIT));
-	            wait.until(ExpectedConditions.visibilityOf(e));
-	            break; // Exit the loop if visibility is successful
-	        } catch (StaleElementReferenceException ex) {
-	            System.out.println("StaleElementReferenceException caught. Retrying visibility attempt " + attempt);
-	            // Add a small delay before retrying (customize based on your needs)
-	            try {
-	                Thread.sleep(1000);
-	            } catch (InterruptedException e1) {
-	                e1.printStackTrace();
-	            }
-	        }
-	    }
+		int maxAttempts = 6;
+		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+			try {
+				WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(TestUtils.WAIT));
+				wait.until(ExpectedConditions.visibilityOf(e));
+				break; // Exit the loop if visibility is successful
+			} catch (StaleElementReferenceException ex) {
+				System.out.println("StaleElementReferenceException caught. Retrying visibility attempt " + attempt);
+				// Add a small delay before retrying (customize based on your needs)
+				try {
+					Thread.sleep(1000);
+				} catch (WebDriverException  | InterruptedException  e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
 	}
-	
 
-	public boolean isDisplayed(WebElement e, String msg) {
-	    int maxAttempts = 5;
-	    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-	        try {
-	            waitForVisibility(e);
-	            utils.log().info(msg);
-	            ExtentReport.getTest().log(Status.INFO, msg);
-	            return e.isDisplayed();
-	        } catch (StaleElementReferenceException ex) {
-	            System.out.println("StaleElementReferenceException caught. Retrying isDisplayed attempt " + attempt);
-	            // Add a small delay before retrying (customize based on your needs)
-	            try {
-	                Thread.sleep(1000);
-	            } catch (InterruptedException e1) {
-	                e1.printStackTrace();
-	            }
-	        }
-	    }
-	    return false; // Return false if visibility is not successful after max attempts
+	public boolean isDisplayed(WebElement e, String msg)  {
+		int maxAttempts = 5;
+		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+			try {
+				waitForVisibility(e);
+				utils.log().info(msg);
+				ExtentReport.getTest().log(Status.INFO, msg);
+				return e.isDisplayed();
+			} catch (StaleElementReferenceException ex) {
+				System.out.println("StaleElementReferenceException caught. Retrying isDisplayed attempt " + attempt);
+				// Add a small delay before retrying (customize based on your needs)
+				try {
+					Thread.sleep(1000);
+				} catch (WebDriverException   | InterruptedException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+		return false; // Return false if visibility is not successful after max attempts
 	}
+
 	public void click(WebElement e, String msg) {
-	    int maxAttempts = 5;
-	    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-	        try {
-	            waitForVisibility(e);
-	            utils.log().info(msg);
-	            ExtentReport.getTest().log(Status.INFO, msg);
-	            e.click();
-	            break; // Exit the loop if click is successful
-	        } catch (StaleElementReferenceException ex) {
-	            System.out.println("StaleElementReferenceException caught. Retrying click attempt " + attempt);
-	            // Add a small delay before retrying (customize based on your needs)
-	            try {
-	                Thread.sleep(1000);
-	            } catch (InterruptedException e1) {
-	                e1.printStackTrace();
-	            }
-	        }
-	    }
+		int maxAttempts = 5;
+		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+			try {
+				waitForVisibility(e);
+				utils.log().info(msg);
+				ExtentReport.getTest().log(Status.INFO, msg);
+				e.click();
+				break; // Exit the loop if click is successful
+			} catch (StaleElementReferenceException ex) {
+				System.out.println("StaleElementReferenceException caught. Retrying click attempt " + attempt);
+				// Add a small delay before retrying (customize based on your needs)
+				try {
+					Thread.sleep(1000);
+				} catch (WebDriverException | InterruptedException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
 	}
+
 	public void sendKeys(WebElement e, String txt, String msg) {
-	    int maxAttempts = 5;
-	    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-	        try {
-	            waitForVisibility(e);
-	            utils.log().info(msg);
-	            ExtentReport.getTest().log(Status.INFO, msg);
-	            e.sendKeys(txt);
-	            break; // Exit the loop if sendKeys is successful
-	        } catch (StaleElementReferenceException ex) {
-	            System.out.println("StaleElementReferenceException caught. Retrying sendKeys attempt " + attempt);
-	            // Add a small delay before retrying (customize based on your needs)
-	            try {
-	                Thread.sleep(1000);
-	            } catch (InterruptedException e1) {
-	                e1.printStackTrace();
-	            }
-	        }
-	    }
+		int maxAttempts = 5;
+		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+			try {
+				waitForVisibility(e);
+				utils.log().info(msg);
+				ExtentReport.getTest().log(Status.INFO, msg);
+				e.sendKeys(txt);
+				break; // Exit the loop if sendKeys is successful
+			} catch (StaleElementReferenceException ex) {
+				System.out.println("StaleElementReferenceException caught. Retrying sendKeys attempt " + attempt);
+				// Add a small delay before retrying (customize based on your needs)
+				try {
+					Thread.sleep(1000);
+				} catch (WebDriverException  | InterruptedException  e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
 	}
 
 //	public void waitForVisibility(WebElement e) {
 //		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(TestUtils.WAIT));
 //		wait.until(ExpectedConditions.visibilityOf(e));
 //	}
-	
+
 	public void setImplicitWait() {
-		 getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	}
+
 	/*
 	 * public void waitForVisibility(WebElement e){ Wait<WebDriver> wait = new
 	 * FluentWait<WebDriver>(getDriver()) .withTimeout(Duration.ofSeconds(30))
@@ -416,12 +415,13 @@ public class BaseTest {
 //		ExtentReport.getTest().log(Status.INFO, msg);
 //		return e.isDisplayed();
 //	}
-	public boolean isDisplayed(WebElement e) {
+	public boolean isDisplayed(WebElement e) throws InterruptedException {
 		waitForVisibility(e);
-		
+
 		return e.isDisplayed();
 	}
-	public void clear(WebElement e) {
+
+	public void clear(WebElement e) throws InterruptedException {
 		waitForVisibility(e);
 		e.clear();
 	}
@@ -438,12 +438,13 @@ public class BaseTest {
 //		e.click();
 //	}
 
-	public void sendKeys(WebElement e, String txt) {
+	public void sendKeys(WebElement e, String txt) throws InterruptedException {
 		waitForVisibility(e);
 		e.sendKeys(txt);
 
 	}
-	public void sendKeysObject(WebElement e, Object object) {
+
+	public void sendKeysObject(WebElement e, Object object) throws InterruptedException {
 		waitForVisibility(e);
 		e.sendKeys((CharSequence[]) object);
 
@@ -455,7 +456,7 @@ public class BaseTest {
 //		e.sendKeys(txt);
 //	}
 
-	public String getAttribute(WebElement e, String attribute) {
+	public String getAttribute(WebElement e, String attribute) throws InterruptedException {
 		waitForVisibility(e);
 		return e.getAttribute(attribute);
 	}
@@ -464,23 +465,17 @@ public class BaseTest {
 		e.isSelected();
 
 	}
-	public boolean isDisplayed2(By WebElement) {
-		WebElement element = getElement(WebElement);
-		if (element != null && element.isDisplayed()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	private WebElement getElement(By webElement) {
+
+	private WebElement getElement(By recentVisitPatients) {
 		WebElement element = null;
 		try {
-			element = getDriver().findElement(webElement);
+			element = getDriver().findElement(recentVisitPatients);
 		} catch (Exception e) {
-			System.out.println("some exception occurred while creating the webelement : " + webElement);
+			System.out.println("some exception occurred while creating the webelement : " + recentVisitPatients);
 		}
 		return element;
 	}
+
 	public String doGetFormattedCurrentDDMonYYYY() {
 		Date currentDate = new Date();
 		SimpleDateFormat dateformat = new SimpleDateFormat("dd MMMM, yyyy", Locale.ENGLISH);
@@ -488,6 +483,7 @@ public class BaseTest {
 		System.out.println("Current Date: " + formattedDate);
 		return formattedDate;
 	}
+
 	public static void executeCommand(String command) {
 		try {
 			Process process = Runtime.getRuntime().exec(command);
@@ -496,6 +492,7 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 	}
+
 	public String extractBefore(String input, String splitString) {
 		// Find the index of the split string
 		int splitIndex = input.indexOf(splitString);
@@ -508,6 +505,7 @@ public class BaseTest {
 		// If the split string is not found, return the original string
 		return input.trim();
 	}
+
 	public String extractBetween(String input, String startDelimiter, String endDelimiter) {
 		// Find the index of the start delimiter
 		int startIndex = input.indexOf(startDelimiter);
@@ -525,7 +523,7 @@ public class BaseTest {
 		// string or handle accordingly
 		return "";
 	}
-	
+
 	public List<WebElement> getElements(By locator) {
 		List<WebElement> element = null;
 		try {
@@ -535,23 +533,31 @@ public class BaseTest {
 		}
 		return element;
 	}
-	public void clear(WebElement e, String msg) {
+
+	public void clear(WebElement e, String msg) throws InterruptedException {
 		waitForVisibility(e);
 		utils.log().info(msg);
 		ExtentReport.getTest().log(Status.INFO, msg);
 		e.clear();
 	}
+
 	public boolean isDisplayedWithoutWaits(WebElement e) {
 		return e.isDisplayed();
 	}
-	public WebElement scrollToElementByDescription(String description) {
-		return getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()"
+
+	public WebElement scrollToElementByDescription(String description) throws InterruptedException {
+		WebElement scroll = getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()"
 				+ ".scrollable(true)).scrollIntoView(" + "new UiSelector().description(\"" + description + "\"));"));
+		waitForVisibility(scroll);
+		return scroll;
 	}
-	public WebElement scrollToElement() {
-		return getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()"
+
+	public WebElement scrollToElement() throws InterruptedException {
+		WebElement scroll = getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()"
 				+ ".scrollable(true)).scrollIntoView("
 				+ "new UiSelector().description(\"Identification First Screen Phone Num Title LinearLayout\"));"));
+		waitForVisibility(scroll);
+		return scroll;
 		// AppiumBy.androidUIAutomator("new UiScrollable(new
 		// UiSelector()).scrollIntoView(text(\"Date of Birth\"));"));
 	}
@@ -562,16 +568,14 @@ public class BaseTest {
 //	    		 "new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
 //						  + "new UiSelector().description(\""+ e +"\"));"));
 //	}
-	public String getText(WebElement e, String msg) {
+	public String getText(WebElement e, String msg) throws InterruptedException {
 		String txt = null;
-
+		waitForVisibility(e);
 		txt = getAttribute(e, "text");
-
 		utils.log().info(msg + txt);
 		ExtentReport.getTest().log(Status.INFO, msg + txt);
 		return txt;
 	}
-	
 
 	public void closeApp() {
 
@@ -582,71 +586,114 @@ public class BaseTest {
 	public void launchApp() {
 		((JavascriptExecutor) getDriver()).executeScript("mobile:startActivity", ImmutableMap.of("intent",
 				getProps().getProperty("androidAppPackage") + "/" + getProps().getProperty("androidAppActivity")));
-		
+
 	}
 
 	public void resetApp() {
 		getDriver().executeScript("mobile:clearApp",
 				ImmutableMap.of("appId", getProps().getProperty("androidAppPackage")));
 	}
+
 	public void launchCamera() {
-		((JavascriptExecutor) getDriver()).executeScript("mobile:startActivity", ImmutableMap.of("intent",
-				"com.android.camera2"+ "/" + "com.android.camera.CameraLauncher"));
-		
+		((JavascriptExecutor) getDriver()).executeScript("mobile:startActivity",
+				ImmutableMap.of("intent", "com.android.camera2" + "/" + "com.android.camera.CameraLauncher"));
+
 	}
+
 	public void activateIntelehealth() {
 		((InteractsWithApps) getDriver()).activateApp(getProps().getProperty("androidAppPackage"));
 	}
 
-	
-	public WebElement scrollToTextContains_Android(String text) {
-        return getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
-                + ".scrollIntoView(new UiSelector().textContains(\"" + text + "\"))"));
+	public WebElement scrollToTextContains_Android(String text) throws InterruptedException {
+		WebElement scroll = getDriver()
+				.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
+						+ ".scrollIntoView(new UiSelector().textContains(\"" + text + "\"))"));
+		waitForVisibility(scroll);
+		return scroll;
 	}
-	
-	   public static String encrypt(String password) {
-	        try {
-	            // Generate a fixed-size key based on the password
-	            MessageDigest sha = MessageDigest.getInstance("SHA-256");
-	            byte[] keyBytes = Arrays.copyOf(sha.digest(SECRET_KEY.getBytes()), 16);
 
-	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-	            SecretKeySpec secretKey = new SecretKeySpec(keyBytes, "AES");
-	            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-	            byte[] encryptedBytes = cipher.doFinal(password.getBytes());
-	            return java.util.Base64.getEncoder().encodeToString(encryptedBytes);
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	            return null;
-	        }
-	    }
+	public static String encrypt(String password) {
+		try {
+			// Generate a fixed-size key based on the password
+			MessageDigest sha = MessageDigest.getInstance("SHA-256");
+			byte[] keyBytes = Arrays.copyOf(sha.digest(SECRET_KEY.getBytes()), 16);
 
-	    public static String decrypt(String encryptedPassword) {
-	        try {
-	            // Generate a fixed-size key based on the password
-	            MessageDigest sha = MessageDigest.getInstance("SHA-256");
-	            byte[] keyBytes = Arrays.copyOf(sha.digest(SECRET_KEY.getBytes()), 16);
+			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+			SecretKeySpec secretKey = new SecretKeySpec(keyBytes, "AES");
+			cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+			byte[] encryptedBytes = cipher.doFinal(password.getBytes());
+			return java.util.Base64.getEncoder().encodeToString(encryptedBytes);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
-	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-	            SecretKeySpec secretKey = new SecretKeySpec(keyBytes, "AES");
-	            cipher.init(Cipher.DECRYPT_MODE, secretKey);
-	            byte[] decryptedBytes = cipher.doFinal(java.util.Base64.getDecoder().decode(encryptedPassword));
-	            return new String(decryptedBytes);
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	            return null;
-	        }
-	    }
-	    
-	    
-	    public void pressEnter(WebElement element) {
-	        element.click(); // Ensure the element is focused
-	        ((PressesKey) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
-	    }
-	    
-	    
-	    public boolean isDisplayed2(WebElement e) {
-			WebElement element = e;
+	public static String decrypt(String encryptedPassword) {
+		try {
+			// Generate a fixed-size key based on the password
+			MessageDigest sha = MessageDigest.getInstance("SHA-256");
+			byte[] keyBytes = Arrays.copyOf(sha.digest(SECRET_KEY.getBytes()), 16);
+
+			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+			SecretKeySpec secretKey = new SecretKeySpec(keyBytes, "AES");
+			cipher.init(Cipher.DECRYPT_MODE, secretKey);
+			byte[] decryptedBytes = cipher.doFinal(java.util.Base64.getDecoder().decode(encryptedPassword));
+			return new String(decryptedBytes);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public void pressEnter(WebElement element) {
+		element.click(); // Ensure the element is focused
+		((PressesKey) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+	}
+
+	public boolean isDisplayed2(By recentVisitPatients) {
+		int maxAttempts = 4;
+
+		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+			try {
+				WebElement element = getElement(recentVisitPatients);
+
+				// Check if the element is not null before proceeding
+				if (element != null) {
+					WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+
+					// Wrap in try-catch to handle TimeoutException
+					try {
+						wait.until(ExpectedConditions.visibilityOf(element));
+					} catch (TimeoutException timeoutEx) {
+						System.out.println(
+								"TimeoutException caught. Element is not visible. Retrying attempt " + attempt);
+						continue; // Skip to the next attempt
+					}
+
+					// Check if the element is displayed
+					if (element.isDisplayed()) {
+						return true;
+					}
+				} else {
+					System.out.println("Retrying attempt " + attempt);
+				}
+			} catch (StaleElementReferenceException ex) {
+				System.out.println("StaleElementReferenceException caught. Retrying attempt " + attempt);
+				// Add a small delay before retrying (customize based on your needs)
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
+				}
+			}
+		}
+		return false; // Return false if the element is not displayed after max attempts
+	}
+
+	public boolean isDisplayedListofWebelemets(List<WebElement> webElements) {
+		List<WebElement> elements = webElements;
+		for (WebElement element : elements) {
 			try {
 				if (element != null && element.isDisplayed()) {
 					return true;
@@ -654,22 +701,10 @@ public class BaseTest {
 			} catch (Exception e1) {
 
 			}
-			return false;
 		}
+		return false;
+	}
 
-		public boolean isDisplayedListofWebelemets(List<WebElement> webElements) {
-			List<WebElement> elements = webElements;
-			for (WebElement element : elements) {
-				try {
-					if (element != null && element.isDisplayed()) {
-						return true;
-					}
-				} catch (Exception e1) {
-
-				}
-			}
-			return false;
-		}
 	@AfterTest(alwaysRun = true)
 	public void afterTest() {
 		if (getDriver() != null) {

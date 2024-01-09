@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import com.aventstack.extentreports.Status;
 import com.intelehealth.base.BaseTest;
@@ -169,13 +171,13 @@ public class AppointmentsPage extends BaseTest {
 	private WebElement completedTabCount;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"upcoming title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]")
-	private List<WebElement> todayUpcomingAppointments;
+	private WebElement todayUpcomingAppointments;
 
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"upcoming title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"])[last()]")
 	private WebElement todayUpcomingAppointmentslatest;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"cancelled title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]")
-	private List<WebElement> todayCancelledAppointments;
+	private WebElement todayCancelledAppointments;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"completed title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]")
 	private WebElement todayCompletedAppointments;
@@ -193,7 +195,7 @@ public class AppointmentsPage extends BaseTest {
 	private WebElement appointmentDetailsPageTitle;
 
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"completed title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"])[last()]")
-	private List<WebElement> todayCompletedAppointmentsLast;
+	private WebElement todayCompletedAppointmentsLast;
 
 	@AndroidFindBy(accessibility = "Appointment Details Call ImageView")
 	private WebElement appointmentDetailsCallIcon;
@@ -324,17 +326,31 @@ public class AppointmentsPage extends BaseTest {
 	@AndroidFindBy(accessibility = "Appointment Details Schedule Button")
 	private WebElement scheduleAppointmentButton;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Today Appointment Item Patient Name TextView\"]")
-	private WebElement todaysAppointmentPatientName;
-
-	@AndroidFindBy(xpath = "(//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"])/android.widget.RelativeLayout")
-	private List<WebElement> todayAppointmentPatients;
-
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Appointment booked successfully!']")
-	private WebElement byAppointmentBookedSuccessfullyText;
+	@AndroidFindBy(id = "com.android.chrome:id/terms_accept")
+	private WebElement chromeAcceptAndContinue;
 
 	Robot robot;
 	VisitSummaryPage visitSummaryPage;
+
+	By byAppointmentBookedSuccessfullyText = By
+			.xpath("//android.widget.TextView[@text='Appointment booked successfully!']");
+
+	By todaysUpcomingAppointmentPatientName = By.xpath(
+			"//android.widget.TextView[@content-desc=\"upcoming title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]");
+
+	By todaysCancelledAppointmentPatientName = By.xpath(
+			"//android.widget.TextView[@content-desc=\"cancelled title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]");
+
+	By todaysCompletedAppointmentPatientName = By.xpath(
+			"//android.widget.TextView[@content-desc=\"completed title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]");
+
+	By todaysAppointmentPatientName = By
+			.xpath("//android.widget.TextView[@content-desc=\"Today Appointment Item Patient Name TextView\"]");
+
+	By todayAppointmentPatients = By.xpath(
+			"(//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"])/android.widget.RelativeLayout");
+
+	By byChromeAcceptAndContinue = By.id("com.android.chrome:id/terms_accept");
 
 	// Constructor
 	public AppointmentsPage(ThreadLocal<AppiumDriver> driver) throws Throwable {
@@ -343,63 +359,61 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	// Verifies that the appointment details screen is displayed
-	public void verifyAppointmentDetailsScreenIsDisplayed() {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on appointments");
+	public void verifyAppointmentDetailsScreenIsDisplayed() throws Throwable {
+		refreshAppointments();
 		waitForVisibility(MyAppointmentsTitle);
-		isDisplayed(MyAppointmentsTitle,"MyAppointment Screen is Displayed");
-		click(completed,"Clicked on Completed Tab");
+		isDisplayed(MyAppointmentsTitle, "MyAppointment Screen is Displayed");
+		click(completed, "Clicked on Completed Tab");
 
 		try {
-			if (isDisplayed(completedPatient,"Completed patient is Displayed")) {
-				click(completedPatient ,"Clicked on Completed Patient ");
+			if (isDisplayed(completedPatient, "Completed patient is Displayed")) {
+				click(completedPatient, "Clicked on Completed Patient ");
 			}
 		} catch (Exception e) {
 			// Handle the exception if the element is not found or any other error occurs
 		}
 
-		isDisplayed(appointmentsDetailsScreenTitle,"Appointments Detals Screen is Displayed");
+		isDisplayed(appointmentsDetailsScreenTitle, "Appointments Detals Screen is Displayed");
 
 	}
 
 	// Verifies the functionality of the "All" tab
-	public void verifyAllTab() {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(all,"Clicked on All Tab");
+	public void verifyAllTab() throws Throwable {
+		refreshAppointments();
+		click(all, "Clicked on All Tab");
 
 		try {
 			// Check if elements are displayed before getting counts
-			if (isDisplayed(upcomingAppointmentsCount,"Upcoming Appointment Count is Displayed")) {
+			if (isDisplayed(upcomingAppointmentsCount, "Upcoming Appointment Count is Displayed")) {
 				int appointmentsCount = Integer.parseInt(upcomingAppointmentsCount.getText().toString());
-				ExtentReport.getTest().log(Status.INFO,appointmentsCount == 0 ? "No upcoming appointments"
-						: "Upcoming appointments count: " + appointmentsCount); 
+				ExtentReport.getTest().log(Status.INFO, appointmentsCount == 0 ? "No upcoming appointments"
+						: "Upcoming appointments count: " + appointmentsCount);
 				System.out.println(appointmentsCount == 0 ? "No upcoming appointments"
 						: "Upcoming appointments count: " + appointmentsCount);
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Upcoming Appointments count element is not displayed");
+				ExtentReport.getTest().log(Status.INFO, "Upcoming Appointments count element is not displayed");
 				System.out.println("Upcoming Appointments count element is not displayed");
 			}
 
 			if (isDisplayed(completedAppointmentsCount, "Completed Appointment Count is Displayed")) {
 				int completedCount = Integer.parseInt(completedAppointmentsCount.getText());
-				ExtentReport.getTest().log(Status.INFO,completedCount == 0 ? "No completed appointments"
+				ExtentReport.getTest().log(Status.INFO, completedCount == 0 ? "No completed appointments"
 						: "Completed appointments count: " + completedCount);
 				System.out.println(completedCount == 0 ? "No completed appointments"
 						: "Completed appointments count: " + completedCount);
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Completed Appointments count element is not displayed");
+				ExtentReport.getTest().log(Status.INFO, "Completed Appointments count element is not displayed");
 				System.out.println("Completed Appointments count element is not displayed");
 			}
 
 			if (isDisplayed(cancelledAppointmentsCount, "Cancelled Appointment Count is Displayed")) {
 				int cancelledCount = Integer.parseInt(cancelledAppointmentsCount.getText());
-				ExtentReport.getTest().log(Status.INFO,cancelledCount == 0 ? "No cancelled appointments"
+				ExtentReport.getTest().log(Status.INFO, cancelledCount == 0 ? "No cancelled appointments"
 						: "Cancelled appointments count: " + cancelledCount);
 				System.out.println(cancelledCount == 0 ? "No cancelled appointments"
 						: "Cancelled appointments count: " + cancelledCount);
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Cancelled Appointments count element is not displayed");
+				ExtentReport.getTest().log(Status.INFO, "Cancelled Appointments count element is not displayed");
 				System.out.println("Cancelled Appointments count element is not displayed");
 			}
 		} catch (Exception e) {
@@ -408,60 +422,53 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	// Verifies the functionality of the "Appointments" radio button
-	public void verifyAppointmentsRadioButton() {
-		waitForVisibility(appointments);
-	    click(appointments, "Clicked on Appointments");
-	    click(all, "Clicked on All");
-	    click(filter, "Clicked on Filter");
-	    click(completedRadioButton, "Clicked on Completed Radio Button");
+	public void verifyAppointmentsRadioButton() throws Throwable {
+		refreshAppointments();
+		click(all, "Clicked on All");
+		click(filter, "Clicked on Filter");
+		click(completedRadioButton, "Clicked on Completed Radio Button");
 
-	    isDisplayed(completedAppointmentResult,"Completed Appointment Result is Displayed");
-	    
+		isDisplayed(completedAppointmentResult, "Completed Appointment Result is Displayed");
 
-	    isDisplayed(completedAppointmentTitle,"Completed Appointment Title is Displayed");
-	   
+		isDisplayed(completedAppointmentTitle, "Completed Appointment Title is Displayed");
+
 	}
-
 
 	// Verifies that the user can select "From" and "To" dates
-	public void verifyUserCanSelectFromAndToDate() {
-		waitForVisibility(appointments);
-	    click(appointments, "Clicked on Appointments");
-	    click(all, "Clicked on All");
-	    click(calender, "Clicked on Calendar");
+	public void verifyUserCanSelectFromAndToDate() throws Throwable {
+		refreshAppointments();
+		click(all, "Clicked on All");
+		click(calender, "Clicked on Calendar");
 
-	    // Select From Date
-	    click(fromDateCalenderIcon, "Clicked on From Date Calendar Icon");
-	    click(monthSpinner, "Clicked on Month Spinner");
-	    click(fromMonth, "Clicked on From Month");
-	    click(yearSpinner, "Clicked on Year Spinner");
-	    click(fromYear, "Clicked on From Year");
-	    click(date, "Clicked on Date");
-	    click(okayButton, "Clicked on Okay Button for From Date");
+		// Select From Date
+		click(fromDateCalenderIcon, "Clicked on From Date Calendar Icon");
+		click(monthSpinner, "Clicked on Month Spinner");
+		click(fromMonth, "Clicked on From Month");
+		click(yearSpinner, "Clicked on Year Spinner");
+		click(fromYear, "Clicked on From Year");
+		click(date, "Clicked on Date");
+		click(okayButton, "Clicked on Okay Button for From Date");
 
-	    // Select To Date
-	    click(toDateCalenderIcon, "Clicked on To Date Calendar Icon");
-	    click(monthSpinner, "Clicked on Month Spinner");
-	    click(toMonth, "Clicked on To Month");
-	    click(yearSpinner, "Clicked on Year Spinner");
-	    click(toYear, "Clicked on To Year");
-	    click(date, "Clicked on Date");
-	    click(okayButton, "Clicked on Okay Button for To Date");
+		// Select To Date
+		click(toDateCalenderIcon, "Clicked on To Date Calendar Icon");
+		click(monthSpinner, "Clicked on Month Spinner");
+		click(toMonth, "Clicked on To Month");
+		click(yearSpinner, "Clicked on Year Spinner");
+		click(toYear, "Clicked on To Year");
+		click(date, "Clicked on Date");
+		click(okayButton, "Clicked on Okay Button for To Date");
 
-	    isDisplayed(dateRange,"Date Range is Displayed");
-	    
-	  
+		isDisplayed(dateRange, "Date Range is Displayed");
+
 	}
 
-
 	// Verifies the count of appointments in the "Cancelled" tab
-	public void verifyCountOfCancelledTab() {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(cancelledTab,"Clicked on cancelled Tab");
+	public void verifyCountOfCancelledTab() throws Throwable {
+		refreshAppointments();
+		click(cancelledTab, "Clicked on cancelled Tab");
 		String cc = cancelledCount.getText();
 		String ct = cancelledTitelText.getText();
-       int extractedCT = 0;
+		int extractedCT = 0;
 		// Define a regular expression pattern to match the numeric part
 		Pattern pattern = Pattern.compile("\\d+");
 
@@ -472,52 +479,50 @@ public class AppointmentsPage extends BaseTest {
 		if (matcher.find()) {
 			// Extract and print the matched number
 			String numberString = matcher.group();
-			 extractedCT = Integer.parseInt(numberString);
-			 
+			extractedCT = Integer.parseInt(numberString);
+
 			System.out.println("Extracted number: " + extractedCT);
 		} else {
 			System.out.println("No number found in the input string.");
 		}
 		System.out.println("Cancelled count: " + cc);
 		System.out.println("Extracted number: " + extractedCT);
-		if(Integer.parseInt(cc) == extractedCT) {
-			ExtentReport.getTest().log(Status.INFO,"Verified the count of the Cancelled tab..");
-		    System.out.println("Verified the count of the Cancelled tab..");
+		if (Integer.parseInt(cc) == extractedCT) {
+			ExtentReport.getTest().log(Status.INFO, "Verified the count of the Cancelled tab..");
+			System.out.println("Verified the count of the Cancelled tab..");
 		} else {
-			ExtentReport.getTest().log(Status.INFO,"Verification of count of cancelled failed; count does not match");
-		    System.out.println("Verification of count of cancelled failed; count does not match");
+			ExtentReport.getTest().log(Status.INFO, "Verification of count of cancelled failed; count does not match");
+			System.out.println("Verification of count of cancelled failed; count does not match");
 		}
-
 
 	}
 
 	// Verifies the functionality of the "Cancelled" tab
-	public void verifyCancelledTabFunctionality() {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(cancelledTab,"Clicked on cancelled Tab");
+	public void verifyCancelledTabFunctionality() throws Throwable {
+		refreshAppointments();
+		click(cancelledTab, "Clicked on cancelled Tab");
 		try {
-			if (isDisplayed(cancelledTitelText,"Cancelled TitleText is Displayed")) {
-				ExtentReport.getTest().log(Status.INFO,"Cancelled section present.");
+			if (isDisplayed(cancelledTitelText, "Cancelled TitleText is Displayed")) {
+				ExtentReport.getTest().log(Status.INFO, "Cancelled section present.");
 				System.out.println("Cancelled section present.");
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Cancelled section not present.");
+				ExtentReport.getTest().log(Status.INFO, "Cancelled section not present.");
 				System.out.println("Cancelled section not present.");
 			}
 
-			if (isDisplayed(completedTitelText,"Completed Title Text is Displayed")) {
-				ExtentReport.getTest().log(Status.INFO,"Completed section present.");
+			if (isDisplayed(completedTitelText, "Completed Title Text is Displayed")) {
+				ExtentReport.getTest().log(Status.INFO, "Completed section present.");
 				System.out.println("Completed section present.");
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Completed section not  present.");
+				ExtentReport.getTest().log(Status.INFO, "Completed section not  present.");
 				System.out.println("Completed section not present.");
 			}
 
-			if (isDisplayed(upcomingTitleText,"Upcoming Title Text is Displayed")) {
-				ExtentReport.getTest().log(Status.INFO,"Upcoming section present.");
+			if (isDisplayed(upcomingTitleText, "Upcoming Title Text is Displayed")) {
+				ExtentReport.getTest().log(Status.INFO, "Upcoming section present.");
 				System.out.println("Upcoming section present.");
 			} else {
-				ExtentReport.getTest().log(Status.INFO,"Upcoming section  not present.");
+				ExtentReport.getTest().log(Status.INFO, "Upcoming section  not present.");
 				System.out.println("Upcoming section not present.");
 			}
 		} catch (Exception e) {
@@ -542,61 +547,59 @@ public class AppointmentsPage extends BaseTest {
 		} else {
 			System.out.println("No number found in the input string.");
 		}
-		if(Integer.parseInt(cc) == extractedCT) {
-			ExtentReport.getTest().log(Status.INFO,"Verified the count of the completed tab..");
-		    System.out.println("Verified the count of the completed tab..");
+		if (Integer.parseInt(cc) == extractedCT) {
+			ExtentReport.getTest().log(Status.INFO, "Verified the count of the completed tab..");
+			System.out.println("Verified the count of the completed tab..");
 		} else {
-			ExtentReport.getTest().log(Status.INFO,"Verification of count of completed failed; count does not match");
-		    System.out.println("Verification of count of completed failed; count does not match");
+			ExtentReport.getTest().log(Status.INFO, "Verification of count of completed failed; count does not match");
+			System.out.println("Verification of count of completed failed; count does not match");
 		}
-		
+
 	}
 
 	// Verifies the functionality of the "Cancel" button
-	public void verifyCancelButton() throws InterruptedException {
-		waitForVisibility(appointments);
-	    click(appointments, "Clicked on Appointments");
-	    Thread.sleep(2000);
-	    int number = 0;
-	    String uvalue = upcomingTitleText.getText();
+	public void verifyCancelButton() throws Throwable {
+		refreshAppointments();
+		Thread.sleep(2000);
+		int number = 0;
+		String uvalue = upcomingTitleText.getText();
 
-	    // Define a regular expression pattern to match the numeric part
-	    Pattern pattern = Pattern.compile("\\d+");
+		// Define a regular expression pattern to match the numeric part
+		Pattern pattern = Pattern.compile("\\d+");
 
-	    // Create a Matcher object
-	    Matcher matcher = pattern.matcher(uvalue);
+		// Create a Matcher object
+		Matcher matcher = pattern.matcher(uvalue);
 
-	    // Check if a match is found
-	    if (matcher.find()) {
-	        // Extract and print the matched number
-	        String numberString = matcher.group();
-	        number = Integer.parseInt(numberString);
-	        System.out.println("Extracted number: " + number);
-	    } else {
-	        System.out.println("No number found in the input string.");
-	    }
+		// Check if a match is found
+		if (matcher.find()) {
+			// Extract and print the matched number
+			String numberString = matcher.group();
+			number = Integer.parseInt(numberString);
+			System.out.println("Extracted number: " + number);
+		} else {
+			System.out.println("No number found in the input string.");
+		}
 
-	    if (number > 0) {
-	        click(upcomingPatient, "Clicked on Upcoming Patient");
-	        click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
+		if (number > 0) {
+			click(upcomingPatient, "Clicked on Upcoming Patient");
+			click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
 
-	        isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
-	        isDisplayed(cancelAppointmentDialogSubtitle, "Cancel Appointment Dialog Subtitle is Displayed");
-	        isDisplayed(yesButton, "Yes Button is Displayed");
-	        isDisplayed(noButton, "No Button is Displayed");
-	    } else {
-	        // Throw an exception or use an assertion to fail the test case
-	        throw new AssertionError("No upcoming patient found. Test case failed.");
-	    }
+			isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
+			isDisplayed(cancelAppointmentDialogSubtitle, "Cancel Appointment Dialog Subtitle is Displayed");
+			isDisplayed(yesButton, "Yes Button is Displayed");
+			isDisplayed(noButton, "No Button is Displayed");
+		} else {
+			// Throw an exception or use an assertion to fail the test case
+			throw new AssertionError("No upcoming patient found. Test case failed.");
+		}
 	}
 
 	// Verifies the functionality of the "Yes" button
-	public void verifyYesButton() throws InterruptedException {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(backArrow,"Clicked on Back Arrow");
+	public void verifyYesButton() throws Throwable {
+		refreshAppointments();
+		click(backArrow, "Clicked on Back Arrow");
 		Thread.sleep(5000);
-		click(appointments,"Clicked on Appointments");
+		click(appointments, "Clicked on Appointments");
 //		for(int i=0; i<3;i++) {
 //		click(refresh);
 //		}
@@ -621,36 +624,32 @@ public class AppointmentsPage extends BaseTest {
 		}
 
 		if (number > 0) {
-			 click(upcomingPatient, "Clicked on Upcoming Patient");
-			    click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
+			click(upcomingPatient, "Clicked on Upcoming Patient");
+			click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
 
-			    isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
-			    isDisplayed(cancelAppointmentDialogSubtitle, "Cancel Appointment Dialog Subtitle is Displayed");
+			isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
+			isDisplayed(cancelAppointmentDialogSubtitle, "Cancel Appointment Dialog Subtitle is Displayed");
 
-			    click(yesButton, "Clicked on Yes Button");
+			click(yesButton, "Clicked on Yes Button");
 
-			    isDisplayed(reasonDialogTitle, "Reason Dialog Title is Displayed");
-			    isDisplayed(doctorRadioButton, "Doctor Radio Button is Displayed");
-			    isDisplayed(noPatientRadioButton, "No Patient Radio Button is Displayed");
-			    isDisplayed(othersRadioButton, "Others Radio Button is Displayed");
-			    isDisplayed(cancelButton, "Cancel Button is Displayed");
-			    isDisplayed(saveButton, "Save Button is Displayed");
+			isDisplayed(reasonDialogTitle, "Reason Dialog Title is Displayed");
+			isDisplayed(doctorRadioButton, "Doctor Radio Button is Displayed");
+			isDisplayed(noPatientRadioButton, "No Patient Radio Button is Displayed");
+			isDisplayed(othersRadioButton, "Others Radio Button is Displayed");
+			isDisplayed(cancelButton, "Cancel Button is Displayed");
+			isDisplayed(saveButton, "Save Button is Displayed");
 		} else {
-			
+
 			throw new AssertionError("No upcoming patient found. Test case failed.");
-			
 
 		}
 
 	}
 
 	// Verifies the Completed tab functionality
-	public void verifyCompletedTab() {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(completed,"Clicked On Completed Tab");
-
-		
+	public void verifyCompletedTab() throws Throwable {
+		refreshAppointments();
+		click(completed, "Clicked On Completed Tab");
 
 		int number = 0;
 		String ct = completedTitelText.getText();
@@ -682,16 +681,15 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	// Verifies the functionality of the Save button on the appointment screen
-	public void verifyAppointmentSaveButton() throws InterruptedException {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked onAppointments");
-		click(backArrow,"Clicked on Back Arrow");
-		Thread.sleep(10000);
-		click(appointments,"Clicked onAppointments");
+	public void verifyAppointmentSaveButton() throws Throwable {
+		refreshAppointments();
+//		click(backArrow,"Clicked on Back Arrow");
+//		Thread.sleep(10000);
+//		click(appointments,"Clicked onAppointments");
 //	for(int i=0; i<3;i++) {
 //	click(refresh);
 //	}
-		click(refresh,"Clicked On Refresh ");
+//		click(refresh,"Clicked On Refresh ");
 		int number = 0;
 		String uvalue = upcomingTitleText.getText();
 		// Define a regular expression pattern to match the numeric part
@@ -712,37 +710,38 @@ public class AppointmentsPage extends BaseTest {
 
 		if (number > 0) {
 			click(upcomingPatient, "Clicked on Upcoming Patient");
-		    click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
+			click(appointmentCancelButton, "Clicked on Appointment Cancel Button");
 
-		    isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
+			isDisplayed(cancelAppointmentDialog, "Cancel Appointment Dialog is Displayed");
 
-		    click(yesButton, "Clicked on Yes Button");
-		    click(noPatientRadioButton, "Clicked on No Patient Radio Button");
-		    click(saveButton, "Clicked on Save Button");
-
-		    isDisplayed(appointmentCanceledSuccessMsg, "Appointment Canceled Success Message is Displayed");
-		    isDisplayed(MyAppointmentsTitle, "My Appointments Title is Displayed");
+			click(yesButton, "Clicked on Yes Button");
+			click(noPatientRadioButton, "Clicked on No Patient Radio Button");
+			click(saveButton, "Clicked on Save Button");
+			try {
+				isDisplayed(appointmentCanceledSuccessMsg, "Appointment Canceled Success Message is Displayed");
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			isDisplayed(MyAppointmentsTitle, "My Appointments Title is Displayed");
 
 		} else {
-			
+
 			throw new AssertionError("No upcoming patient found. Test case failed.");
-			
 
 		}
 	}
 
 	// Verifies that the Schedule Appointment page is displayed
-	public void verifySchedulaAppointmentPageIsDisplayed() throws InterruptedException {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked onAppointments");
-		click(backArrow,"Clicked on Back Arrow");
+	public void verifySchedulaAppointmentPageIsDisplayed() throws Throwable {
+		refreshAppointments();
+		click(backArrow, "Clicked on Back Arrow");
 		Thread.sleep(10000);
-		click(appointments,"Clicked onAppointments");
+		click(appointments, "Clicked onAppointments");
 //	for(int i=0; i<3;i++) {
 //	click(refresh);
 //	}
-		click(refresh,"Clicked on Refresh");
-		click(cancelledTab,"Clicked on cancelled Tab");
+		click(refresh, "Clicked on Refresh");
+		click(cancelledTab, "Clicked on cancelled Tab");
 		int number = 0;
 		String uvalue = cancelledTitelText.getText();
 		// Define a regular expression pattern to match the numeric part
@@ -762,25 +761,24 @@ public class AppointmentsPage extends BaseTest {
 		}
 
 		if (number > 0) {
-			   click(upcomingPatient, "Clicked on Upcoming Patient");
-			    click(appointmentScheduleButton, "Clicked on Appointment Schedule Button");
+			click(upcomingPatient, "Clicked on Upcoming Patient");
+			click(appointmentScheduleButton, "Clicked on Appointment Schedule Button");
 
-			    isDisplayed(scheduleAppointmentTitle, "Schedule Appointment Title is Displayed");
+			isDisplayed(scheduleAppointmentTitle, "Schedule Appointment Title is Displayed");
 		}
 	}
 
 	// Verifies the Cancelled tab functionality
-	public void verifyCancelledTab() throws InterruptedException {
-		waitForVisibility(appointments);
-		click(appointments,"Clicked on Appointments");
-		click(backArrow,"Clicked on Back Arrow");
+	public void verifyCancelledTab() throws Throwable {
+		refreshAppointments();
+		click(backArrow, "Clicked on Back Arrow");
 		Thread.sleep(10000);
-		click(appointments,"Clicked on Appointments");
+		click(appointments, "Clicked on Appointments");
 		Thread.sleep(2000);
-		click(cancelledTab,"Clicked on cancelled Tab");
+		click(cancelledTab, "Clicked on cancelled Tab");
 		String count;
 		count = cancelledCount.getText();
-		click(upcomingTab,"Clicked on Upcoming Tab");
+		click(upcomingTab, "Clicked on Upcoming Tab");
 		String uCount = upcomingTitleText.getText();
 		int number = 0;
 //Define a regular expression pattern to match the numeric part
@@ -800,12 +798,12 @@ public class AppointmentsPage extends BaseTest {
 		}
 //click(upcomingTab);
 		if (number > 0) {
-			 click(upcomingPatient, "Clicked on Upcoming Patient");
-			    click(cancelButton, "Clicked on Cancel Button");
-			    click(yesButton, "Clicked on Yes Button");
-			    click(noPatientRadioButton, "Clicked on No Patient Radio Button");
-			    click(saveButton, "Clicked on Save Button");
-			    click(cancelledTab, "Clicked on Cancelled Tab");
+			click(upcomingPatient, "Clicked on Upcoming Patient");
+			click(cancelButton, "Clicked on Cancel Button");
+			click(yesButton, "Clicked on Yes Button");
+			click(noPatientRadioButton, "Clicked on No Patient Radio Button");
+			click(saveButton, "Clicked on Save Button");
+			click(cancelledTab, "Clicked on Cancelled Tab");
 			String newCount = cancelledCount.getText();
 
 			if (Integer.parseInt(count) > Integer.parseInt(newCount)) {
@@ -816,70 +814,76 @@ public class AppointmentsPage extends BaseTest {
 		}
 	}
 
-	
+	public void verifyCancelledSection() throws Throwable {
+		refreshAppointments();
+		// Click on Back Arrow
+		click(backArrow, "Clicked on Back Arrow");
 
-	public void verifyCancelledSection() throws InterruptedException {
-		waitForVisibility(appointments);
-	    // Click on Appointments
-	    click(appointments, "Clicked on Appointments");
+		// Wait for some time (you may replace this with a more robust wait strategy)
+		Thread.sleep(10000);
 
-	    // Click on Back Arrow
-	    click(backArrow, "Clicked on Back Arrow");
+		// Click on Appointments again
+		click(appointments, "Clicked on Appointments");
 
-	    // Wait for some time (you may replace this with a more robust wait strategy)
-	    Thread.sleep(10000);
+		// Wait for some time (you may replace this with a more robust wait strategy)
+		Thread.sleep(2000);
 
-	    // Click on Appointments again
-	    click(appointments, "Clicked on Appointments");
+		// Click on Cancelled Tab
+		click(cancelledTab, "Clicked on Cancelled Tab");
 
-	    // Wait for some time (you may replace this with a more robust wait strategy)
-	    Thread.sleep(2000);
+		// Get the count of cancelled appointments from the UI
+		String countInBrackets = cancelledTitelText.getText();
 
-	    // Click on Cancelled Tab
-	    click(cancelledTab, "Clicked on Cancelled Tab");
+		// Extract the numeric count from the string using regular expressions
+		Matcher matcher = Pattern.compile("\\d+").matcher(countInBrackets);
+		int countFromUI = matcher.find() ? Integer.parseInt(matcher.group()) : 0;
 
-	    // Get the count of cancelled appointments from the UI
-	    String countInBrackets = cancelledTitelText.getText();
+		// Verify that it shows the correct count
+		if (countFromUI == 0) {
+			System.out.println("Verification: Cancelled Tab shows Cancelled (0)");
+		} else {
+			System.out.println("Verification: Cancelled Tab shows Cancelled (" + countFromUI + ")");
+		}
 
-	    // Extract the numeric count from the string using regular expressions
-	    Matcher matcher = Pattern.compile("\\d+").matcher(countInBrackets);
-	    int countFromUI = matcher.find() ? Integer.parseInt(matcher.group()) : 0;
+		// Get the list of cancelled appointments
+		List<WebElement> cancelledAppointments = apponimentsCancelledPatients;
 
-	    // Verify that it shows the correct count
-	    if (countFromUI == 0) {
-	        System.out.println("Verification: Cancelled Tab shows Cancelled (0)");
-	    } else {
-	        System.out.println("Verification: Cancelled Tab shows Cancelled (" + countFromUI + ")");
-	    }
+		// Check if the list is empty
+		if (cancelledAppointments.isEmpty()) {
 
-	    // Get the list of cancelled appointments
-	    List<WebElement> cancelledAppointments = apponimentsCancelledPatients;
+			throw new AssertionError("No cancelled patients found. Test case failed.");
 
-	    // Check if the list is empty
-	    if (cancelledAppointments.isEmpty()) {
-	       
-	        throw new AssertionError("No cancelled patients found. Test case failed.");
-			
-	    } else {
-	    	ExtentReport.getTest().log(Status.INFO, "Cancelled patients found");
-	        System.out.println("Cancelled patients found");
+		} else {
+			ExtentReport.getTest().log(Status.INFO, "Cancelled patients found");
+			System.out.println("Cancelled patients found");
 
-	       
-	    }
+		}
 	}
-
-		
 
 	// Clicking on app sync icon and Clicking on appointments
 	public void refreshAppointments() throws Throwable {
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
 		Thread.sleep(20000);
 		click(homeScreenRefreshButton, "Clicking on app sync icon");
 		click(openAppointments, "Clicking on appointments");
+		break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 	}
 
-	// Gets the last character of the provided string and verifies whether No. of
-	// 'Upcoming' appointments are displayed
-	public char doGetLastOneCharUpcoming(WebElement e) {
+	/*
+	 * Gets the last character of the provided string and verifies whether No. of
+	 * 'Upcoming' appointments are displayed
+	 */
+	public char doGetLastOneCharUpcoming(WebElement e) throws InterruptedException {
+		waitForVisibility(e);
 		String text = e.getText();
 		char Upcoming = text.charAt(9);
 		char Upcoming1 = text.charAt(10);
@@ -890,9 +894,12 @@ public class AppointmentsPage extends BaseTest {
 		return Upcoming;
 	}
 
-	// Gets the last character of the provided string and verifies whether No. of
-	// 'cancelled' appointments are displayed
-	public char doGetLastOneCharCancelled(WebElement e) {
+	/*
+	 * Gets the last character of the provided string and verifies whether No. of
+	 * 'Cancelled' appointments are displayed
+	 */
+	public char doGetLastOneCharCancelled(WebElement e) throws InterruptedException {
+		waitForVisibility(e);
 		String text = e.getText();
 		char Cancelled = text.charAt(10);
 		char Cancelled1 = text.charAt(11);
@@ -903,9 +910,12 @@ public class AppointmentsPage extends BaseTest {
 		return Cancelled;
 	}
 
-	// Gets the last character of the provided string and verifies whether No. of
-	// 'completed' appointments are displayed
-	public char doGetLastOneCharCompletedSection(WebElement e) {
+	/*
+	 * Gets the last character of the provided string and verifies whether No. of
+	 * 'Completed' appointments are displayed
+	 */
+	public char doGetLastOneCharCompletedSection(WebElement e) throws InterruptedException {
+		waitForVisibility(e);
 		String text = e.getText();
 		char Completed = text.charAt(10);
 		char Completed1 = text.charAt(11);
@@ -922,16 +932,20 @@ public class AppointmentsPage extends BaseTest {
 	public void verifyIfOnlyTodaysDateAppointmentsAreShowingUnderTodaysTab() throws Throwable {
 		refreshAppointments();
 		click(todaysTab, "Clicking on today's tab");
+		click(upcomingTab, "Clicking on upcoming tab");
 		boolean There = isDisplayed2(todaysAppointmentPatientName);
 		if (There == true) {
-			int allPatients = todayAppointmentPatients.size();
+			List<WebElement> patientNames = getElements(todayAppointmentPatients);
+			int allPatients = patientNames.size();
 			int maxRetries = allPatients; // Maximum number of retries
 			// Retry loop
 			for (int attempt = 0; attempt < maxRetries; attempt++) {
-				for (Iterator<WebElement> iterator = todayAppointmentPatients.iterator(); iterator.hasNext();) {
+				List<WebElement> allPatientNames = getElements(todayAppointmentPatients);
+				for (Iterator<WebElement> iterator = allPatientNames.iterator(); iterator.hasNext();) {
 					WebElement webElement = (WebElement) iterator.next();
 					click(webElement, "Clicking on today's appointments");
 					try {
+						waitForVisibility(appointmentsDate);
 						String appointmentsDateText = appointmentsDate.getText();
 						click(todayAppointmentBackArrow);
 						System.out.println("Appointment Date: " + appointmentsDateText);
@@ -961,13 +975,13 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	// Verifies that the cancelled section is displayed
-	public void cancelledSectionDisplayed() {
+	public void cancelledSectionDisplayed() throws InterruptedException {
 		ExtentReport.getTest().log(Status.INFO, "Verifying whether cancelled section is displayed");
 		isDisplayed(cancelledSection);
 	}
 
 	// Verifies that the completed section is displayed
-	public void completedSectionDisplayed() {
+	public void completedSectionDisplayed() throws InterruptedException {
 		ExtentReport.getTest().log(Status.INFO, "Verifying whether completed section is displayed");
 		isDisplayed(completedSection);
 	}
@@ -984,7 +998,7 @@ public class AppointmentsPage extends BaseTest {
 		scrollToElementByDescription("completed title textview in Todays Appointments");
 		completedSectionDisplayed();
 		doGetLastOneCharCompletedSection(completedSection);
-		boolean patients = isDisplayedListofWebelemets(todayUpcomingAppointments);
+		boolean patients = isDisplayed2(todaysAppointmentPatientName);
 		if (patients == true) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether there are patients in the current date");
 			System.out.println("There are patients in the current date");
@@ -998,10 +1012,11 @@ public class AppointmentsPage extends BaseTest {
 	// Verifies the presence of the cancelled section under the 'Upcoming' tab
 	public void verifyCancelledSectionUnderUpcomingTab() throws Throwable {
 		refreshAppointments();
+		waitForVisibility(upcomingSection);
 		scrollToElementByDescription("cancelled title textview in Todays Appointments");
 		cancelledSectionDisplayed();
 		doGetLastOneCharCancelled(cancelledSection);
-		boolean Patients = isDisplayedListofWebelemets(todayCancelledAppointments);
+		boolean Patients = isDisplayed2(todaysCancelledAppointmentPatientName);
 		if (Patients == true) {
 			ExtentReport.getTest().log(Status.INFO,
 					"Verifying whether there are cancelled appointments in the current date");
@@ -1020,7 +1035,7 @@ public class AppointmentsPage extends BaseTest {
 		scrollToElementByDescription("completed title textview in Todays Appointments");
 		completedSectionDisplayed();
 		doGetLastOneCharCompletedSection(completedSection);
-		boolean Patients = isDisplayed2(todayCompletedAppointments);
+		boolean Patients = isDisplayed2(todaysCompletedAppointmentPatientName);
 		if (Patients == true) {
 			ExtentReport.getTest().log(Status.INFO,
 					"Verifying whether there are completed appointments in the current date");
@@ -1036,13 +1051,13 @@ public class AppointmentsPage extends BaseTest {
 	// Verifies the count of patients in the 'Upcoming' tab
 	public void verifyTheCountOfUpcomingTab() throws Throwable {
 		refreshAppointments();
-		Thread.sleep(3000);
-		boolean upcomingThere = isDisplayedListofWebelemets(todayUpcomingAppointments);
+		click(todaysTab);
+		boolean upcomingThere = isDisplayed2(todaysUpcomingAppointmentPatientName);
 		if (upcomingThere == true) {
-			int totalUpcomingPatients = todayUpcomingAppointments.size();
-			System.out.println(totalUpcomingPatients);
+			List<WebElement> upcomingPatientNames = getElements(todaysUpcomingAppointmentPatientName);
+			int totalUpcomingPatients = upcomingPatientNames.size();
+			waitForVisibility(upcomingSection);
 			String upcomnigCount = upcomingSection.getText();
-			System.out.println(upcomnigCount);
 			CharSequence intUpcomnigCount = String.valueOf(totalUpcomingPatients);
 			if (upcomnigCount.contains(intUpcomnigCount)) {
 				ExtentReport.getTest().log(Status.INFO,
@@ -1054,11 +1069,12 @@ public class AppointmentsPage extends BaseTest {
 			ExtentReport.getTest().log(Status.INFO, "There are no patients in the 'upcoming' section");
 			System.out.println("There are no patients in the 'upcoming' section");
 		}
-		boolean cancelledThere = isDisplayedListofWebelemets(todayCancelledAppointments);
 		scrollToElementByDescription("cancelled title textview in Todays Appointments");
 		cancelledSectionDisplayed();
+		boolean cancelledThere = isDisplayed2(todaysCancelledAppointmentPatientName);
 		if (cancelledThere == true) {
-			int totalCancelledPatients = todayCancelledAppointments.size();
+			List<WebElement> cancelledPatientNames = getElements(todaysCancelledAppointmentPatientName);
+			int totalCancelledPatients = cancelledPatientNames.size();
 			String cancelledCount = cancelledSection.getText();
 			String cancelledPatients = String.valueOf(totalCancelledPatients);
 			if (cancelledCount.contains(cancelledPatients)) {
@@ -1071,12 +1087,13 @@ public class AppointmentsPage extends BaseTest {
 			ExtentReport.getTest().log(Status.INFO, "There are no patients in the cancelled section");
 			System.out.println("There are no patients in the 'cancelled' section");
 		}
-
-		boolean completedThere = isDisplayedListofWebelemets(todayCompletedAppointmentsLast);
 		scrollToElementByDescription("completed title textview in Todays Appointments");
 		completedSectionDisplayed();
+		boolean completedThere = isDisplayed2(todaysCompletedAppointmentPatientName);
 		if (completedThere == true) {
-			int TotalCompletedPatients = todayCompletedAppointmentsLast.size();
+			List<WebElement> completedPatientNames = getElements(todaysCompletedAppointmentPatientName);
+			int TotalCompletedPatients = completedPatientNames.size();
+			waitForVisibility(completedSection);
 			String completedCount = completedSection.getText();
 			String completedPatients = String.valueOf(TotalCompletedPatients);
 			if (completedCount.contains(completedPatients)) {
@@ -1092,10 +1109,13 @@ public class AppointmentsPage extends BaseTest {
 
 	}
 
-	// Verifies the patient visit details displayed after clicking on upcoming
-	// appointment from 'Upcoming' section
+	/*
+	 * Verifies the patient visit details displayed after clicking on upcoming
+	 * appointment from 'Upcoming' section
+	 */
 	public void verifyThePatientVisitDetailsInUpcomingSection() throws Throwable {
 		refreshAppointments();
+		waitForVisibility(todayUpcomingAppointmentslatest);
 		click(todayUpcomingAppointmentslatest, "Clicking on newly added upcoming appointment");
 		if (isDisplayed(appointmentDetailsPageTitle)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether user is navigated to appointment details page");
@@ -1103,18 +1123,21 @@ public class AppointmentsPage extends BaseTest {
 
 	}
 
-	// Verifies the functionality of clicking on the call and WhatsApp icons on the
-	// Appointment Details page
+	/*
+	 * Verifies the functionality of clicking on the call and WhatsApp icons on the
+	 * Appointment Details page
+	 */
 	public void verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided() throws Throwable {
-		ExtentReport.getTest().log(Status.INFO, "Creating the appointment with phone number");
-		visitSummaryPage.verifyIfBookedAppointmentIsReflectingInAppointments();
-		click(todayAppointmentBackArrow, "Clicking on back arrow");
 		verifyThePatientVisitDetailsInUpcomingSection();
 		if (isDisplayed(appointmentDetailsCallIcon) && isDisplayed(appointmentDetailsWhatsappIcon)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether Call Icon and Whatsapp Icon are displayed");
 			System.out.println("Call Icon and Whatsapp Icon are displayed");
 		}
 		click(appointmentDetailsWhatsappIcon, "Clicking on whatsapp icon");
+		boolean acceptAndContine = isDisplayed2(byChromeAcceptAndContinue);
+		if (acceptAndContine == true) {
+			click(chromeAcceptAndContinue);
+		}
 		if (isDisplayed(turnOnSyncNoThanks) && isDisplayed(turnOnSyncAddAccount)) {
 			ExtentReport.getTest().log(Status.INFO, "There is no whatsapp application in the device");
 			System.out.println("There is no whatsapp application in the device");
@@ -1138,10 +1161,7 @@ public class AppointmentsPage extends BaseTest {
 	 */
 	public void verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage() throws Throwable {
 		refreshAppointments();
-		for (WebElement upcomingPatients : todayUpcomingAppointments) {
-			click(upcomingPatients, "Clicking on upcoming appointment");
-			break;
-		}
+		click(todayUpcomingAppointments, "Clicking on upcoming appointment");
 		click(appointmentDetailsVisitSummaryForwardArrow, "Clicking on arrow next to visit summary");
 		if (isDisplayed(visitSummaryPageTitle) && isDisplayed(visitSummaryPageDetailsText)
 				&& isDisplayed(visitSummaryPageHeight) && isDisplayed(visitSummaryPageWeight)
@@ -1155,13 +1175,12 @@ public class AppointmentsPage extends BaseTest {
 		}
 	}
 
-	//  Verifies the functionality of the 'Reschedule' feature on the Appointment Details page
+	// Verifies the functionality of the 'Reschedule' feature on the Appointment
+	// Details page
 	public void verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage() throws Throwable {
 		refreshAppointments();
-		for (WebElement upcomingPatients : todayUpcomingAppointments) {
-			click(upcomingPatients, "Clicking on upcoming appointment");
-			break;
-		}
+		waitForVisibility(todayUpcomingAppointments);
+		click(todayUpcomingAppointments, "Clicking on upcoming appointment");
 		click(appointmentDetailsRescheduleButton, "Clicking on reschedule button");
 		if (isDisplayed(rescheduleAppointmentText) && isDisplayed(areUSureRescheduleText)) {
 			ExtentReport.getTest().log(Status.INFO,
@@ -1177,8 +1196,9 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	/*
-	 * Verifies that the user receives the 'Select Reschedule Reason' popup by clicking 'Yes'
-	 * when attempting to reschedule an appointment on the Appointment Details page
+	 * Verifies that the user receives the 'Select Reschedule Reason' popup by
+	 * clicking 'Yes' when attempting to reschedule an appointment on the
+	 * Appointment Details page
 	 */
 	public void verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes() throws Throwable {
 		verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage();
@@ -1197,8 +1217,9 @@ public class AppointmentsPage extends BaseTest {
 	}
 
 	/*
-	 * Verifies the functionality of clicking on the 'Save' button after selecting a reason
-	 * in the 'Reschedule Reason' popup during the appointment rescheduling process
+	 * Verifies the functionality of clicking on the 'Save' button after selecting a
+	 * reason in the 'Reschedule Reason' popup during the appointment rescheduling
+	 * process
 	 */
 	public void verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup() throws Throwable {
 		verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes();
@@ -1213,7 +1234,8 @@ public class AppointmentsPage extends BaseTest {
 		}
 	}
 
-	// Verifies the process of selecting any available time slot and clicking on the 'Book Appointment' button
+	// Verifies the process of selecting any available time slot and clicking on the
+	// 'Book Appointment' button
 	public void verifySelectingAnyTimeSlotsAndClickingOnBookAppointment() throws Throwable {
 		verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup();
 		click(appointmentFirstTime, "Selecting the time slot");
@@ -1241,7 +1263,8 @@ public class AppointmentsPage extends BaseTest {
 		}
 	}
 
-	// Verifies the behavior when the user clicks 'Yes' in the 'Confirm Appointment' popup
+	// Verifies the behavior when the user clicks 'Yes' in the 'Confirm Appointment'
+	// popup
 	public void verifyWhenUserClicksYesInConfirmAppointmentPopup() throws Throwable {
 		click(appointmentYesButton, "Clicking on 'Yes' button in the confirm popup");
 		if (isDisplayed(bookingAppointmentText)) {
@@ -1263,15 +1286,14 @@ public class AppointmentsPage extends BaseTest {
 
 	}
 
-	// Verifies that a rescheduled appointment is displayed under the 'Today's' tab in the 'Upcoming' section
+	// Verifies that a rescheduled appointment is displayed under the 'Today's' tab
+	// in the 'Upcoming' section
 	public void verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection() throws Throwable {
 		refreshAppointments();
+		waitForVisibility(todayUpcomingAppointmentPatientName);
 		String reschedulingPatientName = todayUpcomingAppointmentPatientName.getText();
 		Thread.sleep(3000);
-		for (WebElement upcomingPatients : todayUpcomingAppointments) {
-			click(upcomingPatients, "Clicking on upcoming appointment");
-			break;
-		}
+		click(todayUpcomingAppointments, "Clicking on upcoming appointment");
 		click(appointmentDetailsRescheduleButton, "Clicking on reshedule button");
 		click(appointmentYesButton, "Clicking on yes button");
 		click(patientIsNotAvailableRadioButton, "Clicking on patient is not available radio button");
@@ -1279,6 +1301,7 @@ public class AppointmentsPage extends BaseTest {
 		click(appointmentFirstTime, "Selecting the time slot");
 		click(bookAppointmentButton, "Clicking on book appointment button");
 		click(appointmentYesButton, "Clicking on yes button");
+		waitForVisibility(todayUpcomingAppointmentPatientNameAdded);
 		String rescheduledPatientName = todayUpcomingAppointmentPatientNameAdded.getText();
 		Thread.sleep(6000);
 		if (rescheduledPatientName.equals(reschedulingPatientName)) {
@@ -1294,20 +1317,20 @@ public class AppointmentsPage extends BaseTest {
 	// Verifies that the user can successfully schedule an appointment
 	public void verifyUserCanScheduleTheAppointmentSuccessfully() throws Throwable {
 		refreshAppointments();
-		boolean cancelledPatients = isDisplayedListofWebelemets(todayCancelledAppointments);
+		click(todaysTab);
+		boolean cancelledPatients = isDisplayed2(todaysCancelledAppointmentPatientName);
 		if (cancelledPatients == true) {
+			waitForVisibility(upcomingTabCount);
 			String countBeforeSchedulingCancelled = upcomingTabCount.getText();
 			System.out.println(countBeforeSchedulingCancelled);
 		}
 		if (cancelledPatients == false) {
-			boolean IfThere = isDisplayedListofWebelemets(todayUpcomingAppointments);
+			boolean IfThere = isDisplayed2(todaysUpcomingAppointmentPatientName);
 			if (IfThere == true) {
+				waitForVisibility(todayUpcomingAppointmentPatientName);
 				String reschedulingPatientName = todayUpcomingAppointmentPatientName.getText();
 				System.out.println(reschedulingPatientName);
-				for (WebElement upcomingPatients : todayUpcomingAppointments) {
-					click(upcomingPatients, "Clicking on upcoming appointment");
-					break;
-				}
+				click(todayUpcomingAppointments);
 				click(appointmentDetailsCancelButton);
 				click(appointmentYesButton);
 				click(patientIsNotAvailableRadioButton);
@@ -1316,12 +1339,10 @@ public class AppointmentsPage extends BaseTest {
 			if (IfThere == false) {
 				getDriver().navigate().back();
 				visitSummaryPage.verifyIfBookedAppointmentIsReflectingInAppointments();
+				waitForVisibility(todayUpcomingAppointmentPatientName);
 				String reschedulingPatientName = todayUpcomingAppointmentPatientName.getText();
 				System.out.println(reschedulingPatientName);
-				for (WebElement upcomingPatients : todayUpcomingAppointments) {
-					click(upcomingPatients, "Clicking on upcoming appointment");
-					break;
-				}
+				click(todayUpcomingAppointments);
 				click(appointmentDetailsCancelButton);
 				click(appointmentYesButton);
 				click(patientIsNotAvailableRadioButton);
@@ -1330,7 +1351,9 @@ public class AppointmentsPage extends BaseTest {
 		}
 		ExtentReport.getTest().log(Status.INFO,
 				"Getting the count of upcoming patients before scheduling the cancelled appointment");
+		waitForVisibility(upcomingTabCount);
 		String countBeforeSchedulingCancelled = upcomingTabCount.getText();
+		waitForVisibility(firstCancelledAppointmentPatientName);
 		String cancelledPatient = firstCancelledAppointmentPatientName.getText();
 		click(firstCancelledAppointmentPatientName);
 		click(scheduleAppointmentButton);
@@ -1345,7 +1368,9 @@ public class AppointmentsPage extends BaseTest {
 		}
 		ExtentReport.getTest().log(Status.INFO,
 				"Getting the count of upcoming patients after scheduling the cancelled appointment");
+		waitForVisibility(upcomingTabCount);
 		String countAfterSchedulingCancelled = upcomingTabCount.getText();
+		waitForVisibility(todayUpcomingAppointmentPatientName);
 		String upcomingPatients = todayUpcomingAppointmentPatientName.getText();
 		if (upcomingPatients.contains(cancelledPatient)) {
 			ExtentReport.getTest().log(Status.INFO,

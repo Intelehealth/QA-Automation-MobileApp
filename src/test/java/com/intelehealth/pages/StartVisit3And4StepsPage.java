@@ -420,7 +420,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 
 	// Select the element representing Hypertension
-	public void selectHyperTension() {
+	public void selectHyperTension() throws InterruptedException {
 		click(hyperTension, "Selected HyperTension");
 	}
 
@@ -490,7 +490,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Verify the display of the first question set
-	public void verifyOneOfSixQuestions() {
+	public void verifyOneOfSixQuestions() throws InterruptedException {
 
 		isDisplayed(oneOfSixQuestions, "One of Six Questions is displayed");
 		isDisplayed(oneOfSixQuestionsImage, "Image for One of Six Questions is displayed");
@@ -502,7 +502,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Verify options for the first question and take a picture
-	public void verifyOneOfSixQuestionOption()  {
+	public void verifyOneOfSixQuestionOption() throws InterruptedException  {
 		click(oneOfSixQuestionsNoOption, "Clicked on No option for One of Six Questions");
 		int maxRetries = 5;
 		for (int i = 0; i < maxRetries; i++) {
@@ -520,23 +520,23 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 //Verify the display of the second question set
-	public void verifyTwoOfSixQuestionsIsDisplayed() {
+	public void verifyTwoOfSixQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(twoOfSixQuestions, "Two of Six Questions is displayed");
 	}
 
 //Verify taking a picture option
-	public void verifyTakeAPictureOption() {
+	public void verifyTakeAPictureOption() throws InterruptedException {
 		click(oneOfSixQuestionsTakePictureOption, "Clicked on Take a Picture option");
 		isDisplayed(imageCaptureButton, "Image Capture button is displayed");
 		isDisplayed(captureImageText, "Upload an image from gallery or take a picture is displayed");
 	}
 
-	public void selectOneOfSixquestionsNoOption() {
+	public void selectOneOfSixquestionsNoOption() throws InterruptedException {
 		click(oneOfSixQuestionsNoOption, "Selected 'No' option for One of Six Questions");
 	}
 
 // Verify upload options after clicking on take a picture
-	public void verifyUploadIcon() {
+	public void verifyUploadIcon() throws InterruptedException {
 		click(oneOfSixQuestionsTakePictureOption, "Clicked on 'Take a Picture' option");
 		click(imageCaptureButton, "Clicked on Image Capture button");
 		isDisplayed(takePhoto, "Take Photo option is displayed");
@@ -545,7 +545,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 //Verify the display of the second question set with options
-	public void verifyTwoOfSixQuestionIsDisplayedWithOptions() {
+	public void verifyTwoOfSixQuestionIsDisplayedWithOptions() throws InterruptedException {
 		click(oneOfSixQuestionsNoOption, "Clicked on 'No' option for the first question");
 		isDisplayed(twoOfSixQuestions, "Second question is displayed");
 		isDisplayed(isTherePallorQuestion, "Is there pallor question is displayed");
@@ -556,7 +556,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Verify two of six questions have normal and pale options
-	public void verifyTwoOfSixQuestionsNormalPaleOption() {
+	public void verifyTwoOfSixQuestionsNormalPaleOption() throws InterruptedException {
 		click(normal, "Clicked on 'Normal' option");
 		click(pale, "Clicked on 'Pale' option");
 		isDisplayed(threeOfSixQuestions, "Third question is displayed");
@@ -564,7 +564,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	// Verify three questions are displayed with options, including normal, pinch
 	// skin, and three of six questions
-	public void verifyThreeOfQuestionsIsDisplayedWithOptions() {
+	public void verifyThreeOfQuestionsIsDisplayedWithOptions() throws InterruptedException {
 		click(normal, "Clicked on 'Normal' option");
 		isDisplayed(threeOfSixQuestions, "Third question is displayed");
 		isDisplayed(pinchSkinQuestion, "Pinch Skin question is displayed");
@@ -573,7 +573,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Verify three of six questions have normal and slow options
-	public void verifyThreeOfSixQuestionsNormalSlowOption() {
+	public void verifyThreeOfSixQuestionsNormalSlowOption() throws InterruptedException {
 		click(threeOfSixQuestionsNormalOption, "Clicked on 'Normal' option");
 		isDisplayed(fourOfSixQuestions, "Fourth question is displayed");
 		click(slow, "Clicked on 'Slow' option");
@@ -582,7 +582,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	// Verify four of six questions are displayed with options, including nail
 	// abnormality, normal nails, clubbing, spoon nails, and discolored nails
-	public void verifyFourOfSixQuestionIsDisplayedWithOptions() {
+	public void verifyFourOfSixQuestionIsDisplayedWithOptions() throws InterruptedException {
 		isDisplayed(nailAbnormalityQuestion, "Nail Abnormality question is displayed");
 		isDisplayed(nailsAreNormal, "'Nails are Normal' option is displayed");
 		isDisplayed(clubbing, "'Clubbing' option is displayed");
@@ -593,7 +593,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	// Verify four of six questions have options including normal nails, clubbing,
 	// spoon nails, and discolored nails
-	public void verifyFourOfSixQuestionsOptions() {
+	public void verifyFourOfSixQuestionsOptions() throws InterruptedException {
 		click(nailsAreNormal, "Clicked on 'Nails are Normal'");
 		isDisplayed(fiveOfSixQuestions, "Five of Six Questions is displayed");
 
@@ -608,12 +608,12 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 	// Verify five of six questions are displayed
-	public void verifyFiveOfSixQuestionsIsDisplayed() {
+	public void verifyFiveOfSixQuestionsIsDisplayed() throws InterruptedException {
 		isDisplayed(fiveOfSixQuestions, "Five of Six Questions is displayed");
 	}
 
 	// Verifies the five of
-	public void verifyFiveOfSixQuestionsOptionsAreDisplayed() {
+	public void verifyFiveOfSixQuestionsOptionsAreDisplayed() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "One of Six Questions is displayed");
 		click(oneOfSixQuestionsNoOption, "Clicked No option for One of Six Questions");
 
@@ -632,7 +632,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(fiveOfSixQuestionsTakeAPictureOption, "Take a Picture option is displayed");
 	}
 
-	public void verifyFiveOfSixQuestionsNailsAreNormal_NailsArePaleOption() {
+	public void verifyFiveOfSixQuestionsNailsAreNormal_NailsArePaleOption() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "One of Six Questions is displayed");
 		click(oneOfSixQuestionsYesOption, "Clicked Yes option for One of Six Questions");
 		
@@ -658,7 +658,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(sixOfSixQuestions, "Six of Six Questions is displayed");
 	}
 
-	public void verifySixOfSixQuestionsIsDisplayedWithOptions() {
+	public void verifySixOfSixQuestionsIsDisplayedWithOptions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "One of Six Questions is displayed");
 		click(oneOfSixQuestionsYesOption, "Clicked Yes option for One of Six Questions");
 		
@@ -681,7 +681,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(sixOfSixQuestionsTakeAPictureOption, "Take a Picture option is displayed");
 	}
 
-	public void verifySixOfSixQuestionsOptions() {
+	public void verifySixOfSixQuestionsOptions() throws InterruptedException {
 		click(sixOfSixQuestionsTakeAPictureOption, "Clicked Take a Picture option for Six of Six Questions");
 		click(inLeft, "Clicked In Left option");
 		isDisplayed(physicalExaminationSummaryHeader, "Physical Examination Summary Header is displayed");
@@ -691,12 +691,12 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(physicalExaminationSummaryHeader, "Physical Examination Summary Header is displayed");
 	}
 
-	public void verifyPhysicalExaminationChangeButton() {
+	public void verifyPhysicalExaminationChangeButton() throws InterruptedException {
 		click(physicalExaminationSummaryChangeIcon, "Clicked on Physical Examination Change button");
 		isDisplayed(physicalExamHeader, "Physical Examination Header is displayed");
 	}
 
-	public void answerPhysicalExaminationQuestions() {
+	public void answerPhysicalExaminationQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "One of Six Questions is displayed");
 		click(oneOfSixQuestionsYesOption, "Clicked on Yes option for One of Six Questions");
 
@@ -718,18 +718,18 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(physicalExaminationSummaryHeader, "Physical Examination Summary Header is displayed");
 	}
 
-	public void updateThePhysicalExaminationQuestions() {
+	public void updateThePhysicalExaminationQuestions() throws InterruptedException {
 		isDisplayed(sixOfSixQuestions, "Six of Six Questions is displayed");
 		click(inRight, "Clicked on 'In Right' option");
 
 	}
 
-	public void verifyBackButton() {
+	public void verifyBackButton() throws InterruptedException {
 		click(physicalExaminationSummaryBackButton, "Clicked on Back Button");
 		isDisplayed(physicalExamHeader, "Physical Exam Header is displayed");
 	}
 
-	public void verifyConfirmButton() {
+	public void verifyConfirmButton() throws InterruptedException {
 		click(physicalExaminationSummaryConfirmButton, "Clicked on Confirm Button");
 		if (isDisplayed(thirdProgressBar, "Third step is complete")) {
 			// Additional action or log statement if needed
@@ -737,7 +737,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(thirdProgressBar, "Third progress bar is displayed");
 	}
 
-	public void answerMedicalHistoryQuestions() {
+	public void answerMedicalHistoryQuestions() throws InterruptedException {
 
 		click(physicalExaminationSummaryConfirmButton, "Clicked on Confirm Button");
 
@@ -785,7 +785,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	// Verifies the visibility of key UI elements on the Family History screen.
 
-	public void verifyFamilyHistoryScreenUi() {
+	public void verifyFamilyHistoryScreenUi() throws InterruptedException {
 
 		isDisplayed(familyHistoryHeader, "Family History Header is displayed");
 
@@ -798,7 +798,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	// Validates the selection of multiple options in the Family History screen.
 
-	public void validateMultipleOptionsInFamilyHistory() {
+	public void validateMultipleOptionsInFamilyHistory() throws InterruptedException {
 
 		isDisplayed(familyHistoryHeader, "Family History Header is displayed");
 
@@ -810,7 +810,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	// Verifies the display of the describe text box and related elements after
 	// selecting the 'Other' option on the Family History screen.
 
-	public void verifyDescribeTextBoxIsDisplayed() {
+	public void verifyDescribeTextBoxIsDisplayed() throws InterruptedException {
 
 		isDisplayed(familyHistoryHeader, "Family History Header is displayed");
 
@@ -824,7 +824,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	// Enters data in the text box and submits the form after selecting the 'Other'
 	// option on the Family History screen.
 
-	public void enterDataInTextBoxAndSubmit() {
+	public void enterDataInTextBoxAndSubmit() throws InterruptedException {
 
 		click(otherOption, "Clicked on 'Other' option");
 
@@ -849,7 +849,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 //	  Verifies the behavior of the Family History screen confirm button.
 //	 Clicks the confirm button and checks if the Medical History Summary screen header is displayed.
 	 
-	public void verifyFamilyHistoryScreenConfirmButton() {
+	public void verifyFamilyHistoryScreenConfirmButton() throws InterruptedException {
 	   
 	  
 	    isDisplayed(medicalHistorySummaryScreenHeader, "Medical History Summary Screen Header is displayed");
@@ -859,7 +859,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	
 	// Verifies the behavior of the "Change" button on the Patient History screen. Clicks the "Change" button and checks if the Medical History Header is displayed.
 	 
-	public void verifyPatientHistoryChangeButton() {
+	public void verifyPatientHistoryChangeButton() throws InterruptedException {
 	  
 	    click(patientHistoryChangeButton, "Clicked on Patient History Change Button");
 	    isDisplayed(medicalHistoryHeader, "Medical History Header is displayed");
@@ -869,19 +869,19 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	//  Verifies the behavior of the "Change" button on the Family History screen.Clicks the "Change" button and checks if the Medical History Header is displayed.  Add additional verification or actions as needed.
 	 
 
-	public void verifyFamilyHistoryChangeButton() {
+	public void verifyFamilyHistoryChangeButton() throws InterruptedException {
 		click(FamilyHistoryChangeButton, "Clicked on Family History Change Button");
 		 isDisplayed(familyHistoryHeader, "Medical History Header is displayed");
 
 	}
 
-	public void verifyMedicalHistorySummaryScreenBackButton() {
+	public void verifyMedicalHistorySummaryScreenBackButton() throws InterruptedException {
 	    
 	    click(SummaryScreenBackButton, "Clicked on Summary Screen Back Button");
 	    isDisplayed(medicalHistoryHeader, "Medical History Header is displayed");
 
 	}
-	public void verifyMedicalHistorySummaryScreenConfirmButton() {
+	public void verifyMedicalHistorySummaryScreenConfirmButton() throws InterruptedException {
 	    
 	    isDisplayed(medicalHistorySummaryScreenHeader, "Medical History Summary Screen Header is displayed");
 
@@ -894,7 +894,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	    
 	}
 
-	public void verifyUserAbleToSelectOneOrMoreOption() {
+	public void verifyUserAbleToSelectOneOrMoreOption() throws InterruptedException {
 	   
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 
@@ -914,7 +914,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifySkipButtonOnPatientScreen() {
+	public void verifySkipButtonOnPatientScreen() throws InterruptedException {
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 	    isDisplayed(oneOfSixMedicalQuestions, "First Medical Question is displayed");
 	    isDisplayed(pregnancyStatusQuestion, "Pregnancy Status Question is displayed");
@@ -935,7 +935,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifyPatientHistorySubmitButtonFunctionality() {
+	public void verifyPatientHistorySubmitButtonFunctionality() throws InterruptedException {
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 	    isDisplayed(oneOfSixMedicalQuestions, "First Medical Question is displayed");
 	    isDisplayed(pregnancyStatusQuestion, "Pregnancy Status Question is displayed");
@@ -949,7 +949,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifyPatientHistoryOtherDescribeTextBox() {
+	public void verifyPatientHistoryOtherDescribeTextBox() throws InterruptedException {
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 	    isDisplayed(oneOfSixMedicalQuestions, "First Medical Question is displayed");
 	    isDisplayed(pregnancyStatusQuestion, "Pregnancy Status Question is displayed");
@@ -976,7 +976,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifyPatientHistoryDropdowns() {
+	public void verifyPatientHistoryDropdowns() throws InterruptedException {
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 	    isDisplayed(oneOfSixMedicalQuestions, "First Medical Question is displayed");
 	    isDisplayed(pregnancyStatusQuestion, "Pregnancy Status Question is displayed");
@@ -997,7 +997,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void calenderSelectionOption() {
+	public void calenderSelectionOption() throws InterruptedException {
 	    click(physicalExaminationSummaryConfirmButton, "Clicked on Physical Examination Summary Confirm Button");
 	    isDisplayed(oneOfSixMedicalQuestions, "First Medical Question is displayed");
 	    isDisplayed(pregnancyStatusQuestion, "Pregnancy Status Question is displayed");
@@ -1062,7 +1062,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 //				("new UiScrollable(new UiSelector()).scrollIntoView(text(\"4 of 6 questions\"));")));
 	
 
-	public void updatePhysicalExaminationQuestionsAndVerify() {
+	public void updatePhysicalExaminationQuestionsAndVerify() throws InterruptedException {
 	  
 	    click(physicalExaminationSummaryChangeIcon, "Clicked on Physical Examination Summary Change Icon");
 
@@ -1091,7 +1091,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifyChangesUpdatedInMedicalHistorySummaryScreen() {
+	public void verifyChangesUpdatedInMedicalHistorySummaryScreen() throws InterruptedException {
 	    // Retry clicking the "Patient History Change" button up to 5 times
 	    int maxRetries = 5;
 	    for (int i = 0; i < maxRetries; i++) {
@@ -1120,7 +1120,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	   // click(FamilyHistoryChangeButton, "Clicked on Confirm Button");
 	}
 
-	public void verifyFamilyHistoryDescribeSection() {
+	public void verifyFamilyHistoryDescribeSection() throws InterruptedException {
 	    // Verify the display of family history header and question
 	    isDisplayed(familyHistoryHeader, "Family History Header is displayed");
 	    isDisplayed(familyHistoryQuestion, "Family History Question is displayed");
@@ -1154,7 +1154,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 	}
 
 
-	public void verifyClickingPhotoInOneOfSixQuestions() {
+	public void verifyClickingPhotoInOneOfSixQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "1 of 6 questions is Displayed");
 		click(oneOfSixQuestionsTakePictureOption, "Clicked on Take a picture ");
 		click(imageCaptureButton, "Clicked on + icon ");
@@ -1178,7 +1178,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void verifyClickingPhotoInTwoOfSixQuestions() {
+	public void verifyClickingPhotoInTwoOfSixQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "1 of 6 questions is Displayed");
 		click(oneOfSixQuestionsNoOption, "Clicked on No ");
 		isDisplayed(twoOfSixQuestions, "2 of 6 Questons is Displyed");
@@ -1202,7 +1202,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(threeOfSixQuestions, " 3 of 6 Questions is Displayed");
 	}
 
-	public void verifyClickingPhotoInFourOfSixQuestions() {
+	public void verifyClickingPhotoInFourOfSixQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "1 of 6 questions is Displayed");
 		click(oneOfSixQuestionsNoOption, "Clicked on No");
 
@@ -1221,7 +1221,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void verifyClickingPhotoInFiveOfSixQuestions() {
+	public void verifyClickingPhotoInFiveOfSixQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "1 of 6 questions is Displayed");
 		click(oneOfSixQuestionsNoOption, "Clicked on No");
 		isDisplayed(twoOfSixQuestions, "2 of 6 Questons is Displyed");
@@ -1243,7 +1243,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void verifyClickingPhotoInSixOfSixQuestions() {
+	public void verifyClickingPhotoInSixOfSixQuestions() throws InterruptedException {
 		isDisplayed(oneOfSixQuestions, "1 of 6 questions is Displayed");
 		click(oneOfSixQuestionsNoOption, "Clicked on No");
 		isDisplayed(twoOfSixQuestions, "2 of 6 Questons is Displyed");
@@ -1267,7 +1267,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void verifyPictureUploadedFromGalleryInOneOfSix() {
+	public void verifyPictureUploadedFromGalleryInOneOfSix() throws InterruptedException {
 		launchCamera();
 		click(shutterButton, "Clicked on capture button");
 		activateIntelehealth();
@@ -1282,7 +1282,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(twoOfSixQuestions, "2 of 6 Questons is Displyed");
 	}
 
-	public void verifyPictureUploadedFromGalleryInTwoOfSix() {
+	public void verifyPictureUploadedFromGalleryInTwoOfSix() throws InterruptedException {
 		launchCamera();
 		click(shutterButton, "Clicked on capture button");
 		activateIntelehealth();
@@ -1300,7 +1300,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void verifyPictureUploadedFromGalleryInFourOfSix() {
+	public void verifyPictureUploadedFromGalleryInFourOfSix() throws InterruptedException {
 		launchCamera();
 		click(shutterButton, "Clicked on capture button");
 		activateIntelehealth();
@@ -1321,7 +1321,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(fiveOfSixQuestions, "5 of 6 Questons is Displyed");
 	}
 
-	public void verifyPictureUploadedFromGalleryInFiveOfSix() {
+	public void verifyPictureUploadedFromGalleryInFiveOfSix() throws InterruptedException {
 		launchCamera();
 		click(shutterButton, "Clicked on capture button");
 		activateIntelehealth();
@@ -1344,7 +1344,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 		isDisplayed(sixOfSixQuestions, "6 of 6 Questons is Displyed");
 	}
 
-	public void verifyPictureUploadedFromGalleryInSixOfSix() {
+	public void verifyPictureUploadedFromGalleryInSixOfSix() throws InterruptedException {
 		launchCamera();
 		click(shutterButton, "Clicked on capture button");
 		activateIntelehealth();
@@ -1375,7 +1375,7 @@ public class StartVisit3And4StepsPage extends BaseTest {
 
 	}
 
-	public void sendVisit() {
+	public void sendVisit() throws InterruptedException {
 		handleHypertensionVisitQuestions();
 		answerPhysicalExaminationQuestions();
 		answerMedicalHistoryQuestions();

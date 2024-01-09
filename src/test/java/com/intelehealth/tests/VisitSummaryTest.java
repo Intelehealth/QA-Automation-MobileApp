@@ -69,58 +69,58 @@ public class VisitSummaryTest extends BaseTest {
 
 	}
 
-	@Test(priority = 1, description = "Verify edit option functionality beside patient name", enabled = false)
+	@Test(priority = 1, description = "Verify edit option functionality beside patient name", enabled = true)
 	public void IDA4_2175_verifyEditOptionFunctionalityBesidePatientName() throws Throwable {
 		visitSummaryPage.verifyEditOptionFunctionalityBesidePatientName();
 	}
 	
-	@Test(priority = 2, description = "Verify the changes are saved when patient details are updated", enabled = false)
+	@Test(priority = 2, description = "Verify the changes are saved when patient details are updated", enabled = true)
 	public void IDA4_2176_verifyTheChangesAreSavedWhenPatientDetailsAreUpdated() throws Throwable {
 		visitSummaryPage.verifyTheChangesAreSavedWhenPatientDetailsAreUpdated();
 	}
 
-	@Test(priority = 3, description = "Verify clicking on Add additional document", enabled = false)
+	@Test(priority = 3, description = "Verify clicking on Add additional document", enabled = true)
 	public void IDA4_2183_verifyClickingOnAddAdditionalDocument() throws Throwable {
 		visitSummaryPage.verifyClickingOnAddAdditionalDocument();
 	}
 
-	@Test(priority = 4, description = "Verify user is able to click photo", enabled = false)
+	@Test(priority = 4, description = "Verify user is able to click photo", enabled = true)
 	public void IDA4_2185_verifyUserIsAbleToClickPhoto() throws Throwable {
 		visitSummaryPage.verifyUserIsAbleToClickPhoto();
 	}
 
-	@Test(priority = 5, description = "Verify choose from gallery option to add document", enabled = false)
+	@Test(priority = 5, description = "Verify choose from gallery option to add document", enabled = true)
 	public void IDA4_2186_verifyChooseFromGalleryOptionToAddDocument() throws Throwable {
 		visitSummaryPage.verifyChooseFromGalleryOptionToAddDocument();
 	}
 	
-	@Test(priority = 6, description = "Verify clicking on close button on the document uploaded", enabled = false)
+	@Test(priority = 6, description = "Verify clicking on close button on the document uploaded", enabled = true)
 	public void IDA4_2190_verifyClickingOnCloseButtonOnTheDocumentUploaded() throws Throwable {
 		visitSummaryPage.verifyClickingOnCloseButtonOnTheDocumentUploaded();
 	}
 
-	@Test(priority = 7, description = "Verify Doctor's speciality drop down", enabled = false)
+	@Test(priority = 7, description = "Verify Doctor's speciality drop down", enabled = true)
 	public void IDA4_2192_verifyDoctorSpecialityDropdown() throws Throwable {
 		visitSummaryPage.verifyDoctorSpecialityDropdown();
 	}
 
-	@Test(priority = 8, description = "Verify if priority visit is enabled ON", enabled = false)
+	@Test(priority = 8, description = "Verify if priority visit is enabled ON", enabled = true)
 	public void IDA4_2194_verifyIfPriorityVisitIsEnabledON() throws Throwable {
 		visitSummaryPage.verifyIfPriorityVisitIsEnabledON();
 	}
 
-	@Test(priority = 9, description = "Verify behavior on clicking Yes in send visit popup", enabled = false)
+	@Test(priority = 9, description = "Verify behavior on clicking Yes in send visit popup", enabled = true)
 	public void IDA4_2200_verifyBehaviorOnClickingYesInSendVisitPopup() throws Throwable {
 		visitSummaryPage.addPatients();
 		visitSummaryPage.verifyBehaviorOnClickingYesInSendVisitPopup();
 	}
 
-	@Test(priority = 10, description = "Verify clicking on Appointment button functionality after visit is sent to doctor", enabled = false)
+	@Test(priority = 10, description = "Verify clicking on Appointment button functionality after visit is sent to doctor", enabled = true)
 	public void IDA4_2202_verifyClickingOnAppointmentButtonFunctionalityAfterVisitIsSentToDoctor() throws Throwable {
 		visitSummaryPage.verifyClickingOnAppointmentButtonFunctionalityAfterVisitIsSentToDoctor();
 	}
 	
-	@Test(priority = 11, description = "Verify if booked appointment is reflecting in appointments", enabled = false)
+	@Test(priority = 11, description = "Verify if booked appointment is reflecting in appointments", enabled = true)
 	public void IDA4_2203_verifyIfBookedAppointmentIsReflectingInAppointments() throws Throwable {
 		visitSummaryPage.verifyIfBookedAppointmentIsReflectingInAppointments();
 	}

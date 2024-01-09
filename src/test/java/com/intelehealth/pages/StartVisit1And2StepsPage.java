@@ -575,7 +575,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	
 	// Verifies the UI elements of the first Vitals screen.
-	  public void verifyUiOfFirstVitalsScreen() {
+	  public void verifyUiOfFirstVitalsScreen() throws InterruptedException {
 		  
 
 		    // Check if the following UI elements are displayed on the screen
@@ -625,7 +625,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	 // Enters the specified text into the Height input field.
 	 
 	 
-	public void enterHeight(String txt) {
+	public void enterHeight(String txt) throws InterruptedException {
 		sendKeys(heightEditText, txt,"Entered Height");
 	}
 
@@ -634,7 +634,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	  
 	 
 
-	public void enterWeight(String txt) {
+	public void enterWeight(String txt) throws InterruptedException {
 		sendKeys(weightEditText, txt,"Entered weight");
 	}
 
@@ -739,7 +739,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	
 	 // Verifies the UI elements on the Vitals Summary screen.
 	 
-	public void verifyVitalslSummaryUi() {
+	public void verifyVitalslSummaryUi() throws InterruptedException {
 // Check if the following UI elements are displayed on the Vitals Summary screen
 		isDisplayed(vitalsDetailsLabel, "Vitals Details Label is Displayed");
 		isDisplayed(vitalsTitle, "Vitals Title is Displayed");
@@ -822,7 +822,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 
 	// Verifies the BMI status for a patient with severe obesity based on provided height and weight.
-	public void verifyStatusForSevereObesityWeightpatient(String height, String weight, String expectedStatus) {
+	public void verifyStatusForSevereObesityWeightpatient(String height, String weight, String expectedStatus) throws InterruptedException {
 	    // Enter the provided height into the height field
 	    sendKeys(heightEditText, height,"Entered Height");
 
@@ -850,7 +850,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 
 	// Verifies the BMI status for a patient with moderate obesity based on provided height and weight.
-	public void verifyStatusModerateObesityWeightPatient(String height, String weight, String expectedStatus) {
+	public void verifyStatusModerateObesityWeightPatient(String height, String weight, String expectedStatus) throws InterruptedException {
 	    // Enter the provided height into the height field
 	    sendKeys(heightEditText, height,"Entered Height");
 
@@ -878,7 +878,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 
 	// Verifies the BMI status for a patient with very severe obesity based on provided height and weight.
-	public void verifyStatusForVerySevereObesityWeightPatient(String height, String weight, String expectedStatus) {
+	public void verifyStatusForVerySevereObesityWeightPatient(String height, String weight, String expectedStatus) throws InterruptedException {
 	    // Enter the provided height into the height field
 	    sendKeys(heightEditText, height,"Entered Height");
 
@@ -2045,7 +2045,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 //Verifies the functionality of selecting and confirming a specific visit reason in the "All Reasons" section 
-	public void verifyAllReasonInAllReasonSection() {
+	public void verifyAllReasonInAllReasonSection() throws InterruptedException {
 		// Navigate to the next screen after entering vitals
 		clickOnFirstVitalsNextButton();
 
@@ -2085,7 +2085,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	}
 //method to verify 2/4 visit reason page
-	public void verifyUiOfVisitReasonPage() {
+	public void verifyUiOfVisitReasonPage() throws InterruptedException {
 		// Navigate to the next screen after entering vitals
 		clickOnFirstVitalsNextButton();
 

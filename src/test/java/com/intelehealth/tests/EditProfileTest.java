@@ -51,10 +51,11 @@ public class EditProfileTest  extends BaseTest{
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
 		appSetupPage.completeSetup();
-
+		
 		// Click on the hamburger menu in the login menu page
+		
 		loginMenuPage.clickOnHamburgerMenu();
-		Thread.sleep(5000);
+		
 	}
 	@Test(priority = 1, description = "Verify that Edit profile navigates to My Profile page", enabled = true)
 	public void IDA4_1987_verifyMyProfilePage() throws InterruptedException {
@@ -69,12 +70,12 @@ public class EditProfileTest  extends BaseTest{
 		editProfilePage.uploadProfilePhotoAndVerify();
 	}
 	@Test(priority = 4, description = "Verify that user can save the updated details", enabled = true)
-	public void IDA4_1992_uploadAPhotoAndVerify() throws InterruptedException {
+	public void IDA4_1992_verifyUserCanSaveUpdatedDetails() throws InterruptedException {
 		editProfilePage.verifyUserCanSaveTheUpdatedDetails();
 	}
-//	@Test(priority = 5, description = "Verify if user can change password", enabled = true)
-//	public void IDA4_1997_VerifyChangePassword() throws InterruptedException {
-//		editProfilePage.verifyUserAbleToLoginWithNewPassword();
-//		editProfilePage.resetThePasswordToOldPassword();
-//	}
+	@Test(priority = 5, description = "Verify if user can change password", enabled = true)
+	public void IDA4_1997_VerifyChangePassword() throws InterruptedException {
+		editProfilePage.verifyUserAbleToLoginWithNewPassword();
+		editProfilePage.resetThePasswordToOldPassword();
+	}
 }

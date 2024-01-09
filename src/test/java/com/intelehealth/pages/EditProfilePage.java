@@ -113,8 +113,9 @@ public WebElement scrollToYear() {
 	}
 	// Verifies the elements on the My Profile page
 public void verifyMyProfilePage() throws InterruptedException {
+	
 	isDisplayed(editProfile, "Edit Profile is Displayed");
-	Thread.sleep(5000);
+	Thread.sleep(10000);
 	click(editProfile,"Clicked on Edit Profile");
     isDisplayed(myProfileTitle, "My Profile Title Displayed");
     isDisplayed(changePhoto, "Change Photo Displayed");
@@ -137,8 +138,9 @@ public void verifyMyProfilePage() throws InterruptedException {
 }
 //Changes the profile photo by capturing a new photo
 public void changeProfilePhotoByCapturingPhoto() throws InterruptedException {
+	waitForVisibility(editProfile);
 	click(editProfile, "Clicked on edit profile");
-	Thread.sleep(5000);
+	Thread.sleep(7000);
 	click(changePhoto, "Clicked on change photo");
 	click(takePhoto, "Clicked on Take photo");
 	click(camera, "Clicked on Camera");
@@ -155,13 +157,14 @@ public void uploadProfilePhotoAndVerify() throws InterruptedException{
 	click(changePhoto, "Clicked on change photo");
 	click(chooseFromGallery, "Clicked on Choose from gallery");
 	click(photos, "Clicked on photos");
-	click(image, "Seplects a image");	
+	click(image, "Selects a image");	
 	isDisplayed(profilePhoto, "profile photo is displayed");
 }
 //Verifies that the user can save the updated details
 public void verifyUserCanSaveTheUpdatedDetails() throws InterruptedException {
+	waitForVisibility(editProfile);
 	click(editProfile, "Clicked on edit profile");
-	Thread.sleep(5000);
+	Thread.sleep(7000);
 	scrollToDateOfBirth();
 	click(dob, "Clicked on DOB Field");
 	click(monthSpinner, "Clicked on month spinner");
@@ -191,7 +194,7 @@ public void verifyUserAbleToLoginWithNewPassword() throws InterruptedException {
  generatedPassword = generatePassword(); // Corrected: initialize generatedPassword
     System.out.println("Generated Password: " + generatedPassword);
     isDisplayed(editProfile, "Edit Profile is Displayed");
-	Thread.sleep(5000);
+	Thread.sleep(7000);
 	click(editProfile,"Clicked on Edit Profile");
     click(changePassword, "Clicked on Change Password");
     sendKeys(currentPwdTextBox, "Nurse123", "Entered Current Password");
@@ -207,7 +210,7 @@ public void verifyUserAbleToLoginWithNewPassword() throws InterruptedException {
 public void resetThePasswordToOldPassword() throws InterruptedException {
 	loginMenuPage.clickOnHamburgerMenu();
 	isDisplayed(editProfile, "Edit Profile is Displayed");
-	Thread.sleep(5000);
+	Thread.sleep(7000);
 	click(editProfile,"Clicked on Edit Profile");
 	click(changePassword, "Clicked on Change Password");
 	  sendKeys(currentPwdTextBox, generatedPassword, "Entered Current Password");

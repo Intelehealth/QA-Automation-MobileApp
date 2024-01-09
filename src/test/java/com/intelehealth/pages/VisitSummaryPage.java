@@ -14,6 +14,7 @@ import org.json.JSONTokener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -360,28 +361,30 @@ public class VisitSummaryPage extends BaseTest {
 
 	@AndroidFindBy(accessibility = "Additional Docs List Item Parent RelativeLayout")
 	private WebElement addedAdditionalDocument;
-	
-	@AndroidFindBy(accessibility  = "Shutter")
+
+	@AndroidFindBy(accessibility = "Shutter")
 	private WebElement shutterButton;
-	
-	@AndroidFindBy( xpath =  "//android.view.View[@resource-id='com.google.android.apps.photos:id/image']")
+
+	@AndroidFindBy(xpath = "//android.view.View[@resource-id='com.google.android.apps.photos:id/image']")
 	private WebElement photos;
-	
-	@AndroidFindBy( xpath =  "(//android.view.ViewGroup)[2]")
+
+	@AndroidFindBy(xpath = "(//android.view.ViewGroup)[2]")
 	private WebElement image;
-	
-	@AndroidFindBy(accessibility  = "Additional Docs List Item Document Delete ImageButton")
+
+	@AndroidFindBy(accessibility = "Additional Docs List Item Document Delete ImageButton")
 	private WebElement documentDeleteIcon;
-	
+
 	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@resource-id=\"org.intelehealth.app:id/frame_10014\"]")
 	private WebElement prescriptionPatients;
 
-	@AndroidFindBy(xpath = "//android.widget.Toast[@text=\"Picture taken\"]")
-	private WebElement byPictureTaken;
-	
-	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Additional Docs List Item Parent RelativeLayout\"]")
-	private WebElement byAddedAdditionalDocument;
-	
+	@AndroidFindBy(accessibility = "Identification Activity Refresh ImageButton")
+	private WebElement addNewPatientRefreshButton;
+
+	By byPictureTaken = By.xpath("//android.widget.Toast[@text=\"Picture taken\"]");
+	By byAddedAdditionalDocument = By.xpath(
+			"//android.widget.RelativeLayout[@content-desc=\"Additional Docs List Item Parent RelativeLayout\"]");
+
+	// Constructor
 	public VisitSummaryPage(ThreadLocal<AppiumDriver> driver) throws Throwable {
 		this.driver = driver;
 		addNewPatientTest = new AddNewPatientTest();
@@ -404,132 +407,885 @@ public class VisitSummaryPage extends BaseTest {
 		}
 	}
 
-
 	// Adds phone number
-	public void phoneNumber() {
+	public void phoneNumber() throws InterruptedException {
 		click(addNewPatientPhoneNo, "Clicking on phone number");
 		sendKeys(addNewPatientPhoneNo, "8765985376", "Entering the phone number");
 	}
 
 	// Adds patients
 	public void addPatients() throws Throwable {
-		addNewPatientPage.clickOnAddPatients();
-		Thread.sleep(3000);
-		addNewPatientPage.clickOnAcceptButton();
-//		addNewPatientPage.clickRefreshButton();
-		Thread.sleep(3000);
-		addNewPatientPage.enterFirstName(appData.getJSONObject("personalDetails").getString("firstName"));
-		Thread.sleep(2000);
-		addNewPatientPage.enterLastName();
-		addNewPatientPage.selectGender();
-		scrollToElement();
-		addNewPatientPage.clickOnDobIcon();
-		addNewPatientPage.clickOnMonthSpinner();
-		addNewPatientPage.selectMonth();
-		addNewPatientPage.clickOnYearSpinner();
-		addNewPatientPage.scrollToViewYear();
-		addNewPatientPage.selectYear();
-		addNewPatientPage.selectDate();
-		addNewPatientPage.clickOnOkayButton();
-		phoneNumber();
-		addNewPatientPage.clickOnNextButton1();
-		addNewPatientPage.clickOnStateSpinner();
-		addNewPatientPage.scrollToViewState();
-		addNewPatientPage.selectState();
-		addNewPatientPage.clickOnDistrictSpinner();
-		addNewPatientPage.scrollToViewDistrict();
-		addNewPatientPage.selectDistrict();
-		addNewPatientPage.enterPatientAddressDetails(appData.getJSONObject("patientAddress").getString("pincode"),
-				appData.getJSONObject("patientAddress").getString("village"),
-				appData.getJSONObject("patientAddress").getString("address1"),
-				appData.getJSONObject("patientAddress").getString("address2"));
+		int maxAttempts = 3;
+		int attempt = 0;
 
-		addNewPatientPage.clickOnNextButton2();
-		addNewPatientPage.enterOtherDetails(appData.getJSONObject("personalDetails").getString("nationalId"),
-				appData.getJSONObject("personalDetails").getString("occupation"));
-		addNewPatientPage.clickOnNextButton3();
-		Thread.sleep(6000);
+		while (attempt < maxAttempts) {
+			try {
+				// Test code
+				Thread.sleep(20000);
+				waitForVisibility(homeScreenRefreshButton);
+				click(homeScreenRefreshButton, "Clicking on app sync icon");
+				addNewPatientPage.clickOnAddPatients();
+				Thread.sleep(3000);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnAcceptButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+//		        addNewPatientPage.clickRefreshButton();
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				addNewPatientPage.enterFirstName(appData.getJSONObject("personalDetails").getString("firstName"));
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(4000);
+				click(addNewPatientRefreshButton);
+				addNewPatientPage.enterLastName();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectGender();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				scrollToElement();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnDobIcon();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnMonthSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectMonth();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnYearSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewYear();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectYear();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectDate();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnOkayButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				phoneNumber();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnNextButton1();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnStateSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewState();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectState();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnDistrictSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewDistrict();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.selectDistrict();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.enterPatientAddressDetails(
+						appData.getJSONObject("patientAddress").getString("pincode"),
+						appData.getJSONObject("patientAddress").getString("village"),
+						appData.getJSONObject("patientAddress").getString("address1"),
+						appData.getJSONObject("patientAddress").getString("address2"));
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnNextButton2();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.enterOtherDetails(appData.getJSONObject("personalDetails").getString("nationalId"),
+						appData.getJSONObject("personalDetails").getString("occupation"));
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnNextButton3();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(6000);
+				waitForVisibility(patientDetailsScreenPersonalDetailsNameValue);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		String nameBeforeChanging = patientDetailsScreenPersonalDetailsNameValue.getText();
-		click(patientDetailsScreenPersonalDetailsEditIcon, "Clicking on edit icon");
-		click(firstName, "Clicking on first name textfield");
-		sendKeys(firstName, "Automate", "Entering the name");
-		click(updatePatientSaveButton, "Clicking on save button");
+		while (attempt < maxAttempts) {
+			try {
+				click(patientDetailsScreenPersonalDetailsEditIcon, "Clicking on edit icon");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				click(firstName, "Clicking on first name textfield");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				sendKeys(firstName, "Automate", "Entering the name");
+				click(updatePatientSaveButton, "Clicking on save button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				waitForVisibility(patientDetailsScreenPersonalDetailsNameValue);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		String nameAfterChanging = patientDetailsScreenPersonalDetailsNameValue.getText();
 		if (!nameBeforeChanging.contains("Automate") && nameAfterChanging.contains("Automate")) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether the details have been updated successfully");
 		}
-		addNewPatientPage.clickOnStartVisitButton();
-		addNewPatientPage.clickOnContinueButton();
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnStartVisitButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.clickOnContinueButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 	}
 
 	// Completes all four steps of a process
 	public void completing4OutOf4Steps() throws Throwable {
-		// Enter 1/4 vitals
-		sendKeys(heightEditText, "165", "Entering the height");
-		sendKeys(weightEditText, "68", "Entering the weight");
-		sendKeys(bpSystolicEditText, "120", "Entering the bp Systolic");
-		sendKeys(bpDiastolicEditText, "72", "Entering the bp Diastolic");
-		sendKeys(pulseEditText, "72", "Entering the pulse");
-		sendKeys(temperatureEditText, "98", "Entering the temperature");
-		startVisit1And2StepsPage.scrollToViewRespiratoryRate();
-		sendKeys(spo2EditText, "98", "Entering the spo2");
-		sendKeys(respiratoryRateEditText, "72");
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-		startVisit1And2StepsPage.clickOnConfirmButton();
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-		startVisit1And2StepsPage.clickOnYesButton();
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-		startVisit1And2StepsPage.clickOnSubmitButton();
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-		startVisit1And2StepsPage.clickOnGroin();
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-		startVisit1And2StepsPage.clickOnGradualOption();
-		startVisit1And2StepsPage.selectNightOption();
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.clickOnEightOfTwelveSubmitButton();
-		startVisit1And2StepsPage.selectfoodOption();
-		startVisit1And2StepsPage.selectLeaningForward();
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-		Thread.sleep(2000);
-		startVisit1And2StepsPage.selectNoneOption();
-		startVisit1And2StepsPage.clickOnTwelevOfTwelveSkipButton();
-		for (int i = 0; i < 10; i++) {
-			click(lastNoButton, "Clicking on no button");
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
+				// Test code
+				// Enter 1/4 vitals
+				sendKeys(heightEditText, "165", "Entering the height");
+				sendKeys(weightEditText, "68", "Entering the weight");
+				sendKeys(bpSystolicEditText, "120", "Entering the bp Systolic");
+				sendKeys(bpDiastolicEditText, "72", "Entering the bp Diastolic");
+				sendKeys(pulseEditText, "72", "Entering the pulse");
+				sendKeys(temperatureEditText, "98", "Entering the temperature");
+				startVisit1And2StepsPage.scrollToViewRespiratoryRate();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
 		}
-		click(associatedSymptomsSubmit, "Clicking on associated symptoms submit button");
-		click(visitReasonSummaryScreenConfirmButton, "Clicking on visit reason summary screen confirm button");
-		click(washHandsOkayButton, "Clicking on wash hands okay button");
-		click(jaundiceNoButton, "Clicking on jaundice no button");
-		click(pallorNormalButton, "Clicking on pallor normal button");
-		click(pinchSkinSlowButton, "Clicking on pinch skin slow button");
-		click(clubbingButton, "Clicking on clubbing button");
-		Thread.sleep(2000);
-		click(nailsArePaleButton, "Clicking on nails are pale button");
-		click(noOedemaButton, "Clicking on no oedema button");
-		click(noButton, "Clicking on no button");
-		click(lastNoButton, "Clicking on no button");
-		click(noTendernessButton, "Clicking on no tenderness button");
-		click(lastNoButton, "Clicking on no button");
-		click(physicalExaminationConfirmButton, "Clicking on physical examination confirm button");
-		click(jaundiceNoButton, "Clicking on no button");
-		click(noKnownAllergiesButton, "Clicking on no known allergies button");
-		click(deniedToAnswerButton, "Clicking on denied to answer button");
-		click(deniedButton, "Clicking on denied button");
-		click(lastSkipButton, "Clicking on skip button");
-		click(lastSkipButton, "Clicking on skip button");
-		click(noneOfTheAboveButton, "Clicking on none of the above button");
-		click(familyHistorySubmit, "Clicking on family history submit button");
-		click(medicalHistoryConfirmButton, "Clicking on medical history confirm button");
+		while (attempt < maxAttempts) {
+			try {
+				sendKeys(spo2EditText, "98", "Entering the spo2");
+				sendKeys(respiratoryRateEditText, "72");
+				startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnConfirmButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnYesButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickUpperRightHypochondrium();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnSubmitButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectPainRadiatesOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnGroin();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnNumberSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectTwo();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnDurationSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectDays();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnGradualOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectNightOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectMildOneThreeOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectCoughingOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnEightOfTwelveSubmitButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectfoodOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectLeaningForward();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(2000);
+				startVisit1And2StepsPage.selectNoneOption();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				startVisit1And2StepsPage.clickOnTwelevOfTwelveSkipButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				for (int i = 0; i < 10; i++) {
+					Thread.sleep(1000);
+					click(lastNoButton, "Clicking on no button");
+				}
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(associatedSymptomsSubmit, "Clicking on associated symptoms submit button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(visitReasonSummaryScreenConfirmButton, "Clicking on visit reason summary screen confirm button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(washHandsOkayButton, "Clicking on wash hands okay button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(jaundiceNoButton, "Clicking on jaundice no button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(pallorNormalButton, "Clicking on pallor normal button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(pinchSkinSlowButton, "Clicking on pinch skin slow button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				click(clubbingButton, "Clicking on clubbing button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(nailsArePaleButton, "Clicking on nails are pale button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				click(noOedemaButton, "Clicking on no oedema button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(noButton, "Clicking on no button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(lastNoButton, "Clicking on no button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(noTendernessButton, "Clicking on no tenderness button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(lastNoButton, "Clicking on no button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(physicalExaminationConfirmButton, "Clicking on physical examination confirm button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(jaundiceNoButton, "Clicking on no button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(noKnownAllergiesButton, "Clicking on no known allergies button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(deniedToAnswerButton, "Clicking on denied to answer button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(2000);
+				click(deniedButton, "Clicking on denied button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(lastSkipButton, "Clicking on skip button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(lastSkipButton, "Clicking on skip button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(noneOfTheAboveButton, "Clicking on none of the above button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(familyHistorySubmit, "Clicking on family history submit button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(1000);
+				click(medicalHistoryConfirmButton, "Clicking on medical history confirm button");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+
+		}
 	}
 
 	// Verifies the functionality of the edit option beside the patient's name
@@ -553,12 +1309,14 @@ public class VisitSummaryPage extends BaseTest {
 	public void verifyTheChangesAreSavedWhenPatientDetailsAreUpdated() throws Throwable {
 		addPatients();
 		completing4OutOf4Steps();
+		waitForVisibility(visitSummaryPatientName);
 		String beforeChangingPatientName = visitSummaryPatientName.getText();
 		click(editDetailsIcon, "Clicking on edit details icon");
 		clear(updateDetailsFirstNameTextField, "Clearing the update details first name textfield");
 		sendKeys(updateDetailsFirstNameTextField, "Update", "Entering the first name");
 		sendKeys(updateDetailsLastNameTextField, "Testing", "Entering the last name");
 		click(updateDetailsSaveButton, "Clicking on update details save button");
+		waitForVisibility(updatedFirstName);
 		String afterChangingPatientName = updatedFirstName.getText();
 		if (!beforeChangingPatientName.equals(afterChangingPatientName)
 				&& afterChangingPatientName.equals("Update Testing")) {
@@ -628,22 +1386,23 @@ public class VisitSummaryPage extends BaseTest {
 		}
 
 	}
-	
-	// Verifies the functionality of clicking on the close button for the uploaded document
+
+	// Verifies the functionality of clicking on the close button for the uploaded
+	// document
 	public void verifyClickingOnCloseButtonOnTheDocumentUploaded() throws Throwable {
 		verifyChooseFromGalleryOptionToAddDocument();
-		click(documentDeleteIcon,"Clicking on document delete icon");
+		click(documentDeleteIcon, "Clicking on document delete icon");
 		boolean addedDocument = isDisplayed2(byAddedAdditionalDocument);
-		if(addedDocument == false) {
+		if (addedDocument == false) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether added document is deleted");
 			System.out.println("Added document is deleted");
-		}else {
+		} else {
 			throw new Exception("Added document is not deleted");
 		}
 	}
 
 	// Clicking on doctors speciality dropdown
-	public void clickDoctorSpeciality() {
+	public void clickDoctorSpeciality() throws InterruptedException {
 		click(doctorsSpecialityDropdown, "Clicking on doctors speciality dropdown");
 	}
 
@@ -654,7 +1413,9 @@ public class VisitSummaryPage extends BaseTest {
 		scrollToElementByDescription("Visit Summary Speciality Spinner");
 		clickDoctorSpeciality();
 		click(pediatrician, "Selecting pediatrician from the dropdown");
+		waitForVisibility(pediatrician);
 		String speciality = pediatrician.getText();
+		waitForVisibility(doctorsSpecialityDropdown);
 		String selectedSpeciality = doctorsSpecialityDropdown.getText();
 		if (selectedSpeciality.equals(speciality)) {
 			ExtentReport.getTest().log(Status.INFO,
@@ -665,7 +1426,7 @@ public class VisitSummaryPage extends BaseTest {
 	}
 
 	// Clicking on priority visit toggle button
-	public void priorityVisitEnable() {
+	public void priorityVisitEnable() throws InterruptedException {
 		click(priorityVisitToggleButton, "Clicking on priority visit toggle button");
 	}
 
@@ -677,6 +1438,7 @@ public class VisitSummaryPage extends BaseTest {
 		clickDoctorSpeciality();
 		click(pediatrician, "Selecting pediatrician from the dropdown");
 		scrollToElementByDescription("Visit Summary Priority Checkbox SwitchMaterial");
+		waitForVisibility(medicalHistoryDetails);
 		String patientMedicalHistory = medicalHistoryDetails.getText();
 		if (patientMedicalHistory.contains("Not pregnant") && patientMedicalHistory.contains("No known allergies")
 				&& patientMedicalHistory.contains("Denied to Answer") && patientMedicalHistory.contains("Denied")) {
@@ -715,7 +1477,8 @@ public class VisitSummaryPage extends BaseTest {
 		}
 	}
 
-	// Verifies the functionality of clicking on the appointment button after the visit is sent to the doctor
+	// Verifies the functionality of clicking on the appointment button after the
+	// visit is sent to the doctor
 	public void verifyClickingOnAppointmentButtonFunctionalityAfterVisitIsSentToDoctor() throws Throwable {
 		addPatients();
 		verifyBehaviorOnClickingYesInSendVisitPopup();
@@ -731,10 +1494,12 @@ public class VisitSummaryPage extends BaseTest {
 		}
 	}
 
-	// Verifies if the booked appointment is reflecting correctly in the Appointments section
+	// Verifies if the booked appointment is reflecting correctly in the
+	// Appointments section
 	public void verifyIfBookedAppointmentIsReflectingInAppointments() throws Throwable {
 		addPatients();
 		completing4OutOf4Steps();
+		waitForVisibility(visitSummaryPatientName);
 		String patientName = visitSummaryPatientName.getText();
 		scrollToElementByDescription("Visit Summary Speciality Spinner");
 		clickDoctorSpeciality();
@@ -743,9 +1508,11 @@ public class VisitSummaryPage extends BaseTest {
 		click(sendVisitYesButton, "Clicking on yes button");
 		click(okayButton, "Clicking on okay button");
 		click(appointmentButton, "Clicking on appointment button");
+		Thread.sleep(7000);
 		click(appointmentFirstTime, "Selecting the time slot");
 		click(bookAppointmentButton, "Clicking on book appointment button");
 		click(appointmentYesButton, "Clicking on yes button");
+		waitForVisibility(addedAppointmentPatientName);
 		String appointmentPatientName = addedAppointmentPatientName.getText();
 		if (patientName.equals(appointmentPatientName)) {
 			ExtentReport.getTest().log(Status.INFO,

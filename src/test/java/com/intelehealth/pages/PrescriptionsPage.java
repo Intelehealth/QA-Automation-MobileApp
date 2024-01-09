@@ -2,6 +2,7 @@ package com.intelehealth.pages;
 
 import java.awt.Robot;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.Status;
@@ -197,6 +198,9 @@ public class PrescriptionsPage extends BaseTest {
 	@AndroidFindBy(id = "com.android.printspooler:id/title")
 	private WebElement printerPageTitle;
 
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Select a printer\"]")
+	private WebElement selectAPrinterText;
+
 	@AndroidFindBy(id = "com.android.printspooler:id/page_content")
 	private WebElement printedFile;
 
@@ -229,7 +233,7 @@ public class PrescriptionsPage extends BaseTest {
 
 	@AndroidFindBy(accessibility = "Common Message Dialog Positive Button")
 	private WebElement followupReminderAlertPopupOkButton;
-	
+
 	@AndroidFindBy(accessibility = "displays the count of awaiting prescriptions textview for Received Prescriptions")
 	private WebElement patientsAwaitingTheirPrescriptions;
 
@@ -253,54 +257,54 @@ public class PrescriptionsPage extends BaseTest {
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"recent visits title textview\"]//(//android.widget.FrameLayout[@resource-id=\"org.intelehealth.app:id/fu_cardview_item\"])//android.widget.TextView[@content-desc=\"patient date and time row item\"]")
 	private WebElement pendingRecentVisitsDate;
-	
+
 	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@resource-id=\"org.intelehealth.app:id/frame_10014\"]")
 	private WebElement pendingVisitPatients;
 
-	@AndroidFindBy(xpath = "//android.widget.Toast[@text=\"Mobile number not provided.\"]")
-	private WebElement byMobileNumNotProvided;
-	
-	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"More options\"]")
-	private WebElement byCallMore;
+	@AndroidFindBy(id = "com.android.chrome:id/terms_accept")
+	private WebElement chromeAcceptAndContinue;
 
-	@AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"com.android.dialer:id/digits\"]")
-	private WebElement byPhoneNumberDigits;
-	
-	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"backspace\"]")
-	private WebElement byCallBackSpace;
-	
-	@AndroidFindBy(xpath = "//android.widget.Button[@text='Add account']")
-	private WebElement byTurnOnSyncAddAccount;
-	
-	@AndroidFindBy(xpath = "//android.widget.Button[@text='No thanks']")
-	private WebElement byTurnOnSyncNoThanks;
-	
-	@AndroidFindBy(id = "org.intelehealth.app:id/btnPrintPresc")
-	private WebElement byPrescriptionPrintButton;
-	
-	@AndroidFindBy(id = "org.intelehealth.app:id/btnSharePresc")
-	private WebElement byPrescriptionShareButton;
+	By byChromeAcceptAndContinue = By.id("com.android.chrome:id/terms_accept");
+	By byMobileNumNotProvided = By.xpath("//android.widget.Toast[@text=\"Mobile number not provided.\"]");
+	By byCallMore = By.xpath("//android.widget.ImageButton[@content-desc=\"More options\"]");
+	By byPhoneNumberDigits = By.xpath("//android.widget.EditText[@resource-id=\"com.android.dialer:id/digits\"]");
+	By byCallBackSpace = By.xpath("//android.widget.ImageButton[@content-desc=\"backspace\"]");
+	By byTurnOnSyncAddAccount = By.xpath("//android.widget.Button[@text='Add account']");
+	By byTurnOnSyncNoThanks = By.xpath("//android.widget.Button[@text='No thanks']");
+	By byPrescriptionPrintButton = By.id("org.intelehealth.app:id/btnPrintPresc");
+	By byPrescriptionShareButton = By.id("org.intelehealth.app:id/btnSharePresc");
+	By byfollowupReminderAlertPopupText = By
+			.xpath("//android.widget.TextView[contains(@text,'Please remind the patient of their follow up date:')]");
 
-	@AndroidFindBy(xpath = 
-			"//android.widget.TextView[@resource-id=\"org.intelehealth.app:id/you_can_add\"]//..//androidx.recyclerview.widget.RecyclerView[@resource-id=\"org.intelehealth.app:id/recycler_recent\"]//android.widget.TextView[@content-desc=\"patient name row item title\"]")
-	private WebElement recentVisitPatients;
-	
-	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Visit Details Follow Up Parent RelativeLayout\"]")
-	private WebElement followUp;
-	
+	By recentVisitPatients = By.xpath(
+			"//android.widget.TextView[@resource-id=\"org.intelehealth.app:id/you_can_add\"]//..//androidx.recyclerview.widget.RecyclerView[@resource-id=\"org.intelehealth.app:id/recycler_recent\"]//android.widget.TextView[@content-desc=\"patient name row item title\"]");
+
 	// Refreshes the prescriptions
 	public void refreshPrescriptions() throws Throwable {
 		robot = new Robot();
-		Thread.sleep(20000);
-		click(homeScreenRefreshButton, "Clicking on app sync icon");
-		click(homeScreenPrescriptionArrowIcon, "Clicking on prescriptions");
+		int maxAttempts = 3;
+		int attempt = 0;
+
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton, "Clicking on app sync icon");
+				click(homeScreenPrescriptionArrowIcon, "Clicking on prescriptions");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 	}
 
-	//Verifies that patients with received prescriptions are listed in the recent visit section
+	// Verifies that patients with received prescriptions are listed in the recent
+	// visit section
 	public void verifyReceivedPrescriptionsPatientsListedInRecentVisit() throws Throwable {
-		restAssured sendPrescription = new restAssured();
-		sendPrescription.createPatientAndSharePrescription();
+//		restAssured sendPrescription = new restAssured();
+//		sendPrescription.createPatientAndSharePrescription();
 		refreshPrescriptions();
+		waitForVisibility(prescriptionPatients);
 		boolean recentPatients = isDisplayed2(recentVisitPatients);
 		if (recentPatients == true) {
 			if (isDisplayed(recentVisitPatientName) && isDisplayed(recentVisitDateAndTime)
@@ -317,11 +321,12 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies the share functionality when clicked on any recent patient visit
+	// Verifies the share functionality when clicked on any recent patient visit
 	public void verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit() throws Throwable {
-		restAssured sendPrescription = new restAssured();
-		sendPrescription.createPatientAndSharePrescription();
+//		restAssured sendPrescription = new restAssured();
+//		sendPrescription.createPatientAndSharePrescription();
 		refreshPrescriptions();
+		waitForVisibility(prescriptionPatients);
 		boolean recentPatients = isDisplayed2(recentVisitPatients);
 		if (recentPatients == true) {
 			click(recentVisitShareIcon, "Clicking on recent visit share icon");
@@ -337,48 +342,59 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies if the prescription is shared upon entering a valid number
+	// Verifies if the prescription is shared upon entering a valid number
 	public void verifyIfThePrescriptionIsSharedOnEnteringAValidNumber() throws Throwable {
 		verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit();
 		click(sharePrescriptionPopupMobileNumTextfield, "Clicking on mobile number textfield");
 		sendKeys(sharePrescriptionPopupMobileNumTextfield, "7892450759", "Entering the mobile number");
 		click(sharePrescriptionPopupShareButton, "Clicking on share button");
+		boolean acceptAndContine = isDisplayed2(byChromeAcceptAndContinue);
+		if (acceptAndContine == true) {
+			click(chromeAcceptAndContinue);
+		}
 		if (isDisplayed(turnOnSyncNoThanks) && isDisplayed(turnOnSyncAddAccount)) {
 			ExtentReport.getTest().log(Status.INFO, "There is no whatsapp application in the device");
 			System.out.println("There is no whatsapp application in the device");
 		}
 	}
-	
-	//Verifies that the count of patients awaiting prescriptions is correct
+
+	// Verifies that the count of patients awaiting prescriptions is correct
 	public void verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect() throws Throwable {
 		refreshPrescriptions();
-		if(isDisplayed(patientsAwaitingTheirPrescriptions)) {
-			ExtentReport.getTest().log(Status.INFO,"Verifying whether '<No>Patients are awaiting their prescriptions' text is displayed properly");
+		if (isDisplayed(patientsAwaitingTheirPrescriptions)) {
+			ExtentReport.getTest().log(Status.INFO,
+					"Verifying whether '<No>Patients are awaiting their prescriptions' text is displayed properly");
 			System.out.println("<No>Patients are awaiting their prescriptions text is displayed properly");
 		}
+		waitForVisibility(patientsAwaitingTheirPrescriptions);
 		String awaitingText = patientsAwaitingTheirPrescriptions.getText();
 		ExtentReport.getTest().log(Status.INFO, "Getting the number of patients awaiting for their prescriptions");
 		String patientsCount = extractBefore(awaitingText, "patients are awaiting their prescriptions.");
 		click(pendingTab, "Clicking on pending tab");
+		waitForVisibility(pendingPrescriptionCountWithMessage);
 		String pendingCountAndMessage = pendingPrescriptionCountWithMessage.getText();
 		ExtentReport.getTest().log(Status.INFO, "Getting the count of pending prescriptions");
-		String awaitingPatientsCount = extractBetween(pendingCountAndMessage, "Doctor is yet to send the prescriptions for",
-				"patients, you can remind the doctor.");
-		if(patientsCount.equals(awaitingPatientsCount)) {
-			ExtentReport.getTest().log(Status.INFO,"Verifying whether the count of patients is correctly displayed");
+		String awaitingPatientsCount = extractBetween(pendingCountAndMessage,
+				"Doctor is yet to send the prescriptions for", "patients, you can remind the doctor.");
+		if (patientsCount.equals(awaitingPatientsCount)) {
+			ExtentReport.getTest().log(Status.INFO, "Verifying whether the count of patients is correctly displayed");
 			System.out.println("The count of patients is correctly displayed");
-		}else {
+		} else {
 			throw new Exception("The count is not displayed correctly");
 		}
-		
+
 	}
 
-	//Verifies that the user is able to navigate to the visit details page by clicking on any recent visit
+	// Verifies that the user is able to navigate to the visit details page by
+	// clicking on any recent visit
 	public void verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit() throws Throwable {
 		refreshPrescriptions();
+		waitForVisibility(prescriptionPatients);
 		boolean recentPatients = isDisplayed2(recentVisitPatients);
 		if (recentPatients == true) {
 			click(recentVisitPatientName, "Clicking on patient from the list of recent visit");
+			By followUp = By.xpath(
+					"//android.widget.RelativeLayout[@content-desc=\"Visit Details Follow Up Parent RelativeLayout\"]");
 			if (isDisplayed(visitDetailsPageTitle) && isDisplayed(visitDetailsPatientName)
 					&& isDisplayed(visitDetailsPatientGenderAge) && isDisplayed(visitDetailsPatientID)
 					&& isDisplayed(visitDetailsPatientCallIcon) && isDisplayed(visitDetailsPatientWhatsappIcon)
@@ -409,7 +425,7 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user can initiate a call to the patient
+	// Verifies that the user can initiate a call to the patient
 	public void verifyThatUserCanCallPatient() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
@@ -431,16 +447,21 @@ public class PrescriptionsPage extends BaseTest {
 
 	}
 
-	//Verifies that the user can send a WhatsApp message to the patient
+	// Verifies that the user can send a WhatsApp message to the patient
 	public void verifyThatUserCanSendWhatsappMessageToThePatient() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
 		click(visitDetailsPatientWhatsappIcon, "Clicking on whatsapp icon");
 		try {
-			if (!isDisplayed2(byTurnOnSyncNoThanks) && !isDisplayed2(byTurnOnSyncAddAccount)) {
+			if (!isDisplayed2(byChromeAcceptAndContinue)
+					|| !isDisplayed2(byTurnOnSyncNoThanks) && !isDisplayed2(byTurnOnSyncAddAccount)) {
 				ExtentReport.getTest().log(Status.INFO, "Verifying whether the mobile number is not provided");
 				System.out.println("Mobile number is not provided");
 			} else {
+				boolean acceptAndContine = isDisplayed2(byChromeAcceptAndContinue);
+				if (acceptAndContine == true) {
+					click(chromeAcceptAndContinue);
+				}
 				if (isDisplayed(turnOnSyncNoThanks) && isDisplayed(turnOnSyncAddAccount)) {
 					ExtentReport.getTest().log(Status.INFO,
 							"Verifying whether the device is not having whatsapp installed");
@@ -454,33 +475,44 @@ public class PrescriptionsPage extends BaseTest {
 	}
 
 	// Clicking on doctor speciality dropdown
-	public void clickDoctorSpeciality() {
+	public void clickDoctorSpeciality() throws InterruptedException {
 		click(doctorsSpecialityDropdown, "Clicking on doctors speciality dropdown");
 	}
 
-	//Verifies that the user is able to view the visit summary page
+	// Verifies that the user is able to view the visit summary page
 	public void verifyUserIsAbleToViewVisitSummaryPage() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
+		waitForVisibility(visitDetailsPatientName);
 		String patientNameVisitDetails = visitDetailsPatientName.getText();
+		waitForVisibility(visitDetailsPatientGenderAge);
 		String genderAgeVisitDetails = visitDetailsPatientGenderAge.getText();
+		waitForVisibility(visitDetailsPatientID);
 		String patientIdVisitDetails = visitDetailsPatientID.getText();
+		waitForVisibility(visitDetailsReasonForVisit);
 		String reasonForVisitVisitDetails = visitDetailsReasonForVisit.getText();
+		waitForVisibility(visitDetailsDoctorSpeciality);
 		String doctorSpecialityVisitDetails = visitDetailsDoctorSpeciality.getText();
 		click(visitDetailsVisitSummary, "Clicking on visit summary");
+		waitForVisibility(visitSummaryPatientName);
 		String patientNameVisitSummary = visitSummaryPatientName.getText();
 		isDisplayed(visitSummaryPatientGender);
+		waitForVisibility(visitSummaryPatientGender);
 		String patientGenderVisitSummary = visitSummaryPatientGender.getText();
+		waitForVisibility(visitSummaryPatientOpenMRSID);
 		String patientIdVisitSummary = visitSummaryPatientOpenMRSID.getText();
 		boolean vitals = isDisplayed(visitSummaryVitals);
 		boolean reasonForVisit = isDisplayed(visitSummaryReasonForVisit);
 		scrollToTextContains_Android("Physical Examination");
 		boolean physicalExaminaton = isDisplayed(visitSummaryPhysicalExaminaton);
 		scrollToElementByDescription("Visit Summary Item Card Details 2 TextView");
+		waitForVisibility(visitSummaryVisitReasonComplaint);
 		String reasonForVisitVisitSummary = visitSummaryVisitReasonComplaint.getText();
+		Thread.sleep(2000);
 		scrollToElementByDescription("Visit Summary Speciality Header RelativeLayout");
 		boolean addAdditionalDocuments = isDisplayed(visitSummaryAddDocumentsTitle);
 		clickDoctorSpeciality();
+		waitForVisibility(doctorsSpecialityValue);
 		String doctorSpecialityVisitSummary = doctorsSpecialityValue.getText();
 		boolean MedicalHistory = isDisplayed(visitSummaryMedicalHistory);
 		click(doctorsSpecialityDropdown);
@@ -502,16 +534,22 @@ public class PrescriptionsPage extends BaseTest {
 
 	}
 
-	//Verifies that the user can successfully navigate to the prescription page
+	// Verifies that the user can successfully navigate to the prescription page
 	public void verifythatUserCanNavigateToPrescriptionPage() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
+		waitForVisibility(visitDetailsPatientName);
 		String patientNameVisitDetails = visitDetailsPatientName.getText();
+		waitForVisibility(visitDetailsPatientGenderAge);
 		String genderAgeVisitDetails = visitDetailsPatientGenderAge.getText();
+		waitForVisibility(visitDetailsPatientID);
 		String patientIdVisitDetails = visitDetailsPatientID.getText();
 		click(visitDetailsPrescription, "Clicking on prescription");
+		waitForVisibility(prescriptionPatientName);
 		String patientNamePrescription = prescriptionPatientName.getText();
+		waitForVisibility(prescriptionPatientAgeGender);
 		String patientAgeGenderPrescription = prescriptionPatientAgeGender.getText();
+		waitForVisibility(prescriptionPatientId);
 		String patientIdPrescription = prescriptionPatientId.getText();
 		isDisplayed(prescriptionConsultedDoctorDetails);
 		isDisplayed(prescriptionDiagnosis);
@@ -535,7 +573,7 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user is able to download the prescription
+	// Verifies that the user is able to download the prescription
 	public void verifyThatUserIsAbleToDownloadThePrescription() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
@@ -556,33 +594,35 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user can successfully print the prescription
+	// Verifies that the user can successfully print the prescription
 	public void verifyUserCanPrintThePrescription() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
 		click(visitDetailsPrescription, "Clicking on prescription");
 		click(prescriptionPrintButton, "Clicking on print button");
-		if (isDisplayed(printedFile) && isDisplayed(printerPageTitle)) {
+		if (isDisplayed(printedFile) && isDisplayed(selectAPrinterText) || isDisplayed(printerPageTitle)) {
 			ExtentReport.getTest().log(Status.INFO,
 					"Verifying whether user is able to print the prescription and navigated to select a printer page");
 			System.out.println("Able to print the prescription");
 		}
 	}
-	
-	//Handles the functionality to share the prescription from visit details
+
+	// Handles the functionality to share the prescription from visit details
 	public void visitDetailsPrescriptionShare() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
 		click(visitDetailsPrescription, "Clicking on prescription");
 		click(prescriptionShareButton, "Clicking on share button");
 	}
-	
-    //Verifies that the user can successfully share the prescription with the patient
+
+	// Verifies that the user can successfully share the prescription with the
+	// patient
 	public void verifyThatUserCanShareThePrescriptionToPatient() throws Throwable {
 		if (isDisplayed(sharePrescriptionPopupText) && isDisplayed(sharePrescriptionPopupMobileNumText)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether popup is opened");
 			System.out.println("Popup is opened");
 		}
+		waitForVisibility(sharePrescriptionPopupMobileNumText);
 		String ifEmpty = sharePrescriptionPopupMobileNumText.getText();
 		if (ifEmpty.contentEquals("Enter mobile number")) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether patient has not given the mobile number");
@@ -595,8 +635,10 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user can successfully share the prescription through WhatsApp
+	// Verifies that the user can successfully share the prescription through
+	// WhatsApp
 	public void verifyUserCanShareThroughWhatsapp() throws Throwable {
+		waitForVisibility(sharePrescriptionPopupMobileNumText);
 		String ifEmpty = sharePrescriptionPopupMobileNumText.getText();
 		if (ifEmpty.contentEquals("Enter mobile number")) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether patient has not given the mobile number");
@@ -604,6 +646,10 @@ public class PrescriptionsPage extends BaseTest {
 			click(sharePrescriptionPopupMobileNumText, "Clicking on mobile number textfield");
 			sendKeys(sharePrescriptionPopupMobileNumText, "7892450759", "Entering the mobile number");
 			click(sharePrescriptionPopupShareButton, "Clicking on share prescription button in the share popup");
+			boolean acceptAndContine = isDisplayed2(byChromeAcceptAndContinue);
+			if (acceptAndContine == true) {
+				click(chromeAcceptAndContinue);
+			}
 			if (isDisplayed(turnOnSyncNoThanks) && isDisplayed(turnOnSyncAddAccount)) {
 				ExtentReport.getTest().log(Status.INFO,
 						"Verifying whether the device is not having whatsapp installed");
@@ -614,6 +660,10 @@ public class PrescriptionsPage extends BaseTest {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether popup is opened with patient number");
 			System.out.println("Popup is opened with patient number");
 			click(sharePrescriptionPopupShareButton, "Clicking on share prescription button in the share popup");
+			boolean acceptAndContine = isDisplayed2(byChromeAcceptAndContinue);
+			if (acceptAndContine == true) {
+				click(chromeAcceptAndContinue);
+			}
 			if (isDisplayed(turnOnSyncNoThanks) && isDisplayed(turnOnSyncAddAccount)) {
 				ExtentReport.getTest().log(Status.INFO,
 						"Verifying whether the device is not having whatsapp installed");
@@ -622,7 +672,8 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that clicking on the "Home" button navigates the user to the home page
+	// Verifies that clicking on the "Home" button navigates the user to the home
+	// page
 	public void verifyHomeNavigatesToHomePage() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
@@ -636,7 +687,8 @@ public class PrescriptionsPage extends BaseTest {
 
 	}
 
-	//Verifies that the user can successfully end a visit and navigated to Close visits page
+	// Verifies that the user can successfully end a visit and navigated to Close
+	// visits page
 	public void verifyThatUserCanEndVisit() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
@@ -649,7 +701,8 @@ public class PrescriptionsPage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user can successfully end a visit and feedback form is opened
+	// Verifies that the user can successfully end a visit and feedback form is
+	// opened
 	public void verifyUserCanEndVisit() throws Throwable {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
@@ -669,21 +722,29 @@ public class PrescriptionsPage extends BaseTest {
 		refreshPrescriptions();
 		click(prescriptionPatients, "Clicking on patient from the list");
 		click(visitDetailsEndVisitButton, "Clicking on end visit");
-		if (isDisplayed(followupReminderAlertPopupText)) {
-			ExtentReport.getTest().log(Status.INFO, "Verifying whether alert is opened and proper text is displayed");
-			System.out.println("Alert is opened and proper text is displayed");
+		boolean followUpReminder = isDisplayed2(byfollowupReminderAlertPopupText);
+		if (followUpReminder == true) {
+			ExtentReport.getTest().log(Status.INFO,
+					"Verifying whether alert message is opened and proper text is displayed");
+			System.out.println("Alert message is opened and proper text is displayed");
+			click(followupReminderAlertPopupOkButton, "Clicking on okay button in the alert popup");
+		} else {
+			ExtentReport.getTest().log(Status.INFO, "There is no follow up visit for the patient");
+			System.err.println("There is no follow up visit for the patient");
+			throw new Exception("There is no follow up visit for the patient");
 		}
-		click(followupReminderAlertPopupOkButton, "Clicking on okay button in the alert popup");
 		if (isDisplayed(feedbackPageTitle) && isDisplayed(feedbackPageGiveFeedbackTextArea)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether feedback form is opened");
 			System.out.println("Feedback form is opened");
 		}
 	}
 
-	//Verifies that the awaiting prescription notification is displayed along with the count
+	// Verifies that the awaiting prescription notification is displayed along with
+	// the count
 	public void verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount() throws Throwable {
 		refreshPrescriptions();
 		click(pendingTab, "Clicking on pending tab");
+		waitForVisibility(pendingPrescriptionCountWithMessage);
 		String pendingCountAndMessage = pendingPrescriptionCountWithMessage.getText();
 		String onlyCount = extractBetween(pendingCountAndMessage, "Doctor is yet to send the prescriptions for",
 				"patients, you can remind the doctor.");
@@ -692,12 +753,12 @@ public class PrescriptionsPage extends BaseTest {
 					"Verifying whether notification is displayed with pending prescription count.'Doctor is yet to send the prescriptions for <no> patients,you can remind the doctor' text is displayed");
 			System.out.println(
 					"Notification is displayed with pending prescription number.'Doctor is yet to send the prescriptions for <no> patients,you can remind the doctor' text is displayed");
-		}else {
+		} else {
 			throw new Exception("Count is not displayed");
 		}
 	}
 
-	//Verifies that recent visits are displayed in the list
+	// Verifies that recent visits are displayed in the list
 	public void verifyThatRecentVisitsDisplayInList() throws Throwable {
 		refreshPrescriptions();
 		click(pendingTab, "Clicking on pending tab");
@@ -708,13 +769,14 @@ public class PrescriptionsPage extends BaseTest {
 			System.out.println("Recent visits are displayed along with Patient name and date");
 		}
 	}
-	
-	//Verifies that the user can successfully end a pending visit
+
+	// Verifies that the user can successfully end a pending visit
 	public void verifyThatUserCanEndPendingVisit() throws Throwable {
 		refreshPrescriptions();
 		click(pendingTab, "Clicking on pending tab");
-		click(pendingVisitPatients,"Clicking on pending visit patient from the list");
-		click(visitDetailsEndVisitButton,"Clicking on end visit button");
+		click(pendingVisitPatients, "Clicking on pending visit patient from the list");
+		click(visitDetailsEndVisitButton, "Clicking on end visit button");
+		waitForVisibility(feedbackPageTitle);
 		if (isDisplayed(feedbackPageTitle) && isDisplayed(feedbackPageGiveFeedbackTextArea)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether visit is ended and feedback form is opened");
 			System.out.println("Visit is ended and feedback form is opened");

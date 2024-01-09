@@ -60,9 +60,9 @@ public class AppSetupPage extends BaseTest {
 	private WebElement checkBox;
 	@AndroidFindBy(accessibility = "Setup Ayu Intro Screen Setup Button")
 	private WebElement setupButton;
-	@AndroidFindBy(accessibility = "Setup Ayu Intro Screen Accept TnC And PP TextView")
+	@AndroidFindBy(accessibility = "Setup Ayu Intro Screen Accept TnC And PP TextView 2")
 	private WebElement termsAndCondition;
-	@AndroidFindBy(accessibility = "Setup Ayu Intro Screen Accept TnC And PP TextView")
+	@AndroidFindBy(accessibility = "Setup Ayu Intro Screen Accept TnC And PP TextView 4")
 	private WebElement privacyPolicy;
 	// Terms and Conditions Screen Elements
 	@AndroidFindBy(accessibility = "Terms and Conditions Title TextView")
@@ -79,7 +79,7 @@ public class AppSetupPage extends BaseTest {
 	@AndroidFindBy(accessibility = "Privacy Policy Title TextView")
 	private WebElement privacyPolicyTitle;
 
-	@AndroidFindBy(accessibility = "Privacy Policy Content ")
+	@AndroidFindBy(accessibility = "Privacy Policy Content TextView")
 	private WebElement privacyPolicyContent;
 
 	@AndroidFindBy(accessibility = "Privacy Policy Back Arrow ImageView")
@@ -155,7 +155,6 @@ public  AppSetupPage() throws IOException {
 	        System.err.println("An error occurred while handling permissions: " + e.getMessage());
 	        // You can choose to proceed with the next steps here if needed
 	    }
-	    // The missing closing brace for the handlePermissions method has been added
 	}
 
 
@@ -164,51 +163,51 @@ public  AppSetupPage() throws IOException {
 	
 
 	// Click on Next button
-	public void clickOnNextButton() {
+	public void clickOnNextButton() throws InterruptedException {
 		click(nextButton);
 			//	"Clicked on Next Button");
 		
 	}
 
 	// Click on Skip button
-	public void clickOnSkipButton() {
+	public void clickOnSkipButton() throws InterruptedException {
 		click(skipButton);
 	}
 
 	// Click on CheckBox
-	public void clickOnCheckBox() {
+	public void clickOnCheckBox() throws InterruptedException {
 		click(checkBox);
 	}
 
 	
 	// Click on Setup button
-	public void clickOnSetupButton() {
+	public void clickOnSetupButton() throws InterruptedException {
 	    click(setupButton);
 	}
 
 	// Click on Terms and Conditions Back Arrow
-	public void clickOnTermsAndConditionsBackArrow() {
+	public void clickOnTermsAndConditionsBackArrow() throws InterruptedException {
 	    click(termsAndConditionsBackArrow, "Clicked on Terms and Conditions Back Arrow");
 	}
 
 	// Click on Terms and Conditions
-	public void clickOnTermsAndCondition() {
+	public void clickOnTermsAndCondition() throws InterruptedException {
 	    click(termsAndCondition, "Clicked on Terms and Conditions");
 	}
 
 	// Click on Privacy Policy
-	public void clickOnPrivacyPolicy() {
+	public void clickOnPrivacyPolicy() throws InterruptedException {
 	    click(privacyPolicy, "Clicked on Privacy Policy");
 	}
 
 	// Click on Privacy Policy Back Arrow
-	public void clickOnPrivacyPolicyBackArrow() {
+	public void clickOnPrivacyPolicyBackArrow() throws InterruptedException {
 	    click(privacyPolicyBackArrow, "Clicked on Privacy Policy Back Arrow");
 	}
 
 	// Verify elements on Introductory Screen
 	// Verify elements on Introductory Screen
-	public void verifyIntroductoryScreen() {
+	public void verifyIntroductoryScreen() throws InterruptedException {
 	    isDisplayed(whoWeAre, "Who We Are is displayed on the Introductory Screen");
 	    
 	    isDisplayed(takePatientVisits, "Take Patient Visits is displayed on the Introductory Screen");
@@ -218,14 +217,14 @@ public  AppSetupPage() throws IOException {
 
 	// Verify Skip button is displayed
 	// Verify Skip button is displayed
-	public void skipButtonIsDisplayed() {
+	public void skipButtonIsDisplayed() throws InterruptedException {
 	    isDisplayed(skipButton, "Skip button is displayed");
 	}
 
 
 	
 	// Verify elements on Ayu Intro Screen
-	public void verifyAyuScreen() {
+	public void verifyAyuScreen() throws InterruptedException {
 	    isDisplayed(helloIamAyu, "Hello, I am Ayu text is displayed");
 	    isDisplayed(ayuIntroScreenSubtitle, "Ayu Intro Screen Subtitle is displayed");
 	    isDisplayed(checkBox, "Checkbox is displayed");
@@ -235,7 +234,7 @@ public  AppSetupPage() throws IOException {
 
 	
 	// Verify elements on Terms and Conditions Screen
-	public void verifyTermsAndConditionScreen() {
+	public void verifyTermsAndConditionScreen() throws InterruptedException {
 	    isDisplayed(termsAndonditionTitle, "Terms and Condition Title is displayed");
 	    isDisplayed(termsAndConditionDescription, "Terms and Condition Description is displayed");
 	    isDisplayed(termsAndConditionDeclineButton, "Decline Button is displayed");
@@ -244,7 +243,8 @@ public  AppSetupPage() throws IOException {
 
 	// Verify elements on Privacy Policy Screen
 	// Verify elements on Privacy Policy Screen
-	public void verifyPrivacyPolicyScreen() {
+	public void verifyPrivacyPolicyScreen() throws InterruptedException {
+		
 	    isDisplayed(privacyPolicyTitle, "Privacy Policy Title is displayed");
 	    isDisplayed(privacyPolicyContent, "Privacy Policy Content is displayed");
 	    isDisplayed(privacyPolicyDeclineButton, "Privacy Policy Decline Button is displayed");
@@ -253,7 +253,7 @@ public  AppSetupPage() throws IOException {
 
 	// Perform login
 	// Perform login
-	public void login(String un, String pw) {
+	public void login(String un, String pw) throws InterruptedException {
 	    // Click on the dropdown to open the menu
 	  
 	    click(dropdown);
@@ -271,22 +271,24 @@ public  AppSetupPage() throws IOException {
 	    click(toggle);
 	    click(back);
 	    isDisplayed(locationName);
+	    click(refreshButton);
+	    Thread.sleep(20000);;
 	}
 
 
 	// Verify Location is displayed
 	// Verify if the location name is displayed
-	public void locationIsDisplayed() {
+	public void locationIsDisplayed() throws InterruptedException {
 	    isDisplayed(locationName);
 	}
 
 	// Check if the setup language screen is displayed
-	public boolean setupLanguageScreenIsDisplayed() {
+	public boolean setupLanguageScreenIsDisplayed() throws InterruptedException {
 	    return isDisplayed(english, "Setup Language Screen is displayed");
 	}
 
 	// Perform a series of actions to complete the setup process
-	public void completeSetup() {
+	public void completeSetup() throws InterruptedException {
 	    // Click the "Next" button
 	    clickOnNextButton();
 
@@ -317,9 +319,7 @@ public  AppSetupPage() throws IOException {
 	        String decryptedPassword = decrypt(encryptedPassword);
 	        System.out.println("Decrypted Password: " + decryptedPassword);
 	    login(decryptedUserName, decryptedPassword);
-	    
-	    locationIsDisplayed();
-	    click(refreshButton);
+	  
 	}
 
 }

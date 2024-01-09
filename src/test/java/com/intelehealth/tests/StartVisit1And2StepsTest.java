@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.AfterMethod;
@@ -84,7 +85,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 3, description = "Verify the functionality of BM index(auto-calculated) textfield on 1st vital screen", enabled = true)
-	public void IDA4_2419_verifyBMIValueIsAutoCalculated() {
+	public void IDA4_2419_verifyBMIValueIsAutoCalculated() throws JSONException, InterruptedException {
 // Enter the patient's height as "160" on the Start Visit page
 		startVisit1And2StepsPage.enterHeight(appData.getJSONObject("patientVitalsDetails").getString("height"));
 
@@ -98,7 +99,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 4, description = "Verify the UI of Vital summary", enabled = true)
-	public void IDA4_2429_verifyTheUiOfVitalSummary() {
+	public void IDA4_2429_verifyTheUiOfVitalSummary() throws InterruptedException {
 // Click on the "Next" button on the First Vitals Screen of the Start Visit page
 		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
 
@@ -108,7 +109,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 	}
 
 	@Test(priority = 5, description = "Verify the status of BMI index by changing different height & weight and if editable field", enabled = true)
-	public void IDA4_2421_checkBMIStatusWithDifferentValues() {
+	public void IDA4_2421_checkBMIStatusWithDifferentValues() throws JSONException, InterruptedException {
 // Verify status for a patient with normal weight based on height  and weight 
 		startVisit1And2StepsPage.verifyStatusForNormalWeightPatient(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),

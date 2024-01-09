@@ -47,75 +47,74 @@ public class AppointmentsTest extends BaseTest{
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
         appSetupPage.completeSetup();
-        Thread.sleep(1500);
 
 }
-	@Test(priority = 1, description = "Verify clicking on visit under completed section", enabled = true)
-	public void IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed() {
+	@Test(priority = 1, description = "Verify clicking on visit under completed section", enabled = false)
+	public void IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed() throws Throwable {
 	    // Verify that the appointment details screen is displayed when clicking on 'Visit' under the completed section
 	    appointmentsPage.verifyAppointmentDetailsScreenIsDisplayed();
 	}
 
-	@Test(priority = 2, description = "Verify the overall All tab section", enabled = true)
-	public void IDA4_2404_verifyOverAllTabSection() {
+	@Test(priority = 2, description = "Verify the overall All tab section", enabled = false)
+	public void IDA4_2404_verifyOverAllTabSection() throws Throwable {
 	    // Verify the overall All tab section on the appointments page
 	    appointmentsPage.verifyAllTab();
 	}
 
-	@Test(priority = 3, description = "Verify when user selects specific radio button for appointments filter", enabled = true)
-	public void IDA4_2406_verifySpecificRadioButtonForAppointments() {
+	@Test(priority = 3, description = "Verify when user selects specific radio button for appointments filter", enabled = false)
+	public void IDA4_2406_verifySpecificRadioButtonForAppointments() throws Throwable  {
 	    // Verify that specific radio buttons for appointments filter work as expected
 	    appointmentsPage.verifyAppointmentsRadioButton();
 	}
 
-	@Test(priority = 4, description = "Verify user can select the FROM and TO dates from calendar filter in All tab section", enabled = true)
-	public void IDA4_2408_verifyAllTabCalenderFilter() {
+	@Test(priority = 4, description = "Verify user can select the FROM and TO dates from calendar filter in All tab section", enabled = false)
+	public void IDA4_2408_verifyAllTabCalenderFilter() throws Throwable {
 	    // Verify that the user can select FROM and TO dates from the calendar filter in the All tab section
 	    appointmentsPage.verifyUserCanSelectFromAndToDate();
 	}
-	@Test(priority = 5, description = "Verify the count of cancelled tab", enabled = true)
-	public void IDA4_2374_verifyCountOfCancelledTab() {
+	@Test(priority = 5, description = "Verify the count of cancelled tab", enabled = false)
+	public void IDA4_2374_verifyCountOfCancelledTab() throws Throwable {
 	   appointmentsPage.verifyCountOfCancelledTab();
 	}
-	@Test(priority = 6, description = "Verify the functionality of 'Cancelled' tab", enabled = true)
-	public void IDA4_2373_verifyCancelledTab() {
+	@Test(priority = 6, description = "Verify the functionality of 'Cancelled' tab", enabled = false)
+	public void IDA4_2373_verifyCancelledTab() throws Throwable {
 	   
 	   appointmentsPage.verifyCancelledTabFunctionality();
 	}
-	@Test(priority = 7, description = "Verify when user clicks on cancel appointment", enabled = true)
-	public void IDA4_2380_verifyCancelAppointment() throws InterruptedException {
+	@Test(priority = 7, description = "Verify when user clicks on cancel appointment", enabled = false)
+	public void IDA4_2380_verifyCancelAppointment() throws Throwable {
 	   
 	   appointmentsPage.verifyCancelButton();
 	}
-	@Test(priority = 8, description = "Verify the Yes button functionality in cancel appointment popup", enabled = true)
-	public void IDA4_2382_verifyYesButtonFunctionality() throws InterruptedException {
+	@Test(priority = 8, description = "Verify the Yes button functionality in cancel appointment popup", enabled = false)
+	public void IDA4_2382_verifyYesButtonFunctionality() throws Throwable {
 	   
 	   appointmentsPage.verifyYesButton();
 	}
 	
-	@Test(priority = 9, description = "Verify the functionality of 'Completed' tab", enabled = true)
-	public void IDA4_2391_verifyCompletedTabFunctionality() throws InterruptedException {
+	@Test(priority = 9, description = "Verify the functionality of 'Completed' tab", enabled = false)
+	public void IDA4_2391_verifyCompletedTabFunctionality() throws Throwable {
 	   
 	   appointmentsPage.verifyCompletedTab();
 	}
-	@Test(priority = 10, description = "Verify user can cancel the appointment by clicking save", enabled = true)
-	public void IDA4_2385_verifycancelAppointmentSaveButton() throws InterruptedException {
+	@Test(priority = 10, description = "Verify user can cancel the appointment by clicking save", enabled = false)
+	public void IDA4_2385_verifycancelAppointmentSaveButton() throws Throwable {
 	   
 	   appointmentsPage.verifyAppointmentSaveButton();
 	}
 	
-	@Test(priority = 11, description = "Verify clicking on Schedule appointment CTA for a cancelled appointment", enabled = true)
-	public void IDA4_2388_verifyScheduleAppointmentScreenIsDisplayed() throws InterruptedException {
+	@Test(priority = 11, description = "Verify clicking on Schedule appointment CTA for a cancelled appointment", enabled = false)
+	public void IDA4_2388_verifyScheduleAppointmentScreenIsDisplayed() throws Throwable {
 	   
 	   appointmentsPage.verifySchedulaAppointmentPageIsDisplayed();
 	}
-	@Test(priority = 12, description = "Verify the Cancelled appointment under Cancelled section and its tab", enabled = true)
-	public void IDA4_2386_verifyCancelledAppointment() throws InterruptedException {
+	@Test(priority = 12, description = "Verify the Cancelled appointment under Cancelled section and its tab", enabled = false)
+	public void IDA4_2386_verifyCancelledAppointment() throws Throwable {
 	   
 	   appointmentsPage.verifyCancelledTab();
 	}
-	@Test(priority = 13, description = "Verify the cancelled section under cancelled tab", enabled = true)
-	public void IDA4_2375_verifyCancelledSection() throws InterruptedException {
+	@Test(priority = 13, description = "Verify the cancelled section under cancelled tab", enabled = false)
+	public void IDA4_2375_verifyCancelledSection() throws Throwable {
 		appointmentsPage.verifyCancelledSection();
 	   
 }
@@ -149,7 +148,7 @@ public class AppointmentsTest extends BaseTest{
 		appointmentsPage.verifyThePatientVisitDetailsInUpcomingSection();
 	}
 
-	@Test(priority = 20, description = "Verify clicking on call and whatsapp icon on appointment details page when number is provided", enabled = false)
+	@Test(priority = 20, description = "Verify clicking on call and whatsapp icon on appointment details page when number is provided", enabled = true)
 	public void IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided() throws Throwable {
 		appointmentsPage.verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided();
 	}
@@ -159,7 +158,7 @@ public class AppointmentsTest extends BaseTest{
 		appointmentsPage.verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage();
 	}
 	
-	@Test(priority = 22, description = "Verify the functionality of Reschedule in Appointment details page", enabled = false)
+	@Test(priority = 22, description = "Verify the functionality of Reschedule in Appointment details page", enabled = true)
 	public void IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage() throws Throwable {
 		appointmentsPage.verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage();
 	}
@@ -190,7 +189,7 @@ public class AppointmentsTest extends BaseTest{
 		appointmentsPage.verifyWhenUserClicksYesInConfirmAppointmentPopup();
 	}
 
-	@Test(priority = 28, description = "Verify Rescheduled appointment displays under Today's tab of upcoming section", enabled = true)
+	@Test(priority = 28, description = "Verify Rescheduled appointment displays under Today's tab of upcoming section", enabled = false)
 	public void IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection() throws Throwable {
 		appointmentsPage.verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection();
 	}

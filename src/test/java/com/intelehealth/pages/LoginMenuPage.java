@@ -83,26 +83,27 @@ public class LoginMenuPage extends BaseTest {
 
 	// Click on Hamburger Menu
 	// Click on the hamburger menu icon
-	public void clickOnHamburgerMenu() {
+	public void clickOnHamburgerMenu() throws InterruptedException {
+		Thread.sleep(50000);
 	    click(menu);
 	}
 
 
 
 	// Click on the Log Out button
-	public void clickOnLogOut() {
+	public void clickOnLogOut() throws InterruptedException {
 	    click(logOut, "Clicked on the Log Out button");
 	}
 
 	// Verify if the "Welcome Back" title is displayed on the login screen
-	public void verifyWelcomeBackTitle() {
+	public void verifyWelcomeBackTitle() throws InterruptedException {
 	    isDisplayed(loginScreenWelcomeBackTitle, "Welcome Back title is displayed on the login screen");
 	}
 
 
 
 	// Perform login with the provided username and password
-	public void login() {
+	public void login() throws InterruptedException {
 		   String originalUserName = appData.getJSONObject("validUser").getString("username");
 		    String originalPassword = appData.getJSONObject("validUser").getString("password");
 		    
@@ -128,7 +129,7 @@ ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 	}
 
 	// Verify elements on the Menu Page
-	public void verifyMenuPageElements() {
+	public void verifyMenuPageElements() throws InterruptedException {
 	    isDisplayed(profile, "Profile element is displayed on the Menu Page");
 	    isDisplayed(myAchievements, "My Achievements element is displayed on the Menu Page");
 	    isDisplayed(changeLanguageAndProtocol, "Change Language and Protocol element is displayed on the Menu Page");
@@ -140,7 +141,7 @@ ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 
 
 	// Verify user profile details on the Profile Page
-	public void verifyUserProfileDetails() {
+	public void verifyUserProfileDetails() throws InterruptedException {
 	    isDisplayed(name, "User's name is displayed on the Profile Page");
 	    isDisplayed(healthworkerID, "Healthworker ID is displayed on the Profile Page");
 	    isDisplayed(editProfileLink, "Edit Profile link is displayed on the Profile Page");
@@ -148,11 +149,11 @@ ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 	}
 
 	// Click on the "Yes" button
-	public void clickOnYes() {
+	public void clickOnYes() throws InterruptedException {
 	    click(yesButton, "Clicked on the Yes button");
 	}
 	// Verify if the location name is displayed
-	public void verifyLocationIsDisplayed() {
+	public void verifyLocationIsDisplayed() throws InterruptedException {
 	    isDisplayed(locationName, "Location name is displayed");
 	}
 	// Verify logout functionality
@@ -170,7 +171,7 @@ ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 	    isDisplayed(loginScreenWelcomeBackTitle, "Verified the display of the login screen's welcome back title");
 	}
 	// Verify reset app functionality
-	public void verifyResetAppFunctionality() {
+	public void verifyResetAppFunctionality() throws InterruptedException {
 	    // Click on the reset app button
 	    click(resetApp, "Clicked on the Reset App button");
 

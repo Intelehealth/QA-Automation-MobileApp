@@ -56,16 +56,16 @@ public class NotificationTest extends BaseTest {
 		
 		Thread.sleep(5000);
 	}
-//	@Test(priority = 1, description = "Verify that user is able to view the prescription", enabled = true)
-//	public void IDA4_2142_verifyUserAbleToViewPrescription() throws InterruptedException {
-//		notificationPage.verifyUserAbleToViewPrescription();
-//	}
-//	@Test(priority = 2, description = "Verify once internet is available, the data should be synced to web portal automatically", enabled = true)
-//	public void IDA4_2150_verifyDataIsSyncedToWebApp() throws InterruptedException {
-//		notificationPage.verifyDataIsSyncedToWeb();
-//	}
+	@Test(priority = 1, description = "Verify that user is able to view the prescription", enabled = true)
+	public void IDA4_2142_verifyUserAbleToViewPrescription() throws InterruptedException {
+		notificationPage.verifyUserAbleToViewPrescription();
+	}
+	@Test(priority = 2, description = "Verify once internet is available, the data should be synced to web portal automatically", enabled = false)
+	public void IDA4_2150_verifyDataIsSyncedToWebApp() throws InterruptedException {
+		notificationPage.verifyDataIsSyncedToWeb();
+	}
 	
-	@Test(priority = 3, description = "Verify that user can view the recent received prescription notification on top", enabled = true)
+	@Test(priority = 3, description = "Verify that user can view the recent received prescription notification on top", enabled = false)
 	public void IDA4_2140_verifyThatUserCanViewTheRecentReceivedPrescriptionNotificationOnTop() throws Exception {
 		notificationPage.verifyThatUserCanViewTheRecentReceivedPrescriptionNotificationOnTop();
 	}

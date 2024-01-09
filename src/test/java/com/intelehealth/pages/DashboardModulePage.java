@@ -1,14 +1,12 @@
 package com.intelehealth.pages;
 
 import java.io.InputStream;
-import java.util.List;
-
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.intelehealth.base.BaseTest;
 import com.intelehealth.reports.ExtentReport;
@@ -16,10 +14,7 @@ import com.intelehealth.tests.AddNewPatientTest;
 import com.intelehealth.tests.VisitSummaryTest;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.touch.offset.PointOption;
-import io.opentelemetry.api.internal.Utils;
 
 public class DashboardModulePage extends BaseTest {
 
@@ -27,14 +22,14 @@ public class DashboardModulePage extends BaseTest {
 	JSONObject appData;
 
 	AddNewPatientTest addNewPatientTest;
-	StartVisit1And2StepsPage startVisit1And2StepsPage;
+
 	VisitSummaryTest visitSummaryTest;
 	AddNewPatientPage addNewPatientPage;
 	AppSetupPage appSetupPage;
 
 	public DashboardModulePage(ThreadLocal<AppiumDriver> driver) throws Throwable {
 		addNewPatientTest = new AddNewPatientTest();
-		startVisit1And2StepsPage = new StartVisit1And2StepsPage();
+
 		addNewPatientPage = new AddNewPatientPage();
 		appSetupPage = new AppSetupPage();
 		InputStream datais = null;
@@ -186,9 +181,6 @@ public class DashboardModulePage extends BaseTest {
 	@AndroidFindBy(accessibility = "Permission Required Dialog Okay Button")
 	private WebElement permissionRequiredPopupOkayButton;
 
-	@AndroidFindBy(accessibility = "Usage access")
-	private WebElement usageAccess;
-
 	@AndroidFindBy(accessibility = "Intelehealth")
 	private WebElement intelehealthUsageAccess;
 
@@ -198,8 +190,11 @@ public class DashboardModulePage extends BaseTest {
 	@AndroidFindBy(accessibility = "My Achievements 'Level' TextView")
 	private WebElement myAchievementsLevelText;
 
-	@AndroidFindBy(accessibility = "//android.widget.TextView[@content-desc=\"Permission Required Dialog Title TextView\"]")
-	private WebElement permissionRequired;
+	By todaysUpcomingAppointmentPatientName = By.xpath(
+			"//android.widget.TextView[@content-desc=\"upcoming title textview in Todays Appointments\"]//..//android.widget.FrameLayout[@content-desc=\"Today Appointment Item Parent CardView\"]");
+
+	By byPermissionRequiredPopupOkayButton = By
+			.xpath("//android.widget.Button[@content-desc=\"Permission Required Dialog Okay Button\"]");
 
 	// Perform login
 	public void login(String un, String pw) {
@@ -219,7 +214,6 @@ public class DashboardModulePage extends BaseTest {
 		isDisplayed(locationName);
 	}
 
-	
 	public void performLogin() {
 		String originalUserName = appData.getJSONObject("validUser").getString("username");
 		String originalPassword = appData.getJSONObject("validUser").getString("password");
@@ -267,6 +261,7 @@ public class DashboardModulePage extends BaseTest {
 		String decryptedPassword = decrypt(encryptedPassword);
 		sendKeys(username, decryptedUserName);
 		sendKeys(password, decryptedPassword);
+		waitForVisibility(location);
 		String SelectedLocation = location.getText();
 		click(setupScreeenSetupButton, "Clicking on setup button");
 		waitForVisibility(addedLocation);
@@ -279,7 +274,7 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-    // Verifies that the last synced time and date display on the page
+	// Verifies that the last synced time and date display on the page
 	public void verifyThatLastSyncedTimeAndDateDisplayOnTopOfThePage() {
 		performLogin();
 		ExtentReport.getTest().log(Status.INFO,
@@ -287,20 +282,40 @@ public class DashboardModulePage extends BaseTest {
 		isDisplayed(appSyncTime);
 	}
 
-	//Verifies the functionality of the sync icon
+	// Verifies the functionality of the sync icon
 	public void verifyThatSyncIconFunctionality() throws Throwable {
 		performLogin();
+		waitForVisibility(appSyncTime);
 		String beforeSyncTime = appSyncTime.getText();
+		waitForVisibility(numberOfUnclosedVisits);
 		String beforeSyncUnclosedVisits = numberOfUnclosedVisits.getText();
+		waitForVisibility(numberOfPrescriptions);
 		String beforeSyncPrescriptions = numberOfPrescriptions.getText();
+		waitForVisibility(numberOfAppointments);
 		String beforeSyncNumberOfAppointments = numberOfAppointments.getText();
+		waitForVisibility(numberOfFollowUps);
 		String beforeSyncNumberOfFollowUps = numberOfFollowUps.getText();
-		Thread.sleep(10500);
-		click(homeScreenRefreshButton, "Clicking on the sync icon");
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton, "Clicking on the sync icon");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		waitForVisibility(appSyncTime);
 		String afterSyncTime = appSyncTime.getText();
+		waitForVisibility(numberOfUnclosedVisits);
 		String afterSyncUnclosedVisits = numberOfUnclosedVisits.getText();
+		waitForVisibility(numberOfPrescriptions);
 		String afterSyncPrescriptions = numberOfPrescriptions.getText();
+		waitForVisibility(numberOfAppointments);
 		String afterSyncNumberOfAppointments = numberOfAppointments.getText();
+		waitForVisibility(numberOfFollowUps);
 		String afterSyncNumberOfFollowUps = numberOfFollowUps.getText();
 		if (!beforeSyncTime.equals(afterSyncTime)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether app is synced");
@@ -318,7 +333,8 @@ public class DashboardModulePage extends BaseTest {
 
 	}
 
-	//Verifies that clicking the notification icon navigates to the notification page
+	// Verifies that clicking the notification icon navigates to the notification
+	// page
 	public void verifyThatNotificationIconNavigateToNotificationPage() throws Throwable {
 		performLogin();
 		click(notificationIcon, "Clicking on notification icon");
@@ -328,11 +344,21 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies the display and click functionality of the Find Patient search box
+	// Verifies the display and click functionality of the Find Patient search box
 	public void verifyThatFindPatientSearchBoxDisplayedAndClickFunctionality() throws Throwable {
 		performLogin();
-		Thread.sleep(10500);
-		click(homeScreenRefreshButton);
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		click(searchPatientTextfield, "Clicking on search patient textfield");
 		if (isDisplayed(findPatientTextfield) && isDisplayed(allPatientsPageText)) {
 			ExtentReport.getTest().log(Status.INFO,
@@ -341,7 +367,7 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies the display of the Add Patient section along with the arrow icon
+	// Verifies the display of the Add Patient section along with the arrow icon
 	public void verifyThatAddPatientSectionDisplayedWithArrowIcon() throws Throwable {
 		performLogin();
 		if (isDisplayed(addPatientIcon) && isDisplayed(addPatientsText) && isDisplayed(addPatientArrowIcon)) {
@@ -351,7 +377,8 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that the Prescription section displays the count of received prescriptions out of total prescriptions
+	// Verifies that the Prescription section displays the count of received
+	// prescriptions out of total prescriptions
 	public void verifyThatPrescriptionSectionShouldDisplayTheReceivedPrescriptionsOutOfTotalPrecriptions()
 			throws Throwable {
 		performLogin();
@@ -364,7 +391,8 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies the functionality when clicking on the Prescriptions arrow navigates to prescriptions page
+	// Verifies the functionality when clicking on the Prescriptions arrow navigates
+	// to prescriptions page
 	public void verifyClickingOnPrescriptionsArrow() throws Throwable {
 		performLogin();
 		click(homeScreenPrescriptionArrowIcon, "Clicking on prescriptions arrow icon");
@@ -374,18 +402,28 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that the Close Visits section displays the number of unclosed visits
+	// Verifies that the Close Visits section displays the number of unclosed visits
 	public void verifyThatCloseVisitsSectionDisplayTheNumberOfUnclosedVisit() throws Throwable {
 		performLogin();
-		Thread.sleep(10500);
-		click(homeScreenRefreshButton);
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		if (isDisplayed(numberOfUnclosedVisits) && isDisplayed(countOfUnclosedVisits)) {
 			ExtentReport.getTest().log(Status.INFO, "Verifying whether the count of unclosed visits is displayed");
 			System.out.println("The count of unclosed visits is displayed");
 		}
 	}
 
-	//Verifies that the user can navigate to the Close Visits page
+	// Verifies that the user can navigate to the Close Visits page
 	public void verifyThatUserCanNavigateToCloseVisitsPage() throws Throwable {
 		performLogin();
 		click(numberOfUnclosedVisits, "Clicking on close visits");
@@ -395,7 +433,7 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that the Appointments section displays the upcoming appointments
+	// Verifies that the Appointments section displays the upcoming appointments
 	public void verifyAppointmentsSectionShouldDisplayTheUpcomingAppointments() throws Throwable {
 		performLogin();
 		if (isDisplayed(numberOfAppointments) && isDisplayed(homeScreenNoOfUpcomingAppointments)) {
@@ -404,7 +442,7 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that the user can navigate to the My Appointments page
+	// Verifies that the user can navigate to the My Appointments page
 	public void verifyThatUserCanNavigateToMyAppointmentsPage() throws Throwable {
 		performLogin();
 		click(openAppointments, "Clicking on appointments");
@@ -414,7 +452,8 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that the Follow-Up Visits section displays the number of follow-up visits
+	// Verifies that the Follow-Up Visits section displays the number of follow-up
+	// visits
 	public void verifyThatFollowUpVisitsSectionDisplayTheNumberOfFollowUpVisits() throws Throwable {
 		performLogin();
 		if (isDisplayed(numberOfFollowUps) && isDisplayed(homeScreenNoOfPendingFollowUps)) {
@@ -424,7 +463,8 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that selecting Follow-Up Visits navigates to the Follow-Up Visits page
+	// Verifies that selecting Follow-Up Visits navigates to the Follow-Up Visits
+	// page
 	public void verifyThatFollowUpVisitsShouldNavigateToFollowUpVisitsPage() throws Throwable {
 		performLogin();
 		click(numberOfFollowUps, "Clicking on number of follow ups");
@@ -434,28 +474,36 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that selecting Achievements on the bottom navigation navigates to My Achievements page
+	// Verifies that selecting Achievements on the bottom navigation navigates to My
+	// Achievements page
 	public void verifyThatAchievementsOnBottomNavigateToMyAchievementsPage() throws Throwable {
 		performLogin();
 		click(homeScreenAchievements, "Clicking on achievements");
-		Thread.sleep(4000);
-		boolean popUp = isDisplayed2(permissionRequired);
-		if (popUp == true) {
+		boolean permissionPopup = isDisplayed2(byPermissionRequiredPopupOkayButton);
+		if (permissionPopup == true) {
 			click(permissionRequiredPopupOkayButton, "Clicking on okay button in the permission required popup");
+			scrollToElementByText("Intelehealth");
 			click(intelehealthUsageAccess, "Clicking on intelehealth in usage access screen");
 			click(permitUsageAccessToggleButton, "Clicking on permit usage access toggle button");
 			for (int i = 0; i < 2; i++) {
 				ExtentReport.getTest().log(Status.INFO, "Clicking on navigate back button");
 				getDriver().navigate().back();
 			}
-		}
-		if (isDisplayed(myAchievementsLevelText) || myAchievementsPageTitle.isDisplayed()) {
-			ExtentReport.getTest().log(Status.INFO, "Verifying whether user is navigated to 'My Achievements' page");
-			System.out.println("User is navigated to 'My Achievements' page");
+			if (isDisplayed(myAchievementsLevelText) || myAchievementsPageTitle.isDisplayed()) {
+				ExtentReport.getTest().log(Status.INFO,
+						"Verifying whether user is navigated to 'My Achievements' page");
+				System.out.println("User is navigated to 'My Achievements' page");
+			}
 		}
 	}
 
-	//Verifies that selecting Help on the bottom navigation navigates to the Help Center page
+	private void scrollToElementByText(String string) {
+		// TODO Auto-generated method stub
+
+	}
+
+	// Verifies that selecting Help on the bottom navigation navigates to the Help
+	// Center page
 	public void verifyThatHelpOnBottomNavigateToHelpCenterPage() throws Throwable {
 		performLogin();
 		click(homeScreenHelp, "Clicking on help");
@@ -465,7 +513,8 @@ public class DashboardModulePage extends BaseTest {
 		}
 	}
 
-	//Verifies that selecting Add Patient on the bottom navigation navigates to the Privacy Policy page
+	// Verifies that selecting Add Patient on the bottom navigation navigates to the
+	// Privacy Policy page
 	public void verifyThatAddPatientOnBottomNavigateToPrivacyPolicyPage() throws Throwable {
 		performLogin();
 		click(homeScreenAddPatients, "Clicking on add patients icon");

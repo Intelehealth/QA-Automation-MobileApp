@@ -122,7 +122,7 @@ public class CloseVisitsPage extends BaseTest {
 	}
 
 	// Close visits in both the Recent and Older Visits sections
-	public void closeVisitsInRecentAndOlderVisitsSection() {
+	public void closeVisitsInRecentAndOlderVisitsSection() throws InterruptedException {
 	    // Close visits in the Recent Visits section
 	    click(closeVisits, "Clicked on 'Close Visits'");
 	    click(closeVisitsButton, "Clicked on 'Close Visits' Button");
@@ -150,7 +150,7 @@ public class CloseVisitsPage extends BaseTest {
 
 	
 	// Verify elements in the Recent Visits section
-	public void verifyRecentVisitsSection() {
+	public void verifyRecentVisitsSection() throws InterruptedException {
 	    click(closeVisits, "Clicked on 'Close Visits'");
 	    isDisplayed(recentVisitsTitle, "Recent Visits Section - Title");
 
