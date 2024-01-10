@@ -78,4 +78,11 @@ public class EditProfileTest  extends BaseTest{
 		editProfilePage.verifyUserAbleToLoginWithNewPassword();
 		editProfilePage.resetThePasswordToOldPassword();
 	}
+	@AfterMethod
+	public void afterMethod() {
+		System.gc();
+		// Close the app after each test method
+		closeApp();
+
+	}
 }
