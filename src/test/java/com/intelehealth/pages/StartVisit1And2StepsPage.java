@@ -1,9 +1,9 @@
 package com.intelehealth.pages;
-
 import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import com.aventstack.extentreports.Status;
@@ -155,6 +155,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	@AndroidFindBy(accessibility = "back button to previous screen visit reason capture fragment")
 	private WebElement visitReasononBackButton;
 	@AndroidFindBy(accessibility = "selected reasons textview in Visit Reason Capture Fragment")
+	
 	private WebElement selectedReasonLabel;
 	@AndroidFindBy(accessibility = "all reasons textview in Visit Reason Capture Fragment")
 	private WebElement allResaonsection;
@@ -311,9 +312,9 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement night;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='6 of 12 questions']")
 	private WebElement sixOfTwelveQuestions;
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id='org.intelehealth.app:id/tvReasonItemChip'])[4]")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Other [Describe]']")
 	private WebElement othersOptionOfFiveOfTwelveQuestions;
-	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Visit Reason Input Text Submit Button\"])[2]")
+	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Visit Reason Input Text Submit Button\"])[last()]")
 	private WebElement fiveOfTwelveQuestionsSubmitButton;
 // 6 of 12 questions
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Constant']")
@@ -322,7 +323,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement sixOfTwelveQuestionsSubmitButton;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='7 of 12 questions']")
 	private WebElement sevenOfTwelveQuestions;
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@text='Other [describe]'])[last()]")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@text='Other [describe]'])")
 	private WebElement othersOptionOfSixOfTwelveQuestions;
 // 7 of 12 questions
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Mild, 1-3']")
@@ -335,6 +336,9 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement coughingOption;
 	@AndroidFindBy(accessibility = "Question Node Submit Button")
 	private WebElement eightOfTwelveQuestionsSubmitButton;
+	@AndroidFindBy(accessibility = "Visit Reason Input Text Submit Button")
+	private WebElement eightOfTwelveSubmitButton;
+	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Other [describe]']")
 	private WebElement otherOptionOfEightOfTwelveQuestions;
 
@@ -347,7 +351,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement leaningForwardOption;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Other']")
 	private WebElement otherOption;
-	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Question Node Submit Button\"])[2]")
+	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Visit Reason Input Text Submit Button\"])[last()]")
 	private WebElement nineOfTwelveQusetionsSubmitButton;
 
 // 10 of 12
@@ -1325,14 +1329,21 @@ public class StartVisit1And2StepsPage extends BaseTest {
 		click(submitButtonOfFourOfTwelveQuestion);
 	}
 
+	
 	public void enterValueInDescribeTextBox(String txt) throws InterruptedException {
-		sendKeys(describeTextField, txt);
-//inputField.sendKeys(Keys.ENTER);
-// describeTextField.sendKeys(Keys.ENTER);
-// pressEnter(describeField);
-
-// pressEnter(describeTextField);
-	}
+        int attempts = 0;
+        while (attempts < 2) {
+            try {
+                // Try interacting with the element
+                sendKeys(describeTextField, txt);
+                // If successful, break out of the loop
+                break;
+            } catch (StaleElementReferenceException e) {
+                // If StaleElementReferenceException occurs, catch it and try again
+                attempts++;
+            }
+        }
+    }
 
 	public void clickOnSubmitButtonOfFourOfTwelveQuestion() {
 		click(submitButtonOfFourOfTwelveQuestion);
@@ -1384,7 +1395,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	}
 
 	public void clickOnEightOfTwelveSubmitButton() {
-		click(eightOfTwelveQuestionsSubmitButton);
+		click(eightOfTwelveSubmitButton);
 	}
 
 	public void verifyNineOfTwelveQuestionsIsDisplayed() throws InterruptedException {

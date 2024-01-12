@@ -147,12 +147,18 @@ public class EndToEndPage extends BaseTest {
 
 	@AndroidFindBy(accessibility = "Identification Second Screen Village EditText")
 	private WebElement villageTextBox;
+	
+	@AndroidFindBy(accessibility = "Identification Activity Refresh ImageButton")
+	private WebElement addNewPatientRefreshButton;
 
 	By byNoTimeSlots = By
 			.xpath("//android.widget.TextView[@content-desc=\"Schedule Appointment 'No Slot Available' TextView\"]");
 
 	By patientDetailsOpenVisit = By
 			.xpath("//android.widget.TextView[@content-desc=\"Patient Details Open Visits Title TextView\"]");
+
+	By findPatientScreen = By
+			.xpath("//android.widget.RelativeLayout[@content-desc=\"Find Patient Screen Parent RelativeLayout\"]");
 
 	// Constructor
 	public EndToEndPage(ThreadLocal<AppiumDriver> driver) throws Throwable {
@@ -203,39 +209,249 @@ public class EndToEndPage extends BaseTest {
 
 	// Performs the login, adds a new patient, and registers the patient
 	public void loginAddPatientPatientRegister() throws Throwable {
-		addNewPatientPage.clickOnAddPatients();
-		Thread.sleep(3000);
-		addNewPatientPage.clickOnAcceptButton();
-		Thread.sleep(3000);
-		addNewPatientPage.enterFirstName(appData.getJSONObject("personalDetails").getString("firstName"));
-		Thread.sleep(2000);
-		addNewPatientPage.enterLastName();
+		int maxAttempts = 3;
+		int attempt = 0;
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(20000);
+				click(homeScreenRefreshButton, "Clicking on app sync icon");
+				ExtentReport.getTest().log(Status.INFO, "Clicking on Add Patient button");
+				addNewPatientPage.clickOnAddPatients();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				ExtentReport.getTest().log(Status.INFO, "Clicking on Accept button");
+				addNewPatientPage.clickOnAcceptButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				ExtentReport.getTest().log(Status.INFO, "Entering the first name");
+				addNewPatientPage.enterFirstName(appData.getJSONObject("personalDetails").getString("firstName"));
+				Thread.sleep(4000);
+				click(addNewPatientRefreshButton);
+				ExtentReport.getTest().log(Status.INFO, "Entering the last name");
+				addNewPatientPage.enterLastName();
+
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		waitForVisibility(addedFirstName);
 		String givenFirstName = addedFirstName.getText();
 		waitForVisibility(addedLastName);
 		String givenLastName = addedLastName.getText();
-		addNewPatientPage.selectGender();
-		scrollToElement();
-		addNewPatientPage.clickOnDobIcon();
-		addNewPatientPage.clickOnMonthSpinner();
-		addNewPatientPage.selectMonth();
-		addNewPatientPage.clickOnYearSpinner();
-		addNewPatientPage.scrollToViewYear();
-		addNewPatientPage.selectYear();
-		addNewPatientPage.selectDate();
-		addNewPatientPage.clickOnOkayButton();
-		waitForVisibility(addedPatientAge);
+		while (attempt < maxAttempts) {
+			try {
+				Thread.sleep(3000);
+				ExtentReport.getTest().log(Status.INFO, "Selecting the gender");
+				addNewPatientPage.selectGender();
+				scrollToElement();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clickin on DOB icon");
+				addNewPatientPage.clickOnDobIcon();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on month spinner");
+				addNewPatientPage.clickOnMonthSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Selecting the month");
+				addNewPatientPage.selectMonth();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on year spinner");
+				addNewPatientPage.clickOnYearSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewYear();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Selecting the year");
+				addNewPatientPage.selectYear();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Selecting the date");
+				addNewPatientPage.selectDate();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on okay button");
+				addNewPatientPage.clickOnOkayButton();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				waitForVisibility(addedPatientAge);
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		String givenAge = addedPatientAge.getText();
-		addNewPatientPage.clickOnNextButton1();
-		addNewPatientPage.clickOnStateSpinner();
-		addNewPatientPage.scrollToViewState();
-		addNewPatientPage.selectState();
-		addNewPatientPage.clickOnDistrictSpinner();
-		addNewPatientPage.scrollToViewDistrict();
-		addNewPatientPage.selectDistrict();
-		sendKeys(villageTextBox, "BHATKAL");
-		addNewPatientPage.clickOnNextButton2();
-		addNewPatientPage.clickOnNextButton3();
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on next button");
+				addNewPatientPage.clickOnNextButton1();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on state spinner");
+				addNewPatientPage.clickOnStateSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewState();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Selecting the state");
+				addNewPatientPage.selectState();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on district spinner");
+				addNewPatientPage.clickOnDistrictSpinner();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				addNewPatientPage.scrollToViewDistrict();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Selecting the district");
+				addNewPatientPage.selectDistrict();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				sendKeys(villageTextBox, "BHATKAL","Entered village name");
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on next button");
+				addNewPatientPage.clickOnNextButton2();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
+		while (attempt < maxAttempts) {
+			try {
+				ExtentReport.getTest().log(Status.INFO, "Clicking on next button");
+				addNewPatientPage.clickOnNextButton3();
+				break; // Break out of the loop if successful
+			} catch (WebDriverException e) {
+				// Log or handle the exception
+				attempt++;
+			}
+		}
 		waitForVisibility(patientDetailsPatientName);
 		String savedPatientName = patientDetailsPatientName.getText();
 		waitForVisibility(patientDetailsAge);
@@ -269,8 +485,8 @@ public class EndToEndPage extends BaseTest {
 		int attempt = 0;
 		while (attempt < maxAttempts) {
 			try {
-//				scrollToTextContains_Android("Prescription received");
-				scrollToTextContains_Android("Prescription pending");
+				scrollToTextContains_Android("Prescription received");
+//				scrollToTextContains_Android("Prescription pending");
 				click(recentlyAddedPrescriptionPendingPatient, "Clicking on the recently added patient");
 //		        scrollToElementByDescription("Patient Details Open Visits Title TextView");
 				scrollToElementByDescription("Past Visit List Item Visit Date TextView");
