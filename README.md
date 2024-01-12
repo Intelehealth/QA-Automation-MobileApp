@@ -4,16 +4,17 @@ Appium mobile test automation framework with Page Object Model design using Java
 Framework follows many of the industry best practices and supports Android.
 
 ##Project overview
- - Total Testcases - 
- - Regression Testcases(Automatable) - 
- - High Priority Regression Testcases (Automatable) - 
+ - Total Testcases - 680
+ - Regression Testcases - 373
+ - High Priority Regression Testcases (Automated) - 242
 
 ##Introduction on intelehealth app
+
   - Intelehealth is an Medical domain Non Profitable Organization Intelehealth leverages open-source technology for 
     Governments, NGO’s and Hospitals to seamlessly connect hard to reach population with high quality primary healthcare! 
     
 Technologies/Tools used in building the framework
-=================================================
+===============================================
 - Eclipse - IDE
 - Appium - Mobile Automation library
 - Maven - Build automation tool
@@ -25,9 +26,109 @@ Technologies/Tools used in building the framework
 - XML - Static text
 
 
-   
+ Appium Installation Steps
+===========================
+
+Important setup notes
+
+-> Be an admin on your Windows/Mac
+-> Use latest Windows/MacOS operating system
+-> Office machine? make sure anti-virus and company policies are not blocking installation of Appium and associated softwares
+"-> If practicing using an Android emulator, use a powerful processor and sufficient RAM"
+-> Avoid using phone from Chinese manufacturers that may restrict Appium due to their security limitations
+
+
+Install Appium Command Line Interface (CLI) server
+==================================================
+-> Commands to check if node and NPM (Node Package Manager) are installed:
+node -v
+npm -v
+-> Install node.js (NPM is included) from link - https://nodejs.org/en/download/
+Important note: Use the LTS and not current version.
+-> Command to install Appium using npm: npm install -g appium@next
+Note: @next will not be required once Appium 2.0 stable release is out to market.
+-> Command to install specific version: npm install -g appium@<verion_number>
+-> Command to start Appium: appium
+-> Command to get installation location: where appium
+-> Command to uninstall Appium: npm uninstall -g appium
+
+
+Install UiAutomator2 driver (using Appium CLI)
+==============================================
+Get help: appium driver --help (or -h)
+Get list of officially supported drivers: appium driver list
+Install driver: appium driver install uiautomator2
+Install driver with specific version: appium driver install uiautomator2@<version_number>
+
+
+Install Appium Inspector
+========================
+-> Download and install from https://github.com/appium/appium-inspector/releases
+
+
+Install JAVA JDK and configure environment variables
+====================================================
+-> Command to check if JAVA is already installed: java -version
+-> JAVA JDK download link: https://www.oracle.com/technetwork/java/javase/downloads/index.html
+Important note: Please use Java 8/11/15 for now. Don't use Java 16 or higher. The current Appium Java Client 8.x.x is not compatible with Java 16+. You may use Java 16+ once Appium Java client becomes compatible.
+-> Create JAVA_HOME system environment variable and set it to JDK path (without bin folder). 
+Edit PATH system environment variable and add %JAVA_HOME%\bin
+Note: Usually JDK path is "C:\Program Files\Java\<your_jdk_version>"
+
+
+Install Android Studio and configure environment variables
+==========================================================
+-> Android Studio download link: https://developer.android.com/studio
+-> Create ANDROID_HOME system environment variable and set it to SDK path. 
+"Edit PATH system environment variable and add below,"
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\cmdline-tools
+
+
+Verify installation using appium-doctor
+=======================================
+Command to install appium-doctor: npm install -g appium-doctor
+Command to get help: appium-doctor --help
+Command to check Android setup: appium-doctor --android 
+
+
+Emulator Setup: Accelerate Performance
+======================================
+Launch Android Studio -> SDK Manager -> SDK Tools
+Intel processor: Check "Intel x86 Emulator Accelerator (HAXM Installer)" and Apply
+AMD processor: Check "Android Emulator Hypervisor Driver for AMD Processors (installer)" and Apply
+
+
+Emulator Setup: Create AVD and start it 
+=======================================
+Important note: AVDs are resource hungry! Please use a laptop with powerful processor (that supports Intel HAXM/AMD hypervisor) and sufficient RAM.
+Open Android Studio -> Configure -> Virtual Device Manager -> Create Virtual Device -> 
+Select Model -> Download Image for desired OS version if not already downloaded 
+-> Start AVD
+
+
+Emulator Setup: Create Driver Session using Appium CLI
+===============================================
+Download link for dummy app:
+https://github.com/appium/appium/tree/master/packages/appium/sample-code/apps
+[Also available for download from the lecture's resources section]
+
+
+Real Device Setup: Enable USB debugging on Android mobile
+===============================================
+Note: Steps can differ based on the phone manufacturer!
+-> Settings -> System -> About Phone -> Click Build Number 7-8 times
+-> Settings -> Developer Options -> Enable USB Debugging
+-> Permission pop-up: Check the box and press Allow to recognise the computer
+-> run "adb devices" in CMD prompt to check if device is recognised
+-> USB drivers:
+Google: https://developer.android.com/studio/run/win-usb
+OEMs: https://developer.android.com/studio/run/oem-usb
+
+
+
 Project Structure
-===================================================== 
+===============================================
 
  Intelehealth-Mobile-Automation/
 |-- src/
