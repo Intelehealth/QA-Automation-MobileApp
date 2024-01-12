@@ -6,7 +6,7 @@ Framework follows many of the industry best practices and supports Android.
 ##Project overview
  - Total Testcases - 680
  - Regression Testcases - 373
- - High Priority Regression Testcases (Automated) - 242
+ - High Priority Regression Testcases (Automated) - 243
 
 ##Introduction on intelehealth app
 

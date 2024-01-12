@@ -351,7 +351,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement leaningForwardOption;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Other']")
 	private WebElement otherOption;
-	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Visit Reason Input Text Submit Button\"])[last()]")
+	@AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Question Node Submit Button\"])[last()]")
 	private WebElement nineOfTwelveQusetionsSubmitButton;
 
 // 10 of 12
@@ -371,7 +371,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement ageOnSetSkipButton;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Last menstruation period']")
 	private WebElement lastMenstruationPeriod;
-	@AndroidFindBy(xpath = "//android.widget.CalendarView[@content-desc=\"Visit Reason Date Picker CalendarView\"]")
+	@AndroidFindBy(xpath = "//android.widget.CalendarView[@content-desc='Visit Reason Date Picker CalendarView']")
 	private WebElement calender;
 	@AndroidFindBy(xpath = "//android.view.View[@text='1']")
 	private WebElement menstruationDate;
@@ -391,14 +391,14 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement twelveOfTweleveQusetions;
 	@AndroidFindBy(accessibility = "Visit Reason Input Text Skip Button")
 	private WebElement twelveOfTwelveSkipButton;
-	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Visit Reason Input Text Submit Button\"]")
+	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Visit Reason Input Text Submit Button']")
 	private WebElement twelveOfTwelveSubmitButton;
 //Associated symptoms
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='2/4 Visit reason : Associated symptoms']")
 	private WebElement associatedSymptomsTitle;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Do you have the following symptom(s)?']")
 	private WebElement doYouHaveFollowingSymptom;
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'Yes' TextView\"])[6]")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc='Associated Symptom List Item 'Yes' TextView'])[6]")
 	private WebElement changeInApetiteYesButton;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='1 of 1 questions']")
 	private WebElement oneOfOneQuestions;
@@ -412,7 +412,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 	private WebElement sevenYesButton;
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'Yes' TextView\"])[8]")
 	private WebElement eightYesButton;
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'Yes' TextView\"])[9]")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'Yes' TextView\"])[4]")
 	private WebElement nineYesButton;
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'Yes' TextView\"])[16]")
 	private WebElement sixteenYesButton;
@@ -515,6 +515,9 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	@AndroidFindBy(accessibility = "Patient Details Screen Other Details 'Economic' Value TextView")
 	private WebElement economicValue;
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"Associated Symptom List Item 'No' TextView\"])[5]")
+	private WebElement asymNoButton;
+
 
 //scroll
 
@@ -1594,7 +1597,7 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	// Clicks on the "Yes" button for the associated symptom nine.
 	public void clickOnNineAssociatedSymptomYesButton() {
-		click(sevenYesButton);
+		click(nineYesButton);
 	}
 
 	// Clicks on the "Yes" button for the associated symptom sixteen.
@@ -1967,6 +1970,11 @@ public class StartVisit1And2StepsPage extends BaseTest {
 
 	public void clickSymptomsNoButton() {
 		for (int i = 0; i < 4; i++) {
+			click(lastNoButton);
+		}
+	}
+	public void checkSymptomsNoButton() {
+		for (int i = 0; i < 10; i++) {
 			click(lastNoButton);
 		}
 	}

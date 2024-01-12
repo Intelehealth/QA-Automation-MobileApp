@@ -65,7 +65,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 1, description = "Verify the UI of first page of Vitals (1/4 Vitals)", enabled = true)
+	@Test(priority = 1, description = "Verify the UI of first page of Vitals (1/4 Vitals)", enabled = false)
 	public void IDA4_2413_verifyVitalsScreenUi() throws InterruptedException, IOException {
 
 // Verify UI elements of the First Vitals Screen on the Start Visit page
@@ -73,7 +73,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2, description = "Verify the functionality of Next button on 1st vital screen", enabled = true)
+	@Test(priority = 2, description = "Verify the functionality of Next button on 1st vital screen", enabled = false)
 	public void IDA4_2415_verifyNextButtonFunctionality() throws InterruptedException {
 
 // Click on the "Next" button on the First Vitals Screen of the Start Visit page
@@ -84,7 +84,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 3, description = "Verify the functionality of BM index(auto-calculated) textfield on 1st vital screen", enabled = true)
+	@Test(priority = 3, description = "Verify the functionality of BM index(auto-calculated) textfield on 1st vital screen", enabled = false)
 	public void IDA4_2419_verifyBMIValueIsAutoCalculated() throws JSONException, InterruptedException {
 // Enter the patient's height as "160" on the Start Visit page
 		startVisit1And2StepsPage.enterHeight(appData.getJSONObject("patientVitalsDetails").getString("height"));
@@ -98,7 +98,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4, description = "Verify the UI of Vital summary", enabled = true)
+	@Test(priority = 4, description = "Verify the UI of Vital summary", enabled = false)
 	public void IDA4_2429_verifyTheUiOfVitalSummary() throws InterruptedException {
 // Click on the "Next" button on the First Vitals Screen of the Start Visit page
 		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
@@ -108,7 +108,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 5, description = "Verify the status of BMI index by changing different height & weight and if editable field", enabled = true)
+	@Test(priority = 5, description = "Verify the status of BMI index by changing different height & weight and if editable field", enabled = false)
 	public void IDA4_2421_checkBMIStatusWithDifferentValues() throws JSONException, InterruptedException {
 // Verify status for a patient with normal weight based on height  and weight 
 		startVisit1And2StepsPage.verifyStatusForNormalWeightPatient(
@@ -142,7 +142,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 6, description = "Verify the details section on Vital summary", enabled = true)
+	@Test(priority = 6, description = "Verify the details section on Vital summary", enabled = false)
 	public void IDA4_2430_verifyDeatilsOnVitalSummaryScreen() throws JSONException, InterruptedException {
 // Enter patient vitals details using data from the appData object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -171,7 +171,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 7, description = "Verify clicking on the change button of details section on Vital summary", enabled = true)
+	@Test(priority = 7, description = "Verify clicking on the change button of details section on Vital summary", enabled = false)
 	public void IDA4_2432_VerifyChangeButtonOfVitalSummaryScreen() throws JSONException, InterruptedException {
 // Entering patient vitals details on the startVisit1And2StepsPage
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -197,7 +197,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 8, description = "Verify that the updated 1/4 details are saved", enabled = true)
+	@Test(priority = 8, description = "Verify that the updated 1/4 details are saved", enabled = false)
 	public void IDA4_2433_VerifyVitalsdetailsAreSaved() throws JSONException, InterruptedException {
 // Entering patient vital details using the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -227,7 +227,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 9, description = "Verify the functionality of Confirm button on 1/4 vital summary screen", enabled = true)
+	@Test(priority = 9, description = "Verify the functionality of Confirm button on 1/4 vital summary screen", enabled = false)
 	public void IDA4_2435_verifyConfirmButtonfuntionality() throws JSONException, InterruptedException {
 // Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -243,7 +243,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyVisitReasonScreenIsDisplayed();
 	}
 
-	@Test(priority = 10, description = "Verify the functionality of Selected reason section", enabled = true)
+	@Test(priority = 10, description = "Verify the functionality of Selected reason section", enabled = false)
 	public void IDA4_2438_verifyFuntionalityOfSelectedReason() throws JSONException, InterruptedException {
 // Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -266,7 +266,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 11, description = "Verify user can remove the selected reason", enabled = true)
+	@Test(priority = 11, description = "Verify user can remove the selected reason", enabled = false)
 	public void IDA4_2439_VerifyTheFunctionalityOfRemoveOption() throws JSONException, InterruptedException {
 // Start entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -291,7 +291,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 12, description = "Verify whether all selected reasons from All reason section are getting reflected under Selected reason section", enabled = true)
+	@Test(priority = 12, description = "Verify whether all selected reasons from All reason section are getting reflected under Selected reason section", enabled = false)
 	public void IDA4_2440_verifySelectedReasons() throws InterruptedException {
 // Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -312,7 +312,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 13, description = "Verify the functionality of Back button after selecting a reason on 2/4 visit reason screen", enabled = true)
+	@Test(priority = 13, description = "Verify the functionality of Back button after selecting a reason on 2/4 visit reason screen", enabled = false)
 	public void IDA4_2452_verifySelectedReasons() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -337,7 +337,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 14, description = "Verify the functionality of Next button on 2/4 Visit reason screen", enabled = true)
+	@Test(priority = 14, description = "Verify the functionality of Next button on 2/4 Visit reason screen", enabled = false)
 	public void IDA4_2454_VerifyConfirmVisitPopup() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -361,7 +361,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyConfirmVisitPopup();
 	}
 
-	@Test(priority = 15, description = "Verify clicking on No button in Confirm visit reason popup", enabled = true)
+	@Test(priority = 15, description = "Verify clicking on No button in Confirm visit reason popup", enabled = false)
 	public void IDA4_2455_VerifyConfirmVisitPopupNoButtonFuntionality() throws JSONException, InterruptedException {
 		// Enter patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -390,7 +390,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 16, description = "Verify clicking on Yes button in Confirm visit reason popup", enabled = true)
+	@Test(priority = 16, description = "Verify clicking on Yes button in Confirm visit reason popup", enabled = false)
 	public void IDA4_2456_VerifyConfirmVisitPopupYesButtonFuntionality() throws JSONException, InterruptedException {
 		// Enter patient vitals details using data from the appData object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -418,7 +418,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 17, description = "Verify the options displayed for the question", enabled = true)
+	@Test(priority = 17, description = "Verify the options displayed for the question", enabled = false)
 	public void IDA4_2459_VerifyOptions() throws JSONException, InterruptedException {
 		// Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -455,7 +455,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 18, description = "Verify the functionality of Submit button on 1st question", enabled = true)
+	@Test(priority = 18, description = "Verify the functionality of Submit button on 1st question", enabled = false)
 	public void IDA4_2462_verifySubmitButtonFuntionality() throws JSONException, InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -501,7 +501,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 19, description = "Verify whether user able to go to 3rd question without selecting option/answer for 2nd question", enabled = true)
+	@Test(priority = 19, description = "Verify whether user able to go to 3rd question without selecting option/answer for 2nd question", enabled = false)
 	public void IDA4_2464_verifyUserCanGoTo3rdQuestionWithoutSelecting2ndQuestion() throws JSONException, InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -544,13 +544,13 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 		// Verifying the display of the second out of twelve questions
 		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-
+       
 		// Verifying that the third out of twelve questions is not present
 		startVisit1And2StepsPage.threeOfTwelveQuestioNotPresent();
 
 	}
 
-	@Test(priority = 20, description = "Verify after selecting one option from 2nd question option list 'pain radiates to' option selected", enabled = true)
+	@Test(priority = 20, description = "Verify after selecting one option from 2nd question option list 'pain radiates to' option selected", enabled = false)
 	public void IDA4_2465_selectPainRadiatesToOptionAndVerifyDescribeSectionDisplayed() throws InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -604,7 +604,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 21, description = "Verify the Describe section of 2 of 12 questions screen", enabled = true)
+	@Test(priority = 21, description = "Verify the Describe section of 2 of 12 questions screen", enabled = false)
 	public void IDA4_2466_VerifyDescribeSection() throws InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -668,7 +668,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 22, description = "Verify by not selecting any options and click on submit button for describe section of 2 of 12", enabled = true)
+	@Test(priority = 22, description = "Verify by not selecting any options and click on submit button for describe section of 2 of 12", enabled = false)
 	public void IDA4_2467_VerifyDescribeSection() throws InterruptedException {
 		// Entering patient vitals details using data from the appData JSON object
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -723,7 +723,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 23, description = "Verify selecting any one number in 3 of 12", enabled = true)
+	@Test(priority = 23, description = "Verify selecting any one number in 3 of 12", enabled = false)
 	public void IDA4_2470_selectNumberAndVerify() throws InterruptedException {
 		// Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -764,7 +764,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 24, description = "Verify selecting any one number in 3 of 12", enabled = true)
+	@Test(priority = 24, description = "Verify selecting any one number in 3 of 12", enabled = false)
 	public void IDA4_2474_selectNumberAndVerify() throws InterruptedException {
 		// Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -808,7 +808,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 25, description = "Verify clicking on submit button by selecting both Number and duration type in 3 of 12", enabled = true)
+	@Test(priority = 25, description = "Verify clicking on submit button by selecting both Number and duration type in 3 of 12", enabled = false)
 	public void IDA4_2476_verifySubmitButtonOfThreeOfElevenQuestion() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -846,7 +846,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 26, description = "Verify whether user able to select any options in 4 of 12", enabled = true)
+	@Test(priority = 26, description = "Verify whether user able to select any options in 4 of 12", enabled = false)
 	public void IDA4_2478_selectOptionInFourOfTwelve() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -886,7 +886,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
 	}
 
-	@Test(priority = 27, description = "Verify when user selects any option other than Others[Describe]in 4 of 12", enabled = true)
+	@Test(priority = 27, description = "Verify when user selects any option other than Others[Describe]in 4 of 12", enabled = false)
 	public void IDA4_2479_verifyFiveOfTwelveQuestionIsDisplayed() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -926,7 +926,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
 	}
 
-	@Test(priority = 28, description = "Verify clicking on Others [Describe] section in 4 of 12", enabled = true)
+	@Test(priority = 28, description = "Verify clicking on Others [Describe] section in 4 of 12", enabled = false)
 	public void IDA4_2480_verifyClickingOnOthersOption() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -967,7 +967,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 29, description = "Verify entering any data in describe field and click on submit button in 4 of 12", enabled = true)
+	@Test(priority = 29, description = "Verify entering any data in describe field and click on submit button in 4 of 12", enabled = false)
 	public void IDA4_2483_enterDataInDescribeFieldAndclickSubmitButton() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1011,7 +1011,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
 	}
 
-	@Test(priority = 30, description = "Verify whether user able to select any options in 5 of 12", enabled = true)
+	@Test(priority = 30, description = "Verify whether user able to select any options in 5 of 12", enabled = false)
 	public void IDA4_2485_verifyUserAbleToSelectOptionOfFiveOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1056,7 +1056,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 31, description = "Verify when user selects any option other than Others[Describe] in 5 of 12", enabled = true)
+	@Test(priority = 31, description = "Verify when user selects any option other than Others[Describe] in 5 of 12", enabled = false)
 	public void IDA4_2486_verifyWhenUserSelectsOptionInFiveOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1098,7 +1098,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 32, description = "Verify when user selects any option other than Others[Describe] in 5 of 12", enabled = true)
+	@Test(priority = 32, description = "Verify clicking on Others [Describe] section in 5 of 12", enabled = false)
 	public void IDA4_2487_verifyFiveOfTwelveQuestionsDescribeTextBoxIsDisplayedWithSubmitButton()
 			throws InterruptedException {
 
@@ -1143,7 +1143,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
 	}
 
-	@Test(priority = 33, description = "Verify entering any data in describe field and click on submit button in 5 of 12", enabled = true)
+	@Test(priority = 33, description = "Verify entering any data in describe field and click on submit button in 5 of 12", enabled = false)
 	public void IDA4_2489_verifySixOfTwelevQuestionIsAutoPopulated() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1180,17 +1180,17 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
 		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
 		startVisit1And2StepsPage.clickOnGradualOption();
-		startVisit1And2StepsPage.clickOnSubmitButtonOfFourOfTwelveQuestion();
+		
 		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
 
 		startVisit1And2StepsPage.selectOtherOptionOfFiveOfTwelveQuestions();
-		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
+		//startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
 		startVisit1And2StepsPage.enterValueInDescribeTextBox(appData.getJSONObject("description").getString("value"));
 		startVisit1And2StepsPage.clickOnFiveOfTwelveQuestionsSubmitButton();
 		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 34, description = "Verify whether user able to select any options in 6 of 12", enabled = true)
+	@Test(priority = 34, description = "Verify whether user able to select any options in 6 of 12", enabled = false)
 	public void IDA4_2491_verifyUserAbleToSelectAnyOptionsOfSixOfTwelveQusetions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1235,7 +1235,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 35, description = "Verify clicking on Others [Describe] section in 6 of 12", enabled = true)
+	@Test(priority = 35, description = "Verify clicking on Others [Describe] section in 6 of 12", enabled = false)
 	public void IDA4_2493_verifyClickingOnOtherOptionDisplaysDescribeTextArea() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1281,7 +1281,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 36, description = "Verify entering any data in describe field or select any option and click on submit button in 6 of 12", enabled = true)
+	@Test(priority = 36, description = "Verify entering any data in describe field or select any option and click on submit button in 6 of 12", enabled = false)
 	public void IDA4_2496_verifySixOftwelveQuestionsSubmitButtonFuntionality() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1328,7 +1328,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 37, description = "Verify whether user able to select any options in 7 of 12", enabled = true)
+	@Test(priority = 37, description = "Verify whether user able to select any options in 7 of 12", enabled = false)
 	public void IDA4_2498_verifyUserAbleToSelectAnyOptionInSevenOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1376,7 +1376,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
 	}
 
-	@Test(priority = 38, description = "Verify whether user able to select any options in 7 of 12", enabled = true)
+	@Test(priority = 38, description = "Verify whether user able to select any options in 7 of 12", enabled = false)
 	public void IDA4_2499_verifyEightOfTwelveQuetionsIsDisplayed() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1424,7 +1424,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
 	}
 
-	@Test(priority = 39, description = "Verify whether user able to select any options in 8 of 12", enabled = true)
+	@Test(priority = 39, description = "Verify whether user able to select any options in 8 of 12", enabled = false)
 	public void IDA4_2501_verifyUserAbleToSelectAnyOptionInEightOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1476,7 +1476,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 40, description = "Verify clicking on Others [Describe] section in 8 of 12", enabled = true)
+	@Test(priority = 40, description = "Verify clicking on Others [Describe] section in 8 of 12", enabled = false)
 	public void IDA4_2503_verifyEightOfTwelveQuestionsDescribeTextBoxIsDisplayed() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1526,7 +1526,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
 	}
 
-	@Test(priority = 41, description = "Verify entering any data in describe field or select any option and click on submit button in 8 of 12", enabled = true)
+	@Test(priority = 41, description = "Verify entering any data in describe field or select any option and click on submit button in 8 of 12", enabled = false)
 	public void IDA4_2507_enterValueInDescribeTextBoxOFEightOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1573,13 +1573,13 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.selectMildOneThreeOption();
 		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
 		startVisit1And2StepsPage.clickOnOtherOptonOfEightOfTwelveQusetions();
-		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
+		//startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
 		startVisit1And2StepsPage.enterValueInDescribeTextBox(appData.getJSONObject("description").getString("value"));
 		startVisit1And2StepsPage.clickOnEightOfTwelveSubmitButton();
 		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 42, description = "Verify whether user able to select one or more options in 9 of 12", enabled = true)
+	@Test(priority = 42, description = "Verify whether user able to select one or more options in 9 of 12", enabled = false)
 	public void IDA4_2509_selectOneOrMoreOptionInnineOfTwelveQuestions() throws InterruptedException {
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -1634,7 +1634,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 43, description = "Verify clicking on Others [Describe] section in 9 of 12", enabled = true)
+	@Test(priority = 43, description = "Verify clicking on Others [Describe] section in 9 of 12", enabled = false)
 	public void IDA4_2511_verifyDescribeTextAreaIsDisplayedInNineOfTwelveQuestions() throws InterruptedException {
 // Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -1711,773 +1711,780 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.clickOnEightOfTwelveSubmitButton();
 		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
 		startVisit1And2StepsPage.selectOtherOption();
-		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
+		//startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
 		startVisit1And2StepsPage.enterValueInDescribeTextBox(appData.getJSONObject("description").getString("value"));
 		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
 		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
 	}
 
-	@Test(priority = 44, description = "Verify entering any data in describe field or select any option and click on submit button in 9 of 12", enabled = true)
-	public void IDA4_2515_verifyTenOfTwelveQuestionsIsAutoPopulated() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//	@Test(priority = 44, description = "Verify entering any data in describe field or select any option and click on submit button in 9 of 12", enabled = false)
+////	public void IDA4_2515_verifyTenOfTwelveQuestionsIsAutoPopulated() throws InterruptedException {
+////// Entering patient vitals details
+////		startVisit1And2StepsPage.enterPatientVitalsDetails(
+////				appData.getJSONObject("patientVitalsDetails").getString("height"),
+////				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+////				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+////				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+////				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+////				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+////				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+////				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+////// Clicking on the next button after entering vitals details
+////		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+////// Confirming the entered vitals
+////		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+////// Selecting visit reason as "Abdominal Pain"
+////		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+////// Clicking on the next button after selecting the visit reason
+////		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+////// Verifying the confirmation popup for the visit
+////		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+////// Confirming the visit by clicking on "Yes"
+////		startVisit1And2StepsPage.clickOnYesButton();
+////// Verifying the display of the first question related to abdominal pain
+////		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+////// Verifying the display of all available options for the question
+////		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+////// Selecting the option "Upper Right Hypochondrium"
+////		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+////// Clicking on the submit button after selecting the option
+////		startVisit1And2StepsPage.clickOnSubmitButton();
+////// Verifying the display of the second question
+////		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+////// Selecting the option "Pain Radiates"
+////		startVisit1And2StepsPage.selectPainRadiatesOption();
+////// Clicking on the "Groin" option
+////		startVisit1And2StepsPage.clickOnGroin();
+////// Clicking on the submit button for the "Pain Radiates" question
+////		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+////// Verifying the display of the third question
+////		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+////
+////// Selecting the number "2" from the spinner
+////		startVisit1And2StepsPage.clickOnNumberSpinner();
+////		startVisit1And2StepsPage.selectTwo();
+////		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+////// Selecting "Days" from the duration spinner
+////		startVisit1And2StepsPage.clickOnDurationSpinner();
+////		startVisit1And2StepsPage.selectDays();
+////		startVisit1And2StepsPage.verifyDaysIsSelected();
+////// Clicking on the submit button for the third question
+////		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+////// Verifying the display of the fourth question
+////		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+////		startVisit1And2StepsPage.clickOnGradualOption();
+////// Verifying the display of the fifth question
+////		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+////
+////		startVisit1And2StepsPage.selectNightOption();
+////// Verifying the display of the sixth question
+////		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+////// Clicking on the "Constant" option for the sixth question
+////		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+////// Clicking on the submit button for the sixth question
+////		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+////// Verifying the display of the seventh question
+////		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+////// Selecting the "Mild (1-3)" option for the seventh question
+////		startVisit1And2StepsPage.selectMildOneThreeOption();
+////// Verifying the display of the eighth question
+////		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+////		startVisit1And2StepsPage.selectCoughingOption();
+////		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+////// Selecting the "Food" option for the ninth question
+////		startVisit1And2StepsPage.selectfoodOption();
+////// Clicking on the submit button for the ninth question
+////		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+////// Verifying the display of the tenth question
+////		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+////	}
+////
+////	@Test(priority = 45, description = "Verify whether user able to select any options in 10 of 12", enabled = false)
+////	public void IDA4_2517_verifyUserAbleToSelectOptionInTenOftTwelveQuestions() throws InterruptedException {
+////// Entering patient vitals details
+////		startVisit1And2StepsPage.enterPatientVitalsDetails(
+////				appData.getJSONObject("patientVitalsDetails").getString("height"),
+////				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+////				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+////				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+////				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+////				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+////				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+////				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+////// Clicking on the next button after entering vitals details
+////		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+////// Confirming the entered vitals
+////		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+////// Selecting visit reason as "Abdominal Pain"
+////		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+////// Clicking on the next button after selecting the visit reason
+////		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+////// Verifying the confirmation popup for the visit
+////		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+////// Confirming the visit by clicking on "Yes"
+////		startVisit1And2StepsPage.clickOnYesButton();
+////// Verifying the display of the first question related to abdominal pain
+////		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+////// Verifying the display of all available options for the question
+////		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+////// Selecting the option "Upper Right Hypochondrium"
+////		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+////// Clicking on the submit button after selecting the option
+////		startVisit1And2StepsPage.clickOnSubmitButton();
+////// Verifying the display of the second question
+////		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+////// Selecting the option "Pain Radiates"
+////		startVisit1And2StepsPage.selectPainRadiatesOption();
+////// Clicking on the "Groin" option
+////		startVisit1And2StepsPage.clickOnGroin();
+////// Clicking on the submit button for the "Pain Radiates" question
+////		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+////// Verifying the display of the third question
+////		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+////
+////// Selecting the number "2" from the spinner
+////		startVisit1And2StepsPage.clickOnNumberSpinner();
+////		startVisit1And2StepsPage.selectTwo();
+////		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+////// Selecting "Days" from the duration spinner
+////		startVisit1And2StepsPage.clickOnDurationSpinner();
+////		startVisit1And2StepsPage.selectDays();
+////		startVisit1And2StepsPage.verifyDaysIsSelected();
+////// Clicking on the submit button for the third question
+////		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+////// Verifying the display of the fourth question
+////		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+////		startVisit1And2StepsPage.clickOnGradualOption();
+////// Verifying the display of the fifth question
+////		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+////
+////		startVisit1And2StepsPage.selectNightOption();
+////// Verifying the display of the sixth question
+////		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+////// Clicking on the "Constant" option for the sixth question
+////		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+////// Clicking on the submit button for the sixth question
+////		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+////// Verifying the display of the seventh question
+////		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+////// Selecting the "Mild (1-3)" option for the seventh question
+////		startVisit1And2StepsPage.selectMildOneThreeOption();
+////// Verifying the display of the eighth question
+////		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+////		startVisit1And2StepsPage.selectCoughingOption();
+////	startVisit1And2StepsPage.clickOnSubmitButton();
+//
+////		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+////// Selecting the "Food" option for the ninth question
+////		startVisit1And2StepsPage.selectfoodOption();
+////// Clicking on the submit button for the ninth question
+////		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+////// Verifying the display of the tenth question
+////		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+////// Select the option indicating that menstruation has not started
+////		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+////
+////// Verify that eleven out of twelve questions are displayed
+////		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
+////
+////	}
+//
+//	@Test(priority = 46, description = "Verify when user selects ''Is menstruating'' option in 10 of 12", enabled = false)
+//	public void IDA4_2519_verifyIsMenstruatingOptionInTenOftTwelveQuestions() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//	startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user is currently menstruating
+//		startVisit1And2StepsPage.selectIsMenstruatingOption();
+//
+//// Verify that the age onset input field is displayed after selecting
+//// menstruation
+//		//startVisit1And2StepsPage.verifyAgeAtOnSetIsDisplayed();
+//
+//// Enter the age of 41 in the age onset input field
+//		startVisit1And2StepsPage.enterAgeInAgeOnSetFeild("41");
+//
+//// Click on the submit button to proceed to the next set of questions
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfTenOftwelveQuestions();
+//
+//// Verify that information about the last menstruation period is displayed
+//		startVisit1And2StepsPage.verifyLastMenstruationPeriodIsDisplayed();
+//
+//// Verify that a calendar interface for selecting dates is displayed
+//		startVisit1And2StepsPage.verifyCalenderIsDisplayed();
+//
+//	}
+//
+//	@Test(priority = 47, description = "Verify click on last menstruation period option in 10 of 12", enabled = false)
+//	public void IDA4_2520_verifyLastMenstruationPeriodOptionInTenOftTwelveQuestions() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//	startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user is currently menstruating
+//		startVisit1And2StepsPage.selectIsMenstruatingOption();
+//
+//// Verify that the age onset input field is displayed after selecting
+//// menstruation
+//		startVisit1And2StepsPage.verifyAgeAtOnSetIsDisplayed();
+//
+//// Enter the age of 41 in the age onset input field
+//		startVisit1And2StepsPage.enterAgeInAgeOnSetFeild("41");
+//
+//// Click on the submit button to proceed to the next set of questions
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfTenOftwelveQuestions();
+//
+//// Verify that information about the last menstruation period is displayed
+//		startVisit1And2StepsPage.verifyLastMenstruationPeriodIsDisplayed();
+//
+//// Verify that a calendar interface for selecting dates is displayed
+//		startVisit1And2StepsPage.verifyCalenderIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectmenstruationDate();
+//		startVisit1And2StepsPage.verifySelectedMenstruationDateIsDisplayed("01/Oct/2023");
+//	}
+//
+//	@Test(priority = 48, description = "Verify entering any data in describe field or select any option and click on submit button in 10 of 12", enabled = false)
+//	public void IDA4_2522_verifyElevenOftweOfTwelveQusetionsIsDisplayed() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//	startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user has not started menstruation
+//		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+//
+//// Verify that the eleventh question of the twelve-question set is displayed
+//		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
+//
+//	}
+//
+//	@Test(priority = 49, description = "Verify whether user able to select any options in 11 of 12", enabled = false)
+//	public void IDA4_2524_verifyUserAbleToSelectAnyOptionInelevenOfTwelveQuestions() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//	startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user has not started menstruation
+//		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+//
+//// Verify that the eleventh question of the twelve-question set is displayed
+//		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.selectNoneOption();
+//
+//	}
+//
+//	@Test(priority = 50, description = "Verify clicking on Yes [Describe] section in 11 of 12", enabled = false)
+//	public void IDA4_2527_verifyDescribeTextAreaIsDisplayedInElevenOfTwelveQuestions() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user has not started menstruation
+//		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+//
+//// Verify that the eleventh question of the twelve-question set is displayed
+//		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
+//// Select the "None" option on the startVisit1And2StepsPage.
+//		startVisit1And2StepsPage.selectNoneOption();
+//// Select the "Yes, Describe" option on the startVisit1And2StepsPage.
+//		startVisit1And2StepsPage.selectYesDescribeOption();
+//// Verify that the describe block is displayed along with the submit button on
+//// the startVisit1And2StepsPage.
+//		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
+//
+//	}
+//
+//	@Test(priority = 51, description = "Verify entering any data in describe field or select any option and click on submit button in 11 of 12", enabled = false)
+//	public void IDA4_2530_verifyTwelveOfTwelveQuestionsIsDisplayed() throws InterruptedException {
+//// Entering patient vitals details
+//		startVisit1And2StepsPage.enterPatientVitalsDetails(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//// Clicking on the next button after entering vitals details
+//		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
+//// Confirming the entered vitals
+//		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
+//// Selecting visit reason as "Abdominal Pain"
+//		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
+//// Clicking on the next button after selecting the visit reason
+//		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
+//// Verifying the confirmation popup for the visit
+//		startVisit1And2StepsPage.verifyConfirmVisitPopup();
+//// Confirming the visit by clicking on "Yes"
+//		startVisit1And2StepsPage.clickOnYesButton();
+//// Verifying the display of the first question related to abdominal pain
+//		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
+//// Verifying the display of all available options for the question
+//		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
+//// Selecting the option "Upper Right Hypochondrium"
+//		startVisit1And2StepsPage.clickUpperRightHypochondrium();
+//// Clicking on the submit button after selecting the option
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//// Verifying the display of the second question
+//		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
+//// Selecting the option "Pain Radiates"
+//		startVisit1And2StepsPage.selectPainRadiatesOption();
+//// Clicking on the "Groin" option
+//		startVisit1And2StepsPage.clickOnGroin();
+//// Clicking on the submit button for the "Pain Radiates" question
+//		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
+//// Verifying the display of the third question
+//		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
+//
+//// Selecting the number "2" from the spinner
+//		startVisit1And2StepsPage.clickOnNumberSpinner();
+//		startVisit1And2StepsPage.selectTwo();
+//		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
+//// Selecting "Days" from the duration spinner
+//		startVisit1And2StepsPage.clickOnDurationSpinner();
+//		startVisit1And2StepsPage.selectDays();
+//		startVisit1And2StepsPage.verifyDaysIsSelected();
+//// Clicking on the submit button for the third question
+//		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
+//// Verifying the display of the fourth question
+//		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
+//		startVisit1And2StepsPage.clickOnGradualOption();
+//// Verifying the display of the fifth question
+//		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//
+//		startVisit1And2StepsPage.selectNightOption();
+//// Verifying the display of the sixth question
+//		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
+//// Clicking on the "Constant" option for the sixth question
+//		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
+//// Clicking on the submit button for the sixth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
+//// Verifying the display of the seventh question
+//		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Mild (1-3)" option for the seventh question
+//		startVisit1And2StepsPage.selectMildOneThreeOption();
+//// Verifying the display of the eighth question
+//		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
+//		startVisit1And2StepsPage.selectCoughingOption();
+//	startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
+//// Selecting the "Food" option for the ninth question
+//		startVisit1And2StepsPage.selectfoodOption();
+//// Clicking on the submit button for the ninth question
+//		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
+//// Verifying the display of the tenth question
+//		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
+//// Select the option indicating that the user has not started menstruation
+//		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
+//
+//// Verify that the eleventh question of the twelve-question set is displayed
+//		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
+//// Select the "None" option on the startVisit1And2StepsPage.
+//		startVisit1And2StepsPage.selectNoneOption();
+//// Verify that all twelve questions are displayed
+//		startVisit1And2StepsPage.verifyTwelveOfTwelveQusetionsIsDisplayed();
+//
+//	}
 
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
+//	@Test(priority = 52, description = "Verify clicking on Skip button in 12 of 12", enabled = false)
+//	public void IDA4_2533_verifyAssociatedSymptomsQuestionIsDisplayed() throws InterruptedException {
+//		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//
+//// Verify that the title for associated symptoms is displayed
+//		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
+//
+//// Verify that the "Do you have the following symptom" question is displayed on
+//// the startVisit1And2StepsPage
+//		startVisit1And2StepsPage.verifyDoYouHaveFollowingSymptomIsDisplayed();
+//
+//	}
 
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-	}
-
-	@Test(priority = 45, description = "Verify whether user able to select any options in 10 of 12", enabled = true)
-	public void IDA4_2517_verifyUserAbleToSelectOptionInTenOftTwelveQuestions() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that menstruation has not started
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-
-// Verify that eleven out of twelve questions are displayed
-		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
-
-	}
-
-	@Test(priority = 46, description = "Verify when user selects ''Is menstruating'' option in 10 of 12", enabled = true)
-	public void IDA4_2519_verifyIsMenstruatingOptionInTenOftTwelveQuestions() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user is currently menstruating
-		startVisit1And2StepsPage.selectIsMenstruatingOption();
-
-// Verify that the age onset input field is displayed after selecting
-// menstruation
-		startVisit1And2StepsPage.verifyAgeAtOnSetIsDisplayed();
-
-// Enter the age of 41 in the age onset input field
-		startVisit1And2StepsPage.enterAgeInAgeOnSetFeild("41");
-
-// Click on the submit button to proceed to the next set of questions
-		startVisit1And2StepsPage.clickOnSubmitButtonOfTenOftwelveQuestions();
-
-// Verify that information about the last menstruation period is displayed
-		startVisit1And2StepsPage.verifyLastMenstruationPeriodIsDisplayed();
-
-// Verify that a calendar interface for selecting dates is displayed
-		startVisit1And2StepsPage.verifyCalenderIsDisplayed();
-
-	}
-
-	@Test(priority = 47, description = "Verify click on last menstruation period option in 10 of 12", enabled = true)
-	public void IDA4_2520_verifyLastMenstruationPeriodOptionInTenOftTwelveQuestions() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user is currently menstruating
-		startVisit1And2StepsPage.selectIsMenstruatingOption();
-
-// Verify that the age onset input field is displayed after selecting
-// menstruation
-		startVisit1And2StepsPage.verifyAgeAtOnSetIsDisplayed();
-
-// Enter the age of 41 in the age onset input field
-		startVisit1And2StepsPage.enterAgeInAgeOnSetFeild("41");
-
-// Click on the submit button to proceed to the next set of questions
-		startVisit1And2StepsPage.clickOnSubmitButtonOfTenOftwelveQuestions();
-
-// Verify that information about the last menstruation period is displayed
-		startVisit1And2StepsPage.verifyLastMenstruationPeriodIsDisplayed();
-
-// Verify that a calendar interface for selecting dates is displayed
-		startVisit1And2StepsPage.verifyCalenderIsDisplayed();
-
-		startVisit1And2StepsPage.selectmenstruationDate();
-		startVisit1And2StepsPage.verifySelectedMenstruationDateIsDisplayed("01/Oct/2023");
-	}
-
-	@Test(priority = 48, description = "Verify entering any data in describe field or select any option and click on submit button in 10 of 12", enabled = true)
-	public void IDA4_2522_verifyElevenOftweOfTwelveQusetionsIsDisplayed() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user has not started menstruation
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-
-// Verify that the eleventh question of the twelve-question set is displayed
-		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
-
-	}
-
-	@Test(priority = 49, description = "Verify whether user able to select any options in 11 of 12", enabled = true)
-	public void IDA4_2524_verifyUserAbleToSelectAnyOptionInelevenOfTwelveQuestions() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user has not started menstruation
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-
-// Verify that the eleventh question of the twelve-question set is displayed
-		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.selectNoneOption();
-
-	}
-
-	@Test(priority = 50, description = "Verify clicking on Yes [Describe] section in 11 of 12", enabled = true)
-	public void IDA4_2527_verifyDescribeTextAreaIsDisplayedInElevenOfTwelveQuestions() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user has not started menstruation
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-
-// Verify that the eleventh question of the twelve-question set is displayed
-		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
-// Select the "None" option on the startVisit1And2StepsPage.
-		startVisit1And2StepsPage.selectNoneOption();
-// Select the "Yes, Describe" option on the startVisit1And2StepsPage.
-		startVisit1And2StepsPage.selectYesDescribeOption();
-// Verify that the describe block is displayed along with the submit button on
-// the startVisit1And2StepsPage.
-		startVisit1And2StepsPage.verifyDescribeBlockIsDisplayedWithSubmitButton();
-
-	}
-
-	@Test(priority = 51, description = "Verify entering any data in describe field or select any option and click on submit button in 11 of 12", enabled = true)
-	public void IDA4_2530_verifyTwelveOfTwelveQuestionsIsDisplayed() throws InterruptedException {
-// Entering patient vitals details
-		startVisit1And2StepsPage.enterPatientVitalsDetails(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-// Clicking on the next button after entering vitals details
-		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-// Confirming the entered vitals
-		startVisit1And2StepsPage.clickOnConfirmButton(); // 1/4
-// Selecting visit reason as "Abdominal Pain"
-		startVisit1And2StepsPage.selectVisitReasonAsAbdominalPain();
-// Clicking on the next button after selecting the visit reason
-		startVisit1And2StepsPage.clickOnNextButtonOfVisitReason();
-// Verifying the confirmation popup for the visit
-		startVisit1And2StepsPage.verifyConfirmVisitPopup();
-// Confirming the visit by clicking on "Yes"
-		startVisit1And2StepsPage.clickOnYesButton();
-// Verifying the display of the first question related to abdominal pain
-		startVisit1And2StepsPage.verifyAbdominalFirstQuestionIsDisplayed();
-// Verifying the display of all available options for the question
-		startVisit1And2StepsPage.verifyAllOptionsAreDisplayed();
-// Selecting the option "Upper Right Hypochondrium"
-		startVisit1And2StepsPage.clickUpperRightHypochondrium();
-// Clicking on the submit button after selecting the option
-		startVisit1And2StepsPage.clickOnSubmitButton();
-// Verifying the display of the second question
-		startVisit1And2StepsPage.verifyTwoOfTwelveQuestionIsDisplayed();
-// Selecting the option "Pain Radiates"
-		startVisit1And2StepsPage.selectPainRadiatesOption();
-// Clicking on the "Groin" option
-		startVisit1And2StepsPage.clickOnGroin();
-// Clicking on the submit button for the "Pain Radiates" question
-		startVisit1And2StepsPage.clickOnPainRadiatesSubmitButton();
-// Verifying the display of the third question
-		startVisit1And2StepsPage.verifyThreeOfTweleveQuestionsIsDisplayed();
-
-// Selecting the number "2" from the spinner
-		startVisit1And2StepsPage.clickOnNumberSpinner();
-		startVisit1And2StepsPage.selectTwo();
-		startVisit1And2StepsPage.verifyNumberTwoIsSelected();
-// Selecting "Days" from the duration spinner
-		startVisit1And2StepsPage.clickOnDurationSpinner();
-		startVisit1And2StepsPage.selectDays();
-		startVisit1And2StepsPage.verifyDaysIsSelected();
-// Clicking on the submit button for the third question
-		startVisit1And2StepsPage.clickOnThreeOfTwelveQuestionSubmitButton();
-// Verifying the display of the fourth question
-		startVisit1And2StepsPage.verifyFourOfTwelveQuestionsIsDisplayed();
-		startVisit1And2StepsPage.clickOnGradualOption();
-// Verifying the display of the fifth question
-		startVisit1And2StepsPage.verifyFiveOfTwelveQuestonIsDisplayed();
-
-		startVisit1And2StepsPage.selectNightOption();
-// Verifying the display of the sixth question
-		startVisit1And2StepsPage.verifySixOfTwelveQuestionsIsDisplayed();
-// Clicking on the "Constant" option for the sixth question
-		startVisit1And2StepsPage.clickOnConstantOptionOfSixOfTweleveQuestions();
-// Clicking on the submit button for the sixth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfSixOfTwelveQusetions();
-// Verifying the display of the seventh question
-		startVisit1And2StepsPage.verifySevenOfTwelveQuestionsIsDisplayed();
-// Selecting the "Mild (1-3)" option for the seventh question
-		startVisit1And2StepsPage.selectMildOneThreeOption();
-// Verifying the display of the eighth question
-		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
-		startVisit1And2StepsPage.selectCoughingOption();
-		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
-// Selecting the "Food" option for the ninth question
-		startVisit1And2StepsPage.selectfoodOption();
-// Clicking on the submit button for the ninth question
-		startVisit1And2StepsPage.clickOnSubmitButtonOfNineOfTwelveQuestions();
-// Verifying the display of the tenth question
-		startVisit1And2StepsPage.verifyTenOfTwelveQuestionsIsDisplayed();
-// Select the option indicating that the user has not started menstruation
-		startVisit1And2StepsPage.selectHasNotStartedMenstruationOption();
-
-// Verify that the eleventh question of the twelve-question set is displayed
-		startVisit1And2StepsPage.verifyElevenOfTwelveQuestionsIsDisplayed();
-// Select the "None" option on the startVisit1And2StepsPage.
-		startVisit1And2StepsPage.selectNoneOption();
-// Verify that all twelve questions are displayed
-		startVisit1And2StepsPage.verifyTwelveOfTwelveQusetionsIsDisplayed();
-
-	}
-
-	@Test(priority = 52, description = "Verify clicking on Skip button in 12 of 12", enabled = true)
-	public void IDA4_2533_verifyAssociatedSymptomsQuestionIsDisplayed() throws InterruptedException {
-		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-
-// Verify that the title for associated symptoms is displayed
-		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
-
-// Verify that the "Do you have the following symptom" question is displayed on
-// the startVisit1And2StepsPage
-		startVisit1And2StepsPage.verifyDoYouHaveFollowingSymptomIsDisplayed();
-
-	}
-
-	@Test(priority = 53, description = "Verify entering any data in describe field and click on submit button in 12 of 12", enabled = true)
+	@Test(priority = 53, description = "Verify entering any data in describe field and click on submit button in 12 of 12", enabled = false)
 	public void IDA4_2534_enterDataInAssociatedTextFieldAndSubmit() throws InterruptedException {
 // Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(
@@ -2550,6 +2557,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 // Verifying the display of the eighth question
 		startVisit1And2StepsPage.verifyEightOfTwelvequsetionsIsDisplayed();
 		startVisit1And2StepsPage.selectCoughingOption();
+		startVisit1And2StepsPage.clickOnEightOfTwelveSubmitButton();
 		startVisit1And2StepsPage.verifyNineOfTwelveQuestionsIsDisplayed();
 // Selecting the "Food" option for the ninth question
 		startVisit1And2StepsPage.selectfoodOption();
@@ -2570,6 +2578,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 // Enter the value in the describe text box based on the value from the appData
 // JSON object and submit
 		startVisit1And2StepsPage.enterValueInDescribeTextBox(appData.getJSONObject("description").getString("value"));
+		startVisit1And2StepsPage.clickOnTwelevOfTwelveSubmitButton();
 
 // Verify that the title for associated symptoms is displayed
 		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
@@ -2578,28 +2587,28 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyDoYouHaveFollowingSymptomIsDisplayed();
 
 	}
-
-	@Test(priority = 54, description = "Verify when user selects yes option for '7. change in frequency of urination[Describe]' symptom", enabled = true)
-	public void IDA4_2541_verifyDescribeTextAreaIsDisplayed() throws InterruptedException {
-		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-//startVisit1And2StepsPage.clickSymptomsNoButton();
-		// Click on the seventh "Yes" button associated with a specific action
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-
-		// Verify that the text area for describing something is displayed
-		startVisit1And2StepsPage.verifyDescribeTextAreaIsDisplayed();
-
-	}
-
-	@Test(priority = 55, description = "Verify when user selects yes option for 8th , 9th and 16th [Describe]'' symptom", enabled = false)
+//
+//	@Test(priority = 54, description = "Verify when user selects yes option for '7. change in frequency of urination[Describe]' symptom", enabled = false)
+//	public void IDA4_2541_verifyDescribeTextAreaIsDisplayed() throws InterruptedException {
+//		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+////startVisit1And2StepsPage.clickSymptomsNoButton();
+//		// Click on the seventh "Yes" button associated with a specific action
+//		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
+//
+//		// Verify that the text area for describing something is displayed
+//		startVisit1And2StepsPage.verifyDescribeTextAreaIsDisplayed();
+//
+//	}
+//
+	@Test(priority = 55, description = "Verify when user selects yes option for 8th , 9th and 16th [Describe]'' symptom", enabled = true)
 	public void IDA4_2543_verifyAssociatedSymptomsDescribeTextAreaIsDisplayed() throws InterruptedException {
 		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -2614,7 +2623,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		// startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
 		// Click on the "Yes" button for the eighth associated symptom
 //		startVisit1And2StepsPage.clickOnEightAssociatedSymptomYesButton();
-		startVisit1And2StepsPage.clickSymptomsNoButton();
+		//startVisit1And2StepsPage.clickOnNoButton();
 		// Verify that the text area for describing symptoms is displayed
 		// startVisit1And2StepsPage.verifyDescribeTextAreaIsDisplayed();
 		startVisit1And2StepsPage.clickOnEightAssociatedSymptomYesButton();
@@ -2633,7 +2642,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 56, description = "Verify on clicking submit button after selecting yes or no option for symptoms", enabled = true)
+	@Test(priority = 56, description = "Verify on clicking submit button after selecting yes or no option for symptoms", enabled = false)
 	public void IDA4_2549_verifyAssociatedSymptomSubmitButton() throws InterruptedException {
 		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -2645,49 +2654,48 @@ public class StartVisit1And2StepsTest extends BaseTest {
 				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
 				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
 
-		startVisit1And2StepsPage.clickSymptomsNoButton();
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction();
+		startVisit1And2StepsPage.checkSymptomsNoButton();
+		
+		
 
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
 
 	}
+//
+//	@Test(priority = 57, description = "Verify the functionality of change button of Abdominal pain(selected visit reason) on 2/4 Visit Reason summary page", enabled = false)
+//	public void IDA4_2551_verifyChangeButtonOfAbdominalPain() throws InterruptedException {
+//		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
+//				appData.getJSONObject("patientVitalsDetails").getString("height"),
+//				appData.getJSONObject("patientVitalsDetails").getString("weight"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
+//				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
+//				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
+//				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
+//				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
+//
+//		Thread.sleep(2000);
+//		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
+//		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
+//		startVisit1And2StepsPage.scrollToEndAction();
+//		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
+//		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
+//		startVisit1And2StepsPage.clickOnAbdominalPainChangeIcon();
+//		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
+//		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
+//		startVisit1And2StepsPage.scrollToEightOfTwelveQuestions();
+//		startVisit1And2StepsPage.selectfoodOption();
+//		startVisit1And2StepsPage.clickOnSubmitButton();
+//		startVisit1And2StepsPage.scrollToEndAction();
+//		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
+//		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
+//		startVisit1And2StepsPage.verifySelectedFoodOptionIsDisplayed();
+//		startVisit1And2StepsPage.verifyVomitingIsDisplayed();
+//
+//	}
 
-	@Test(priority = 57, description = "Verify the functionality of change button of Abdominal pain(selected visit reason) on 2/4 Visit Reason summary page", enabled = true)
-	public void IDA4_2551_verifyChangeButtonOfAbdominalPain() throws InterruptedException {
-		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
-				appData.getJSONObject("patientVitalsDetails").getString("height"),
-				appData.getJSONObject("patientVitalsDetails").getString("weight"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpSystolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("bpDiastolic"),
-				appData.getJSONObject("patientVitalsDetails").getString("pulse"),
-				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
-				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
-				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-
-		Thread.sleep(2000);
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction();
-		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
-		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
-		startVisit1And2StepsPage.clickOnAbdominalPainChangeIcon();
-		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-		startVisit1And2StepsPage.scrollToEightOfTwelveQuestions();
-		startVisit1And2StepsPage.selectfoodOption();
-		startVisit1And2StepsPage.clickOnSubmitButton();
-		startVisit1And2StepsPage.scrollToEndAction();
-		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
-		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
-		startVisit1And2StepsPage.verifySelectedFoodOptionIsDisplayed();
-		startVisit1And2StepsPage.verifyVomitingIsDisplayed();
-
-	}
-
-	@Test(priority = 58, description = "Verify the functionality of Back button on 2/4 Visit Reason summary page ", enabled = true)
+	@Test(priority = 58, description = "Verify the functionality of Back button on 2/4 Visit Reason summary page ", enabled = false)
 	public void IDA4_2555_verifyFunctionalityOfBackButtonOnVisitReasonSummaryScreen() throws InterruptedException {
 		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
 				appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -2700,16 +2708,14 @@ public class StartVisit1And2StepsTest extends BaseTest {
 				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
 
 		Thread.sleep(2000);
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-		startVisit1And2StepsPage.scrollToEndAction();
+		startVisit1And2StepsPage.checkSymptomsNoButton();
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		startVisit1And2StepsPage.verifyVisitReasonSummaryScreenIsDisplayed();
 		startVisit1And2StepsPage.clickOnBackButtonOnVisitReasonSummaryScreen();
 		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
 	}
 
-	@Test(priority = 59, description = "Verify the functionality of Confirm button on 2/4 Visit Reason summary page ", enabled = true)
+	@Test(priority = 59, description = "Verify the functionality of Confirm button on 2/4 Visit Reason summary page ", enabled = false)
 	public void IDA4_2556_verifyFunctionalityOfConfirmButtonOnVisitReasonSummaryScreen() throws InterruptedException {
 		// enter patient vitals and complete the visit
 		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
@@ -2723,11 +2729,9 @@ public class StartVisit1And2StepsTest extends BaseTest {
 				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
 
 		Thread.sleep(2000);
-		// click On the seven associated symptoms yes button
-		startVisit1And2StepsPage.clickOnSevenAssociatedSymptomYesButton();
-		// enter data in describe text filed
-		startVisit1And2StepsPage.enterDataInDescribeTextFiled("Testing");
-
+		
+		startVisit1And2StepsPage.checkSymptomsNoButton();
+		
 		// click on the submit button
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
 		// verify visit summary screen is displayed
@@ -2751,7 +2755,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 61, description = "Verify whether user can select options for all 20 symptoms", enabled = true)
+	@Test(priority = 61, description = "Verify whether user can select options for all 20 symptoms", enabled = false)
 	public void IDA4_2538_selectAssociatedSymptomsTwentyOptionsAndVerify() throws InterruptedException {
 		// enter patient vitals and complete the visit
 		startVisit1And2StepsPage.enterVitalsAndCompleteVisit(
@@ -2768,7 +2772,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 62, description = "Verify whether user able to select one or more options in 11 of 12", enabled = true)
+	@Test(priority = 62, description = "Verify whether user able to select one or more options in 11 of 12", enabled = false)
 	public void IDA4_2525_verifyUserAllowedSelectOnlyOneOptionInElevenOfTwelveQuestions() throws InterruptedException {
 		// enter patient vitals and complete the ten questions
 
@@ -2786,7 +2790,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 63, description = "Verify whether user able to select one or more options in 10 of 12", enabled = true)
+	@Test(priority = 63, description = "Verify whether user able to select one or more options in 10 of 12", enabled = false)
 	public void IDA4_2518_verifyUserAllowedSelectOnlyOneOptionInElevenOfTwelveQuestions() throws InterruptedException {
 
 		// enter patient vitals and complete the visit
@@ -2838,7 +2842,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyAllReasonFuntionality();
 	}
 
-	@Test(priority = 66, description = "Verify all the reason in ''All reasons'' section", enabled = true)
+	@Test(priority = 66, description = "Verify all the reason in ''All reasons'' section", enabled = false)
 
 	public void IDA4_2446_verifyAllReasonInAllReasonSection() throws InterruptedException {
 		// enter patient vitals and complete the visit
@@ -2855,7 +2859,7 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		startVisit1And2StepsPage.verifyAllReasonInAllReasonSection();
 	}
 
-	@Test(priority = 67, description = "Verify the UI of 2/4 Visit Reason page", enabled = true)
+	@Test(priority = 67, description = "Verify the UI of 2/4 Visit Reason page", enabled = false)
 
 	public void IDA4_2437_verifyUIOfVisitReasonPage() throws InterruptedException {
 		// enter patient vitals and complete the visit
