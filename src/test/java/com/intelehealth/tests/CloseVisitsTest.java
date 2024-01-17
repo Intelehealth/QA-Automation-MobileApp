@@ -46,7 +46,7 @@ public class CloseVisitsTest extends BaseTest {
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
         appSetupPage.completeSetup();
-        Thread.sleep(5000);
+        appSetupPage.refreshUIAndWait();
 	}
 	@Test(priority = 1, description = "Verify the functionality of Close visit button under Recent visit/Older Visits section", enabled = true)
 	public void IDA4_2239_verifyCloseVisitButtonFunctionality() throws InterruptedException {

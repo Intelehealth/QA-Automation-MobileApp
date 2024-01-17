@@ -47,6 +47,7 @@ public class AppointmentsTest extends BaseTest{
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
         appSetupPage.completeSetup();
+		appSetupPage.refreshUIAndWait();
 
 }
 	@Test(priority = 1, description = "Verify clicking on visit under completed section", enabled = false)

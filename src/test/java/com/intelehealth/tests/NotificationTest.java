@@ -54,7 +54,8 @@ public class NotificationTest extends BaseTest {
 
 		// Click on the hamburger menu in the login menu page
 		
-		Thread.sleep(5000);
+		appSetupPage.refreshUIAndWait();
+
 	}
 	@Test(priority = 1, description = "Verify that user is able to view the prescription", enabled = true)
 	public void IDA4_2142_verifyUserAbleToViewPrescription() throws InterruptedException {

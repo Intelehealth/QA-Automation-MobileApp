@@ -62,8 +62,8 @@ public class StartVisit3And4StepsTest extends BaseTest {
 		appSetupPage.handlePermissions();
 
 		appSetupPage.completeSetup();
-		utils.log().info("Handling app permissions and completing app setup");
-      Thread.sleep(4000);
+		appSetupPage.refreshUIAndWait();
+
 		// Register a patient with provided details
 		addNewPatientPage.registerAPatient(appData.getJSONObject("personalDetails").getString("firstName"),
 				appData.getJSONObject("patientAddress").getString("pincode"),
@@ -72,7 +72,6 @@ public class StartVisit3And4StepsTest extends BaseTest {
 				appData.getJSONObject("patientAddress").getString("address2"),
 				appData.getJSONObject("personalDetails").getString("nationalId"),
 				appData.getJSONObject("personalDetails").getString("occupation"));
-		utils.log().info("Registering a patient with provided details");
 
 		// Entering patient vitals details
 		startVisit1And2StepsPage.enterPatientVitalsDetails(appData.getJSONObject("patientVitalsDetails").getString("height"),
@@ -83,45 +82,34 @@ public class StartVisit3And4StepsTest extends BaseTest {
 				appData.getJSONObject("patientVitalsDetails").getString("temperature"),
 				appData.getJSONObject("patientVitalsDetails").getString("spo2"),
 				appData.getJSONObject("patientVitalsDetails").getString("respiratoryRate"));
-		utils.log().info("Entering patient vitals details");
 		// Click on the 'Next' button after entering the first set of vitals
 		startVisit1And2StepsPage.clickOnFirstVitalsNextButton();
-		utils.log().info("Clicking on the 'Next' button after entering the first set of vitals");
 
 		// Click on the 'Confirm' button to confirm the entered vitals
 		startVisit1And2StepsPage.clickOnConfirmButton();
-		utils.log().info("Clicking on the 'Confirm' button to confirm the entered vitals");
 
 		// Scroll to the HyperTension section on the page
 		startVisit3And4StepsPage.scrollToHyperTension();
-		utils.log().info("Scrolling to the HyperTension section on the page");
 
 		// Select and confirm the visit reason as Hypertension
 		startVisit3And4StepsPage.selectAndConfirmVisitReason();
-		utils.log().info("Selecting and confirming the visit reason as Hypertension");
 
 		// Handle the Hypertension-related visit questions
 		startVisit3And4StepsPage.handleHypertensionVisitQuestions();
-		utils.log().info("Handling the Hypertension-related visit questions");
 		// Verify that the 'Associated Symptoms' title is displayed on the page
 		startVisit1And2StepsPage.verifyAssociatedSymptomsTitleIsDisplayed();
-		utils.log().info("Verifying that the 'Associated Symptoms' title is displayed on the page");
 
 		// Select 'No' for the first associated symptom
 		startVisit3And4StepsPage.selectAssociatedSymptomFirstNoButton();
-		utils.log().info("Selecting 'No' for the first associated symptom");
 
 		// Click on the main 'Submit' button for associated symptoms
 		startVisit1And2StepsPage.clickOnAssociatedSymptomMainSubmitButton();
-		utils.log().info("Clicking on the main 'Submit' button for associated symptoms");
 
 		// Click on the 'Confirm' button on the visit reason summary screen
 		startVisit1And2StepsPage.clickOnConfirmButtonOnVisitReasonSummaryScreen();
-		utils.log().info("Clicking on the 'Confirm' button on the visit reason summary screen");
 
 		// Click on the 'Okay' button to proceed
 		startVisit1And2StepsPage.clickOnOkayButton();
-		utils.log().info("Clicking on the 'Okay' button to proceed");
 
 	}
 

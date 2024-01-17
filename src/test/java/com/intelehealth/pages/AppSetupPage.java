@@ -258,10 +258,13 @@ public  AppSetupPage() throws IOException {
 //	    click(toggle);
 //	    click(back);
 	    isDisplayed(locationName);
-	    click(refreshButton);
-	    Thread.sleep(20000);;
+	    
 	}
-
+	public void refreshUIAndWait() throws InterruptedException {
+		click(refreshButton);
+		Thread.sleep(20000);
+	}
+	
 
 	// Verify Location is displayed
 	// Verify if the location name is displayed

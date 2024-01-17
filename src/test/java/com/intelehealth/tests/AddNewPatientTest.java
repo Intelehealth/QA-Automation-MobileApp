@@ -60,7 +60,7 @@ public class AddNewPatientTest extends BaseTest {
 		      appSetupPage.handlePermissions();
 		   // Perform the complete setup using the obtained username and password
 		      appSetupPage.completeSetup();
-		      Thread.sleep(10000);
+		      appSetupPage.refreshUIAndWait();
 	}
 	
 

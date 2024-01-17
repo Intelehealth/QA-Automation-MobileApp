@@ -51,7 +51,7 @@ public class EditProfileTest  extends BaseTest{
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
 		appSetupPage.completeSetup();
-		
+		appSetupPage.refreshUIAndWait();
 		// Click on the hamburger menu in the login menu page
 		
 		loginMenuPage.clickOnHamburgerMenu();

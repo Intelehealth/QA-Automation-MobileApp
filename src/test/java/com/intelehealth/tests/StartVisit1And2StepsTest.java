@@ -54,6 +54,8 @@ public class StartVisit1And2StepsTest extends BaseTest {
 		appSetupPage.handlePermissions();
 		// Complete the setup process with a valid user's credentials
 		appSetupPage.completeSetup();
+		appSetupPage.refreshUIAndWait();
+
 		// Register a new patient using provided personal and address details
 		addNewPatientPage.registerAPatient(appData.getJSONObject("personalDetails").getString("firstName"),
 				appData.getJSONObject("patientAddress").getString("pincode"),
