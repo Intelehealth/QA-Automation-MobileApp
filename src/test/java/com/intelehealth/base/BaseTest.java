@@ -201,6 +201,7 @@ public class BaseTest {
 	}
 
 	// for Windows
+
 	public AppiumDriverLocalService getAppiumServerDefault() {
 		int maxAttempts = 3;
 		int attempt = 0;
@@ -208,14 +209,19 @@ public class BaseTest {
 
 		while (attempt < maxAttempts) {
 			try {
-				HashMap<String, String> environment = new HashMap();
-				environment.put("PATH", "/Users/local/bin:" + System.getenv("PATH"));
+				HashMap<String, String> environment = new HashMap<>();
+				// Get the user's home directory
+				String userHome = System.getProperty("user.home");
+
+				// Construct the complete path by appending the remaining path components
+				String appiumJSPath = userHome + "/AppData/Roaming/npm/node_modules/appium/build/lib/main.js";
+				String nodeExePath = "C:/Program Files/nodejs/node.exe";
+				System.out.println(userHome);
+				environment.put("PATH", userHome + "/local/bin:" + System.getenv("PATH"));
 
 				AppiumServiceBuilder builder = new AppiumServiceBuilder();
-				builder.withAppiumJS(
-						new File("C://Users//Shweta//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
-						.usingDriverExecutable(new File("C://Program Files//nodejs//node.exe")).usingPort(4723)
-						.withEnvironment(environment).withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
+				builder.withAppiumJS(new File(appiumJSPath)).usingDriverExecutable(new File(nodeExePath))
+						.usingPort(4723).withEnvironment(environment).withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
 
 				server = AppiumDriverLocalService.buildService(builder);
 
@@ -237,15 +243,18 @@ public class BaseTest {
 
 	public void beforeTest(@Optional("androidOnly") String emulator, String platformName, String udid,
 			String deviceName, @Optional("androidOnly") String systemPort) throws Exception {
+		// Set date and time for logging purposes
 		setDateTime(utils.dateTime());
+		// Set the platform name
 		setPlatform(platformName);
+		// Set the device name
 		setDeviceName(deviceName);
 		URL url;
 		InputStream inputStream = null;
 		InputStream stringsis = null;
 		Properties props = new Properties();
 		AppiumDriver driver;
-
+		// Define the log file path based on platform and device name
 		String strFile = "logs" + File.separator + platformName + "_" + deviceName;
 		File logFile = new File(strFile);
 		if (!logFile.exists()) {
@@ -271,25 +280,29 @@ public class BaseTest {
 			url = new URL(props.getProperty("appiumURL"));
 
 			if (platformName.equals("Android")) {
+				// Set Android-specific capabilities
 				desiredCapabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
-				// desiredCapabilities.setCapability("appPackage",
-				// props.getProperty("androidAppPackage"));
-				// desiredCapabilities.setCapability("appActivity",
-				// props.getProperty("androidAppActivity"));
+				desiredCapabilities.setCapability("appPackage", props.getProperty("androidAppPackage"));
+				desiredCapabilities.setCapability("appActivity", props.getProperty("androidAppActivity"));
 
 				if (emulator.equalsIgnoreCase("true")) {
+					// Set emulator-specific capabilities
 					desiredCapabilities.setCapability("avd", deviceName);
 					desiredCapabilities.setCapability("avdLaunchTimeout", 120000);
 
 				}
 				desiredCapabilities.setCapability("systemPort", systemPort);
 				// desiredCapabilities.setCapability("autoGrantPermissions", true);
-//	            String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
-//						+ File.separator + "resources" + File.separator + "app" + File.separator + "Intelehealth.apk";
-//		
-//			utils.log().info("appUrl is" + androidAppUrl);
-//			desiredCapabilities.setCapability("app", androidAppUrl);
+				// Set the path to the Android app
+				String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+						+ File.separator + "resources" + File.separator + "app" + File.separator
+						+ "Intelehealth4.1.apk";
 
+				utils.log().info("appUrl is" + androidAppUrl);
+				desiredCapabilities.setCapability("app", androidAppUrl);
+				// Set noReset capability to true
+				desiredCapabilities.setCapability("noReset", true);
+				// Initialize the Android driver
 				driver = new AndroidDriver(url, desiredCapabilities);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 				// Check if the app is installed
@@ -297,12 +310,15 @@ public class BaseTest {
 			} else {
 				throw new Exception("Invalid platform! - " + platformName);
 			}
+			// Set the driver instance
 			setDriver(driver);
 			utils.log().info("driver initialized: " + driver);
 		} catch (Exception e) {
+			// Log initialization failure and throw exception
 			utils.log().fatal("driver initialization failure. ABORT!!!\n" + e.toString());
 			throw e;
 		} finally {
+			// Close input streams
 			if (inputStream != null) {
 				inputStream.close();
 			}
@@ -324,14 +340,14 @@ public class BaseTest {
 				// Add a small delay before retrying (customize based on your needs)
 				try {
 					Thread.sleep(1000);
-				} catch (WebDriverException  | InterruptedException  e1) {
+				} catch (WebDriverException | InterruptedException e1) {
 					e1.printStackTrace();
 				}
 			}
 		}
 	}
 
-	public boolean isDisplayed(WebElement e, String msg)  {
+	public boolean isDisplayed(WebElement e, String msg) {
 		int maxAttempts = 5;
 		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
 			try {
@@ -344,7 +360,7 @@ public class BaseTest {
 				// Add a small delay before retrying (customize based on your needs)
 				try {
 					Thread.sleep(1000);
-				} catch (WebDriverException   | InterruptedException e1) {
+				} catch (WebDriverException | InterruptedException e1) {
 					e1.printStackTrace();
 				}
 			}
@@ -387,7 +403,7 @@ public class BaseTest {
 				// Add a small delay before retrying (customize based on your needs)
 				try {
 					Thread.sleep(1000);
-				} catch (WebDriverException  | InterruptedException  e1) {
+				} catch (WebDriverException | InterruptedException e1) {
 					e1.printStackTrace();
 				}
 			}
@@ -416,7 +432,7 @@ public class BaseTest {
 //		return e.isDisplayed();
 //	}
 	public boolean isDisplayed(WebElement e) throws InterruptedException {
-		waitForVisibility(e);
+		// waitForVisibility(e);
 
 		return e.isDisplayed();
 	}
@@ -577,29 +593,30 @@ public class BaseTest {
 		return txt;
 	}
 
+	// Close the currently running app
 	public void closeApp() {
-
 		((InteractsWithApps) getDriver()).terminateApp(getProps().getProperty("androidAppPackage"));
-
 	}
 
+	// Launch the app using the specified activity
 	public void launchApp() {
 		((JavascriptExecutor) getDriver()).executeScript("mobile:startActivity", ImmutableMap.of("intent",
 				getProps().getProperty("androidAppPackage") + "/" + getProps().getProperty("androidAppActivity")));
-
 	}
 
+	// Reset the app to its initial state
 	public void resetApp() {
 		getDriver().executeScript("mobile:clearApp",
 				ImmutableMap.of("appId", getProps().getProperty("androidAppPackage")));
 	}
 
+	// Launch the device's camera app
 	public void launchCamera() {
 		((JavascriptExecutor) getDriver()).executeScript("mobile:startActivity",
 				ImmutableMap.of("intent", "com.android.camera2" + "/" + "com.android.camera.CameraLauncher"));
-
 	}
 
+	// Activate the Intelehealth app
 	public void activateIntelehealth() {
 		((InteractsWithApps) getDriver()).activateApp(getProps().getProperty("androidAppPackage"));
 	}

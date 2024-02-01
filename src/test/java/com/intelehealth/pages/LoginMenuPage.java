@@ -46,7 +46,7 @@ public class LoginMenuPage extends BaseTest {
 	private WebElement name;
 	@AndroidFindBy(accessibility = "Navigation Header Home User ID TextView")
 	private WebElement healthworkerID;
-	@AndroidFindBy(accessibility = "Edit profile link")
+	@AndroidFindBy(accessibility = "Navigation Header Home 'Edit Profile' TextView")
 	private WebElement editProfileLink;
 	@AndroidFindBy(accessibility = "Navigation Header Home User Profile ImageView")
 	private WebElement image;
@@ -60,6 +60,9 @@ public class LoginMenuPage extends BaseTest {
 	private WebElement syncSuccessful;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Reset  App']")
 	private WebElement resetAppPopup;
+	
+	
+	
 	JSONObject appData;
 	public LoginMenuPage() throws IOException{
 		InputStream datais = null;
@@ -81,10 +84,10 @@ public class LoginMenuPage extends BaseTest {
 	}
 	// Methods for Page Actions
 
-	// Click on Hamburger Menu
+	
 	// Click on the hamburger menu icon
 	public void clickOnHamburgerMenu() throws InterruptedException {
-		Thread.sleep(50000);
+		
 	    click(menu);
 	}
 
@@ -123,10 +126,25 @@ public class LoginMenuPage extends BaseTest {
 
 	    // Enter the password into the password field
 	    sendKeys(loginScreenPassword, decryptedPassword, "Entered password: " +decryptedPassword);
-ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
+      ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 	    // Click the login button to submit the credentials
 	    click(loginButton, "Clicked on the Login button");
+	    
+	    
 	}
+	public void loginWithNewPassword(String pw) {
+		   String originalUserName = appData.getJSONObject("validUser").getString("username");
+		   System.out.println(originalUserName);
+			  // Encrypt the password
+		        String encryptedUserName = encrypt(originalUserName);
+		        System.out.println("Encrypted UserName: " + encryptedUserName);
+		        String decryptedUserName = decrypt(encryptedUserName);
+		        System.out.println("Decrypted Password: " + decryptedUserName);
+		        sendKeys(loginScreenUserName, decryptedUserName, "Entered username: " + decryptedUserName);
+		        sendKeys(loginScreenPassword, pw, "Entered password: " +pw);
+		        click(loginButton, "Clicked on the Login button");
+	}
+	
 
 	// Verify elements on the Menu Page
 	public void verifyMenuPageElements() throws InterruptedException {
@@ -181,9 +199,7 @@ ExtentReport.getTest().log(Status.INFO, "Entered the username and password");
 	    // Verify if the app is synchronizing
 	    isDisplayed(synchingApp, "Verified that the app is synchronizing");
 
-	    // Additional verification steps (commented out for now)
-	    // isDisplayed(resetAppPopup, "Verified the display of the reset app popup");
-	    // isDisplayed(syncSuccessful, "Verified sync success message");
+	   
 	}
 	
 	

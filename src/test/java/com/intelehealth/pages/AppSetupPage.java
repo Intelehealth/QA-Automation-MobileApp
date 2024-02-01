@@ -13,28 +13,30 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class AppSetupPage extends BaseTest {
 	// Elements on the App Setup Page
-	 @AndroidFindBy(xpath = "//android.widget.Button[@text='While using the app']")
-	    public WebElement whileUsingAppButton;
+	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
+	// xpath = "//android.widget.Button[@text='While using the app']")
+	public WebElement whileUsingAppButton;
 
-	    @AndroidFindBy(xpath = "//android.widget.Button[@text='Allow']")
-	    public WebElement allowButton;
-	    @AndroidFindBy(xpath = "//android.widget.Button[@text='ALLOW']")
-	    public WebElement pDAllowButton;
-	    @AndroidFindBy(id= "android:id/checkbox")
-	    public WebElement toggle;
-	    @AndroidFindBy(accessibility  = "Back")
-	    public WebElement back;
-	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to take pictures and record video?']")
-	    public WebElement takePicturesTextView;
+	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+	// xpath = "//android.widget.Button[@text='Allow']")
+	public WebElement allowButton;
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='ALLOW']")
+	public WebElement pDAllowButton;
+	@AndroidFindBy(id = "android:id/checkbox")
+	public WebElement toggle;
+	@AndroidFindBy(accessibility = "Back")
+	public WebElement back;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to take pictures and record video?']")
+	public WebElement takePicturesTextView;
 
-	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to access your contacts?']")
-	    public WebElement accessContactsTextView;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to access your contacts?']")
+	public WebElement accessContactsTextView;
 
-	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to make and manage phone calls?']")
-	    public WebElement managePhoneCallsTextView;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to make and manage phone calls?']")
+	public WebElement managePhoneCallsTextView;
 
-	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to access photos and media on your device?']")
-	    public WebElement accessPhotosTextView;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Allow Intelehealth to access photos and media on your device?']")
+	public WebElement accessPhotosTextView;
 	// Language Selection Elements
 	@AndroidFindBy(accessibility = "Splash Screen Bottom Language Panel Save Selected Language Button")
 	private WebElement nextButton;
@@ -105,9 +107,17 @@ public class AppSetupPage extends BaseTest {
 	private WebElement locationName;
 	@AndroidFindBy(id = "org.intelehealth.app:id/ivInternetCustomToolbar")
 	private WebElement refreshButton;
-	
+	@AndroidFindBy(accessibility = "Intelehealth")
+	private WebElement intelehealth;
+	@AndroidFindBy(id = "android:id/switch_widget")
+	private WebElement toggleButton;
+
+	@AndroidFindBy(accessibility = "Navigate up")
+	private WebElement naviagetBack;
+
 	JSONObject appData;
-public  AppSetupPage() throws IOException {
+
+	public AppSetupPage() throws IOException {
 		InputStream datais = null;
 		try {
 			String dataFileName = "data/appData.json";
@@ -124,36 +134,30 @@ public  AppSetupPage() throws IOException {
 		}
 	}
 
-//	@AndroidFindBy(accessibility = "")
-//	private WebElement 
 
 	// Methods for Page Actions
-	
-	
+
 	// Select language
 	public void selectLanguage() {
 		isSelected(english);
 
 	}
+
+	// Handles the permission prompts during app installation
 	public void handlePermissions() throws InterruptedException {
-	    
-	        	isDisplayed(whileUsingAppButton);
-	            click(whileUsingAppButton);
-	            click(allowButton);
-	            click(allowButton);
-	     
+
+		click(whileUsingAppButton);
+		for (int i = 0; i < 3; i++) { // Adjust the loop count if needed
+			click(allowButton);
+		}
+
 	}
-
-
-
-	
-	
 
 	// Click on Next button
 	public void clickOnNextButton() throws InterruptedException {
 		click(nextButton);
-			//	"Clicked on Next Button");
-		
+		// "Clicked on Next Button");
+
 	}
 
 	// Click on Skip button
@@ -166,150 +170,156 @@ public  AppSetupPage() throws IOException {
 		click(checkBox);
 	}
 
-	
 	// Click on Setup button
 	public void clickOnSetupButton() throws InterruptedException {
-	    click(setupButton);
+		click(setupButton);
 	}
 
 	// Click on Terms and Conditions Back Arrow
 	public void clickOnTermsAndConditionsBackArrow() throws InterruptedException {
-	    click(termsAndConditionsBackArrow, "Clicked on Terms and Conditions Back Arrow");
+		click(termsAndConditionsBackArrow, "Clicked on Terms and Conditions Back Arrow");
 	}
 
 	// Click on Terms and Conditions
 	public void clickOnTermsAndCondition() throws InterruptedException {
-	    click(termsAndCondition, "Clicked on Terms and Conditions");
+		click(termsAndCondition, "Clicked on Terms and Conditions");
 	}
 
 	// Click on Privacy Policy
 	public void clickOnPrivacyPolicy() throws InterruptedException {
-	    click(privacyPolicy, "Clicked on Privacy Policy");
+		click(privacyPolicy, "Clicked on Privacy Policy");
 	}
 
 	// Click on Privacy Policy Back Arrow
 	public void clickOnPrivacyPolicyBackArrow() throws InterruptedException {
-	    click(privacyPolicyBackArrow, "Clicked on Privacy Policy Back Arrow");
+		click(privacyPolicyBackArrow, "Clicked on Privacy Policy Back Arrow");
 	}
 
-	// Verify elements on Introductory Screen
+	
 	// Verify elements on Introductory Screen
 	public void verifyIntroductoryScreen() throws InterruptedException {
-	    isDisplayed(whoWeAre, "Who We Are is displayed on the Introductory Screen");
-	    
-	    isDisplayed(takePatientVisits, "Take Patient Visits is displayed on the Introductory Screen");
-	    isDisplayed(providePrescriptions, "Provide Prescriptions is displayed on the Introductory Screen");
-	}
+		isDisplayed(whoWeAre, "Who We Are is displayed on the Introductory Screen");
 
+		isDisplayed(takePatientVisits, "Take Patient Visits is displayed on the Introductory Screen");
+		isDisplayed(providePrescriptions, "Provide Prescriptions is displayed on the Introductory Screen");
+	}
 
 	// Verify Skip button is displayed
 	// Verify Skip button is displayed
 	public void skipButtonIsDisplayed() throws InterruptedException {
-	    isDisplayed(skipButton, "Skip button is displayed");
+		isDisplayed(skipButton, "Skip button is displayed");
 	}
 
-
-	
 	// Verify elements on Ayu Intro Screen
 	public void verifyAyuScreen() throws InterruptedException {
-	    isDisplayed(helloIamAyu, "Hello, I am Ayu text is displayed");
-	    isDisplayed(ayuIntroScreenSubtitle, "Ayu Intro Screen Subtitle is displayed");
-	    isDisplayed(checkBox, "Checkbox is displayed");
-	    isDisplayed(setupButton, "Setup Button is displayed");
+		isDisplayed(helloIamAyu, "Hello, I am Ayu text is displayed");
+		isDisplayed(ayuIntroScreenSubtitle, "Ayu Intro Screen Subtitle is displayed");
+		isDisplayed(checkBox, "Checkbox is displayed");
+		isDisplayed(setupButton, "Setup Button is displayed");
 	}
 
-
-	
 	// Verify elements on Terms and Conditions Screen
 	public void verifyTermsAndConditionScreen() throws InterruptedException {
-	    isDisplayed(termsAndonditionTitle, "Terms and Condition Title is displayed");
-	    isDisplayed(termsAndConditionDescription, "Terms and Condition Description is displayed");
-	    isDisplayed(termsAndConditionDeclineButton, "Decline Button is displayed");
-	    isDisplayed(termsAndConditionAcceptButton, "Accept Button is displayed");
+		isDisplayed(termsAndonditionTitle, "Terms and Condition Title is displayed");
+		isDisplayed(termsAndConditionDescription, "Terms and Condition Description is displayed");
+		isDisplayed(termsAndConditionDeclineButton, "Decline Button is displayed");
+		isDisplayed(termsAndConditionAcceptButton, "Accept Button is displayed");
 	}
 
 	// Verify elements on Privacy Policy Screen
-	// Verify elements on Privacy Policy Screen
+	
 	public void verifyPrivacyPolicyScreen() throws InterruptedException {
-		
-	    isDisplayed(privacyPolicyTitle, "Privacy Policy Title is displayed");
-	    isDisplayed(privacyPolicyContent, "Privacy Policy Content is displayed");
-	    isDisplayed(privacyPolicyDeclineButton, "Privacy Policy Decline Button is displayed");
-	    isDisplayed(privacyPolicyAcceptButton, "Privacy Policy Accept Button is displayed");
+
+		isDisplayed(privacyPolicyTitle, "Privacy Policy Title is displayed");
+		isDisplayed(privacyPolicyContent, "Privacy Policy Content is displayed");
+		isDisplayed(privacyPolicyDeclineButton, "Privacy Policy Decline Button is displayed");
+		isDisplayed(privacyPolicyAcceptButton, "Privacy Policy Accept Button is displayed");
 	}
 
-	// Perform login
+	
 	// Perform login
 	public void login(String un, String pw) throws InterruptedException {
-	    // Click on the dropdown to open the menu
-	  
-	    click(dropdown);
-	    // Click on the location element to select a location
-	  
-	    click(location);
-	    // Enter the username into the username field
-	  
-	    sendKeys(username, un);
-	    // Enter the password into the password field
-	   
-	    sendKeys(password, pw);
-	    // Click on the setup screen setup button to complete the login process
-	    click(setupScreeenSetupButton);
-//	    click(toggle);
-//	    click(back);
-	    isDisplayed(locationName);
-	    
+		// Click on the dropdown to open the menu
+
+		click(dropdown);
+		// Click on the location element to select a location
+
+		click(location);
+		// Enter the username into the username field
+
+		sendKeys(username, un);
+		// Enter the password into the password field
+
+		sendKeys(password, pw);
+		// Click on the setup screen setup button to complete the login process
+		click(setupScreeenSetupButton);
+
+		// Handling display over other apps
+		try {
+			if (isDisplayed(naviagetBack)) {
+				click(intelehealth);
+				click(toggleButton);
+				click(naviagetBack);
+				click(naviagetBack);
+
+			}
+		} catch (Exception e) {
+			// Properly handle the exception, e.g., log the error
+
+		}
+
+		// Check if locationName is displayed after the actions
+		isDisplayed(locationName);
 	}
+
 	public void refreshUIAndWait() throws InterruptedException {
 		click(refreshButton);
-		Thread.sleep(20000);
+		Thread.sleep(26000);
 	}
-	
 
-	// Verify Location is displayed
+	
 	// Verify if the location name is displayed
 	public void locationIsDisplayed() throws InterruptedException {
-	    isDisplayed(locationName);
+		isDisplayed(locationName);
 	}
 
 	// Check if the setup language screen is displayed
 	public boolean setupLanguageScreenIsDisplayed() throws InterruptedException {
-	    return isDisplayed(english, "Setup Language Screen is displayed");
+		return isDisplayed(english, "Setup Language Screen is displayed");
 	}
 
 	// Perform a series of actions to complete the setup process
 	public void completeSetup() throws InterruptedException {
-	    // Click the "Next" button
-	    clickOnNextButton();
+		// Click the "Next" button
+		clickOnNextButton();
 
-	    // Click the "Skip" button
-	    clickOnSkipButton();
+		// Click the "Skip" button
+		clickOnSkipButton();
 
-	    // Click the checkbox
-	    clickOnCheckBox();
+		// Click the checkbox
+		clickOnCheckBox();
 
-	    // Click the "Setup" button
-	    clickOnSetupButton();
+		// Click the "Setup" button
+		clickOnSetupButton();
 
-	    // Perform login with the provided username and password
-	    
-	    
-	    String originalUserName = appData.getJSONObject("validUser").getString("username");
-	    String originalPassword = appData.getJSONObject("validUser").getString("password");
-	    
-		  System.out.println(originalPassword);
-		  System.out.println(originalUserName);
-		  // Encrypt the password
-	        String encryptedUserName = encrypt(originalUserName);
-	        System.out.println("Encrypted UserName: " + encryptedUserName);
-	        String decryptedUserName = decrypt(encryptedUserName);
-	        System.out.println("Decrypted UserName: " + decryptedUserName);
-	        String encryptedPassword = encrypt(originalPassword);
-	        System.out.println("Encrypted Password: " + encryptedPassword);
-	        String decryptedPassword = decrypt(encryptedPassword);
-	        System.out.println("Decrypted Password: " + decryptedPassword);
-	    login(decryptedUserName, decryptedPassword);
-	  
+		// Perform login with the provided username and password
+
+		String originalUserName = appData.getJSONObject("validUser").getString("username");
+		String originalPassword = appData.getJSONObject("validUser").getString("password");
+
+		System.out.println(originalPassword);
+		System.out.println(originalUserName);
+		// Encrypt the password
+		String encryptedUserName = encrypt(originalUserName);
+		System.out.println("Encrypted UserName: " + encryptedUserName);
+		String decryptedUserName = decrypt(encryptedUserName);
+		System.out.println("Decrypted UserName: " + decryptedUserName);
+		String encryptedPassword = encrypt(originalPassword);
+		System.out.println("Encrypted Password: " + encryptedPassword);
+		String decryptedPassword = decrypt(encryptedPassword);
+		System.out.println("Decrypted Password: " + decryptedPassword);
+		login(decryptedUserName, decryptedPassword);
+
 	}
 
 }
