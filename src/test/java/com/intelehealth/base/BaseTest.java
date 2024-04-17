@@ -10,10 +10,13 @@ import com.intelehealth.utils.TestUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.nativekey.PressesKey;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -30,6 +33,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -70,6 +74,7 @@ public class BaseTest {
 	TestUtils utils = new TestUtils();
 
 	public AppiumDriver getDriver() {
+
 		return driver.get();
 	}
 
@@ -195,7 +200,7 @@ public class BaseTest {
 	@AfterSuite(alwaysRun = true)
 	public void afterSuite() {
 		if (server.isRunning()) {
-			// server.stop();
+			server.stop();
 			utils.log().info("Appium server stopped");
 		}
 	}
@@ -273,37 +278,44 @@ public class BaseTest {
 			props.load(inputStream);
 			setProps(props);
 
-			DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-			desiredCapabilities.setCapability("platformName", platformName);
-			desiredCapabilities.setCapability("deviceName", deviceName);
-			desiredCapabilities.setCapability("udid", udid);
+			// options options = new options();
+			UiAutomator2Options options = new UiAutomator2Options();
+			// options.setCapability(propFileName, null);
+			options.setCapability("platformName", platformName);
+			options.setCapability("deviceName", deviceName);
+			options.setCapability("udid", udid);
 			url = new URL(props.getProperty("appiumURL"));
 
 			if (platformName.equals("Android")) {
 				// Set Android-specific capabilities
-				desiredCapabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
-				desiredCapabilities.setCapability("appPackage", props.getProperty("androidAppPackage"));
-				desiredCapabilities.setCapability("appActivity", props.getProperty("androidAppActivity"));
+				options.setCapability("automationName", props.getProperty("androidAutomationName"));
+				options.setCapability("appPackage", props.getProperty("androidAppPackage"));
+				options.setCapability("appActivity", props.getProperty("androidAppActivity"));
 
 				if (emulator.equalsIgnoreCase("true")) {
 					// Set emulator-specific capabilities
-					desiredCapabilities.setCapability("avd", deviceName);
-					desiredCapabilities.setCapability("avdLaunchTimeout", 120000);
+					options.setCapability("avd", deviceName);
+					options.setCapability("avdLaunchTimeout", 120000);
+					utils.log().info("Configured emulator with AVD: " + deviceName);
 
+				} else {
+					// Log configuration for a real device (optionally add real device specific
+					// capabilities)
+					utils.log().info("Configured real device with UDID: " + udid);
 				}
-				desiredCapabilities.setCapability("systemPort", systemPort);
-				// desiredCapabilities.setCapability("autoGrantPermissions", true);
+				options.setCapability("systemPort", systemPort);
+				// options.setCapability("autoGrantPermissions", true);
 				// Set the path to the Android app
 				String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
 						+ File.separator + "resources" + File.separator + "app" + File.separator
 						+ "Intelehealth4.1.apk";
 
 				utils.log().info("appUrl is" + androidAppUrl);
-				desiredCapabilities.setCapability("app", androidAppUrl);
+				options.setCapability("app", androidAppUrl);
 				// Set noReset capability to true
-				desiredCapabilities.setCapability("noReset", true);
+				options.setCapability("noReset", true);
 				// Initialize the Android driver
-				driver = new AndroidDriver(url, desiredCapabilities);
+				driver = new AndroidDriver(url, options);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 				// Check if the app is installed
 
@@ -329,7 +341,8 @@ public class BaseTest {
 	}
 
 	public void waitForVisibility(WebElement e) {
-		int maxAttempts = 6;
+		int maxAttempts = 2;
+
 		for (int attempt = 1; attempt <= maxAttempts; attempt++) {
 			try {
 				WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(TestUtils.WAIT));
@@ -340,9 +353,13 @@ public class BaseTest {
 				// Add a small delay before retrying (customize based on your needs)
 				try {
 					Thread.sleep(1000);
-				} catch (WebDriverException | InterruptedException e1) {
+				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
+			} catch (Exception ex) {
+				System.out.println("Exception caught while waiting for visibility: " + ex.getMessage());
+				throw ex;
+				// ex.printStackTrace();
 			}
 		}
 	}
@@ -561,6 +578,8 @@ public class BaseTest {
 		return e.isDisplayed();
 	}
 
+	// Android actions
+
 	public WebElement scrollToElementByDescription(String description) throws InterruptedException {
 		WebElement scroll = getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()"
 				+ ".scrollable(true)).scrollIntoView(" + "new UiSelector().description(\"" + description + "\"));"));
@@ -574,16 +593,39 @@ public class BaseTest {
 				+ "new UiSelector().description(\"Identification First Screen Phone Num Title LinearLayout\"));"));
 		waitForVisibility(scroll);
 		return scroll;
-		// AppiumBy.androidUIAutomator("new UiScrollable(new
-		// UiSelector()).scrollIntoView(text(\"Date of Birth\"));"));
+
 	}
 
-//  public WebElement scrollToElement( WebElement e) {
-//	    
-//	    return getDriver().findElement(AppiumBy.androidUIAutomator(
-//	    		 "new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
-//						  + "new UiSelector().description(\""+ e +"\"));"));
-//	}
+	// Mobile gestures methods
+
+	public void longPressAction(WebElement e) {
+		((JavascriptExecutor) getDriver()).executeScript("mobile: longClickGesture",
+				ImmutableMap.of("elementId", ((RemoteWebElement) e).getId(), "duration", 2000));
+
+	}
+
+	public void swipeAction(WebElement e, String direction) {
+		((JavascriptExecutor) getDriver()).executeScript("mobile: swipeGesture",
+				ImmutableMap.of("elementId", ((RemoteWebElement) e).getId(),
+
+						"direction", direction, "percent", 0.75));
+
+	}
+
+	/*
+	 * public void swipe(int startX, int startY, int endX, int endY, int millis)
+	 * throws InterruptedException { TouchAction t = new TouchAction(driver);
+	 * t.press(point(startX,
+	 * startY)).waitAction(waitOptions(ofMillis(millis))).moveTo(point(endX,
+	 * endY)).release() .perform(); }
+	 */
+	public void dragAndDropElement(WebElement source, WebElement target) {
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("mobile: dragGesture", ImmutableMap.of("elementId", ((RemoteWebElement) source).getId(),
+				"endElementId", ((RemoteWebElement) target).getId(), "duration", 1.0 // Duration in seconds
+		));
+	}
+
 	public String getText(WebElement e, String msg) throws InterruptedException {
 		String txt = null;
 		waitForVisibility(e);

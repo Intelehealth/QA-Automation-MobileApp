@@ -4,38 +4,26 @@
   <listeners>
     <listener class-name="com.intelehealth.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="M2006C3MII(failed)">
+  <test thread-count="5" parallel="tests" name="Pixel(failed)">
     <parameter name="emulator" value="true"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="emulator-5554"/>
-    <parameter name="deviceName" value="Samsung"/>
+    <parameter name="deviceName" value="Pixel"/>
     <parameter name="systemPort" value="10000"/>
     <classes>
-      <class name="com.intelehealth.tests.AppointmentsTest">
+      <class name="com.intelehealth.tests.AppSetupTest">
         <methods>
-          <include name="IDA4_2386_verifyCancelledAppointment"/>
-          <include name="IDA4_2388_verifyScheduleAppointmentScreenIsDisplayed"/>
-          <include name="IDA4_2380_verifyCancelAppointment"/>
-          <include name="IDA4_2375_verifyCancelledSection"/>
           <include name="beforeMethod"/>
-          <include name="IDA4_2382_verifyYesButtonFunctionality"/>
-          <include name="IDA4_2406_verifySpecificRadioButtonForAppointments"/>
-          <include name="afterSuite"/>
+          <include name="IDA4_1939_verifySelectLanguage"/>
           <include name="beforeMethod"/>
-          <include name="beforeTest"/>
-          <include name="IDA4_2397_verifyAppointmentDetailsScreenIsDisplayed"/>
-          <include name="IDA4_2385_verifycancelAppointmentSaveButton"/>
-          <include name="IDA4_2374_verifyCountOfCancelledTab"/>
           <include name="beforeSuite"/>
-          <include name="IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection"/>
-          <include name="IDA4_2408_verifyAllTabCalenderFilter"/>
+          <include name="afterSuite"/>
           <include name="afterTest"/>
+          <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="IDA4_2404_verifyOverAllTabSection"/>
-          <include name="IDA4_2373_verifyCancelledTab"/>
-          <include name="IDA4_2391_verifyCompletedTabFunctionality"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.intelehealth.tests.AppointmentsTest -->
+      </class> <!-- com.intelehealth.tests.AppSetupTest -->
     </classes>
-  </test> <!-- M2006C3MII(failed) -->
+  </test> <!-- Pixel(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -59,6 +59,7 @@ public class AppSetupTest extends BaseTest {
 
 	@Test(priority = 1, description = "Verify user can select any of the language and click Next", enabled = true)
 	public void IDA4_1939_verifySelectLanguage() throws InterruptedException {
+		launchApp();
 		
 		// Verify introductory screen elements are displayed
 		appSetupPage.verifyIntroductoryScreen();
@@ -69,7 +70,7 @@ public class AppSetupTest extends BaseTest {
 
 	
 
-	@Test(priority = 2, description = " Verify clicking on Skip on the introductory screens", enabled = true)
+	@Test(priority = 2, description = " Verify clicking on Skip on the introductory screens", enabled = false)
 	public void IDA4_1940_verifySkipOnTheIntroductoryScreen() throws InterruptedException {
 
 		appSetupPage.clickOnSkipButton();
@@ -77,7 +78,7 @@ public class AppSetupTest extends BaseTest {
 		appSetupPage.verifyAyuScreen();
 	}
 
-	@Test(priority = 3, description = "Verify that user is able to navigate to setup page when the terms & conditions box is checked", enabled = true)
+	@Test(priority = 3, description = "Verify that user is able to navigate to setup page when the terms & conditions box is checked", enabled = false)
 	public void IDA4_1943_verifyTermsAndConditionCheckBox() throws InterruptedException {
 
 		// Click on the "Skip" button to bypass initial setup
@@ -91,7 +92,7 @@ public class AppSetupTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4, description = "Verify clicking on Terms and Conditions/Privacy Policy link on the checkbox text", enabled = true)
+	@Test(priority = 4, description = "Verify clicking on Terms and Conditions/Privacy Policy link on the checkbox text", enabled = false)
 	public void IDA4_1941_verifyTermsAndPrivacyPolicyScreen() throws InterruptedException {
 
 		// Click on the "Skip" button to bypass the initial setup

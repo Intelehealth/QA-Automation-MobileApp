@@ -1,6 +1,0 @@
-[logsAndroid_Samsung INFO ] 2023-12-23 09:15:27.018 BaseTest:272 - log path: logs\Android_Samsung
-[logsAndroid_Samsung INFO ] 2023-12-23 09:15:27.038 BaseTest:278 - load config.properties
-[logsAndroid_Samsung INFO ] 2023-12-23 09:15:42.820 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (4cd89f4b-10f2-4c4e-9fe3-a2b79aa1a904)
-[logsAndroid_Samsung INFO ] 2023-12-23 09:15:43.979 StartVisit3And4StepsTest:35 - 
-****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
-

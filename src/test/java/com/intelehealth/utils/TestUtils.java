@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 public class TestUtils {
 	// Constant for default wait time
-	public static final long WAIT = 300;
+	public static final long WAIT = 10;
 
 	// Parse an XML file and store string values in a HashMap
 	public HashMap<String, String> parseStringXML(InputStream file) throws Exception {

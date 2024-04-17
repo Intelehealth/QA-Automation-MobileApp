@@ -1,23 +1,1143 @@
-[logsAndroid_Pixel INFO ] 2023-12-22 10:45:25.730 BaseTest:272 - log path: logs\Android_Pixel
-[logsAndroid_Pixel INFO ] 2023-12-22 10:45:25.739 BaseTest:278 - load config.properties
-[logsAndroid_Pixel INFO ] 2023-12-22 10:45:47.742 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (78d06c14-ca57-43f8-980f-6d901c8221b4)
-[logsAndroid_Pixel INFO ] 2023-12-22 10:45:48.993 StartVisit3And4StepsTest:35 - 
-****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:19.036 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:19.057 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:19.124 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:19.125 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:31.451 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (4bdc41d2-dffc-4d00-a81c-768ae457e0ac)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:08:32.407 EditProfileTest:28 - 
+****** starting test:IDA4_1987_verifyMyProfilePage******
 
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:20.391 BaseTest:272 - log path: logs\Android_Pixel
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:20.399 BaseTest:278 - load config.properties
-[logsAndroid_Pixel FATAL] 2023-12-22 10:48:23.464 BaseTest:319 - driver initialization failure. ABORT!!!
-org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+[logsAndroid_Pixel ERROR] 2024-04-17 09:10:34.175 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.pages.AppSetupPage.completeSetup(AppSetupPage.java:294)
+	at com.intelehealth.tests.EditProfileTest.beforeMethod(EditProfileTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpZv1pnc.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3f49d15d (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 41 more
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:10:34.743 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.pages.AppSetupPage.completeSetup(AppSetupPage.java:294)
+	at com.intelehealth.tests.EditProfileTest.beforeMethod(EditProfileTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpZv1pnc.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3f49d15d (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 41 more
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:10:35.323 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.pages.AppSetupPage.completeSetup(AppSetupPage.java:294)
+	at com.intelehealth.tests.EditProfileTest.beforeMethod(EditProfileTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpZv1pnc.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3f49d15d (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 41 more
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:10:35.897 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.pages.AppSetupPage.completeSetup(AppSetupPage.java:294)
+	at com.intelehealth.tests.EditProfileTest.beforeMethod(EditProfileTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpZv1pnc.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3f49d15d (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 41 more
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:10:36.495 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.pages.AppSetupPage.completeSetup(AppSetupPage.java:294)
+	at com.intelehealth.tests.EditProfileTest.beforeMethod(EditProfileTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpZv1pnc.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3f49d15d (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 41 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:12:54.980 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:12:54.992 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:12:55.057 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:12:55.058 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:13:07.827 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (5d88956f-d075-4095-853c-cb3f5cd3252f)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:13:08.702 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:14:59.705 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.isDisplayed(BaseTest.java:370)
+	at com.intelehealth.pages.AppSetupPage.verifyIntroductoryScreen(AppSetupPage.java:201)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1939_verifySelectLanguage(AppSetupTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$qJKGurSw.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@70edfca5 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:15:03.217 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-12-54\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:15:04.051 AppSetupTest:30 - 
+****** starting test:IDA4_1940_verifySkipOnTheIntroductoryScreen******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:16:51.171 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnSkipButton(AppSetupPage.java:165)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1940_verifySkipOnTheIntroductoryScreen(AppSetupTest.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$nkeb5Gi9.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4bd3d711 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:16:54.267 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-12-54\AppSetupTest\IDA4_1940_verifySkipOnTheIntroductoryScreen.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:16:55.056 AppSetupTest:30 - 
+****** starting test:IDA4_1943_verifyTermsAndConditionCheckBox******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:18:40.178 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnSkipButton(AppSetupPage.java:165)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1943_verifyTermsAndConditionCheckBox(AppSetupTest.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$BMClmn36.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@17ebe372 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:18:43.117 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-12-54\AppSetupTest\IDA4_1943_verifyTermsAndConditionCheckBox.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:18:43.949 AppSetupTest:30 - 
+****** starting test:IDA4_1941_verifyTermsAndPrivacyPolicyScreen******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:20:28.931 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnSkipButton(AppSetupPage.java:165)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1941_verifyTermsAndPrivacyPolicyScreen(AppSetupTest.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Jo98iVkA.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1aaa3c5c (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen Skip Screen Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:20:31.759 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-12-54\AppSetupTest\IDA4_1941_verifyTermsAndPrivacyPolicyScreen.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:39.802 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:39.814 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:39.884 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:39.886 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:51.639 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (4d479a38-a858-4966-ab5f-8c1cc9a5da01)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:22:52.499 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:23:08.142 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-22-39\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:29:53.019 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:29:53.032 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:29:53.082 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:29:53.083 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:30:08.877 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (b708b384-9117-435e-9ab9-348d46f50835)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:30:10.941 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:32:10.488 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.tests.AppSetupTest.beforeMethod(AppSetupTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$frUWdVsB.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 30 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1154eb44 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 40 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:35:53.357 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:35:53.366 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:35:53.424 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:35:53.425 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:36:05.672 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (51520be2-bd8c-4299-abe8-59bbb1f384d5)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:36:06.467 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:37:58.531 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.isDisplayed(BaseTest.java:370)
+	at com.intelehealth.pages.AppSetupPage.verifyIntroductoryScreen(AppSetupPage.java:201)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1939_verifySelectLanguage(AppSetupTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$YTdoIcln.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@357ef732 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:38:01.632 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-09-35-53\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:15.930 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:15.941 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:16.003 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:16.004 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:35.532 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (0470718b-80f6-414a-a0e7-a1a7143bab18)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:39:37.651 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:42.014 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:42.023 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:42.076 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:42.078 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:54.700 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (4d5601d7-8677-4ed5-b3e4-240d6c24ef02)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:45:55.576 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:42.494 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:42.503 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:42.557 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:42.558 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:54.512 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (ce40721d-d07a-4d42-9359-f91ac247f63f)
+[logsAndroid_Pixel INFO ] 2024-04-17 09:48:55.321 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 09:50:51.482 TestListener:29 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.click(BaseTest.java:462)
+	at com.intelehealth.pages.AppSetupPage.clickOnNextButton(AppSetupPage.java:158)
+	at com.intelehealth.tests.AppSetupTest.beforeMethod(AppSetupTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$IgKb8yVh.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 30 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1ab57461 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Splash Screen Bottom Language Panel Save Selected Language Button})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 40 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:00:48.016 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:00:48.027 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:00:48.089 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:00:48.090 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:01:01.914 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (bb4533c2-3e20-4b6a-b7a0-3f7be402c08a)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:01:02.906 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:08:45.913 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:08:45.928 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:08:46.001 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:08:46.003 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:09:00.438 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (e65fa8e5-a9d4-481a-844f-db4b0ce491c1)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:09:01.303 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:00.585 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:00.599 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:00.668 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:00.669 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:14.788 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (958b6d14-1e49-49c0-ac02-266e17a9b86e)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:13:15.707 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 10:15:06.798 TestListener:39 - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.intelehealth.base.BaseTest.waitForVisibility(BaseTest.java:348)
+	at com.intelehealth.base.BaseTest.isDisplayed(BaseTest.java:370)
+	at com.intelehealth.pages.AppSetupPage.verifyIntroductoryScreen(AppSetupPage.java:201)
+	at com.intelehealth.tests.AppSetupTest.IDA4_1939_verifySelectLanguage(AppSetupTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$SKPgdXC5.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 26 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3ad0a2fb (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: Intro Screen First Title TextView})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 36 more
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:15:10.204 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-10-13-00\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:21.699 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:21.711 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:21.770 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:21.771 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:35.989 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (a0c2ce8e-7127-4b8e-9278-222b84aab854)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:36.992 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:17:51.281 BaseTest:155 - video path: videos\Android_Pixel\2024-04-17-10-17-21\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:02.898 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:02.906 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:02.975 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:02.977 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:16.683 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (05929e73-7c64-43c4-a0d3-4146a27cdd63)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:20:17.610 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:34.123 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:34.139 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:34.267 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:34.268 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:51.036 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (547cfdd6-d9f6-4a96-889e-23ddb3280aea)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:27:52.013 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:12.761 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:12.770 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:12.827 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:12.827 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:26.051 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (17111f48-5181-48ba-8cda-b0fb1a499389)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:36:26.952 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel ERROR] 2024-04-17 10:37:09.714 TestListener:39 - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [17111f48-5181-48ba-8cda-b0fb1a499389, screenshot {}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Shweta\Downloads\Q..., appActivity: org.intelehealth.app.activi..., appPackage: org.intelehealth.app, automationName: UiAutomator2, avd: Pixel, avdLaunchTimeout: 120000, deviceName: Pixel, noReset: true, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 136, appium:systemPort: 10000, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 1936, left: 0, top: 136, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 17111f48-5181-48ba-8cda-b0fb1a499389
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:117)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-17 10:56:32.705 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:56:32.715 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:56:32.780 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:56:32.783 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-17 10:57:46.825 BaseTest:330 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Emulator is not ready within 59999.8506ms. Reason: adb.exe: device 'emulator-5554' not found
+ 
 Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, appium:avd=Pixel, appium:avdLaunchTimeout=120000, appium:deviceName=Pixel, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {automationName: UiAutomator2, avd: Pixel, avdLaunchTimeout: 120000, deviceName: Pixel, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {automationName: UiAutomator2, avd: Pixel, avdLaunchTimeout: 120000, deviceName: Pixel, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:37.637 BaseTest:272 - log path: logs\Android_Pixel
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:37.644 BaseTest:278 - load config.properties
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:48.584 BaseTest:317 - driver initialized: AndroidDriver:  on ANDROID (e142be41-643a-482e-92b4-8b9c6054fb92)
-[logsAndroid_Pixel INFO ] 2023-12-22 10:48:50.244 StartVisit3And4StepsTest:35 - 
-****** starting test:IDA4_2562_verifyOneOfSixQuestionsIsShownToUser******
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:14.140 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:14.148 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:14.209 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:14.211 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:50.342 BaseTest:327 - driver initialized: AndroidDriver:  on ANDROID (8c00cc0e-27ca-4452-b411-667c98ed57ee)
+[logsAndroid_Pixel INFO ] 2024-04-17 10:59:51.638 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
 
-[logsAndroid_Pixel INFO ] 2023-12-22 10:50:41.255 StartVisit3And4StepsTest:65 - Handling app permissions and completing app setup
+[logsAndroid_Pixel INFO ] 2024-04-17 11:01:32.986 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:01:32.994 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 11:01:33.036 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:01:33.038 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 11:02:03.982 BaseTest:327 - driver initialized: AndroidDriver:  on ANDROID (1f915be4-033d-4b3c-962a-1c76451ebb38)
+[logsAndroid_Pixel INFO ] 2024-04-17 11:02:04.769 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 11:09:26.841 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:09:26.851 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 11:09:26.904 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:09:26.906 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-17 11:10:39.728 BaseTest:330 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Emulator is not ready within 59999.8457ms. Reason: adb.exe: device 'emulator-5554' not found
+ 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:26.064 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:26.073 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:26.126 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:26.126 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:51.894 BaseTest:327 - driver initialized: AndroidDriver:  on ANDROID (93c1a937-1907-45ac-87c9-12cdc3e62edb)
+[logsAndroid_Pixel INFO ] 2024-04-17 11:11:52.756 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:02.788 BaseTest:270 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:02.800 BaseTest:276 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:02.869 BaseTest:299 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:02.870 BaseTest:313 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:14.354 BaseTest:327 - driver initialized: AndroidDriver:  on ANDROID (ff294b04-1106-4d2c-aae0-ee95874da9a5)
+[logsAndroid_Pixel INFO ] 2024-04-17 11:15:15.159 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+

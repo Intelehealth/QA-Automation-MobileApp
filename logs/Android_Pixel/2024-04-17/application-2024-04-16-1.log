@@ -1,0 +1,232 @@
+[logsAndroid_Pixel INFO ] 2024-04-16 11:17:20.959 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:17:20.978 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 11:17:21.067 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:17:21.083 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:01.170 BaseTest:326 - driver initialized: AndroidDriver:  on ANDROID (e60bbcd3-5091-4574-bd44-87f3c37d528b)
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:02.949 AppSetupTest:30 - 
+****** starting test:IDA4_1939_verifySelectLanguage******
+
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:35.600 BaseTest:371 - Who We Are is displayed on the Introductory Screen
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:41.966 BaseTest:371 - Take Patient Visits is displayed on the Introductory Screen
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:48.975 BaseTest:371 - Provide Prescriptions is displayed on the Introductory Screen
+[logsAndroid_Pixel INFO ] 2024-04-16 11:18:49.205 BaseTest:371 - Skip button is displayed
+[logsAndroid_Pixel INFO ] 2024-04-16 11:19:02.950 BaseTest:155 - video path: videos\Android_Pixel\2024-04-16-11-17-20\AppSetupTest\IDA4_1939_verifySelectLanguage.mp4
+[logsAndroid_Pixel INFO ] 2024-04-16 11:19:03.794 AppSetupTest:30 - 
+****** starting test:IDA4_1940_verifySkipOnTheIntroductoryScreen******
+
+[logsAndroid_Pixel INFO ] 2024-04-16 11:20:24.605 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:20:24.630 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 11:20:24.709 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:20:24.727 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 11:20:30.579 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #10000 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones. 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 11:20:31.515 TestListener:33 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:108)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-16 11:29:27.335 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:29:27.349 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 11:29:27.402 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:29:27.404 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 11:31:13.304 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Emulator is not ready within 59999.8204ms (mount service is not running) 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 11:31:14.191 TestListener:33 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:108)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-16 11:39:34.524 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:39:34.535 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 11:39:34.598 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:39:34.601 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 11:40:49.795 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Emulator is not ready within 59999.6917ms (activity,package,mount services are not running) 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 11:40:55.487 TestListener:33 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:108)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-16 11:46:53.003 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:46:53.034 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 11:46:53.151 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 11:46:53.154 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 11:48:16.221 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Emulator is not ready within 59999.8506ms (activity,package,mount services are not running) 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 11:48:17.251 TestListener:33 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:108)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-16 13:59:09.549 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 13:59:09.583 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 13:59:09.709 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 13:59:09.711 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 13:59:44.661 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\Shweta\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 20'; Command output: cmd: Can't find service: settings
+cmd: Can't find service: settings
+cmd: Can't find service: settings
+ 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 13:59:46.954 TestListener:33 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:108)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[logsAndroid_Pixel INFO ] 2024-04-16 17:04:40.922 BaseTest:269 - log path: logs\Android_Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 17:04:40.941 BaseTest:275 - load config.properties
+[logsAndroid_Pixel INFO ] 2024-04-16 17:04:41.052 BaseTest:298 - Configured emulator with AVD: Pixel
+[logsAndroid_Pixel INFO ] 2024-04-16 17:04:41.054 BaseTest:312 - appUrl isC:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk
+[logsAndroid_Pixel FATAL] 2024-04-16 17:05:54.574 BaseTest:329 - driver initialization failure. ABORT!!!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\Shweta\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 20'; Command output: cmd: Can't find service: settings
+cmd: Can't find service: settings
+cmd: Can't find service: settings
+ 
+Host info: host: 'DESKTOP-LAAIDQD', ip: '192.168.43.151'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:noReset=true, appium:systemPort=10000, appium:udid=emulator-5554, appium:avdLaunchTimeout=120000, appium:appActivity=org.intelehealth.app.activities.chooseLanguageActivity.SplashScreenActivity, appium:avd=Pixel, appium:deviceName=Pixel, platformName=ANDROID, appium:automationName=UiAutomator2, appium:app=C:\Users\Shweta\Downloads\QA-Automation-MobileApp-main\QA-Automation-MobileApp-main\src\test\resources\app\Intelehealth4.1.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\Shweta\Downloads\Q..., appium:appActivity: org.intelehealth.app.activi..., appium:appPackage: org.intelehealth.app, appium:automationName: UiAutomator2, appium:avd: Pixel, appium:avdLaunchTimeout: 120000, appium:deviceName: Pixel, appium:noReset: true, appium:systemPort: 10000, appium:udid: emulator-5554, platformName: ANDROID}
+[logsAndroid_Pixel ERROR] 2024-04-16 17:05:58.354 TestListener:34 - java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+	at com.intelehealth.listeners.TestListener.onTestSkipped(TestListener.java:88)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:262)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:500)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
