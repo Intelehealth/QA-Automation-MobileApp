@@ -1,0 +1,1738 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Appium Framework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Intelehealth</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 25, 2026 05:19:14 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">ShwetaNaik</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">null_null</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="skip" test-id="1"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromUpcomingAppointments</p>
+            <p class="text-sm">
+              <span>5:19:14 pm</span> / <span>00:00:00:010</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromUpcomingAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:14 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:14 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">verify that the appointment details screen is displayed when clicking on 'Visit' under the upcoming section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:14 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="2"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromPastAppointments</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromPastAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">verify that the appointment details screen is displayed when clicking on 'Visit' under the past section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="3"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2380_verifyCancelAppointment</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2380_verifyCancelAppointment</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the No button functionality in cancel appointment popup</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="4"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2382_verifyYesButtonFunctionality</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2382_verifyYesButtonFunctionality</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the Yes button functionality in cancel appointment popup</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="5"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2391_verifyCompletedTabFunctionality</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2391_verifyCompletedTabFunctionality</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the functionality of 'Completed' tab</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2385_verifycancelAppointmentSaveButton</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2385_verifycancelAppointmentSaveButton</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify user can cancel the appointment by clicking save</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="7"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2352_verifyThePatientVisitDetailsInUpcomingSection</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2352_verifyThePatientVisitDetailsInUpcomingSection</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the patient visit details in Upcoming section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="8"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify clicking on call and whatsapp icon on appointment details page when number is provided</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="9"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2357_verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2357_verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify user clicking on arrow next to visit summary on appointment details page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="10"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the functionality of Reschedule in Appointment details page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="11"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2361_verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2361_verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify user gets the select Reschedule reason popup by clicking yes</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="12"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2364_verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2364_verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify clicking on Save button by selecting reason in Reschedule reason popup</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="13"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2367_verifySelectingAnyTimeSlotsAndClickingOnBookAppointment</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2367_verifySelectingAnyTimeSlotsAndClickingOnBookAppointment</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify selecting any time slots & clicking on book appointment</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2368_verifyTheConfirmAppointmentPopup</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2368_verifyTheConfirmAppointmentPopup</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the confirm appointment popup</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2370_VerifyWhenUserClicksYesInConfirmAppointmentPopup</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2370_VerifyWhenUserClicksYesInConfirmAppointmentPopup</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify when user clicks Yes in confirm appointment popup</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify Rescheduled appointment displays under Today's tab of upcoming section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyTheAppointmentsSortedInUpcomingTab</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyTheAppointmentsSortedInUpcomingTab</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the patient details in cancelled section of upcoming tab</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInUpcomingAppointments</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInUpcomingAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the HW can able to search the appointments by patient name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="19"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInPastAppointments</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInPastAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the HW can able to search the appointments by patient name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="20"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">testAppointmentFilter</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">testAppointmentFilter</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the appointment filters in Past section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="21"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">testAppointmentFilter</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">testAppointmentFilter</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the appointment filters in Past section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="22"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">testAppointmentFilter</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">testAppointmentFilter</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the appointment filters in Past section</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="23"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2392_verifySearchByOpenMrsIdInUpcomingAppointments</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2392_verifySearchByOpenMrsIdInUpcomingAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">Verify the HW can able to search the appointments by patient openmrs idIn Upcoming Appointments</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="24"
+          author="ShwetaNaik"
+          tag="null_null"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2392_verifySearchByOpenMrsIdInPastAppointments</p>
+            <p class="text-sm">
+              <span>5:19:15 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2392_verifySearchByOpenMrsIdInPastAppointments</h5>
+<span class='badge badge-success'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-danger'>02.25.2026 5:19:15 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">null_null</span></div>
+<div class="m-t-10 m-l-5">verify search with open mrs id</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:19:15 pm</td>
+        <td>
+          Test Skipped: Cannot invoke "io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()" because the return value of "com.intelehealth.base.BaseTest.getDriver()" is null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>24</span>
+</span>
+<p class="name">null_null</p>
+<p class="duration text-sm">24 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>null_null</h4>
+<span status="skip" class='badge log badge-skip'>24 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromPastAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_2380_verifyCancelAppointment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_2382_verifyYesButtonFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>IDA4_2391_verifyCompletedTabFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_2385_verifycancelAppointmentSaveButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_2352_verifyThePatientVisitDetailsInUpcomingSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>IDA4_2357_verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_2361_verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_2364_verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>IDA4_2367_verifySelectingAnyTimeSlotsAndClickingOnBookAppointment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_2368_verifyTheConfirmAppointmentPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_2370_VerifyWhenUserClicksYesInConfirmAppointmentPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>verifyTheAppointmentsSortedInUpcomingTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInPastAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>IDA4_2392_verifySearchByOpenMrsIdInUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>IDA4_2392_verifySearchByOpenMrsIdInPastAppointments</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>24</span>
+</span>
+<p class="name">ShwetaNaik</p>
+<p class="duration text-sm">24 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ShwetaNaik</h4>
+<span status="skip" class='badge log badge-skip'>24 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromPastAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_2380_verifyCancelAppointment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_2382_verifyYesButtonFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>IDA4_2391_verifyCompletedTabFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_2385_verifycancelAppointmentSaveButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_2352_verifyThePatientVisitDetailsInUpcomingSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>IDA4_2357_verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_2361_verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_2364_verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>IDA4_2367_verifySelectingAnyTimeSlotsAndClickingOnBookAppointment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_2368_verifyTheConfirmAppointmentPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_2370_VerifyWhenUserClicksYesInConfirmAppointmentPopup</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>verifyTheAppointmentsSortedInUpcomingTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInPastAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>testAppointmentFilter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>IDA4_2392_verifySearchByOpenMrsIdInUpcomingAppointments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:19:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>IDA4_2392_verifySearchByOpenMrsIdInPastAppointments</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 25, 2026 05:19:14 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 25, 2026 05:19:15 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>24</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>24</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromUpcomingAppointments":0.01,"IDA4_2397_verifyAppointmentDetailsScreenIsDisplayedFromPastAppointments":0.001,"IDA4_2380_verifyCancelAppointment":0.001,"IDA4_2382_verifyYesButtonFunctionality":0.001,"IDA4_2391_verifyCompletedTabFunctionality":0,"IDA4_2385_verifycancelAppointmentSaveButton":0,"IDA4_2352_verifyThePatientVisitDetailsInUpcomingSection":0.001,"IDA4_2356_verifyClickingOnCallAndWhatsappIconAnAppointmentDetailsPageWhenNumberIsProvided":0.001,"IDA4_2357_verifyUserClickingOnArrowNextToVisitSummaryOnAppointmentDetailsPage":0,"IDA4_2359_verifyTheFunctionalityOfRescheduleInAppointmentDetailsPage":0,"IDA4_2361_verifyUserGetsTheSelectRescheduleReasonPopupByClickingYes":0.001,"IDA4_2364_verifyClickingOnSaveButtonBySelectingReasonInRescheduleReasonPopup":0,"IDA4_2367_verifySelectingAnyTimeSlotsAndClickingOnBookAppointment":0.001,"IDA4_2368_verifyTheConfirmAppointmentPopup":0,"IDA4_2370_VerifyWhenUserClicksYesInConfirmAppointmentPopup":0,"IDA4_2371_verifyRescheduledAppointmentDisplaysUnderTodaysTabOfUpcomingSection":0,"verifyTheAppointmentsSortedInUpcomingTab":0,"IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInUpcomingAppointments":0,"IDA4_2390_verifyHWCanAbleToSearchTheAppointmentsByPatientNameInPastAppointments":0,"testAppointmentFilter":0,"testAppointmentFilter":0,"testAppointmentFilter":0.001,"IDA4_2392_verifySearchByOpenMrsIdInUpcomingAppointments":0.001,"IDA4_2392_verifySearchByOpenMrsIdInPastAppointments":0
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>ShwetaNaik</td>
+<td>0</td>
+<td>0</td>
+<td>24</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>null_null</td>
+<td>0</td>
+<td>0</td>
+<td>24</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 0,
+warningParent: 0,
+skipParent: 24,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 0,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 24,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

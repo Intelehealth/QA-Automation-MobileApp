@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="Suite">
+	<test name="M2006C3MII">
+		<listeners>
+			<listener class-name="com.intelehealth.listeners.TestListener" />
+		</listeners>
+		<parameter name="emulator"
+			value="false" />
+		<parameter name="platformName" value="Android" />
+		<parameter name="udid" value="RZCWA20L2MF" />
+		<parameter name="deviceName" value="Samsung" />
+		<parameter name="systemPort" value="10000" />
+		<classes>
+			<!--						<class
+			name="com.intelehealth.tests.ChangeLanguageAndProtocolTest" />
+<class name="com.intelehealth.tests.AppSetupTest" />
+			<class name="com.intelehealth.tests.ForgotPasswordTest" />
+			<class name="com.intelehealth.tests.LoginMenuTest" />
+-->
+			<class name="com.intelehealth.tests.EditProfileTest" />
+
+
+			<!--
+			<class name="com.intelehealth.tests.AppSetupTest" /> 
+			<class name="com.intelehealth.tests.LoginMenuTest" />
+				<class name="com.intelehealth.tests.LoginMenuTest" />
+			<class name="com.intelehealth.tests.CloseVisitsTest" />
+			<class name="com.intelehealth.tests.PrescriptionsTest" />
+			<class name="com.intelehealth.tests.StartVisit1And2StepsTest"/>
+			<class name="com.intelehealth.tests.CloseVisitsTest" />
+			<class name="com.intelehealth.tests.AddNewPatientPage" />
+			<class name="com.intelehealth.tests.FindPatientTest" />
+			
+			</class>-->
+		</classes>
+	</test>
+</suite> 

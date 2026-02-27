@@ -1,0 +1,1732 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Appium Framework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Intelehealth</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 14, 2026 11:45:08 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">ShwetaNaik</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Android_Samsung</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="skip" test-id="1"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1939_verifySelectLanguage</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:009</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1939_verifySelectLanguage</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user can select any of the language and click Next</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="2"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordUIElements</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordUIElements</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password UI elements are displayed (positive)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="3"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1949_verifyWelcomeBackTitle</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1949_verifyWelcomeBackTitle</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify if the 'Welcome Back' title is displayed on the login screen.</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="4"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1940_verifySkipOnTheIntroductoryScreen</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1940_verifySkipOnTheIntroductoryScreen</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5"> Verify clicking on Skip on theintroductory screens</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="5"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithValidUsername</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithValidUsername</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with valid username (positive)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1943_verifyForgotUsernameDialogBox</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1943_verifyForgotUsernameDialogBox</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user is able to navigate to setup page when the terms & conditions box is checked</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="7"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1943_verifyTermsAndConditionCheckBox</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1943_verifyTermsAndConditionCheckBox</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user is able to navigate to setup page when the terms & conditions box is checked</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="8"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithInvalidUsername</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithInvalidUsername</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with invalid username (negative)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="9"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordUIElements</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordUIElements</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password UI elements are displayed (positive)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="10"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithEmptyUsername</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithEmptyUsername</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with empty username (negative)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="11"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1950_verifyLoginWithValidUsernameAndPassword</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1950_verifyLoginWithValidUsernameAndPassword</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5"> Verify if a user will be able to login with a valid username and valid password.</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="12"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1943_verifyForgotUsernameDialogBox</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1943_verifyForgotUsernameDialogBox</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user is able to navigate to setup page when the terms & conditions box is checked</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="13"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithValidMobileNumber</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithValidMobileNumber</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with valid mobile number (positive)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1957_verifyHamburgerMenu</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1957_verifyHamburgerMenu</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify if clicking on the Hamburger menu open the menu page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1942_verifySetUpScreenUIElements</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1942_verifySetUpScreenUIElements</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that UI of set up screen</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithInvalidMobileNumber</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithInvalidMobileNumber</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with invalid mobile number (negative)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_1959_verifyUserProfile</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_1959_verifyUserProfile</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user profile is displayed on top of the menu page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordWithEmptyMobileNumber</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordWithEmptyMobileNumber</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password with empty mobile number (negative)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="19"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2050_verifyLogoutFunctionality</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2050_verifyLogoutFunctionality</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify the User can logout from app</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="20"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForgotPasswordUIAfterValidUsername</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">verifyForgotPasswordUIAfterValidUsername</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Forgot Password UI after entering valid username and clicking Continue</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="21"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2052_verifyResetApp</p>
+            <p class="text-sm">
+              <span>11:45:08 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2052_verifyResetApp</h5>
+<span class='badge badge-success'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-danger'>02.14.2026 11:45:08 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify if user can Reset the App</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:45:08 pm</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\bandi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s RZCWA20L2MF install -g D:\\admin\\QA-Automation-MobileApp-srinivas-main-stable\\src\\test\\resources\\app\\IDA-5.1.1-202602131043-ida-staging-debug.apk' exited with code 1'; Command output: adb.exe: failed to install D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk: Failure [INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name org.intelehealth.nas.fileprovider (in package org.intelehealth.app) is already used by org.intelehealth.nas]
+
+ 
+Host info: host: 'SRINIVAS', ip: '192.168.1.2'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=false, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA20L2MF, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=D:\admin\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\IDA-5.1.1-202602131043-ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}}]
+Capabilities {appium:app: D:\admin\QA-Automation-Mobi..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: false, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA20L2MF, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>21</span>
+</span>
+<p class="name">Android_Samsung</p>
+<p class="duration text-sm">21 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Android_Samsung</h4>
+<span status="skip" class='badge log badge-skip'>21 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_1939_verifySelectLanguage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>verifyForgotPasswordUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_1949_verifyWelcomeBackTitle</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_1940_verifySkipOnTheIntroductoryScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>verifyForgotPasswordWithValidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_1943_verifyForgotUsernameDialogBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_1943_verifyTermsAndConditionCheckBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>verifyForgotPasswordWithInvalidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>verifyForgotPasswordUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>verifyForgotPasswordWithEmptyUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_1950_verifyLoginWithValidUsernameAndPassword</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_1943_verifyForgotUsernameDialogBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>verifyForgotPasswordWithValidMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_1957_verifyHamburgerMenu</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_1942_verifySetUpScreenUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>verifyForgotPasswordWithInvalidMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>IDA4_1959_verifyUserProfile</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>verifyForgotPasswordWithEmptyMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2050_verifyLogoutFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>verifyForgotPasswordUIAfterValidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>IDA4_2052_verifyResetApp</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>21</span>
+</span>
+<p class="name">ShwetaNaik</p>
+<p class="duration text-sm">21 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ShwetaNaik</h4>
+<span status="skip" class='badge log badge-skip'>21 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_1939_verifySelectLanguage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>verifyForgotPasswordUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_1949_verifyWelcomeBackTitle</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_1940_verifySkipOnTheIntroductoryScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>verifyForgotPasswordWithValidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_1943_verifyForgotUsernameDialogBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_1943_verifyTermsAndConditionCheckBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>verifyForgotPasswordWithInvalidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>verifyForgotPasswordUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>verifyForgotPasswordWithEmptyUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_1950_verifyLoginWithValidUsernameAndPassword</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_1943_verifyForgotUsernameDialogBox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>verifyForgotPasswordWithValidMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_1957_verifyHamburgerMenu</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_1942_verifySetUpScreenUIElements</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>verifyForgotPasswordWithInvalidMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>IDA4_1959_verifyUserProfile</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>verifyForgotPasswordWithEmptyMobileNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2050_verifyLogoutFunctionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>verifyForgotPasswordUIAfterValidUsername</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>23:45:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>IDA4_2052_verifyResetApp</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 14, 2026 11:45:08 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 14, 2026 11:45:09 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>21</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>21</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"IDA4_1939_verifySelectLanguage":0.009,"verifyForgotPasswordUIElements":0.001,"IDA4_1949_verifyWelcomeBackTitle":0,"IDA4_1940_verifySkipOnTheIntroductoryScreen":0.001,"verifyForgotPasswordWithValidUsername":0.001,"IDA4_1943_verifyForgotUsernameDialogBox":0.001,"IDA4_1943_verifyTermsAndConditionCheckBox":0.001,"verifyForgotPasswordWithInvalidUsername":0,"verifyForgotPasswordUIElements":0,"verifyForgotPasswordWithEmptyUsername":0,"IDA4_1950_verifyLoginWithValidUsernameAndPassword":0,"IDA4_1943_verifyForgotUsernameDialogBox":0.001,"verifyForgotPasswordWithValidMobileNumber":0.001,"IDA4_1957_verifyHamburgerMenu":0,"IDA4_1942_verifySetUpScreenUIElements":0,"verifyForgotPasswordWithInvalidMobileNumber":0.001,"IDA4_1959_verifyUserProfile":0,"verifyForgotPasswordWithEmptyMobileNumber":0.001,"IDA4_2050_verifyLogoutFunctionality":0,"verifyForgotPasswordUIAfterValidUsername":0,"IDA4_2052_verifyResetApp":0.001
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>ShwetaNaik</td>
+<td>0</td>
+<td>0</td>
+<td>21</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Android_Samsung</td>
+<td>0</td>
+<td>0</td>
+<td>21</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 0,
+warningParent: 0,
+skipParent: 21,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 0,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 21,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

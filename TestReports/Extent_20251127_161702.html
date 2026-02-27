@@ -1,0 +1,1626 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Appium Framework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Intelehealth</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nov 27, 2025 04:17:02 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">ShwetaNaik</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Android_Samsung</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="skip" test-id="1"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2078_verifyReceivedPrescriptionsPatientsListedInRecentVisit</p>
+            <p class="text-sm">
+              <span>4:17:02 PM</span> / <span>00:00:00:023</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2078_verifyReceivedPrescriptionsPatientsListedInRecentVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-default'>00:00:00:023</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify received prescriptions patients listed in recent visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:02 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="2"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2107_verifyUserWillGetTheFollowUpAlertPopUpWhenEndTheVisit</p>
+            <p class="text-sm">
+              <span>4:17:02 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2107_verifyUserWillGetTheFollowUpAlertPopUpWhenEndTheVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user will get the follow up alert pop up when End the visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:02 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="3"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2080_verifyIfThePrescriptionIsSharedOnEnteringAValidNumber</p>
+            <p class="text-sm">
+              <span>4:17:02 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2080_verifyIfThePrescriptionIsSharedOnEnteringAValidNumber</h5>
+<span class='badge badge-success'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:02 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify if the prescription is shared on entering a valid number</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:02 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="4"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2085_verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2085_verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify the count of patients awaiting prescriptions are correct</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="5"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2086_verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2086_verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user is able to navigate to visit details page by clicking on any recent visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2089_verifyThatUserCanCallPatient</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2089_verifyThatUserCanCallPatient</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can call patient</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="7"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2090_verifyThatUserCanSendWhatsappMessageToThePatient</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2090_verifyThatUserCanSendWhatsappMessageToThePatient</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can send whatsapp message to the patient</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="8"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2092_verifyUserIsAbleToViewVisitSummaryPage</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2092_verifyUserIsAbleToViewVisitSummaryPage</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user is able to view visit summary page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="9"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2094_verifythatUserCanNavigateToPrescriptionPage</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2094_verifythatUserCanNavigateToPrescriptionPage</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can navigate to prescription page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="10"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2099_verifyThatUserIsAbleToDownloadThePrescription</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2099_verifyThatUserIsAbleToDownloadThePrescription</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user is able to download the prescription</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="11"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2100_verifyUserCanPrintThePrescription</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2100_verifyUserCanPrintThePrescription</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user can print the prescription</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="12"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2101_verifyThatUserCanShareThePrescriptionToPatient</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2101_verifyThatUserCanShareThePrescriptionToPatient</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can share the prescription to patient</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="13"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2102_verifyUserCanShareThroughWhatsapp</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2102_verifyUserCanShareThroughWhatsapp</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user can share through whatsapp</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2104_verifyHomeNavigatesToHomePage</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2104_verifyHomeNavigatesToHomePage</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify Home navigates to home page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2079_verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2079_verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify share functionality when clicked on any recent patient visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2109_verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2109_verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify the Awaiting prescription notification is displayed along with the count</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2110_verifyThatRecentVisitsDisplayInList</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2110_verifyThatRecentVisitsDisplayInList</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that recent visits display in list</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2105_verifyThatUserCanEndVisit</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2105_verifyThatUserCanEndVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can End visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="19"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2106_verifyUserCanEndVisit</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2106_verifyUserCanEndVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify user can end visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="20"
+          author="ShwetaNaik"
+          tag="Android_Samsung"
+          device="">
+          <div class="test-detail">
+            <p class="name">IDA4_2113_verifyThatUserCanEndPendingVisit</p>
+            <p class="text-sm">
+              <span>4:17:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">IDA4_2113_verifyThatUserCanEndPendingVisit</h5>
+<span class='badge badge-success'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-danger'>11.27.2025 4:17:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShwetaNaik</span>
+<span class="badge badge-pill badge-default">Android_Samsung</span></div>
+<div class="m-t-10 m-l-5">Verify that user can end visit</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:17:03 PM</td>
+        <td>
+          Test Skipped: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up 
+Host info: host: 'DESKTOP-FV3PV75', ip: '10.215.139.177'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:dontStopAppOnReset=true, appium:autoDismissAlerts=true, appium:automationName=UiAutomator2, appium:noReset=false, appium:udid=RZCWA24SMHY, appium:autoGrantPermissions=true, appium:appActivity=org.intelehealth.app.ui.splash.activity.SplashActivity, appium:deviceName=Samsung, platformName=ANDROID, appium:fullContextList=true, appium:app=F:\latest_IH_mobile\QA-Automation-MobileApp-srinivas-main-stable\src\test\resources\app\Ida-staging-debug.apk, appium:appPackage=org.intelehealth.app}], desiredCapabilities=Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}}]
+Capabilities {appium:app: F:\latest_IH_mobile\QA-Auto..., appium:appActivity: org.intelehealth.app.ui.spl..., appium:appPackage: org.intelehealth.app, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Samsung, appium:dontStopAppOnReset: true, appium:fullContextList: true, appium:newCommandTimeout: 300, appium:noReset: false, appium:udid: RZCWA24SMHY, platformName: ANDROID}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>20</span>
+</span>
+<p class="name">Android_Samsung</p>
+<p class="duration text-sm">20 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Android_Samsung</h4>
+<span status="skip" class='badge log badge-skip'>20 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_2078_verifyReceivedPrescriptionsPatientsListedInRecentVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>IDA4_2107_verifyUserWillGetTheFollowUpAlertPopUpWhenEndTheVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_2080_verifyIfThePrescriptionIsSharedOnEnteringAValidNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_2085_verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>IDA4_2086_verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_2089_verifyThatUserCanCallPatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_2090_verifyThatUserCanSendWhatsappMessageToThePatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>IDA4_2092_verifyUserIsAbleToViewVisitSummaryPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>IDA4_2094_verifythatUserCanNavigateToPrescriptionPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>IDA4_2099_verifyThatUserIsAbleToDownloadThePrescription</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_2100_verifyUserCanPrintThePrescription</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_2101_verifyThatUserCanShareThePrescriptionToPatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>IDA4_2102_verifyUserCanShareThroughWhatsapp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_2104_verifyHomeNavigatesToHomePage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_2079_verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>IDA4_2109_verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>IDA4_2110_verifyThatRecentVisitsDisplayInList</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>IDA4_2105_verifyThatUserCanEndVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2106_verifyUserCanEndVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>IDA4_2113_verifyThatUserCanEndPendingVisit</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>20</span>
+</span>
+<p class="name">ShwetaNaik</p>
+<p class="duration text-sm">20 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ShwetaNaik</h4>
+<span status="skip" class='badge log badge-skip'>20 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>IDA4_2078_verifyReceivedPrescriptionsPatientsListedInRecentVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>IDA4_2107_verifyUserWillGetTheFollowUpAlertPopUpWhenEndTheVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>IDA4_2080_verifyIfThePrescriptionIsSharedOnEnteringAValidNumber</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>IDA4_2085_verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>IDA4_2086_verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>IDA4_2089_verifyThatUserCanCallPatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>IDA4_2090_verifyThatUserCanSendWhatsappMessageToThePatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>IDA4_2092_verifyUserIsAbleToViewVisitSummaryPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>IDA4_2094_verifythatUserCanNavigateToPrescriptionPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>IDA4_2099_verifyThatUserIsAbleToDownloadThePrescription</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>IDA4_2100_verifyUserCanPrintThePrescription</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>IDA4_2101_verifyThatUserCanShareThePrescriptionToPatient</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>IDA4_2102_verifyUserCanShareThroughWhatsapp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>IDA4_2104_verifyHomeNavigatesToHomePage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>IDA4_2079_verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>IDA4_2109_verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>IDA4_2110_verifyThatRecentVisitsDisplayInList</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>IDA4_2105_verifyThatUserCanEndVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>IDA4_2106_verifyUserCanEndVisit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:17:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>IDA4_2113_verifyThatUserCanEndPendingVisit</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Nov 27, 2025 04:17:02 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Nov 27, 2025 04:17:03 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>20</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>20</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"IDA4_2078_verifyReceivedPrescriptionsPatientsListedInRecentVisit":0.023,"IDA4_2107_verifyUserWillGetTheFollowUpAlertPopUpWhenEndTheVisit":0.003,"IDA4_2080_verifyIfThePrescriptionIsSharedOnEnteringAValidNumber":0.001,"IDA4_2085_verifyTheCountOfPatientsAwaitingPrescriptionsAreCorrect":0.001,"IDA4_2086_verifyThatUserIsAbleToNavigateToVisitDetailsPageByClickingOnAnyRecentVisit":0.002,"IDA4_2089_verifyThatUserCanCallPatient":0.001,"IDA4_2090_verifyThatUserCanSendWhatsappMessageToThePatient":0.001,"IDA4_2092_verifyUserIsAbleToViewVisitSummaryPage":0,"IDA4_2094_verifythatUserCanNavigateToPrescriptionPage":0.001,"IDA4_2099_verifyThatUserIsAbleToDownloadThePrescription":0.001,"IDA4_2100_verifyUserCanPrintThePrescription":0.001,"IDA4_2101_verifyThatUserCanShareThePrescriptionToPatient":0,"IDA4_2102_verifyUserCanShareThroughWhatsapp":0.002,"IDA4_2104_verifyHomeNavigatesToHomePage":0,"IDA4_2079_verifyShareFunctionalityWhenClickedOnAnyRecentPatientVisit":0,"IDA4_2109_verifyTheAwaitingPrescriptionNotificationIsDisplayedAlongWithTheCount":0,"IDA4_2110_verifyThatRecentVisitsDisplayInList":0.001,"IDA4_2105_verifyThatUserCanEndVisit":0,"IDA4_2106_verifyUserCanEndVisit":0.001,"IDA4_2113_verifyThatUserCanEndPendingVisit":0
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>ShwetaNaik</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Android_Samsung</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 0,
+warningParent: 0,
+skipParent: 20,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 0,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 20,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
