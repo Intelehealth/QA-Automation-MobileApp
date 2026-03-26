@@ -23,7 +23,8 @@
 		"occupation":"farmer",
 		"lastname1":"Bot",
 		"updatedName":"User B",
-		"updatedNationalId":"78912345"
+		"updatedNationalId":"78912345",
+		"prescriptionFirstName":"App"
 		
 	},
 	"patientAddress":{

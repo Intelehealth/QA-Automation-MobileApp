@@ -38,7 +38,7 @@ public class FindPatientPage extends BaseTest {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Add New Patient']")
 	private WebElement addNewPatientCTAButton;
 
-	@AndroidFindBy(xpath = "(//android.widget.FrameLayout[@resource-id='org.intelehealth.app:id/fu_cardview_item'])[1]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]")
+	@AndroidFindBy(id = "org.intelehealth.app:id/search_name")
 	private WebElement lblPatientCard;
 	
 //	@AndroidFindBy(accessibility = "No Patient Found Placeholder Icon ImageView")

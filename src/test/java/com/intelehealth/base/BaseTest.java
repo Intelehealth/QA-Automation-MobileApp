@@ -11,6 +11,7 @@ import java.net.URL;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
@@ -28,7 +29,10 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.ThreadContext;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
@@ -42,7 +46,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -63,6 +66,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.nativekey.PressesKey;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.remote.SupportsRotation;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -363,7 +367,7 @@ public class BaseTest {
 				// Set the path to the Android app
 				String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
 						+ File.separator + "resources" + File.separator + "app" + File.separator
-						+ "IDA-5.1.1-202602131043-ida-staging-debug.apk";
+						+ "IDA-5.1.1-202603231032-ida-staging-debug.apk";
 
 				TestUtils.log().info("appUrl is " + androidAppUrl);
 				options.setCapability("app", androidAppUrl);
@@ -1033,8 +1037,9 @@ public class BaseTest {
 	public static String formatToTwoDecimalPlaces(double value) {
 		return String.format("%.2f", value);
 	}
-
+//can you update this method as this is not working as expected, it is not scrolling at all, it is just finding the element and not performing the scroll action, please update the method to perform the scroll action as well
 	public void scrollDown() {
+		
 		getDriver().findElement(
 				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward()"));
 	}
@@ -1049,7 +1054,7 @@ public class BaseTest {
 				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollBackward()"));
 	}
 
-	//@AfterTest(alwaysRun = true)
+	// @AfterTest(alwaysRun = true)
 	public void afterTest() {
 		if (getDriver() != null) {
 			getDriver().quit();
@@ -1104,5 +1109,230 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 
+	}
+
+	/**
+	 * @interruption based scenario helper methods for ScreenOrientation
+	 * @param expectedOrientation
+	 * @return
+	 */
+	public ScreenOrientation rotateAndGetOrientation(ScreenOrientation expectedOrientation) {
+
+		SupportsRotation rotation = (SupportsRotation) getDriver();
+		rotation.rotate(expectedOrientation);
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		return rotation.getOrientation();
+	}
+
+	public List<String> verifyLayoutAfterRotation(ScreenOrientation expectedOrientation, By... criticalLocators) {
+		List<String> issues = new ArrayList<>();
+
+		// Rotate (use SupportsRotation)
+		((SupportsRotation) getDriver()).rotate(expectedOrientation);
+
+		// small stabilization wait
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException ignored) {
+		}
+
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
+		// get screen size
+		Dimension screenSize = getDriver().manage().window().getSize();
+		int screenWidth = screenSize.getWidth();
+		int screenHeight = screenSize.getHeight();
+
+		List<Rectangle> elementRects = new ArrayList<>();
+
+		for (By locator : criticalLocators) {
+			try {
+				WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+				if (!el.isDisplayed()) {
+					issues.add(locator.toString() + " is not displayed after rotation");
+					continue;
+				}
+
+				Rectangle rect = el.getRect(); // x,y,width,height
+
+				// Check element inside screen bounds
+				int left = rect.getX();
+				int top = rect.getY();
+				int right = rect.getX() + rect.getWidth();
+				int bottom = rect.getY() + rect.getHeight();
+
+				if (left < 0 || top < 0) {
+					issues.add(locator.toString() + " is positioned with negative coordinates (x:" + left + ", y:" + top
+							+ ")");
+				}
+				if (right > screenWidth) {
+					issues.add(locator.toString() + " extends beyond screen width (right:" + right + " > screenWidth:"
+							+ screenWidth + ")");
+				}
+				if (bottom > screenHeight) {
+					issues.add(locator.toString() + " extends beyond screen height (bottom:" + bottom
+							+ " > screenHeight:" + screenHeight + ")");
+				}
+
+				// Optional: check minimal size (avoid overly tiny controls)
+				if (rect.getWidth() < 20 || rect.getHeight() < 20) {
+					issues.add(locator.toString() + " appears too small (w:" + rect.getWidth() + ", h:"
+							+ rect.getHeight() + ")");
+				}
+
+				elementRects.add(rect);
+
+			} catch (Exception e) {
+				issues.add(locator.toString() + " not found / visible after rotation. Exception: " + e.getMessage());
+			}
+		}
+
+		// Check pairwise overlap (simple rectangle intersection)
+		for (int i = 0; i < elementRects.size(); i++) {
+			for (int j = i + 1; j < elementRects.size(); j++) {
+				if (rectanglesOverlap(elementRects.get(i), elementRects.get(j))) {
+					issues.add("Overlap detected between element index " + i + " and " + j);
+				}
+			}
+		}
+
+		return issues;
+	}
+
+	private boolean rectanglesOverlap(Rectangle r1, Rectangle r2) {
+		int left1 = r1.getX();
+		int top1 = r1.getY();
+		int right1 = r1.getX() + r1.getWidth();
+		int bottom1 = r1.getY() + r1.getHeight();
+
+		int left2 = r2.getX();
+		int top2 = r2.getY();
+		int right2 = r2.getX() + r2.getWidth();
+		int bottom2 = r2.getY() + r2.getHeight();
+
+		// If one rectangle is on left side of other
+		if (right1 <= left2 || right2 <= left1)
+			return false;
+		// If one rectangle is above other
+		if (bottom1 <= top2 || bottom2 <= top1)
+			return false;
+
+		// otherwise they overlap
+		return true;
+	}
+
+	/**
+	 * This is for enabling/ disabling mobile data and wifi
+	 */
+	private Map<String, Object> runShellCmd(String command, List<String> args) {
+		Map<String, Object> params = new HashMap<>();
+		params.put("command", command);
+		if (args != null && !args.isEmpty())
+			params.put("args", args);
+		// optional: "includeStderr", "timeout" etc.
+		Object res = getDriver().executeScript("mobile: shell", params);
+		if (res instanceof Map)
+			return (Map<String, Object>) res;
+		return Collections.emptyMap();
+	}
+
+	public void disableWifi() {
+		runShellCmd("svc", Arrays.asList("wifi", "disable"));
+	}
+
+	public void enableWifi() {
+		runShellCmd("svc", Arrays.asList("wifi", "enable"));
+	}
+
+	public void disableMobileData() {
+		// may fail on some devices (see caveats)
+		runShellCmd("svc", Arrays.asList("data", "disable"));
+	}
+
+	public void enableMobileData() {
+		runShellCmd("svc", Arrays.asList("data", "enable"));
+	}
+
+	/**
+	 * These are for switching the apps in between
+	 * 
+	 */
+	public void switchToAnotherApp(String packageName) {
+		((InteractsWithApps) getDriver()).activateApp(packageName);
+	}
+
+	public void switchAppToBackground(int seconds) {
+		((InteractsWithApps) getDriver()).runAppInBackground(Duration.ofSeconds(seconds));
+	}
+
+	/**
+	 * @LOCKING AND UNLOCKING THE MOBILE
+	 */
+
+	public void lockDevice() {
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.POWER));
+
+		// ((AndroidDriver) getDriver()).lockDevice(Duration.ofSeconds(seconds));
+	}
+
+	public void unlockDevice() {
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.POWER));
+		swipeUp();
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.DIGIT_1));
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.DIGIT_2));
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.DIGIT_3));
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.DIGIT_4));
+		((AndroidDriver) getDriver()).pressKey(new KeyEvent(AndroidKey.ENTER));
+
+		// ((AndroidDriver) getDriver()).unlockDevice();
+	}
+
+	public void swipeUp() {
+
+		Dimension size = getDriver().manage().window().getSize();
+
+		int startX = size.width / 2;
+		int startY = (int) (size.height * 0.8);
+		int endY = (int) (size.height * 0.2);
+
+		PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+
+		Sequence swipe = new Sequence(finger, 1);
+
+		swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY));
+
+		swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+
+		swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), startX, endY));
+
+		swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+		getDriver().perform(Collections.singletonList(swipe));
+	}
+
+	/**
+	 * toggleDND(true); // Turn ON DND toggleDND(false); // Turn OFF DND
+	 * 
+	 * @param enable
+	 */
+
+	public void toggleDND(boolean enable) {
+
+		try {
+			if (enable) {
+				Runtime.getRuntime().exec("adb shell settings put global zen_mode 2");
+			} else {
+				Runtime.getRuntime().exec("adb shell settings put global zen_mode 0");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

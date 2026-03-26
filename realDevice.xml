@@ -17,9 +17,7 @@
 			<class name="com.intelehealth.tests.ForgotPasswordTest" />
 			<class name="com.intelehealth.tests.LoginMenuTest" />
 -->
-			<class name="com.intelehealth.tests.EditProfileTest" />
-
-
+			<class name="com.intelehealth.tests.AddNewPatientTest" />
 			<!--
 			<class name="com.intelehealth.tests.AppSetupTest" /> 
 			<class name="com.intelehealth.tests.LoginMenuTest" />

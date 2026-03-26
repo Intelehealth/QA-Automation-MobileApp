@@ -3,9 +3,12 @@ package com.intelehealth.tests;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.List;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.openqa.selenium.By;
+import org.openqa.selenium.ScreenOrientation;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -68,6 +71,8 @@ public class AchievementsPageTest extends BaseTest {
 				datais.close();
 			}
 		}
+		toggleDND(true);
+
 		// grant all permissions
 		appSetupPage.handlePermissions();
 		// Perform the complete setup using the obtained username and password
@@ -84,6 +89,7 @@ public class AchievementsPageTest extends BaseTest {
 	public void testVerifyUIElements() {
 //call login page 
 		homePage.clickAchievementsTab();
+
 		String headerText = achievementsPage.getAchievementsHeaderText();
 		String levelText = achievementsPage.getAchievementsLevelText();
 		Assert.assertEquals(headerText, expectedAssertProp.getProperty("achievements.screen.header.text"));
@@ -220,6 +226,43 @@ public class AchievementsPageTest extends BaseTest {
 		Assert.assertEquals(splashPage.getSyncingText(), expectedAssertProp.getProperty("splash.screen.syncing.text"),
 				"Syncing text should be displayed on the Splash page");
 	}
+
+	@Test(priority = 11, description = "Verify app behavior under interrupted scenarios")
+	public void testInterruptedBasedScenario() {
+
+		lockDevice();
+		unlockDevice();
+
+		closeApp();
+		switchToAnotherApp(getProps().getProperty("androidAppPackage"));
+
+		switchAppToBackground(10);
+		switchToAnotherApp("com.whatsapp");
+		switchToAnotherApp(getProps().getProperty("androidAppPackage"));
+
+		enableMobileData();
+		disableMobileData();
+		enableWifi();
+		disableWifi();
+		enableWifi();
+
+		List<String> issues = verifyLayoutAfterRotation(ScreenOrientation.LANDSCAPE,
+				By.id("org.intelehealth.app:id/tv_user_location_home")
+
+		);
+
+		// Assert no issues
+		Assert.assertTrue(issues.isEmpty(), "Layout issues after rotation: " + String.join("; ", issues));
+		ScreenOrientation actualOrientation = rotateAndGetOrientation(ScreenOrientation.LANDSCAPE);
+
+		Assert.assertEquals(actualOrientation, ScreenOrientation.LANDSCAPE, "Orientation did not change to LANDSCAPE");
+
+		ScreenOrientation actualOrientationPORTRAIT = rotateAndGetOrientation(ScreenOrientation.PORTRAIT);
+
+		Assert.assertEquals(actualOrientationPORTRAIT, ScreenOrientation.PORTRAIT,
+				"Orientation did not change to LANDSCAPE");
+	}
+
 	@AfterMethod
 	public void afterMethod() {
 		System.gc();

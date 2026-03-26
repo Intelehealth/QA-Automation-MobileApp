@@ -18,9 +18,10 @@ import com.intelehealth.base.BaseTest;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -38,24 +39,24 @@ import java.util.Collections;
  */
 public class AddNewPatientPage extends BaseTest {
 
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@text='Add Patients'])[1]")
+	@AndroidFindBy(xpath =  "//android.widget.TextView[@text=\"Add Patients\"]")
 	private WebElement addNewPatientButton;
 
 	@AndroidFindBy(id = "org.intelehealth.app:id/btn_accept_privacy")
 	private WebElement acceptButton;
 	
-	@AndroidFindBy(accessibility = "Identification Activity Title TextView")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Add new patient\")")
 	private WebElement addNewPatientTitle;
 	
 	@AndroidFindBy(id = "org.intelehealth.app:id/textInputETPhoneNumber")
 	private WebElement inpPhoneNumber;
 	@AndroidFindBy(id = "org.intelehealth.app:id/btn_accept_consent")
 	private WebElement acceptButtonInProcessingPersonalData;
-	@AndroidFindBy(accessibility = "Identification Activity Personal Icon ImageView")
+	@AndroidFindBy(id = "org.intelehealth.app:id/tvIndicatorPatientPersonal")
 	private WebElement personal;
-	@AndroidFindBy(accessibility = "Identification Activity Personal Title TextView")
+	@AndroidFindBy(id = "org.intelehealth.app:id/tvIndicatorPatientPersonal")
 	private WebElement personalText;
-	@AndroidFindBy(xpath = "//android.widget.Button[@text='Decline']")
+	@AndroidFindBy(id = "org.intelehealth.app:id/btn_decline_privacy")
 	private WebElement declineButton;
 
 	@AndroidFindBy(id = "org.intelehealth.app:id/tv_user_location_home")
@@ -66,7 +67,7 @@ public class AddNewPatientPage extends BaseTest {
 	@AndroidFindBy(id = "org.intelehealth.app:id/textInputETLName")
 	private WebElement lastName;
 
-	@AndroidFindBy(accessibility = "Identification First Screen Gender Male RadioButton")
+	@AndroidFindBy(id = "org.intelehealth.app:id/btnMale")
 	private WebElement male;
 	@AndroidFindBy(id = "org.intelehealth.app:id/btnFemale")
 	private WebElement female;
@@ -97,7 +98,7 @@ public class AddNewPatientPage extends BaseTest {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='android:id/text1' and @text='1993']")
 	private WebElement year;
 
-	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, '18')]")
+	@AndroidFindBy(uiAutomator =  "new UiSelector().text(\"18\")")
 	private WebElement date;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='android:id/text1']")
@@ -132,7 +133,7 @@ public class AddNewPatientPage extends BaseTest {
 
 	@AndroidFindBy(id = "org.intelehealth.app:id/frag2_btn_next")
 	private WebElement nextButton2;
-	@AndroidFindBy(xpath = "Identification First Screen Phone Num Title LinearLayout")
+	@AndroidFindBy(id = "org.intelehealth.app:id/tvPhoneNumber")
 	private WebElement phoneNumberTitle;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Karnataka']")
@@ -164,10 +165,10 @@ public class AddNewPatientPage extends BaseTest {
 	@AndroidFindBy(id = "org.intelehealth.app:id/frag2_btn_next")
 	private WebElement nextButton3;
 
-	@AndroidFindBy(xpath = "(//android.widget.TextView[@text='Change'])[1]")
+	@AndroidFindBy(uiAutomator =  "new UiSelector().resourceId(\"org.intelehealth.app:id/ivChangeIcon\").instance(0)")
 	private WebElement personalDetailsChangeIcon;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Update Patient']")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Update Patient\")")
 	private WebElement updatePatientScreenTitle;
 
 	@AndroidFindBy(id = "org.intelehealth.app:id/startVisitBtn")
@@ -187,12 +188,12 @@ public class AddNewPatientPage extends BaseTest {
 	@AndroidFindBy(accessibility = "Visit Creation Subtitle TextView")
 	// Visit Creation Subtitle TextView-vitals")
 	private WebElement visitCreationVitalsTitle;
-	@AndroidFindBy(accessibility = "//android.widget.TextView[@resource-id='org.intelehealth.app:id/tv_sub_title' and @text='1/4 Vitals']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='org.intelehealth.app:id/tv_sub_title' and @text='1/4 Vitals']")
 	// Visit Creation Subtitle TextView-vitals")
 	private WebElement visitCreationVitalsScreen;
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Prescription received']")
 	private WebElement prescriptionReceived;
-	@AndroidFindBy(accessibility = "Patient Details Patient Name TextView")
+	@AndroidFindBy(id = "org.intelehealth.app:id/name_txtview")
 	private WebElement patientName;
 	@AndroidFindBy(id = "org.intelehealth.app:id/openmrsID_txt")
 	private WebElement patientID;
@@ -233,7 +234,7 @@ public class AddNewPatientPage extends BaseTest {
 	@AndroidFindBy(id = "org.intelehealth.app:id/fabStartChat")
 	private WebElement chatIcon;
 
-	@AndroidFindBy(id = "org.intelehealth.app:id/chiefcomplaint_header_relative")
+	@AndroidFindBy(id = "org.intelehealth.app:id/vs_arrowRight")
 	private WebElement lblOpnVisitChiefComplaint;
 
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Prescription pending\"])[1]")
@@ -254,20 +255,20 @@ public class AddNewPatientPage extends BaseTest {
 //	@AndroidFindBy(accessibility  = "Identification First Screen Next Button")
 //	private WebElement  saveButton;
 //	
-	@AndroidFindBy(accessibility = "Patient Details Screen Address Details Edit Icon ImageView")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"org.intelehealth.app:id/tvChange\"])[2]")
 	private WebElement addressDetailsChangeIcon;
 
-	@AndroidFindBy(accessibility = "org.intelehealth.app:id/national_ID")
+	@AndroidFindBy(id = "org.intelehealth.app:id/national_ID")
 	private WebElement updatedName;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Change']")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"org.intelehealth.app:id/tvChange\"])[2]")
 	private WebElement otherDetailsChangeIcon;
 	@AndroidFindBy(accessibility = "Patient Details Screen Other Details Header Title TextView")
 	private WebElement otherDetailsTitle;
 
 	@AndroidFindBy(id = "org.intelehealth.app:id/lblNationalId")
 	private WebElement nationalIdLabel;
-	@AndroidFindBy(id = "org.intelehealth.app:id/frag2_btn_next")
+	@AndroidFindBy(id = "org.intelehealth.app:id/btnPatientPersonalNext")
 	private WebElement saveButton;
 
 	@AndroidFindBy(accessibility = "Patient Details Refresh ImageView")
@@ -506,12 +507,36 @@ public class AddNewPatientPage extends BaseTest {
 
 	// Select the state from the available options
 	public void selectState() throws InterruptedException {
-		click(state);
+		/*
+		 * for(int scrollcount = 0; scrollcount < 5; scrollcount++) { try {
+		 * scrollDown(); if(scrollcount >= 3) { click(state); break; } } catch(Exception
+		 * e) {
+		 * 
+		 * } }
+		 */
+		//click(state);
+		AndroidDriver androidDriver = (AndroidDriver) driver.get();
+
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 2
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 3
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 3
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
 	}
 
 	// Select the district from the available options
 	public void selectDistrict() throws InterruptedException {
-		click(district);
+		//click(district);
+		AndroidDriver androidDriver = (AndroidDriver) driver.get();
+
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 2
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 3
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 3
+		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+
 	}
 
 	// Click on the "Change" icon in the personal details section
@@ -523,6 +548,8 @@ public class AddNewPatientPage extends BaseTest {
 	public void clickOnSaveButton() throws InterruptedException {
 		click(saveButton);
 	}
+	
+	
 
 //	// Verify if the displayed age matches the expected age
 //	public void verifyAge(String expectedAge) {
@@ -593,15 +620,15 @@ public class AddNewPatientPage extends BaseTest {
 
 	// Scroll to view the element related to the state, e.g., "Kerala"
 	public WebElement scrollToViewState() {
-		return getDriver().findElement(
-				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Kerala\"));"));
+		return null;//getDriver().findElement(
+				//AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Kerala\"));"));
 	}
 
 	// Scroll to view the element related to the district, e.g., "Vijayapura
 	// (Bijapur)"
 	public WebElement scrollToViewDistrict() {
-		return getDriver().findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector()).scrollIntoView(text(\"Vijayapura (Bijapur)\"));"));
+		return null;/*getDriver().findElement(AppiumBy.androidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(text(\"Vijayapura (Bijapur)\"));"));*/
 	}
 
 	// Scroll to view the element related to other details on the Patient Details
@@ -787,6 +814,7 @@ public class AddNewPatientPage extends BaseTest {
 
 	// Click on the "Change" icon in the other details section
 	public void clickOnOtherDetailsChangeIcon() throws InterruptedException {
+		scrollDown();
 		click(otherDetailsChangeIcon, "Clicked on the 'Change' icon in the other details section");
 	}
 
@@ -1180,5 +1208,5 @@ public class AddNewPatientPage extends BaseTest {
 		driver.get().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
 				+ ".scrollIntoView(new UiSelector().text(\"1996\"));")).click();
 	}
-
+	
 }

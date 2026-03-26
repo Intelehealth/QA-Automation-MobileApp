@@ -442,7 +442,6 @@ public class AppSetupPage extends BaseTest {
 //				.click();
 		// Enter the username into the username field
 
-		AndroidDriver androidDriver = (AndroidDriver) driver.get();
 
 //		// Press down + enter
 		// androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));
@@ -451,6 +450,8 @@ public class AppSetupPage extends BaseTest {
 //		Thread.sleep(2000);
 //		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));//Select Telemedicine 1
 //
+		AndroidDriver androidDriver = (AndroidDriver) driver.get();
+
 		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 2
 		androidDriver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));// Select Telemedicine 3
 		androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
