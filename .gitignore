@@ -1,0 +1,31 @@
+# Build output
+target/
+*.class
+
+# Allure
+allure-results/
+.allure/
+
+# TestNG / Surefire
+test-output/
+TestReports/
+
+# Logs
+log/
+logs/
+logcat-preserved/
+ServerLogs/
+hs_err_pid*.log
+
+# Media captured during test runs
+Screenshots/
+videos/
+
+# IDE
+.classpath
+.project
+.settings/
+
+# OS
+Thumbs.db
+.DS_Store
