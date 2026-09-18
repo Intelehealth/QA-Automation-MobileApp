@@ -222,17 +222,32 @@ results can be shared via a link instead of a local file.
 **One-time setup (repo admin):**
 1. Run `.\publish-allure-report.ps1` once (see below) to create the `gh-pages` branch.
 2. In GitHub: **Settings > Pages > Source** = "Deploy from a branch", **Branch** = `gh-pages` / `/(root)`.
-3. The report will be live at `https://intelehealth.github.io/QA-Automation-MobileApp/`.
+3. The dashboard will be live at `https://intelehealth.github.io/QA-Automation-MobileApp/`.
 
 **Every time after running tests locally:**
 ```
-mvn test -DsuiteFile=testng.xml
+mvn clean test -DsuiteFile=realDevice.xml
 .\publish-allure-report.ps1
 ```
-The script runs `mvn allure:report` (reads `target/allure-results`, matching
-`src/test/resources/allure.properties`) and pushes the generated
-`target/allure-report` site to the `gh-pages` branch, overwriting the
-previous report. Allow a minute or two for GitHub Pages to redeploy after the push.
+Using `mvn clean` (not just `mvn test`) wipes `target/` — including
+`target/allure-results` — before the run, so each report reflects only the
+latest execution instead of accumulating results from previous runs.
+
+The script runs `mvn allure:report` and pushes the result to the `gh-pages`
+branch with this layout:
+- `/index.html` — a dashboard listing every published run with pass/fail/broken/skipped counts
+- `/latest/` — always mirrors the most recent run, at a stable URL:
+  `https://intelehealth.github.io/QA-Automation-MobileApp/latest/`
+- `/reports/<timestamp>/` — one full report per run, kept for history; the
+  oldest are automatically pruned once there are more than 20 (change
+  `$maxHistoryRuns` at the top of the script to adjust)
+
+It also carries forward Allure's trend/history data between runs, so the
+Trend widget on each report builds up across executions instead of resetting
+every time.
+
+Allow a minute or two for GitHub Pages to redeploy after each push, and hard
+refresh (Ctrl+Shift+R) if the browser shows a cached version.
 
 To view the report locally without publishing, use `mvn allure:serve` instead.
    
