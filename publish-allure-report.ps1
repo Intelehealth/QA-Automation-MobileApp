@@ -18,6 +18,11 @@
 #>
 
 $ErrorActionPreference = "Stop"
+# Git writes routine progress/status messages to stderr. On PowerShell 7+,
+# $ErrorActionPreference = "Stop" would otherwise turn those into terminating
+# errors even though the command succeeded. This restores the old behavior
+# (no-op / harmless on Windows PowerShell 5.1, which has no such setting).
+$PSNativeCommandUseErrorActionPreference = $false
 
 $repoRoot   = git rev-parse --show-toplevel
 Set-Location $repoRoot
@@ -43,7 +48,6 @@ if (Test-Path $worktree) {
     Remove-Item -Recurse -Force $worktree
 }
 
-git fetch origin $branch 2>$null
 $remoteBranchExists = git ls-remote --heads origin $branch
 
 if ($remoteBranchExists) {
