@@ -1,34 +1,29 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Allure Report</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="plugin/screen-diff/styles.css">
+<meta charset="utf-8">
+<title>Allure Report Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 2rem; background:#f7f7f9; color:#222; }
+h1 { margin-bottom: 0.2rem; }
+.latest-link { display:inline-block; margin: 1rem 0; padding: 0.7rem 1.2rem; background:#5b3ef5; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold; }
+table { border-collapse: collapse; width:100%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+th, td { padding: 0.6rem 1rem; text-align:left; border-bottom:1px solid #eee; }
+th { background:#eee; }
+.pass { color:#2e7d32; font-weight:bold; }
+.fail { color:#c62828; font-weight:bold; }
+.broken { color:#ef6c00; font-weight:bold; }
+.skip { color:#757575; }
+</style>
 </head>
 <body>
-    <div id="alert"></div>
-    <div id="content">
-        <span class="spinner">
-            <span class="spinner__circle"></span>
-        </span>
-    </div>
-    <div id="popup"></div>
-    <script src="app.js"></script>
-    <script src="plugin/behaviors/index.js"></script>
-    <script src="plugin/packages/index.js"></script>
-    <script src="plugin/screen-diff/index.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWC4GKEYS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-FVWC4GKEYS', {
-          'allureVersion': 'dev',
-          'reportUuid': '2550c817-f8bd-45af-9f22-675bc78b865f',
-          'single_file': false
-        });
-    </script>
+<h1>Allure Report Dashboard</h1>
+<p>Intelehealth Mobile Automation - all runs published from local execution. Showing the most recent 20 runs.</p>
+<a class="latest-link" href="latest/index.html">View Latest Report</a>
+<table>
+<tr><th>Run</th><th>Total</th><th>Passed</th><th>Failed</th><th>Broken</th><th>Skipped</th></tr>
+<tr><td><a href="reports/2026-09-18_13-35-13/index.html">2026-09-18 13-35-13</a></td><td>5</td><td class="pass">5</td><td class="fail">0</td><td class="broken">0</td><td class="skip">0</td></tr>
+
+</table>
 </body>
 </html>
