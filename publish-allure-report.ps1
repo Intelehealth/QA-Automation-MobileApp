@@ -53,7 +53,7 @@ $remoteBranchExists = git ls-remote --heads origin $branch
 if ($remoteBranchExists) {
     git worktree add $worktree $branch
 } else {
-    Write-Host "Branch '$branch' does not exist yet — creating it." -ForegroundColor Yellow
+    Write-Host "Branch '$branch' does not exist yet - creating it." -ForegroundColor Yellow
     git worktree add --orphan -b $branch $worktree
 }
 
@@ -70,7 +70,7 @@ if ($hasChanges) {
     git push origin $branch
     Write-Host "`nReport pushed to '$branch'. It will be live shortly on GitHub Pages." -ForegroundColor Green
 } else {
-    Write-Host "`nNo changes — report is identical to the last published version." -ForegroundColor Yellow
+    Write-Host "`nNo changes - report is identical to the last published version." -ForegroundColor Yellow
 }
 Pop-Location
 
